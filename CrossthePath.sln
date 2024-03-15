@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34601.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CrossthePath", "projects\CrossthePath\CrossthePath.vcxproj", "{B3A4856E-9D16-4FA7-B2A4-00B2E1F21B76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3A4856E-9D16-4FA7-B2A4-00B2E1F21B76}.Debug|x64.ActiveCfg = Debug|x64
+		{B3A4856E-9D16-4FA7-B2A4-00B2E1F21B76}.Debug|x64.Build.0 = Debug|x64
+		{B3A4856E-9D16-4FA7-B2A4-00B2E1F21B76}.Release|x64.ActiveCfg = Release|x64
+		{B3A4856E-9D16-4FA7-B2A4-00B2E1F21B76}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {043B5B21-5C6D-4E6C-A7C7-DB56D066A617}
+	EndGlobalSection
+EndGlobal
