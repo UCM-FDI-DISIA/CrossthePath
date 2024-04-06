@@ -2,14 +2,32 @@
 **![](https://lh7-us.googleusercontent.com/tX5_504h3_F3XO2bBb4I-GpfmWqsnwBvUx8hfpOMDvEZBUiHOhhyYCF15okseQXX5RKzXbB8144J1-I3kL35-TPEdAxVXW_lvdpjApnKA584bKBH75zdqeKbcsWIl2WylvOuN1f-xprCBn_oqeYnBRY)**
 ## 1. Ficha técnica
 
-|               |                                              |
-|----------------|-------------------------------|-----------------------------|
-|**Título**|Cross the Path|
-|**Género**|Acción/Plataforma, endless runner|
-|**Target**|Jugadores casuales que quieren jugar para pasar el tiempo|
-|**Rating**|PEGI 3|
-|**Plataforma**|PC (Windows)|
-|**Modo de juego**|Single player|
+<table>
+  <tr>
+    <td>Título</td>
+    <td><i>Cross the Path</i</td>
+  </tr>
+  <tr>
+    <td>Género</td>
+    <td><i>Acción/Plataforma, endless runner</i></td>
+  </tr>
+    <tr>
+    <td>Target</td>
+    <td>Jugadores casuales que quieren jugar para pasar el tiempo</td>
+  </tr>
+    <tr>
+    <td>Rating</td>
+    <td>PEGI 3</td>
+  </tr>
+    <tr>
+    <td>Plataforma</td>
+    <td>PC (Windows)</td>
+  </tr>
+    <tr>
+    <td>Modos de juego</td>
+    <td>Un Jugador</td>
+  </tr>
+</table>
 
 ## 2. Aspectos generales
 
