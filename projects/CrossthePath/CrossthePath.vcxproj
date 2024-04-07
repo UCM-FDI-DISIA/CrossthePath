@@ -62,10 +62,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)EDEN\src\EDEN_Script;$(SolutionDir)EDEN\src\EDEN_Render;$(SolutionDir)EDEN\src\EDEN_Physics;$(SolutionDir)EDEN\src\EDEN_Input;$(SolutionDir)EDEN\src\EDEN_Audio;$(SolutionDir)EDEN\src\EDEN;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)EDEN\src\EDEN\bin\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -77,12 +79,14 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)EDEN\src\EDEN_Script;$(SolutionDir)EDEN\src\EDEN_Render;$(SolutionDir)EDEN\src\EDEN_Physics;$(SolutionDir)EDEN\src\EDEN_Input;$(SolutionDir)EDEN\src\EDEN_Audio;$(SolutionDir)EDEN\src\EDEN;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)EDEN\src\EDEN\bin\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -90,6 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EDEN\projects\EDEN\EDEN.vcxproj">
+      <Project>{8445b889-2769-4e51-83f9-bb45322fac88}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
