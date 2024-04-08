@@ -2,8 +2,8 @@
 
 #include <string>
 
-namespace eden_script {
-	class ScriptManager;
+namespace eden {
+	class SceneManager;
 }
 extern "C" __declspec(dllexport) std::string saludo();
 
