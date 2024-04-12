@@ -18,9 +18,21 @@
     <ClInclude Include="..\..\src\CrossthePath\CTPMain.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\CrossthePath\Hito2MenuPausa.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\CrossthePath\Hito2Prueba.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\CrossthePath\Hito2MenuPausa.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\CrossthePath\Hito2Prueba.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
