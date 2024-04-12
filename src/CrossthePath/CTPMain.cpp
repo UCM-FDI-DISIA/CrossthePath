@@ -1,10 +1,10 @@
 #include "CTPMain.h"
 #include "SceneManager.h"
 
-std::string saludo() {
-	return "adios";
+void RegisterComponents() {
+
 }
 
-void loadScene(eden::SceneManager* scnManager) {
+void LoadScene(eden::SceneManager* scnManager) {
 	scnManager->PushScene("Menu");
 }
