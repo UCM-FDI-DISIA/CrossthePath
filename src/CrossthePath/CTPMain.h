@@ -7,5 +7,5 @@ namespace eden {
 }
 extern "C" __declspec(dllexport) std::string saludo();
 
-extern "C" __declspec(dllexport) void loadScene();
+extern "C" __declspec(dllexport) void loadScene(eden::SceneManager* scnManager);
 #endif // !CROSS_THE_PATH_MAIN_H_

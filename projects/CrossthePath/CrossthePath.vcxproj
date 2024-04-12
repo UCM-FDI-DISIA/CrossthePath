@@ -67,7 +67,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)EDEN\src\EDEN\bin\;$(SolutionDir)EDEN\lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)EDEN\bin\</AdditionalLibraryDirectories>
       <AdditionalDependencies>EDEN_Export_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -87,7 +87,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)EDEN\src\EDEN\bin\;$(SolutionDir)EDEN\lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)EDEN\bin\</AdditionalLibraryDirectories>
       <AdditionalDependencies>EDEN_Export.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -96,11 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\EDEN\projects\EDEN_Export\EDEN_Export.vcxproj">
-      <Project>{d2cd25b4-633f-4916-b5fa-860855288d4b}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,7 +5,6 @@ std::string saludo() {
 	return "adios";
 }
 
-void loadScene() {
-	eden::SceneManager* scnManager = eden::SceneManager::Instance();
+void loadScene(eden::SceneManager* scnManager) {
 	scnManager->PushScene("Menu");
 }
