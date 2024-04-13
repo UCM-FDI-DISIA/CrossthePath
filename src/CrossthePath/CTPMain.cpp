@@ -13,3 +13,4 @@ void RegisterComponents(eden_ec::ComponentFactory* factory) {
 void LoadScene(eden::SceneManager* scnManager) {
 	scnManager->PushScene("Menu");
 }
+
