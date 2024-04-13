@@ -1,5 +1,5 @@
 #ifndef CROSS_THE_PATH_MAIN_H_
-
+#define CROSS_THE_PATH_MAIN_H_
 #include <string>
 
 namespace eden {

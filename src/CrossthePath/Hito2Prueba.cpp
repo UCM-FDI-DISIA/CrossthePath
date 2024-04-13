@@ -21,14 +21,14 @@ void eden_ec::Hito2Prueba::Start() {
 	animator = _ent->GetComponent<CAnimator>();
 	animator->PlayAnim("Idle");
 
-	eden_script::LuaManager* scriptM = eden_script::ScriptManager::Instance()->GetLuaManager();
+	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "Game", &eden_ec::Hito2Prueba::Pause, "Pause", this);
 	scriptM->SetGlobal(this, "Game");
 	scriptM = nullptr;
 }
 
 void eden_ec::Hito2Prueba::Init(eden_script::ComponentArguments* args) {
-	inputManager = eden_input::InputManager::Instance();
+	inputManager = eden_input::InputManager::getInstance();
 }
 
 void eden_ec::Hito2Prueba::Update(float dt) {
@@ -102,6 +102,6 @@ void eden_ec::Hito2Prueba::Jump() {
 
 void eden_ec::Hito2Prueba::Pause()
 {
-	eden::SceneManager* scnManager = eden::SceneManager::Instance();
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->PushScene("MenuPausa");
 }

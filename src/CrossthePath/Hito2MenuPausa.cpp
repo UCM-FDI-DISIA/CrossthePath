@@ -13,7 +13,7 @@ const std::string eden_ec::Hito2MenuPausa::_id = "PAUSA";
 eden_ec::Hito2MenuPausa::Hito2MenuPausa() {
 
 	////PRUEBA BOTON
-	eden_script::LuaManager* scriptM = eden_script::ScriptManager::Instance()->GetLuaManager();
+	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "Pausa", &eden_ec::Hito2MenuPausa::ResumeGame, "Resume", this);
 	scriptM->Regist(*this, "Pausa", &eden_ec::Hito2MenuPausa::ExitGame, "Exit", this);
 	scriptM->Regist(*this, "Pausa", &eden_ec::Hito2MenuPausa::BackToMenu, "BackMenu", this);
@@ -21,9 +21,9 @@ eden_ec::Hito2MenuPausa::Hito2MenuPausa() {
 	scriptM = nullptr;
 }
 void eden_ec::Hito2MenuPausa::Init(eden_script::ComponentArguments* args) {
-	inputManager = eden_input::InputManager::Instance();
 }
 void eden_ec::Hito2MenuPausa::Start() {
+	inputManager = eden_input::InputManager::getInstance();
 	
 }
 
@@ -33,18 +33,18 @@ void eden_ec::Hito2MenuPausa::HandleInput() {
 
 void eden_ec::Hito2MenuPausa::ResumeGame()
 {
-	eden::SceneManager* scnManager = eden::SceneManager::Instance();
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->PopScene();
 }
 
 void eden_ec::Hito2MenuPausa::ExitGame()
 {
-	eden_input::InputManager::Instance()->SetCloseWindow();
+	inputManager->SetCloseWindow();
 }
 
 void eden_ec::Hito2MenuPausa::BackToMenu()
 {
-	eden::SceneManager* scnManager = eden::SceneManager::Instance();
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("Menu");
 }
 
