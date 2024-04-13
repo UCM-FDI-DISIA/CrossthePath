@@ -1,8 +1,10 @@
 #define _CRTDBG_MAP_ALLOC
 #include "Hito2MenuPausa.h"
+
 #include <InputManager.h>
 #include <ScriptManager.h>
 #include <LuaManager.h>
+
 #include"CLuaBehaviour.h"
 #include "SceneManager.h"
 
