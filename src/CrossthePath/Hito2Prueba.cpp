@@ -34,10 +34,11 @@ void eden_ec::Hito2Prueba::Init(eden_script::ComponentArguments* args) {
 void eden_ec::Hito2Prueba::Update(float dt) {
 
 	if (inputManager->IsKeyHeld('a')) {
-		transform->Translate(eden_utils::Vector3(0, -0.01,0));
-		//transform->Rotate(90, eden_utils::Vector3(0, 1, 0));
+		transform->Translate(eden_utils::Vector3(0, -0.01, 0));
 		if (!keyPressed) {
 			animator->PlayAnim("Walk");
+			transform->SetRotation(*initialRotation);
+			transform->Roll(90);
 		}
 		idle = false;
 		jump = false;
@@ -48,6 +49,7 @@ void eden_ec::Hito2Prueba::Update(float dt) {
 		transform->Translate(eden_utils::Vector3(0.01, 0, 0));
 		if (!keyPressed) {
 			animator->PlayAnim("Walk");
+			transform->SetRotation(*initialRotation);
 		}
 		idle = false;
 		jump = false;
@@ -58,6 +60,7 @@ void eden_ec::Hito2Prueba::Update(float dt) {
 		transform->Translate(eden_utils::Vector3(-0.01, 0, 0));
 		if (!keyPressed) {
 			animator->PlayAnim("Walk");
+			transform->SetRotation(*initialRotation);
 		}
 		idle = false;
 		jump = false;
@@ -65,16 +68,18 @@ void eden_ec::Hito2Prueba::Update(float dt) {
 
 	}
 	else if (inputManager->IsKeyHeld('d')) {
-		transform->Translate(eden_utils::Vector3(0, 0.01,0));
+		transform->Translate(eden_utils::Vector3(0, 0.01, 0));
 
 		if (!keyPressed) {
 			animator->PlayAnim("Walk");
+			transform->SetRotation(*initialRotation);
+			transform->Roll(-90);
 		}
 		idle = false;
 		jump = false;
 		keyPressed = true;
 	}
-	
+
 	else {
 		if (!idle && !jump) {
 			animator->PlayAnim("Idle");
@@ -87,7 +92,6 @@ void eden_ec::Hito2Prueba::Update(float dt) {
 		}
 		keyPressed = false;
 	}
-
 }
 
 void eden_ec::Hito2Prueba::Jump() {

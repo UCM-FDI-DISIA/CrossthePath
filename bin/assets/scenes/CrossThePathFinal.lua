@@ -1,4 +1,4 @@
-Entity1 = {
+Entity115 = {
 	Name = "Camera2",
 	Components = {
 		{
@@ -2321,7 +2321,7 @@ Entity114 = {
 	}	
 }
 
-Entity115 = {
+Entity1 = {
 	Name = "Player",
 	Components = {
 		{

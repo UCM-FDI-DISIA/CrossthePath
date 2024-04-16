@@ -6,6 +6,9 @@
 namespace eden_input {
 	class InputManager;
 }
+namespace eden_utils {
+	class Quaternion;
+}
 namespace eden_ec {
 	class CTransform;
 	class CAnimator;
@@ -34,6 +37,7 @@ namespace eden_ec {
 		eden_input::InputManager* inputManager;
 		eden_ec::CTransform* transform;
 		eden_ec::CAnimator* animator;
+		eden_utils::Quaternion* initialRotation;
 		bool keyPressed = false;
 		bool jump = false;
 		bool idle = true;
