@@ -12,6 +12,8 @@
 #include "LuaManager.h"
 #include "Vector3.h"
 
+#include "GameManager.h"
+
 #include <string>
 #include <math.h> 
 
@@ -24,6 +26,7 @@ void eden_ec::CharacterMovement::Start() {
 	_animator->PlayAnim("Idle");
 
 	_initialRotation = _transform->GetRotation();
+	eden_ec::GameManager::Instance()->SetPlayer(_ent);
 }
 
 void eden_ec::CharacterMovement::Init(eden_script::ComponentArguments* args) {
