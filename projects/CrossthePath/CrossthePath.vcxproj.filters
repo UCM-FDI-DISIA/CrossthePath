@@ -25,6 +25,10 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="InstanciateEnemies.h">
+    <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\CrossthePath\GameManager.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -39,6 +43,10 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="InstanciateEnemies.cpp">
+    <ClCompile Include="..\..\src\CrossthePath\CameraMovement.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

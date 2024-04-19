@@ -12,6 +12,8 @@
 #include <ScriptManager.h>
 #include <LuaManager.h>
 
+#include "GameManager.h"
+
 const std::string eden_ec::Hito2Prueba::_id = "PRUEBA2";
 void eden_ec::Hito2Prueba::Start() {
 	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
@@ -29,6 +31,7 @@ void eden_ec::Hito2Prueba::Start() {
 
 void eden_ec::Hito2Prueba::Init(eden_script::ComponentArguments* args) {
 	inputManager = eden_input::InputManager::getInstance();
+	eden_ec::GameManager::Instance()->SetPlayer(_ent);
 }
 
 void eden_ec::Hito2Prueba::Update(float dt) {

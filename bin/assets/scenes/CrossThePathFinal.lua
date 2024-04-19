@@ -13,6 +13,11 @@ Entity115 = {
 			Name = "CAMERA",
 			Arguments = {
 			}
+		},
+		{
+			Name = "PLAYERCAMERA",
+			Arguments = {
+			}
 		}
 	}
 }

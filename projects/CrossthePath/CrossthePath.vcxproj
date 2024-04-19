@@ -94,13 +94,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h" />
     <ClInclude Include="..\..\src\CrossthePath\CTPMain.h" />
+    <ClInclude Include="..\..\src\CrossthePath\GameManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\Hito2MenuPausa.h" />
     <ClInclude Include="..\..\src\CrossthePath\Hito2Prueba.h" />
     <ClInclude Include="InstanciateEnemies.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\CrossthePath\CameraMovement.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\Hito2MenuPausa.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\Hito2Prueba.cpp" />
     <ClCompile Include="InstanciateEnemies.cpp" />
