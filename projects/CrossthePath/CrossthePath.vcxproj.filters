@@ -21,7 +21,7 @@
     <ClInclude Include="..\..\src\CrossthePath\Hito2MenuPausa.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\CrossthePath\Hito2Prueba.h">
+    <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="InstanciateEnemies.h">
@@ -39,7 +39,7 @@
     <ClCompile Include="..\..\src\CrossthePath\Hito2MenuPausa.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\CrossthePath\Hito2Prueba.cpp">
+    <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="InstanciateEnemies.cpp">

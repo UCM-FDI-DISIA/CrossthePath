@@ -2353,7 +2353,7 @@ Entity1 = {
             }
         },
 		{
-            Name = "PRUEBA2",
+            Name = "CHARACTER_MOVEMENT",
             Arguments = {
             }
         },
