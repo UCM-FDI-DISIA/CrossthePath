@@ -8,6 +8,7 @@ namespace eden_utils {
 }
 namespace eden_ec {
 	class CTransform;
+	/// @brief Clase encargada del movimiento de la cámara siguiendo al jugador
 	class CameraMovement : public Component {
 	public:
 		CameraMovement() = default;
@@ -15,7 +16,7 @@ namespace eden_ec {
 
 		static std::string GetID() { return _id; }
 
-		void Init(eden_script::ComponentArguments* args) override;
+		void Init(eden_script::ComponentArguments* args) {};
 
 		void Start() override;
 
@@ -28,7 +29,10 @@ namespace eden_ec {
 		eden_ec::CTransform* _playerTransform;
 		eden_utils::Quaternion* _initialRotation;
 
-		float _offset;
+		/// @brief velocidad de la cámara
+		float _speed = 5;
+		/// @brief offset de la cámara
+		float _offset = 1.5f;
 	};
 }
 #endif //CAMERA_MOVEMENT_H
