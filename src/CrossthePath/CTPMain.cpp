@@ -5,11 +5,13 @@
 #include "Hito2MenuPausa.h"
 #include "CharacterMovement.h"
 #include "CameraMovement.h"
+#include "FinishLine.h"
 
 void RegisterComponents(eden_ec::ComponentFactory* factory) {
 	factory->RegisterComponent<eden_ec::Hito2MenuPausa>();
 	factory->RegisterComponent<eden_ec::CharacterMovement>();
 	factory->RegisterComponent<eden_ec::CameraMovement>();
+	factory->RegisterComponent<eden_ec::FinishLine>();
 }
 
 void LoadScene(eden::SceneManager* scnManager) {

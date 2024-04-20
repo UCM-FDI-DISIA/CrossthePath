@@ -11,7 +11,7 @@ namespace eden_ec {
 		friend Singleton<GameManager>;
 	public:
 		GameManager() = default;
-		~GameManager() = default;
+		~GameManager();
 
 		static std::string GetID() { return _id; }
 
@@ -21,6 +21,8 @@ namespace eden_ec {
 
 		void Update(float t) override;
 
+		void PlayerWin();
+
 		Entity* GetPlayer();
 		
 		void SetPlayer(Entity* pl);
@@ -28,7 +30,7 @@ namespace eden_ec {
 	protected:
 		const static std::string _id;
 	private:
-		Entity* _player;
+		Entity* _player = nullptr;
 	};
 }
 #endif //GAME_MANAGER_H

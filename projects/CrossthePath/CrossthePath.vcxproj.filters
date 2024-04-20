@@ -1,53 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="..\..\src\CrossthePath\CameraMovement.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\Hito2MenuPausa.cpp" />
+    <ClCompile Include="InstanciateEnemies.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\FinishLine.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\CrossthePath\CTPMain.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\CrossthePath\Hito2MenuPausa.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="InstanciateEnemies.h">
-    <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\CrossthePath\GameManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\CrossthePath\Hito2MenuPausa.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="InstanciateEnemies.cpp">
-    <ClCompile Include="..\..\src\CrossthePath\CameraMovement.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+    <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h" />
+    <ClInclude Include="..\..\src\CrossthePath\CTPMain.h" />
+    <ClInclude Include="..\..\src\CrossthePath\GameManager.h" />
+    <ClInclude Include="..\..\src\CrossthePath\Hito2MenuPausa.h" />
+    <ClInclude Include="InstanciateEnemies.h" />
+    <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
+    <ClInclude Include="..\..\src\CrossthePath\FinishLine.h" />
   </ItemGroup>
 </Project>
