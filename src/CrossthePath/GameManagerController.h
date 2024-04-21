@@ -13,7 +13,8 @@ namespace eden_ec {
 		~GameManagerController();
 
 		void Update(float t);
-		void Start(){}
+		void Awake() override {};
+		void Start() override {}
 		static std::string GetID() { return _id; }
 
 		void Init(eden_script::ComponentArguments* args) {};

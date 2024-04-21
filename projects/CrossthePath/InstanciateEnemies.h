@@ -11,7 +11,9 @@ namespace eden_ec {
 	class CTransform;
 	class InstanciateEnemies : public Component
 	{
-
+	protected:
+		void Awake() override {};
+		void Start() override {};
 	};
 }
 
