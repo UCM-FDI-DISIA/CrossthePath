@@ -37,6 +37,8 @@ namespace eden_ec {
 		void MoveCharacter(eden_utils::Vector3 dir, float dt, float angle = 0);
 
 		void PlayAnimation();
+
+		void StartMoving();
 	protected:
 		const static std::string _id;
 	private:
@@ -47,6 +49,8 @@ namespace eden_ec {
 		eden_utils::Quaternion _initialRotation;
 		
 		bool keyReleased = true;
+
+		bool _firstMove = true;
 
 		MovementAnimations currentAction = MovementAnimations::IDLE;
 		MovementDir currentDirMovement = MovementDir::STOP;

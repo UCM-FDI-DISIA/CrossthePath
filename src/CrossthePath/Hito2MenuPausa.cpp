@@ -12,6 +12,7 @@ const std::string eden_ec::Hito2MenuPausa::_id = "PAUSA";
 
 eden_ec::Hito2MenuPausa::Hito2MenuPausa() {
 
+	
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "Pausa", &eden_ec::Hito2MenuPausa::ResumeGame, "Resume", this);

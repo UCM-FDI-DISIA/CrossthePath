@@ -2443,8 +2443,28 @@ Entity118 = {
         }
 	}
 }
+Entity119 = {
+	Name = "UI_Manager",
+	Components = {
+		{
+			Name = "UI_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
+Entity120 = {
+	Name = "Game_Manager",
+	Components = {
+		{
+			Name = "GAME_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, 
+Entities = {Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, 
 Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, 
 Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29,
  Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
@@ -2456,7 +2476,7 @@ Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, 
 	Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99,
 	 Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108,
 	  Entity109, Entity110, Entity111, Entity112, Entity113,Entity114,Entity115 ,Entity116,Entity117,
-	  Entity118}
+	  Entity118,Entity119,Entity120}
 
 CollisionLayers = {
 	Layers = {

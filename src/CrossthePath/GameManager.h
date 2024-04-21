@@ -2,35 +2,33 @@
 #ifndef GAME_MANAGER_H
 #define GAME_MANAGER_H
 
-#include "Component.h"
 #include "Singleton.h"
 namespace eden_ec {
 	class Entity;
-	class GameManager : public Component, public Singleton<GameManager>
+	class UIManager;
+	class GameManager : public Singleton<GameManager>
 	{
 		friend Singleton<GameManager>;
 	public:
-		GameManager() = default;
+		GameManager();
 		~GameManager();
 
-		static std::string GetID() { return _id; }
-
-		void Init(eden_script::ComponentArguments* args) override;
-
-		void Start() override;
-
-		void Update(float t) override;
+		void Update(float t);
 
 		void PlayerWin();
+
+		void PlayAgain();
 
 		Entity* GetPlayer();
 		
 		void SetPlayer(Entity* pl);
-
-	protected:
-		const static std::string _id;
+		void SetUI(UIManager* ui);
+		void Begin();
 	private:
 		Entity* _player = nullptr;
+		UIManager* _uiManager = nullptr;
+
+		bool _start = false;
 	};
 }
 #endif //GAME_MANAGER_H

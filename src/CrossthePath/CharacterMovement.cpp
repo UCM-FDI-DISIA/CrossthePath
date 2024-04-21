@@ -26,11 +26,11 @@ void eden_ec::CharacterMovement::Start() {
 	_animator->PlayAnim("Idle");
 
 	_initialRotation = _transform->GetRotation();
+	eden_ec::GameManager::Instance()->SetPlayer(_ent);
 }
 
 void eden_ec::CharacterMovement::Init(eden_script::ComponentArguments* args) {
 	_inputManager = eden_input::InputManager::getInstance();
-	eden_ec::GameManager::Instance()->SetPlayer(_ent);
 }
 //
 //void eden_ec::CharacterMovement::MoveCharacter(eden_utils::Vector3 dir, float dt, float angle) {
@@ -79,7 +79,17 @@ void eden_ec::CharacterMovement::PlayAnimation() {
 	}
 }
 
+void eden_ec::CharacterMovement::StartMoving()
+{
+	eden_ec::GameManager::Instance()->Begin();
+}
+
 void eden_ec::CharacterMovement::MoveCharacter(eden_utils::Vector3 dir, float dt, float angle) {
+	
+	if (_firstMove) {
+		_firstMove = false;
+		StartMoving();
+	}
 	switch (currentAction) {
 	case MOVING:
 		_animator->PlayAnim("Walk");
