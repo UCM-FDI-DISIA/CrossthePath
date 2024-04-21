@@ -27,6 +27,8 @@ void eden_ec::Hito2Prueba::Start() {
 	scriptM->Regist(*this, "Game", &eden_ec::Hito2Prueba::Pause, "Pause", this);
 	scriptM->SetGlobal(this, "Game");
 	scriptM = nullptr;
+
+	initialRotation = new eden_utils::Quaternion(transform->GetRotation());
 }
 
 void eden_ec::Hito2Prueba::Init(eden_script::ComponentArguments* args) {
