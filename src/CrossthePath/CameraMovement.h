@@ -8,7 +8,7 @@ namespace eden_utils {
 }
 namespace eden_ec {
 	class CTransform;
-	/// @brief Clase encargada del movimiento de la cámara siguiendo al jugador
+	/// @brief Clase encargada del movimiento de la camara siguiendo al jugador
 	class CameraMovement : public Component {
 	public:
 		CameraMovement() = default;

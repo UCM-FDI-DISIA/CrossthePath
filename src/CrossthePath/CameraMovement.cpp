@@ -13,7 +13,7 @@ void eden_ec::CameraMovement::Start() {
 
 void eden_ec::CameraMovement::Update(float dt) 
 {
-	//Calculamos la dirección en la que se moverá la cámara
+	//Calculamos la direccion en la que se movera la camara
 	eden_utils::Vector3 dir =
 		eden_utils::Vector3(_playerTransform->GetPosition().GetX()+_offset, _playerTransform->GetPosition().GetY(), _playerTransform->GetPosition().GetZ()) - _transform->GetPosition();
 	dir.Normalize();
