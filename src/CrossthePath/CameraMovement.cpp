@@ -5,6 +5,12 @@
 #include "GameManager.h"
 
 const std::string eden_ec::CameraMovement::_id = "PLAYERCAMERA";
+
+eden_ec::CameraMovement::~CameraMovement()
+{
+	delete _initialRotation;
+}
+
 void eden_ec::CameraMovement::Start() {
 	_transform = _ent->GetComponent<CTransform>();
 	_playerTransform = eden_ec::GameManager::Instance()->GetPlayer()->GetComponent<CTransform>();

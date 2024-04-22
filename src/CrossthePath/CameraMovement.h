@@ -12,7 +12,7 @@ namespace eden_ec {
 	class CameraMovement : public Component {
 	public:
 		CameraMovement() = default;
-		~CameraMovement() = default;
+		~CameraMovement() override;
 
 		static std::string GetID() { return _id; }
 
