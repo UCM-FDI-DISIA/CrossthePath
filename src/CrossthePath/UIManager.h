@@ -19,7 +19,7 @@ namespace eden_ec {
 
 		void Init(eden_script::ComponentArguments* args) override;
 
-		void Awake() override {};
+		void Awake() override;
 
 		void Start() override;
 
