@@ -16,7 +16,7 @@ function Pause:OnButtonClick()
 end
 function Pause:OnButtonReleased()
 	print("Estoy encima del boton");
-	Game:Pause();
+	Pausa:PauseGame();
 end
 --Variable global de la clase (para Luabridge)
 PauseLua = Pause:new()
