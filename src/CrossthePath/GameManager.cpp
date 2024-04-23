@@ -33,6 +33,11 @@ eden_ec::Entity* eden_ec::GameManager::GetPlayer()
 	return _player;
 }
 
+std::unordered_map<std::string, eden_ec::Entity*>* eden_ec::GameManager::GetEnemies()
+{
+	return &_enemies;
+}
+
 void eden_ec::GameManager::SetPlayer(Entity* pl)
 {
 	_player = pl;

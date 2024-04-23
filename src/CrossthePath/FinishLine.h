@@ -3,6 +3,8 @@
 #define FINISH_LINE_H
 
 #include "Component.h"
+#include <string>
+#include <unordered_map>
 
 namespace eden_ec {
 	class CTransform;
@@ -14,7 +16,7 @@ namespace eden_ec {
 
 		static std::string GetID() { return _id; }
 
-		void Init(eden_script::ComponentArguments* args) {};
+		void Init(eden_script::ComponentArguments* args);
 
 		void Awake() override {};
 
@@ -27,7 +29,10 @@ namespace eden_ec {
 	private:
 		eden_ec::CTransform* _transform;
 		eden_ec::CTransform* _playerTransform;
-		bool win = false;
+		std::unordered_map<std::string, Entity*>* _enemies;
+		bool _win = false;
+		bool _isPlayer = true; 
+		void DestroyEntities();
 	};
 }
 #endif //FINISH_LINE_H
