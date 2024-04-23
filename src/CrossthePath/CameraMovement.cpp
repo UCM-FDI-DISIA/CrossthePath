@@ -5,6 +5,12 @@
 #include "GameManager.h"
 
 const std::string eden_ec::CameraMovement::_id = "PLAYERCAMERA";
+
+eden_ec::CameraMovement::~CameraMovement()
+{
+	delete _initialRotation;
+}
+
 void eden_ec::CameraMovement::Start() {
 	_transform = _ent->GetComponent<CTransform>();
 	_playerTransform = eden_ec::GameManager::Instance()->GetPlayer()->GetComponent<CTransform>();
@@ -13,7 +19,7 @@ void eden_ec::CameraMovement::Start() {
 
 void eden_ec::CameraMovement::Update(float dt) 
 {
-	//Calculamos la dirección en la que se moverá la cámara
+	//Calculamos la direccion en la que se movera la camara
 	eden_utils::Vector3 dir =
 		eden_utils::Vector3(_playerTransform->GetPosition().GetX()+_offset, _playerTransform->GetPosition().GetY(), _playerTransform->GetPosition().GetZ()) - _transform->GetPosition();
 	dir.Normalize();

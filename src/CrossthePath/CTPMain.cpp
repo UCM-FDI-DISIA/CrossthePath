@@ -9,7 +9,8 @@
 #include "UIManager.h"
 #include "GameManagerController.h"
 
-void RegisterComponents(eden_ec::ComponentFactory* factory) {
+void RegisterComponents() {
+	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
 	factory->RegisterComponent<eden_ec::Hito2MenuPausa>();
 	factory->RegisterComponent<eden_ec::CharacterMovement>();
 	factory->RegisterComponent<eden_ec::CameraMovement>();
@@ -18,7 +19,7 @@ void RegisterComponents(eden_ec::ComponentFactory* factory) {
 	factory->RegisterComponent<eden_ec::GameManagerController>();
 }
 
-void LoadScene(eden::SceneManager* scnManager) {
-	scnManager->PushScene("Menu");
+void LoadScene() {
+	eden::SceneManager::getInstance()->PushScene("Menu");
 }
 

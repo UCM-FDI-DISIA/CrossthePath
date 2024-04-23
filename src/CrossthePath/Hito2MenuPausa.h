@@ -37,6 +37,8 @@ namespace eden_ec {
 
 		void BackToMenu();
 
+		void Pause();
+
 	protected:
 		const static std::string _id;
 	private:
