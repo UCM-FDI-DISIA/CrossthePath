@@ -103,7 +103,6 @@
     <ClInclude Include="..\..\src\CrossthePath\InstanciateEnemies.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="EnemiesMovement.h" />
-    <ClInclude Include="InstanciateEnemies.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +115,6 @@
     <ClCompile Include="..\..\src\CrossthePath\InstanciateEnemies.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="EnemiesMovement.cpp" />
-    <ClCompile Include="InstanciateEnemies.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
