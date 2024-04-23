@@ -10,6 +10,17 @@ eden_ec::GameManager::GameManager(){
 
 eden_ec::GameManager::~GameManager()
 {
+	
+}
+
+void eden_ec::GameManager::Awake()
+{
+
+}
+
+void eden_ec::GameManager::Start()
+{
+	_uiManager->Start();
 }
 
 void eden_ec::GameManager::Update(float dt) {
@@ -24,13 +35,35 @@ void eden_ec::GameManager::PlayerWin()
 void eden_ec::GameManager::PlayAgain()
 {
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	//scnManager->ChangeScene("CrossThePathFinal");
-	scnManager->ChangeScene("Menu");
+	scnManager->ChangeScene("CrossThePathFinal");
+}
+
+eden_ec::UIManager* eden_ec::GameManager::GetUI()
+{
+	return _uiManager;
 }
 
 eden_ec::Entity* eden_ec::GameManager::GetPlayer()
 {
 	return _player;
+}
+
+std::unordered_map<std::string, eden_ec::Entity*>* eden_ec::GameManager::GetEnemies()
+{
+	return &_enemies;
+}
+
+void eden_ec::GameManager::DestroyEnemy(std::string enemyID)
+{
+	auto it = _enemies.find(enemyID);
+	if (it != _enemies.end())
+	{
+		delete it->second;
+	}
+	else
+	{
+		//excepcion?
+	}
 }
 
 void eden_ec::GameManager::SetPlayer(Entity* pl)

@@ -4,22 +4,26 @@
 
 #include "Component.h"
 #include "Singleton.h"
+
 namespace eden_ec {
 	class Entity;
 	class UIManager;
+	class GameManager;
 	class GameManagerController : public Component	{
 	public:
 		GameManagerController();
 		~GameManagerController();
 
 		void Update(float t);
-		void Awake() override {};
-		void Start() override {}
+		void Awake() {};
+		void Start() override;
 		static std::string GetID() { return _id; }
 
 		void Init(eden_script::ComponentArguments* args) {};
 	protected:
 		const static std::string _id;
+	private:
+		eden_ec::GameManager* _gameManager;
 	};
 }
 #endif //GAME_MANAGER_CONTROLLER_H

@@ -8,6 +8,7 @@
 #include "FinishLine.h"
 #include "UIManager.h"
 #include "GameManagerController.h"
+#include "UIManagerComponent.h"
 
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
@@ -17,6 +18,7 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::FinishLine>();
 	factory->RegisterComponent<eden_ec::UIManager>();
 	factory->RegisterComponent<eden_ec::GameManagerController>();
+	factory->RegisterComponent<eden_ec::UIManagerComponent>();
 }
 
 void LoadScene() {

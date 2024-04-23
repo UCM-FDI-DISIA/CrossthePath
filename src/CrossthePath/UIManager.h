@@ -7,7 +7,9 @@
 
 namespace eden_ec {
 	class UIComponent;
-	class UIManager : public Component {
+	class Entity;
+	class UIManager : public Component 
+	{
 	public:
 		enum UI_Elements {
 			WIN,GAMEOVER,SCORE,TIMER,PLAY,PAUSE
@@ -17,18 +19,24 @@ namespace eden_ec {
 
 		static std::string GetID() { return _id; }
 
-		void Init(eden_script::ComponentArguments* args) override;
+		void Init(eden_script::ComponentArguments* args) {}
 
 		void Awake() override;
 
 		void Start() override;
 
+		/// @brief Registra los elementos de la UI
+		void Register(Entity* ent, UI_Elements element);
+
 		void Update(float t) override;
 
+		/// @brief Enseña el cartel de Win
 		void ShowWin();
 
+		/// @breig Replay
 		void PlayAgain();
 
+		/// @Update del timer
 		void Timer(float tm);
 
 	protected:

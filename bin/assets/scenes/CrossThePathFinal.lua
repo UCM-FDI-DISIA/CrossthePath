@@ -2439,11 +2439,28 @@ Entity118 = {
 		{
             Name = "FINISH_LINE",
             Arguments = {
+				IsPlayer = "true"
+			}
+        },
+		{
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "FinishLine",
 			}
         }
 	}
 }
 Entity119 = {
+	Name = "Game_Manager",
+	Components = {
+		{
+			Name = "GAME_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
+Entity120 = {
 	Name = "UI_Manager",
 	Components = {
 		{
@@ -2453,15 +2470,83 @@ Entity119 = {
 		}
 	}
 }
-Entity120 = {
-	Name = "Game_Manager",
+Entity121 = {
+	Name = "win",
 	Components = {
 		{
-			Name = "GAME_MANAGER",
+			Name = "IMAGE",
 			Arguments = {
+                OverlayName= "win",
+				XPos = "50",
+                YPos = "40",
+                Width = "75",
+                Height = "75",
+                Texture = "Win.png",
+                Depth = "1"
+			}
+		},
+		{
+			Name = "UI_MANAGER_COMPONENT",
+			Arguments ={
+				Element = 0
+			}
+		}
+	}	
+}
+Entity122 = {
+	Name = "play",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "button",
+				XPos = "50",
+                YPos = "80",
+                Width = "30",
+                Height = "15",
+                Texture1 = "MenuButton_Ini.png",
+                Texture2 = "MenuButton_Over.png",
+                Texture3 = "MenuButton_Clicked.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "PlayGame",
+			}
+        },
+		{
+			Name = "UI_MANAGER_COMPONENT",
+			Arguments ={
+				Element = 4
 			}
 		}
 	}
+}
+Entity123 = {
+	Name = "timer",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "85",
+                YPos = "7",
+                Tam = "7",
+                Text = "Timer: 0",
+                Font = "",
+                Color = "0|0|0",
+                Depth = "2"
+			}
+		},
+		{
+			Name = "UI_MANAGER_COMPONENT",
+			Arguments ={
+				Element = 3
+			}
+		}
+	}	
 }
 
 Entities = {Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, 
@@ -2476,7 +2561,7 @@ Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, 
 	Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99,
 	 Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108,
 	  Entity109, Entity110, Entity111, Entity112, Entity113,Entity114,Entity115 ,Entity116,Entity117,
-	  Entity118,Entity119,Entity120}
+	  Entity118,Entity119,Entity120,Entity121,Entity122,Entity123}
 
 CollisionLayers = {
 	Layers = {

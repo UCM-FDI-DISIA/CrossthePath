@@ -4,6 +4,8 @@
 
 #include "Component.h"
 #include "Quaternion.h"
+#include <vector>
+
 namespace eden_input {
 	class InputManager;
 }
@@ -36,11 +38,12 @@ namespace eden_ec {
 
 		void Update(float t) override;
 
-		void MoveCharacter(eden_utils::Vector3 dir, float dt, float angle = 0);
+		void MoveCharacter(float dt);
 
 		void PlayAnimation();
 
 		void StartMoving();
+
 	protected:
 		const static std::string _id;
 	private:
@@ -49,13 +52,12 @@ namespace eden_ec {
 		eden_ec::CTransform* _transform;
 		eden_ec::CAnimator* _animator;
 		eden_utils::Quaternion _initialRotation;
-		
-		bool keyReleased = true;
 
+		bool keyReleased = true;
 		bool _firstMove = true;
 
-		MovementAnimations currentAction = MovementAnimations::IDLE;
-		MovementDir currentDirMovement = MovementDir::STOP;
+		MovementAnimations _currentAction = MovementAnimations::IDLE;
+		MovementDir _currentDirMovement = MovementDir::STOP;
 	};
 }
 #endif //CHARACTER_MOVEMENT_H

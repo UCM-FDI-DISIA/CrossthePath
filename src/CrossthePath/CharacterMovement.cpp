@@ -11,6 +11,7 @@
 #include "ScriptManager.h"
 #include "LuaManager.h"
 #include "Vector3.h"
+#include "GameManager.h"
 
 #include "GameManager.h"
 
@@ -32,50 +33,22 @@ void eden_ec::CharacterMovement::Start() {
 void eden_ec::CharacterMovement::Init(eden_script::ComponentArguments* args) {
 	_inputManager = eden_input::InputManager::getInstance();
 }
-//
-//void eden_ec::CharacterMovement::MoveCharacter(eden_utils::Vector3 dir, float dt, float angle) {
-//	_transform->Translate(dir* dt);
-//	if (!keyPressed) {
-//		_animator->PlayAnim("Walk");
-//		_transform->SetRotation(_initialRotation);
-//		_transform->Roll(angle);
-//	}
-//	idle = false;
-//	keyPressed = true;
-//}
-//void eden_ec::CharacterMovement::Update(float dt) {
-//	if (_inputManager->IsKeyHeld('a')) {
-//		MoveCharacter(eden_utils::Vector3(0, -0.01, 0), dt, 90);
-//	}
-//	if (_inputManager->IsKeyHeld('s')) {
-//		MoveCharacter(eden_utils::Vector3(0.01, 0, 0), dt, 180);
-//	}
-//	if (_inputManager->IsKeyHeld('w')) {
-//		MoveCharacter(eden_utils::Vector3(-0.01, 0, 0), dt);
-//	}
-//	if (_inputManager->IsKeyHeld('d')) {
-//		MoveCharacter(eden_utils::Vector3(0, 0.01, 0), dt, -90);
-//	}
-//	
-//	if(!idle) _animator->PlayAnim("Idle");
-//	idle = true;
-//	if (keyPressed) keyPressed = false;
-//}
 
 void eden_ec::CharacterMovement::PlayAnimation() {
-	switch (currentAction){
-		case MOVING: 
-			_animator->PlayAnim("Walk"); 
-			break;
-		case DIE: 
-			_animator->PlayAnim("Die");
-			break;
-		case WIN:
-			_animator->PlayAnim("Win");
-			break;
-		default: 
-			_animator->PlayAnim("Idle");
-		
+
+	switch (_currentAction) {
+	case MOVING:
+		if (!_animator->IsPlaying("Walk")) _animator->PlayAnim("Walk");
+		break;
+	case DIE:
+		if (!_animator->IsPlaying("Die")) _animator->PlayAnim("Die");
+		break;
+	case WIN:
+		if (!_animator->IsPlaying("Win")) _animator->PlayAnim("Win");
+		break;
+	default:
+		if (!_animator->IsPlaying("Idle")) _animator->PlayAnim("Idle");
+
 	}
 }
 
@@ -84,54 +57,77 @@ void eden_ec::CharacterMovement::StartMoving()
 	eden_ec::GameManager::Instance()->Begin();
 }
 
-void eden_ec::CharacterMovement::MoveCharacter(eden_utils::Vector3 dir, float dt, float angle) {
-	
+void eden_ec::CharacterMovement::MoveCharacter(float dt) {
+
 	if (_firstMove) {
 		_firstMove = false;
 		StartMoving();
 	}
-	switch (currentAction) {
-	case MOVING:
-		_animator->PlayAnim("Walk");
-		break;
-	case DIE:
-		_animator->PlayAnim("Die");
-		break;
-	case WIN:
-		_animator->PlayAnim("Win");
-		break;
-	default:
-		_animator->PlayAnim("Idle");
 
+	_transform->SetRotation(_initialRotation);
+	_currentAction = MOVING;
+
+	switch (_currentDirMovement) {
+	case DOWN:
+	{
+		_transform->Translate(eden_utils::Vector3(0.01, 0, 0).Normalized() * dt);
+		_transform->Roll(180);
+	}
+	break;
+	case LEFT:
+	{
+		_transform->Translate(eden_utils::Vector3(0, -0.01, 0).Normalized() * dt);
+		_transform->Roll(90);
+	}
+	break;
+	case RIGHT:
+	{
+		_transform->Translate(eden_utils::Vector3(0, 0.01, 0).Normalized() * dt);
+		_transform->Roll(-90);
+	}
+	break;
+	case UP:
+	{
+		_transform->Translate(eden_utils::Vector3(-0.01, 0, 0).Normalized() * dt);
+	}
 	}
 
-	_transform->Translate(dir.Normalized() * dt);
-	_transform->SetRotation(_initialRotation);
-	_transform->Roll(angle);
-	
-	currentAction = MOVING;
-	keyReleased = false;
 }
+
 
 void eden_ec::CharacterMovement::Update(float dt) {
 	PlayAnimation();
+	keyReleased = true;
+
 	if (_inputManager->IsKeyHeld('a')) {
-		currentDirMovement = LEFT;
-		MoveCharacter(eden_utils::Vector3(0, -0.01, 0), dt, 90);
+		_currentDirMovement = LEFT;
+		keyReleased = false;
+
 	}
 
 	if (_inputManager->IsKeyHeld('s')) {
-		MoveCharacter(eden_utils::Vector3(0.01, 0, 0), dt, 180);
+		_currentDirMovement = DOWN;
+		keyReleased = false;
+
 	}
 
 	if (_inputManager->IsKeyHeld('w')) {
-		MoveCharacter(eden_utils::Vector3(-0.01, 0, 0), dt);
+		_currentDirMovement = UP;
+		keyReleased = false;
+
 	}
 
 	if (_inputManager->IsKeyHeld('d')) {
-		MoveCharacter(eden_utils::Vector3(0, 0.01, 0), dt, -90);
+		_currentDirMovement = RIGHT;
+		keyReleased = false;
+
 	}
-	currentAction = IDLE;
-	_animator->OnAnimEnd();
-	keyReleased = true;
+
+
+	if (keyReleased) {
+		_currentAction = IDLE;
+	}
+	else MoveCharacter(dt);
+
+
 }
