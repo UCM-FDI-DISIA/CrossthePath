@@ -2439,6 +2439,13 @@ Entity118 = {
 		{
             Name = "FINISH_LINE",
             Arguments = {
+				IsPlayer = "true"
+			}
+        },
+		{
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "FinishLine",
 			}
         }
 	}

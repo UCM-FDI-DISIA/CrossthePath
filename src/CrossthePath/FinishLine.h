@@ -33,6 +33,7 @@ namespace eden_ec {
 		bool _win = false;
 		bool _isPlayer = true; 
 		void DestroyEntities();
+		void PlayerWin();
 	};
 }
 #endif //FINISH_LINE_H

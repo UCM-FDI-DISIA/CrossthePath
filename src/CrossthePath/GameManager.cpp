@@ -38,6 +38,19 @@ std::unordered_map<std::string, eden_ec::Entity*>* eden_ec::GameManager::GetEnem
 	return &_enemies;
 }
 
+void eden_ec::GameManager::DestroyEnemy(std::string enemyID)
+{
+	auto it = _enemies.find(enemyID);
+	if (it != _enemies.end())
+	{
+		delete it->second;
+	}
+	else
+	{
+		//excepcion?
+	}
+}
+
 void eden_ec::GameManager::SetPlayer(Entity* pl)
 {
 	_player = pl;

@@ -23,6 +23,8 @@ namespace eden_ec {
 		Entity* GetPlayer();
 
 		std::unordered_map<std::string, eden_ec::Entity*> *GetEnemies();
+
+		void DestroyEnemy(std::string enemyID);
 		
 		void SetPlayer(Entity* pl);
 		void SetUI(UIManager* ui);
