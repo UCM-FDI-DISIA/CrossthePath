@@ -99,8 +99,9 @@
     <ClInclude Include="..\..\src\CrossthePath\FinishLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManagerController.h" />
-    <ClInclude Include="..\..\src\CrossthePath\Hito2MenuPausa.h" />
     <ClInclude Include="..\..\src\CrossthePath\InstanciateEnemies.h" />
+    <ClInclude Include="..\..\src\CrossthePath\MenuOpciones.h" />
+    <ClInclude Include="..\..\src\CrossthePath\MenuPausa.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManagerComponent.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
@@ -111,8 +112,9 @@
     <ClCompile Include="..\..\src\CrossthePath\FinishLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManagerController.cpp" />
-    <ClCompile Include="..\..\src\CrossthePath\Hito2MenuPausa.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\InstanciateEnemies.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\MenuOpciones.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\MenuPausa.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManagerComponent.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />

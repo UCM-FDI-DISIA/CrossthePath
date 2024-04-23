@@ -3,38 +3,80 @@
 #include "Entity.h"
 #include "UIManager.h" 
 #include <SceneManager.h>
+#include <InputManager.h>
+#include <RenderManager.h>
+#include "CText.h"
+#include "CBar.h"
+#include <Scene.h>
 
-
-eden_ec::GameManager::GameManager(){
-}
-
-eden_ec::GameManager::~GameManager()
+eden_ec::GameManager::GameManager()
 {
-	
-}
+	std::vector<std::pair<int, int>> resolutions;
+	resolutions.push_back({ 640,480 });
+	resolutions.push_back({ 1280,720 });
+	resolutions.push_back({ 960,540 });
+	eden_render::RenderManager::getInstance()->SetResolutions(resolutions);
 
-void eden_ec::GameManager::Awake()
-{
-
-}
-
-void eden_ec::GameManager::Start()
-{
+	_states.push_back(MainMenu);
+	_currState = _states[0];
 }
 
 void eden_ec::GameManager::Update(float dt) {
-	if(_start)_uiManager->Timer(dt);
+	if (_start && _currState == Game && _uiManager!=nullptr)_uiManager->Timer(dt);
 }
 
 void eden_ec::GameManager::PlayerWin()
 {
+	_currState = Win;
+	_states[0] = _currState;
 	_uiManager->ShowWin();
 }
 
-void eden_ec::GameManager::PlayAgain()
+void eden_ec::GameManager::Play()
 {
+	_currState = Game;
+	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("CrossThePathFinal");
+}
+
+void eden_ec::GameManager::PauseGame()
+{
+	_currState = Pause;
+	_states.push_back(_currState);
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
+	scnManager->PushScene("MenuPausa");
+}
+
+void eden_ec::GameManager::GoBack()
+{
+	_states.pop_back();
+	_currState = _states[_states.size() - 1];
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
+	scnManager->PopScene();
+}
+
+void eden_ec::GameManager::GoOptions()
+{
+	_currState = Options;
+	_states.push_back(_currState);
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
+	scnManager->PushScene("Options");
+}
+
+void eden_ec::GameManager::GoMainMenu()
+{
+	_currState = MainMenu;
+	_states[0] = _currState;
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
+	scnManager->ChangeScene("Menu");
+}
+
+void eden_ec::GameManager::CloseGame()
+{
+	_currState = Exit;
+	_states[0] = _currState;
+	eden_input::InputManager::getInstance()->SetCloseWindow();
 }
 
 eden_ec::UIManager* eden_ec::GameManager::GetUI()
@@ -77,5 +119,8 @@ void eden_ec::GameManager::SetUI(UIManager* ui)
 
 void eden_ec::GameManager::Begin()
 {
+	//Provisional  HAY QUE HACER EL MENU DE INICIO EN EL JUEGO
+	_currState = Game;
+	_states[0] = _currState;
 	_start = true;
 }

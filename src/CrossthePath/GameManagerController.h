@@ -24,6 +24,7 @@ namespace eden_ec {
 		const static std::string _id;
 	private:
 		eden_ec::GameManager* _gameManager;
+		bool original = false;
 	};
 }
 #endif //GAME_MANAGER_CONTROLLER_H

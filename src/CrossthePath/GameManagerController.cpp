@@ -5,6 +5,8 @@
 #include "EdenMaster.h"
 #include "SceneManager.h"
 #include "Scene.h"
+#include "Entity.h"
+
 
 const std::string eden_ec::GameManagerController::_id = "GAME_MANAGER";
 
@@ -15,7 +17,7 @@ eden_ec::GameManagerController::GameManagerController() {
 
 eden_ec::GameManagerController::~GameManagerController()
 {
-	eden_ec::GameManager::Instance()->Close();
+	if(original)eden_ec::GameManager::Instance()->Close();
 }
 
 void eden_ec::GameManagerController::Update(float dt) {
@@ -29,6 +31,9 @@ void eden_ec::GameManagerController::Awake()
 void eden_ec::GameManagerController::Start()
 {
 	eden::SceneManager::getInstance()->GetCurrentScene()->RemoveGameObject(_ent);
-	eden::SceneManager::getInstance()->GeDontDestroyOnLoadScene()->AddExistingGameObject(_ent);
-	_gameManager->Start();
+	if (eden::SceneManager::getInstance()->GeDontDestroyOnLoadScene()->AddExistingGameObject(_ent)) {
+		original = true;
+		_gameManager->Start();
+	}
+	else _ent->SetAlive(false);
 }

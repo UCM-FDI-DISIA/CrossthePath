@@ -54,7 +54,7 @@ void eden_ec::UIManager::ShowWin()
 
 void eden_ec::UIManager::PlayAgain()
 {
-	eden_ec::GameManager::Instance()->PlayAgain();
+	eden_ec::GameManager::Instance()->Play();
 }
 
 void eden_ec::UIManager::Timer(float tm)
