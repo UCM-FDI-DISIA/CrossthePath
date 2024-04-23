@@ -1,18 +1,18 @@
 --Definicion de la clase en Lua
-finishLineEnemies = {}
+FinishLineEnemies = {}
 
-finishLineEnemies.__index = finishLineEnemies
+FinishLineEnemies.__index = FinishLineEnemies
 
 --Constructor de la clase en Lua
-function finishLineEnemies:new()
+function FinishLineEnemies:new()
 	local obj={}
-	setmetatable(obj, finishLineEnemies)
+	setmetatable(obj, FinishLineEnemies)
 	return obj
 end
 
 --Metodo OnCollisionEnter
-function collisionTest:OnCollisionEnter()
+function FinishLineEnemies:OnCollisionEnter()
 	FinishLine:DestroyEntities();
 end
 --Variable global de la clase (para Luabridge)
-finishLineEnemiesLua = finishLineEnemies:new()
+FinishLineEnemiesLua = FinishLineEnemies:new()

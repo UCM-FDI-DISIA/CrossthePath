@@ -20,7 +20,6 @@ void eden_ec::GameManager::Awake()
 
 void eden_ec::GameManager::Start()
 {
-	_uiManager->Start();
 }
 
 void eden_ec::GameManager::Update(float dt) {

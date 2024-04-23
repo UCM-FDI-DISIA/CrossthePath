@@ -2445,22 +2445,12 @@ Entity118 = {
 		{
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "FinishLine",
+                Script= "FinishLinePlayer",
 			}
         }
 	}
 }
 Entity119 = {
-	Name = "Game_Manager",
-	Components = {
-		{
-			Name = "GAME_MANAGER",
-			Arguments = {
-			}
-		}
-	}
-}
-Entity120 = {
 	Name = "UI_Manager",
 	Components = {
 		{
@@ -2470,7 +2460,7 @@ Entity120 = {
 		}
 	}
 }
-Entity121 = {
+Entity120 = {
 	Name = "win",
 	Components = {
 		{
@@ -2493,7 +2483,7 @@ Entity121 = {
 		}
 	}	
 }
-Entity122 = {
+Entity121 = {
 	Name = "play",
 	Components = {
 		{
@@ -2524,7 +2514,7 @@ Entity122 = {
 		}
 	}
 }
-Entity123 = {
+Entity122 = {
 	Name = "timer",
 	Components = {
 		{
@@ -2561,7 +2551,7 @@ Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, 
 	Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99,
 	 Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108,
 	  Entity109, Entity110, Entity111, Entity112, Entity113,Entity114,Entity115 ,Entity116,Entity117,
-	  Entity118,Entity119,Entity120,Entity121,Entity122,Entity123}
+	  Entity118,Entity119,Entity120,Entity121,Entity122}
 
 CollisionLayers = {
 	Layers = {

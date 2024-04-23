@@ -106,7 +106,18 @@ Entity4 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3,Entity4}
+Entity5 = {
+	Name = "Game_Manager",
+	Components = {
+		{
+			Name = "GAME_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
+
+Entities = { Entity1, Entity2, Entity3,Entity4,Entity5}
 
 CollisionLayers = {
 	Layers = {
