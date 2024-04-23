@@ -4,10 +4,6 @@
 
 #include "Component.h"
 
-namespace eden_input {
-	class InputManager;
-}
-
 namespace eden_ec {
 	class CTransform;
 	class CAnimator;
@@ -41,9 +37,6 @@ namespace eden_ec {
 
 	protected:
 		const static std::string _id;
-	private:
-
-		eden_input::InputManager* inputManager;
 	};
 }
 #endif //HITO2_MENU_PAUSA_H

@@ -25,7 +25,6 @@ eden_ec::Hito2MenuPausa::Hito2MenuPausa() {
 void eden_ec::Hito2MenuPausa::Init(eden_script::ComponentArguments* args) {
 }
 void eden_ec::Hito2MenuPausa::Start() {
-	inputManager = eden_input::InputManager::getInstance();
 	
 }
 
@@ -41,7 +40,7 @@ void eden_ec::Hito2MenuPausa::ResumeGame()
 
 void eden_ec::Hito2MenuPausa::ExitGame()
 {
-	inputManager->SetCloseWindow();
+	eden_input::InputManager::getInstance()->SetCloseWindow();
 }
 
 void eden_ec::Hito2MenuPausa::BackToMenu()

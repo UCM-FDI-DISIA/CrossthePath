@@ -9,7 +9,10 @@
     <ClCompile Include="..\..\src\CrossthePath\FinishLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManagerController.cpp" />
+
+    <ClCompile Include="..\..\src\CrossthePath\UIManagerComponent.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\InstanciateEnemies.cpp" />
+
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h" />
@@ -20,6 +23,9 @@
     <ClInclude Include="..\..\src\CrossthePath\FinishLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManagerController.h" />
+
+    <ClInclude Include="..\..\src\CrossthePath\UIManagerComponent.h" />
+
     <ClInclude Include="..\..\src\CrossthePath\InstanciateEnemies.h" />
   </ItemGroup>
 </Project>

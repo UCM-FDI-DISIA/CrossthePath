@@ -14,12 +14,17 @@ namespace eden_ec {
 		GameManager();
 		~GameManager();
 
+		void Awake();
+
+		void Start();
+
 		void Update(float t);
 
 		void PlayerWin();
 
 		void PlayAgain();
 
+		UIManager* GetUI();
 		Entity* GetPlayer();
 
 		std::unordered_map<std::string, eden_ec::Entity*> *GetEnemies();

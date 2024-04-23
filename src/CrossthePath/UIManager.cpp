@@ -7,7 +7,6 @@
 #include "CLuaBehaviour.h"
 #include "CText.h"
 
-#include <Canvas.h>
 #include <ScriptManager.h>
 #include <LuaManager.h>
 #include <math.h>
@@ -15,7 +14,7 @@
 const std::string eden_ec::UIManager::_id = "UI_MANAGER";
 void eden_ec::UIManager::Awake() {
 
-	eden_ec::GameManager::Instance()->SetUI(this);
+	/*eden_ec::GameManager::Instance()->SetUI(this);
 
 	eden_canvas::Canvas* canvas = eden_canvas::Canvas::Instance();
 
@@ -38,13 +37,18 @@ void eden_ec::UIManager::Awake() {
 	ent->AddComponent<eden_ec::CText>("timer", 85, 7, 7,"Timer: 0", "", 0, 0, 0, 2);
 	ent->GetComponent<CText>()->Register(ent->GetSceneID());
 	ent->GetComponent<CText>()->SetParameters();
-	_elementsUI[TIMER] = ent;
+	_elementsUI[TIMER] = ent;*/
 
 }
 
 void eden_ec::UIManager::Start() {
-	_elementsUI[WIN]->GetComponent<CImage>()->Hide();
-	_elementsUI[PLAY]->GetComponent<CButton>()->Hide();
+	if(_elementsUI[WIN]!=nullptr)_elementsUI[WIN]->GetComponent<CImage>()->Hide();
+	if (_elementsUI[PLAY] != nullptr)_elementsUI[PLAY]->GetComponent<CButton>()->Hide();
+}
+
+void eden_ec::UIManager::Register(Entity* ent, UI_Elements element)
+{
+	_elementsUI[element] = ent;
 }
 
 eden_ec::UIManager::UIManager()
@@ -54,23 +58,17 @@ eden_ec::UIManager::UIManager()
 	scriptM->Regist(*this, "Play", &eden_ec::UIManager::PlayAgain, "Replay", this);
 	scriptM->SetGlobal(this, "Play");
 	scriptM = nullptr;
+
+	eden_ec::GameManager::Instance()->SetUI(this);
 }
 
 eden_ec::UIManager::~UIManager()
 {
-	for (auto it = _elementsUI.begin(); it != _elementsUI.end(); it++) {
-		delete (*it).second;
-	}
-}
 
-void eden_ec::UIManager::Init(eden_script::ComponentArguments* args) {
 }
 
 void eden_ec::UIManager::Update(float dt) {
 
-	for (auto it = _elementsUI.begin(); it != _elementsUI.end(); it++) {
-		(*it).second->Update(dt);
-	}
 }
 
 void eden_ec::UIManager::ShowWin()
