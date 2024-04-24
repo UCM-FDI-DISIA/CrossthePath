@@ -155,7 +155,39 @@ Entity6 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6}
+Entity7 = {
+	Name = "options",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "options",
+				XPos = "90",
+                YPos = "90",
+                Width = "15",
+                Height = "15",
+                Texture1 = "Options.png",
+                Texture2 = "Options.png",
+                Texture3 = "Options.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Options",
+			}
+        },
+		{
+            Name = "PAUSA",
+            Arguments = {
+
+			}
+        }
+	}	
+}
+
+Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6,Entity7}
 
 CollisionLayers = {
 	Layers = {

@@ -15,7 +15,7 @@ namespace eden_ec {
 		~GameManagerController();
 
 		void Update(float t);
-		void Awake() {};
+		void Awake() override;
 		void Start() override;
 		static std::string GetID() { return _id; }
 
@@ -24,6 +24,7 @@ namespace eden_ec {
 		const static std::string _id;
 	private:
 		eden_ec::GameManager* _gameManager;
+		bool original = false;
 	};
 }
 #endif //GAME_MANAGER_CONTROLLER_H

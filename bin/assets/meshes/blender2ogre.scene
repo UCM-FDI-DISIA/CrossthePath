@@ -1,20 +1,306 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- exporter: blender2ogre 0.8.3 -->
-<!-- export_time: Sun, 07 Apr 2024 19:11:23 +0000 -->
+<!-- export_time: Tue, 23 Apr 2024 16:01:42 +0000 -->
 <scene author="czarz" formatVersion="1.1" >
   <nodes >
-    <node name="Cube" >
+    <node name="trash_B" >
       <position x="0.000000" y="0.000000" z="0.000000" />
       <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
       <scale x="1.000000" y="1.000000" z="1.000000" />
-      <entity meshFile="PruebaCubo.mesh" name="Cube" >
+      <entity meshFile="trash_B.mesh" name="trash_B" >
+        <userData />
+      </entity>
+    </node>
+    <node name="trafficlight_C" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="trafficlight_C.mesh" name="trafficlight_C" >
+        <userData />
+      </entity>
+    </node>
+    <node name="trafficlight_B" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="trafficlight_B.mesh" name="trafficlight_B" >
+        <userData />
+      </entity>
+    </node>
+    <node name="trafficlight_A" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="trafficlight_A.mesh" name="trafficlight_A" >
+        <userData />
+      </entity>
+    </node>
+    <node name="streetlight" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="streetlight.mesh" name="streetlight" >
+        <userData />
+      </entity>
+    </node>
+    <node name="road_straight_crossing" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="road_straight_crossing.mesh" name="road_straight_crossing" >
+        <userData />
+      </entity>
+    </node>
+    <node name="road_straight" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="road_straight.mesh" name="road_straight" >
+        <userData />
+      </entity>
+    </node>
+    <node name="redCar" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="redCar.mesh" name="redCar" >
+        <userData />
+      </entity>
+    </node>
+    <node name="firehydrant" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="firehydrant.mesh" name="firehydrant" >
+        <userData />
+      </entity>
+    </node>
+    <node name="dumpster" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="dumpster.mesh" name="dumpster" >
+        <userData />
+      </entity>
+    </node>
+    <node name="car_taxi" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="car_taxi.mesh" name="car_taxi" >
+        <userData />
+      </entity>
+    </node>
+    <node name="car_stationwagon" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="car_stationwagon.mesh" name="car_stationwagon" >
+        <userData />
+      </entity>
+    </node>
+    <node name="car_police" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="car_police.mesh" name="car_police" >
+        <userData />
+      </entity>
+    </node>
+    <node name="car_hatchback" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="car_hatchback.mesh" name="car_hatchback" >
+        <userData />
+      </entity>
+    </node>
+    <node name="bush" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="bush.mesh" name="bush" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_H" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_H.mesh" name="building_H" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_G" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_G.mesh" name="building_G" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_F" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_F.mesh" name="building_F" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_E" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_E.mesh" name="building_E" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_D" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_D.mesh" name="building_D" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_C" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_C.mesh" name="building_C" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_B" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_B.mesh" name="building_B" >
+        <userData />
+      </entity>
+    </node>
+    <node name="building_A" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="building_A.mesh" name="building_A" >
+        <userData />
+      </entity>
+    </node>
+    <node name="box_B" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="box_B.mesh" name="box_B" >
+        <userData />
+      </entity>
+    </node>
+    <node name="box_A" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="box_A.mesh" name="box_A" >
+        <userData />
+      </entity>
+    </node>
+    <node name="bench" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="bench.001.mesh" name="bench" >
+        <userData />
+      </entity>
+    </node>
+    <node name="base" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <entity meshFile="base.001.mesh" name="base" >
         <userData />
       </entity>
     </node>
   </nodes>
   <externals >
     <item type="material" >
-      <file name="Material.material" />
+      <file name="citybits_texture.018.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.013.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.005.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.012.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.027.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.007.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.014.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.025.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.006.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.024.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.017.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.002.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.010.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.011.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.021.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.003.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.009.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.015.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.026.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.028.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.022.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.020.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.004.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.023.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.016.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.019.material" />
+    </item>
+    <item type="material" >
+      <file name="citybits_texture.008.material" />
     </item>
   </externals>
   <environment >

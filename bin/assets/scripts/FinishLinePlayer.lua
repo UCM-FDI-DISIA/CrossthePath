@@ -1,18 +1,18 @@
 --Definicion de la clase en Lua
-finishLinePlayer = {}
+FinishLinePlayer = {}
 
-finishLinePlayer.__index = finishLinePlayer
+FinishLinePlayer.__index = FinishLinePlayer
 
 --Constructor de la clase en Lua
-function finishLinePlayer:new()
+function FinishLinePlayer:new()
 	local obj={}
-	setmetatable(obj, finishLinePlayer)
+	setmetatable(obj, FinishLinePlayer)
 	return obj
 end
 
 --Metodo OnCollisionEnter
-function collisionTest:OnCollisionEnter()
+function FinishLinePlayer:OnCollisionEnter()
 	FinishLine:PlayerWin();
 end
 --Variable global de la clase (para Luabridge)
-finishLinePlayerLua = finishLinePlayer:new()
+FinishLinePlayerLua = FinishLinePlayer:new()
