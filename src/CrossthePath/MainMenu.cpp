@@ -4,6 +4,10 @@
 #include <ScriptManager.h>
 #include <LuaManager.h>
 #include "GameManager.h"
+#include <SceneManager.h>
+#include <RenderManager.h>
+#include "CButton.h"
+#include "Entity.h"
 
 const std::string eden_ec::MainMenu::_id = "MAIN_MENU";
 
@@ -17,6 +21,38 @@ eden_ec::MainMenu::MainMenu() {
 	scriptM->Regist(*this, "MainMenu", &eden_ec::MainMenu::Options, "GoToOptions", this);
 	scriptM->SetGlobal(this, "MainMenu");
 	scriptM = nullptr;
+}
+
+void eden_ec::MainMenu::Start()
+{
+	_start = eden::SceneManager::getInstance()->FindEntity("buttonPlay")->GetComponent<CButton>();
+	_startIniPos = _start->GetPosition();
+	_start->SetPosition(_startNewPos, _startIniPos.second);
+
+	_exit = eden::SceneManager::getInstance()->FindEntity("buttonExit")->GetComponent<CButton>();
+	_exitIniPos = _exit->GetPosition();
+	_exitNewPos = eden_render::RenderManager::getInstance()->GetResolution().first;
+	_exit->SetPosition(_exitNewPos, _exitIniPos.second);
+
+	_options = eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<CButton>();
+	_optionsIniPos = _options->GetPosition();
+	_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
+}
+
+void eden_ec::MainMenu::Update(float t)
+{
+	if (_startNewPos <= _startIniPos.first-3) {
+		_startNewPos = _startNewPos + 3;
+		_start->SetPosition(_startNewPos, _startIniPos.second);
+	}
+	if (_exitNewPos >= _exitIniPos.first+4) {
+		_exitNewPos = _exitNewPos - 4;
+		_exit->SetPosition(_exitNewPos, _exitIniPos.second);
+	}
+	if (_optionsNewPos <= _optionsIniPos.first-5) {
+		_optionsNewPos = _optionsNewPos + 5;
+		_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
+	}
 }
 
 void eden_ec::MainMenu::Play()

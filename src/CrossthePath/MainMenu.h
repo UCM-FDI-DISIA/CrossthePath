@@ -5,7 +5,7 @@
 #include "Component.h"
 
 namespace eden_ec {
-
+	class CButton;
 	class MainMenu : public Component {
 	public:
 		MainMenu();
@@ -17,9 +17,9 @@ namespace eden_ec {
 
 		void Awake() override {}
 
-		void Start() override {}
+		void Start() override;
 
-		void Update(float t) override {}
+		void Update(float t) override;
 
 		void Play();
 
@@ -29,6 +29,17 @@ namespace eden_ec {
 
 	protected:
 		const static std::string _id;
+	private:
+		CButton* _start = nullptr;
+		CButton* _options = nullptr;
+		CButton* _exit = nullptr;
+
+		int _startNewPos=-1;
+		int _exitNewPos = -1;
+		int _optionsNewPos = -1;
+		std::pair<float, float>_startIniPos = std::make_pair(0.0f, 0.0f);
+		std::pair<float, float>_exitIniPos = std::make_pair(0.0f, 0.0f);
+		std::pair<float, float>_optionsIniPos = std::make_pair(0.0f, 0.0f);
 	};
 }
 #endif //MAIN_MENU_H

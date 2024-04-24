@@ -18,14 +18,14 @@ Entity1 = {
 }
 
 Entity2 = {
-	Name = "UI_Button",
+	Name = "buttonPlay",
 	Components = {
 		{
 			Name = "BUTTON",
 			Arguments = {
                 OverlayName= "button",
 				XPos = "50",
-                YPos = "70",
+                YPos = "55",
                 Width = "30",
                 Height = "15",
                 Texture1 = "MenuButton_Ini.png",
@@ -114,7 +114,7 @@ Entity6 = {
 	}
 }
 Entity7 = {
-	Name = "main_options",
+	Name = "buttonOptions",
 	Components = {
 		{
 			Name = "BUTTON",
@@ -146,10 +146,10 @@ Entity8 = {
 			Name = "BUTTON",
 			Arguments = {
                 OverlayName= "buttonExit",
-				XPos = "10",
-                YPos = "90",
+				XPos = "50",
+                YPos = "75",
                 Width = "25",
-                Height = "20",
+                Height = "15",
                 Texture1 = "Exit_Ini.png",
                 Texture2 = "Exit_Over.png",
                 Texture3 = "Exit_Click.png",
