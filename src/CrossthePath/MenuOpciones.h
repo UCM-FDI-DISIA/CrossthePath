@@ -18,7 +18,8 @@ namespace eden_ec {
 
 		void Awake() override {}
 
-		void Start() override {}
+		void Start() override;
+			
 
 		void Update(float t) override {}
 
@@ -46,7 +47,6 @@ namespace eden_ec {
 	protected:
 		const static std::string _id;
 	private:
-		eden_render::RenderManager* _render = nullptr;
 		Entity* _res = nullptr;
 		Entity* _vol = nullptr;
 	};

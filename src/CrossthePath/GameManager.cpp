@@ -54,6 +54,8 @@ void eden_ec::GameManager::GoBack()
 	_currState = _states[_states.size() - 1];
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->PopScene();
+
+	eden_render::RenderManager::getInstance()->ResizedWindow();
 }
 
 void eden_ec::GameManager::GoOptions()
