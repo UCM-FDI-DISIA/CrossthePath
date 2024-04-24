@@ -13,7 +13,7 @@ namespace eden_ec {
 		friend Singleton<GameManager>;
 	public:
 		GameManager();
-		~GameManager()=default;
+		~GameManager();
 		void Awake() {}
 		void Start() {}
 

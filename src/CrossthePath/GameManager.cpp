@@ -21,6 +21,14 @@ eden_ec::GameManager::GameManager()
 	_currState = _states[0];
 }
 
+eden_ec::GameManager::~GameManager()
+{
+	delete _player;
+	delete _uiManager;
+
+	_enemies.clear();
+}
+
 void eden_ec::GameManager::Update(float dt) {
 	if (_start && _currState == Game && _uiManager!=nullptr)_uiManager->Timer(dt);
 }
