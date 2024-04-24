@@ -16,42 +16,7 @@ Entity1 = {
 		}
 	}
 }
-
-
-
 Entity2 = {
-	Name = "buttonResume",
-	Components = {
-		{
-			Name = "BUTTON",
-			Arguments = {
-                OverlayName= "buttonResume",
-				XPos = "50",
-                YPos = "50",
-                Width = "30",
-                Height = "15",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
-                Depth = "2"
-			}
-		},
-        {
-            Name = "BEHAVIOUR",
-			Arguments = {
-                Script= "PausaResume",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
-			}
-        }
-	}	
-}
-
-Entity3 = {
 	Name = "UI_Cursor",
 	Components = {
 		{
@@ -73,7 +38,7 @@ Entity3 = {
 		}
 	}		
 }
-Entity4 = {
+Entity3 = {
 	Name = "UI_Image",
 	Components = {
 		{
@@ -90,7 +55,31 @@ Entity4 = {
 		}
 	}	
 }
-
+Entity4 = {
+	Name = "buttonResume",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonResume",
+				XPos = "50",
+                YPos = "50",
+                Width = "30",
+                Height = "15",
+                Texture1 = "Resume_Ini.png",
+                Texture2 = "Resume_Over.png",
+                Texture3 = "Resume_Click.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Pausa_Resume",
+			}
+        }
+	}	
+}
 Entity5 = {
 	Name = "buttonMenu",
 	Components = {
@@ -111,13 +100,7 @@ Entity5 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "PausaBackMenu",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
+                Script= "Pausa_BackMenu",
 			}
         }
 	}	
@@ -143,13 +126,7 @@ Entity6 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "PausaExit",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
+                Script= "Pausa_Exit",
 			}
         }
 	}	
@@ -175,11 +152,17 @@ Entity7 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options",
+                Script= "Pausa_Options",
 			}
-        },
+        }
+	}	
+}
+
+Entity8 ={
+	Name = "Pause_menu",
+	Components = {
 		{
-            Name = "PAUSA",
+            Name = "MENU_PAUSA",
             Arguments = {
 
 			}
@@ -187,7 +170,7 @@ Entity7 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6,Entity7}
+Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6,Entity7,Entity8}
 
 CollisionLayers = {
 	Layers = {

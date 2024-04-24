@@ -2386,13 +2386,7 @@ Entity116 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Pause",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
+                Script= "Game_Pause",
 			}
         }
 	}
@@ -2503,7 +2497,7 @@ Entity121 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "PlayGame",
+                Script= "Game_Replay",
 			}
         },
 		{

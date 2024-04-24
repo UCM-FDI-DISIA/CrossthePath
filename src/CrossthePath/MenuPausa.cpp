@@ -5,7 +5,7 @@
 #include <LuaManager.h>
 #include "GameManager.h"
 
-const std::string eden_ec::MenuPausa::_id = "PAUSA";
+const std::string eden_ec::MenuPausa::_id = "MENU_PAUSA";
 
 eden_ec::MenuPausa::MenuPausa() {
 
@@ -15,7 +15,6 @@ eden_ec::MenuPausa::MenuPausa() {
 	scriptM->Regist(*this, "Pausa", &eden_ec::MenuPausa::ResumeGame, "Resume", this);
 	scriptM->Regist(*this, "Pausa", &eden_ec::MenuPausa::ExitGame, "Exit", this);
 	scriptM->Regist(*this, "Pausa", &eden_ec::MenuPausa::BackToMenu, "BackMenu", this);
-	scriptM->Regist(*this, "Pausa", &eden_ec::MenuPausa::Pause, "PauseGame", this);
 	scriptM->Regist(*this, "Pausa", &eden_ec::MenuPausa::Options, "GoToOptions", this);
 	scriptM->SetGlobal(this, "Pausa");
 	scriptM = nullptr;
@@ -34,11 +33,6 @@ void eden_ec::MenuPausa::ExitGame()
 void eden_ec::MenuPausa::BackToMenu()
 {
 	eden_ec::GameManager::Instance()->GoMainMenu();
-}
-
-void eden_ec::MenuPausa::Pause()
-{
-	eden_ec::GameManager::Instance()->PauseGame();
 }
 
 void eden_ec::MenuPausa::Options()

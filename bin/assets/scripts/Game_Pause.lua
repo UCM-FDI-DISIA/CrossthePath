@@ -1,22 +1,22 @@
 --Definicion de la clase en Lua
-Pause = {}
+Game_Pause = {}
 
-Pause.__index = Pause
+Game_Pause.__index = Game_Pause
 
 --Constructor de la clase en Lua
-function Pause:new()
+function Game_Pause:new()
 	local obj={}
-	setmetatable(obj, Pause)
+	setmetatable(obj, Game_Pause)
 	return obj
 end
 
 --Metodo OnButtonClicked
-function Pause:OnButtonClick()
+function Game_Pause:OnButtonClick()
 	print("Estoy encima del boton");
 end
-function Pause:OnButtonReleased()
+function Game_Pause:OnButtonReleased()
 	print("Estoy encima del boton");
-	Pausa:PauseGame();
+	Play:Pause();
 end
 --Variable global de la clase (para Luabridge)
-PauseLua = Pause:new()
+Game_PauseLua = Game_Pause:new()

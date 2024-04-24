@@ -78,7 +78,7 @@ Entity4 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "PausaResume",
+                Script= "Options_Resume",
 			}
         }
 	}	
@@ -104,15 +104,9 @@ Entity5 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "FullScreen",
+                Script= "Options_FullScreen",
 			}
-        },
-		{
-			Name ="OPCIONES",
-			Arguments ={
-
-			}
-		}
+        }
 	}	
 }
 
@@ -136,7 +130,7 @@ Entity6 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "PreviousResolution",
+                Script= "Options_PreviousResolution",
 			}
         }
 	}	
@@ -161,7 +155,7 @@ Entity7 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "NextResolution",
+                Script= "Options_NextResolution",
 			}
         }
 	}	
@@ -205,7 +199,7 @@ Entity9 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "DecreaseVolumen",
+                Script= "Options_DecreaseVolumen",
 			}
         }
 	}	
@@ -230,7 +224,7 @@ Entity10 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "IncreaseVolumen",
+                Script= "Options_IncreaseVolumen",
 			}
         }
 	}	
@@ -252,13 +246,24 @@ Entity11 = {
 		}
 	}	
 }
+Entity12 ={
+	Name = "Options_menu",
+	Components = {
+		{
+			Name ="OPCIONES",
+			Arguments ={
+
+			}
+		}
+	}
+}
 
 
 
 
 
 Entities = { Entity1, Entity2, Entity3,Entity4,Entity5,Entity6,Entity7,Entity8,Entity9
-,Entity10,Entity11}
+,Entity10,Entity11, Entity12}
 
 CollisionLayers = {
 	Layers = {

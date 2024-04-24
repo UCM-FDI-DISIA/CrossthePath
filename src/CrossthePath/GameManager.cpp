@@ -23,9 +23,6 @@ eden_ec::GameManager::GameManager()
 
 eden_ec::GameManager::~GameManager()
 {
-	delete _player;
-	delete _uiManager;
-
 	_enemies.clear();
 }
 
@@ -129,8 +126,5 @@ void eden_ec::GameManager::SetUI(UIManager* ui)
 
 void eden_ec::GameManager::Begin()
 {
-	//Provisional  HAY QUE HACER EL MENU DE INICIO EN EL JUEGO
-	_currState = Game;
-	_states[0] = _currState;
 	_start = true;
 }

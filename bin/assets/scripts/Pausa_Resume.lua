@@ -1,22 +1,22 @@
 --Definicion de la clase en Lua
-PausaResume = {}
+Pausa_Resume = {}
 
-PausaResume.__index = PausaResume
+Pausa_Resume.__index = Pausa_Resume
 
 --Constructor de la clase en Lua
-function PausaResume:new()
+function Pausa_Resume:new()
 	local obj={}
-	setmetatable(obj, PausaResume)
+	setmetatable(obj, Pausa_Resume)
 	return obj
 end
 
 --Metodo OnButtonClicked
-function PausaResume:OnButtonClick()
+function Pausa_Resume:OnButtonClick()
 	print("Estoy encima del boton");
 end
-function PausaResume:OnButtonReleased()
+function Pausa_Resume:OnButtonReleased()
 	print("Estoy encima del boton");
 	Pausa:Resume();
 end
 --Variable global de la clase (para Luabridge)
-PausaResumeLua = PausaResume:new()
+Pausa_ResumeLua = Pausa_Resume:new()

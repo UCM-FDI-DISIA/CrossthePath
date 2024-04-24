@@ -17,8 +17,6 @@ Entity1 = {
 	}
 }
 
-
-
 Entity2 = {
 	Name = "UI_Button",
 	Components = {
@@ -39,28 +37,7 @@ Entity2 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "buttonTest",
-			}
-        },
-		{
-            Name = "PRUEBA",
-            Arguments = {
-
-			}
-        },
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "-1.610821008682251|5.619948387145996|5.7784810066223145",
-				Rotation = "false|0.5458973050117493|0.14995510876178741|0.21834951639175415|0.7948793172836304",
-				Scale = "1.0|1.0|1.0"
-			}
-		},
-		{
-            Name = "AUDIO_EMITTER",
-            Arguments = {
-				SongName = "MainMenu.mp3",
-				Is3D = "false"
+                Script= "MainMenu_Play",
 			}
         }
 	}	
@@ -88,6 +65,7 @@ Entity3 = {
 		}
 	}		
 }
+
 Entity4 = {
 	Name = "UI_Image",
 	Components = {
@@ -117,7 +95,77 @@ Entity5 = {
 	}
 }
 
-Entities = { Entity1, Entity2, Entity3,Entity4,Entity5}
+Entity6 = {
+	Name ="Mani_menu",
+	Components ={
+		{
+			Name = "MAIN_MENU",
+			Arguments = {
+
+			}
+		},
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "MainMenu.mp3",
+				Is3D = "false"
+			}
+		}
+	}
+}
+Entity7 = {
+	Name = "main_options",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "options",
+				XPos = "90",
+                YPos = "90",
+                Width = "15",
+                Height = "15",
+                Texture1 = "Options.png",
+                Texture2 = "Options.png",
+                Texture3 = "Options.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "MainMenu_Options",
+			}
+        }
+	}	
+}
+
+Entity8 = {
+	Name = "buttonExit",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonExit",
+				XPos = "10",
+                YPos = "90",
+                Width = "25",
+                Height = "20",
+                Texture1 = "Exit_Ini.png",
+                Texture2 = "Exit_Over.png",
+                Texture3 = "Exit_Click.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "MainMenu_Exit",
+			}
+        }
+	}	
+}
+
+Entities = { Entity1, Entity2, Entity3,Entity4,Entity5,Entity6,Entity7,Entity8}
 
 CollisionLayers = {
 	Layers = {

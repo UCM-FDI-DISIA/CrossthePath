@@ -31,6 +31,7 @@ eden_ec::UIManager::UIManager()
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "Play", &eden_ec::UIManager::PlayAgain, "Replay", this);
+	scriptM->Regist(*this, "Play", &eden_ec::UIManager::Pause, "Pause", this);
 	scriptM->SetGlobal(this, "Play");
 	scriptM = nullptr;
 
@@ -55,6 +56,11 @@ void eden_ec::UIManager::ShowWin()
 void eden_ec::UIManager::PlayAgain()
 {
 	eden_ec::GameManager::Instance()->Play();
+}
+
+void eden_ec::UIManager::Pause()
+{
+	eden_ec::GameManager::Instance()->PauseGame();
 }
 
 void eden_ec::UIManager::Timer(float tm)

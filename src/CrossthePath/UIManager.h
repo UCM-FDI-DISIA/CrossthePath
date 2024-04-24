@@ -36,6 +36,8 @@ namespace eden_ec {
 		/// @breig Replay
 		void PlayAgain();
 
+		void Pause();
+
 		/// @Update del timer
 		void Timer(float tm);
 

@@ -23,6 +23,8 @@ namespace eden_ec {
 
 		void Update(float t) override {}
 
+		void GoBack();
+
 		/// @brief Pantalla completa
 		void FullScreen();
 

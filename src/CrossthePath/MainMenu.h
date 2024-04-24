@@ -1,15 +1,15 @@
 #define _CRTDBG_MAP_ALLOC
-#ifndef MENU_PAUSA_H
-#define MENU_PAUSA_H
+#ifndef MAIN_MENU_H
+#define MAIN_MENU_H
 
 #include "Component.h"
 
 namespace eden_ec {
 
-	class MenuPausa : public Component {
+	class MainMenu : public Component {
 	public:
-		MenuPausa();
-		~MenuPausa() = default;
+		MainMenu();
+		~MainMenu() = default;
 
 		static std::string GetID() { return _id; }
 
@@ -21,11 +21,9 @@ namespace eden_ec {
 
 		void Update(float t) override {}
 
-		void ResumeGame();
+		void Play();
 
 		void ExitGame();
-
-		void BackToMenu();
 
 		void Options();
 
@@ -33,4 +31,4 @@ namespace eden_ec {
 		const static std::string _id;
 	};
 }
-#endif //MENU_PAUSA_H
+#endif //MAIN_MENU_H

@@ -16,6 +16,7 @@ eden_ec::MenuOpciones::MenuOpciones() {
 
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
+	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::GoBack, "GoBack", this);
 	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::FullScreen, "FullScreen", this);
 	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::NextResolution, "NextRes", this);
 	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::PreviousResolution, "PreviousRes", this);
@@ -32,6 +33,11 @@ void eden_ec::MenuOpciones::Start()
 	std::string text = std::to_string(aux.first) + "x" + std::to_string(aux.second);
 	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
 	if (_res != nullptr) _res->GetComponent<CText>()->SetNewText(text);
+}
+
+void eden_ec::MenuOpciones::GoBack()
+{
+	eden_ec::GameManager::Instance()->GoBack();
 }
 
 void eden_ec::MenuOpciones::FullScreen()
