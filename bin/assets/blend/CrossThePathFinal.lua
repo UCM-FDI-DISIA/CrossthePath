@@ -1,4 +1,4 @@
-Entity115 = {
+Entity1 = {
 	Name = "Camera2",
 	Components = {
 		{
@@ -11,11 +11,6 @@ Entity115 = {
 		},
 		{
 			Name = "CAMERA",
-			Arguments = {
-			}
-		},
-		{
-			Name = "PLAYERCAMERA",
 			Arguments = {
 			}
 		}
@@ -374,8 +369,8 @@ Entity19 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.5342912673950195|3.631232738494873|0.3097917139530182",
-				Rotation = "false|0.9999998807907104|0.0|0.0|0.0",
+				Position = "-4.5871453285217285|3.846191644668579|0.3097917139530182",
+				Rotation = "false|0.5|-0.5|0.4999999701976776|0.5",
 				Scale = "1.0|1.0|1.0"
 			}
 		}
@@ -535,7 +530,7 @@ Entity27 = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "-7.533249855041504|3.2944793701171875|0.19990551471710205",
-				Rotation = "false|-51.999996185302734|0.0|0.0|0.9999998807907104",
+				Rotation = "false|0.7071067690849304|0.0|0.0|0.7071067690849304",
 				Scale = "1.0|1.0|1.0"
 			}
 		}
@@ -2209,14 +2204,6 @@ Entity110 = {
 			}
 		},
 		{
-			Name = "LIGHT",
-			Arguments = {
-				LightType = "LT_SPOTLIGHT",
-				DiffuseColor = "5.0|0.0|0.0",
-				SpecularColor = "0.0|0.0|0.0"
-			}
-		},
-		{
 			Name = "PARTICLE_EMITTER",
 			Arguments = {
 				Loop = "true",
@@ -2296,254 +2283,55 @@ Entity113 = {
 				Rotation = "false|0.9781476259231567|-0.20791170001029968|-0.0|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
+		}
+	}
+}
+
+Entity114 = {
+	Name = "Car_Spotlight",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-6.400925159454346|2.7646632194519043|0.1608707755804062",
+				Rotation = "false|0.7071067690849304|0.7071067690849304|0.0|0.0",
+				Scale = "0.11200573295354843|0.09603220224380493|0.2713428735733032"
+			}
 		},
 		{
 			Name = "LIGHT",
 			Arguments = {
-				LightType = "LT_DIRECTIONAL",
-				DiffuseColor = "1.0|1.0|1.0",
+				LightType = "LT_SPOTLIGHT",
+				DiffuseColor = "1.0|0.964|0.367",
 				SpecularColor = "0.0|0.0|0.0"
 			}
 		}
 	}
 }
 
-Entity114 = {
-	Name = "UI_Image",
-	Components = {
-		{
-			Name = "IMAGE",
-			Arguments = {
-                OverlayName= "image",
-				XPos = "85",
-                YPos = "80",
-                Width = "25",
-                Height = "25",
-                Texture = "ComingSoon.png",
-                Depth = "1"
-			}
-		}
-	}	
-}
-
-Entity1 = {
-	Name = "Player",
+Entity115 = {
+	Name = "Car_Spotlight.002",
 	Components = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-4.544820308685303|3.982574224472046|1.1488906890153885",
-				Rotation = "false|0.5|0.5|-0.5|-0.5",
-				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
+				Position = "-6.147891521453857|2.7646632194519043|0.1608707755804062",
+				Rotation = "false|0.7071067690849304|0.7071067690849304|0.0|0.0",
+				Scale = "0.11200573295354843|0.09603220224380493|0.2713428735733032"
 			}
 		},
-        {
-            Name = "MESH_RENDERER",
-            Arguments = {
-                Mesh = "Cube.057"
-            }
-        },
 		{
-            Name = "ANIMATOR",
-            Arguments = {
-                AnimNames = "Die|Duck|HitReact|Idle|JumpIdle|JumpLand|JumpStart|No|Punch|Run|Walk|Wave|Weapon|Yes",
-                AnimMeshNames = "Frog_Death|Frog_Duck|Frog_HitReact|Frog_Idle|Frog_JumpIdle|Frog_JumpLand|Frog_JumpStart|Frog_No|Frog_Punch|Frog_Run|Frog_Walk|Frog_Wave|Frog_Weapon|Frog_Yes",
-                NextAnim = "Idle|Idle|Idle|Idle|JumpLand|Idle|JumpIdle|Idle|Idle|Idle|Idle|Idle|Idle|Idle",
-                LoopAnims = "false|false|false|true|false|false|false|false|false|true|true|false|false|false"
-            }
-        },
-		{
-            Name = "CHARACTER_MOVEMENT",
-            Arguments = {
-            }
-        },
-		{
-            Name = "AUDIO_EMITTER",
-            Arguments = {
-				SongName = "GamePlay.mp3",
-				Is3D = "false"
+			Name = "LIGHT",
+			Arguments = {
+				LightType = "LT_SPOTLIGHT",
+				DiffuseColor = "1.0|0.964|0.367",
+				SpecularColor = "0.0|0.0|0.0"
 			}
-        }
+		}
 	}
 }
+
 Entity116 = {
-	Name = "buttonPause",
-	Components = {
-		{
-			Name = "BUTTON",
-			Arguments = {
-                OverlayName= "buttonPause",
-				XPos = "15",
-                YPos = "15",
-                Width = "15",
-                Height = "15",
-                Texture1 = "Pause.png",
-                Texture2 = "Pause.png",
-                Texture3 = "Pause.png",
-                Depth = "2"
-			}
-		},
-        {
-            Name = "BEHAVIOUR",
-			Arguments = {
-                Script= "Pause",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
-			}
-        }
-	}
-}
-Entity117 = {
-	Name = "UI_Cursor",
-	Components = {
-		{
-			Name = "IMAGE",
-			Arguments = {
-				OverlayName= "image",
-				XPos = "0",
-				YPos = "0",
-				Width = "5",
-				Height = "5",
-				Texture = "Cursor.png",
-				Depth = "10"
-			}
-		},
-		{
-			Name = "CURSOR",
-			Arguments = {
-			}
-		}
-	}		
-}
-Entity118 = {
-	Name = "Finish_Line",
-	Components = {
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "-10|3.982574224472046|1.1488906890153885",
-				Rotation = "false|0.5|0.5|-0.5|-0.5",
-				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
-			}
-		},
-        {
-            Name = "MESH_RENDERER",
-            Arguments = {
-                Mesh = "Cube.057"
-            }
-        },		
-		{
-            Name = "FINISH_LINE",
-            Arguments = {
-				IsPlayer = "true"
-			}
-        },
-	}
-}
-Entity119 = {
-	Name = "Game_Manager",
-	Components = {
-		{
-			Name = "GAME_MANAGER",
-			Arguments = {
-			}
-		}
-	}
-}
-Entity120 = {
-	Name = "UI_Manager",
-	Components = {
-		{
-			Name = "UI_MANAGER",
-			Arguments = {
-			}
-		}
-	}
-}
-Entity121 = {
-	Name = "win",
-	Components = {
-		{
-			Name = "IMAGE",
-			Arguments = {
-                OverlayName= "win",
-				XPos = "50",
-                YPos = "40",
-                Width = "75",
-                Height = "75",
-                Texture = "Win.png",
-                Depth = "1"
-			}
-		},
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 0
-			}
-		}
-	}	
-}
-Entity122 = {
-	Name = "play",
-	Components = {
-		{
-			Name = "BUTTON",
-			Arguments = {
-                OverlayName= "button",
-				XPos = "50",
-                YPos = "80",
-                Width = "30",
-                Height = "15",
-                Texture1 = "MenuButton_Ini.png",
-                Texture2 = "MenuButton_Over.png",
-                Texture3 = "MenuButton_Clicked.png",
-                Depth = "2"
-			}
-		},
-        {
-            Name = "BEHAVIOUR",
-			Arguments = {
-                Script= "PlayGame",
-			}
-        },
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 4
-			}
-		}
-	}
-}
-Entity123 = {
-	Name = "timer",
-	Components = {
-		{
-			Name = "TEXT",
-			Arguments = {
-                OverlayName= "textTest",
-				XPos = "85",
-                YPos = "7",
-                Tam = "7",
-                Text = "Timer: 0",
-                Font = "",
-                Color = "0|0|0",
-                Depth = "2"
-			}
-		},
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 3
-			}
-		}
-	}	
-}
-
-INSTANCIATOR = {
 	Name = "Instanciator",
 	Components = {
 		{
@@ -2553,30 +2341,11 @@ INSTANCIATOR = {
 				Rotation = "false|1.0|0.0|0.0|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
-		},
-		{
-			Name = "INSTANCIATE_ENEMIES",
-			Arguments = {
-				PrefabName = "enemy";
-				SpawnRate = "3.0"
-			}
-		}	
+		}
 	}
 }
 
-Entities = {INSTANCIATOR, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, 
-Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, 
-Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29,
- Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
- Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47, Entity48, Entity49,
-  Entity50, Entity51, Entity52, Entity53, Entity54, Entity55, Entity56, Entity57, Entity58, Entity59,
-   Entity60, Entity61, Entity62, Entity63, Entity64, Entity65, Entity66, Entity67, Entity68, Entity69, 
-   Entity70, Entity71, Entity72, Entity73, Entity74, Entity75, Entity76, Entity77, Entity78, Entity79,
-    Entity80, Entity81, Entity82, Entity83, Entity84, Entity85, Entity86, Entity87, Entity88, Entity89, 
-	Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99,
-	 Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108,
-	  Entity109, Entity110, Entity111, Entity112, Entity113,Entity114,Entity115 ,Entity116,Entity117,
-	  Entity118,Entity119,Entity120,Entity121,Entity122,Entity123}
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47, Entity48, Entity49, Entity50, Entity51, Entity52, Entity53, Entity54, Entity55, Entity56, Entity57, Entity58, Entity59, Entity60, Entity61, Entity62, Entity63, Entity64, Entity65, Entity66, Entity67, Entity68, Entity69, Entity70, Entity71, Entity72, Entity73, Entity74, Entity75, Entity76, Entity77, Entity78, Entity79, Entity80, Entity81, Entity82, Entity83, Entity84, Entity85, Entity86, Entity87, Entity88, Entity89, Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99, Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108, Entity109, Entity110, Entity111, Entity112, Entity113, Entity114, Entity115, Entity116 }
 
 CollisionLayers = {
 	Layers = {

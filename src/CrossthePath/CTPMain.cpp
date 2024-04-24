@@ -9,6 +9,7 @@
 #include "UIManager.h"
 #include "GameManagerController.h"
 #include "UIManagerComponent.h"
+#include "InstanciateEnemies.h"
 
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
@@ -19,6 +20,7 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::UIManager>();
 	factory->RegisterComponent<eden_ec::GameManagerController>();
 	factory->RegisterComponent<eden_ec::UIManagerComponent>();
+	factory->RegisterComponent<eden_ec::InstanciateEnemies>();
 }
 
 void LoadScene() {
