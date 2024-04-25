@@ -1,11 +1,11 @@
-Entity21 = {
+Entity1 = {
 	Name = "Camera",
 	Components = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "1.5169860124588013|8.30273151397705|3.0",
-				Rotation = "false|0.7|-0.7|0.23|0.23",
+				Position = "3|1|0",
+				Rotation = "false|0.62|0.0|0.38|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
 		},
@@ -36,8 +36,16 @@ Entity2 = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "-0.1690845489501953|5.903861999511719|-5.370077133178711",
-				Rotation = "false|0.40507403016090393|-0.4364432394504547|0.5795817375183105|0.5563427805900574",
+				Rotation = "false|0.5|-0.5|0.5|0",
 				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "LIGHT",
+			Arguments = {
+				LightType = "LT_DIRECTIONAL",
+				DiffuseColor = "1.0|1.0|1.0",
+				SpecularColor = "0.0|0.0|0.0"
 			}
 		}
 	}
@@ -403,7 +411,7 @@ Entity20 = {
 	}
 }
 
-Entity1 = {
+Entity21 = {
 	Name = "Player",
 	Components = {
 		{
@@ -415,8 +423,8 @@ Entity1 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-1.0529091358184814|0.09722249209880829|-1.136184573173523",
-				Rotation = "false|0.4999999701976776|-0.5|0.5|0.5",
+				Position = "-1.0529091358184814|0.09722249209880829|0",
+				Rotation = "false|0.5|0.0|0.5|0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
 		},
@@ -433,20 +441,6 @@ Entity1 = {
 }
 
 Entity22 = {
-	Name = "LIGHT",
-	Components = {
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "0.0|0.0|-0.0",
-				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
-				Scale = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity23 = {
 	Name = "Game_Manager",
 	Components = {
 		{
@@ -465,7 +459,67 @@ Entity23 = {
 	}
 }
 
+Entity23 = {
+	Name = "building_F",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "building_F"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-2.0|0.0|-12.0",
+				Rotation = "false|0.4999999701976776|-0.5|0.5|0.5",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
 Entity24 = {
+	Name = "road_straight.006",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "road_straight"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-12.0",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity25 = {
+	Name = "base.006",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "2.0|0.0|-12.0",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity26 = {
 	Name = "buttonPlay",
 	Components = {
 		{
@@ -475,10 +529,10 @@ Entity24 = {
 				XPos = "50",
                 YPos = "55",
                 Width = "30",
-                Height = "15",
-                Texture1 = "MenuButton_Ini.png",
-                Texture2 = "MenuButton_Over.png",
-                Texture3 = "MenuButton_Clicked.png",
+                Height = "30",
+                Texture1 = "Play_Button.png",
+                Texture2 = "PlayOver_Button.png",
+                Texture3 = "PlayClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -491,7 +545,7 @@ Entity24 = {
 	}	
 }
 
-Entity25 = {
+Entity27 = {
 	Name = "UI_Cursor",
 	Components = {
 		{
@@ -513,20 +567,20 @@ Entity25 = {
 		}
 	}		
 }
-Entity26 = {
+Entity28 = {
 	Name = "buttonOptions",
 	Components = {
 		{
 			Name = "BUTTON",
 			Arguments = {
                 OverlayName= "options",
-				XPos = "90",
-                YPos = "90",
-                Width = "15",
-                Height = "15",
-                Texture1 = "UI_CrossThePath_Settings.png",
-                Texture2 = "UI_CrossThePath_SettingsClicked.png",
-                Texture3 = "UI_CrossThePath_SettingsClicked.png",
+				XPos = "97",
+                YPos = "95",
+                Width = "13",
+                Height = "12",
+                Texture1 = "Settings_Button.png",
+                Texture2 = "SettingsOver_Button.png",
+                Texture3 = "SettingsClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -539,7 +593,7 @@ Entity26 = {
 	}	
 }
 
-Entity27 = {
+Entity29 = {
 	Name = "buttonExit",
 	Components = {
 		{
@@ -550,9 +604,9 @@ Entity27 = {
                 YPos = "75",
                 Width = "25",
                 Height = "15",
-                Texture1 = "Exit_Ini.png",
-                Texture2 = "Exit_Over.png",
-                Texture3 = "Exit_Click.png",
+                Texture1 = "Exit_Button.png",
+                Texture2 = "ExitOver_Button.png",
+                Texture3 = "ExitClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -564,11 +618,30 @@ Entity27 = {
         }
 	}	
 }
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, 
-Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, 
-Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, 
-Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, 
-Entity24, Entity25, Entity26, Entity27}
+
+Entity30 = {
+	Name = "UI_Image",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+                OverlayName= "image",
+				XPos = "50",
+                YPos = "15",
+                Width = "100",
+                Height = "50",
+                Texture = "CrossThePath_Title.png",
+                Depth = "1"
+			}
+		}
+	}	
+}
+
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
+Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
+Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, 
+Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
+Entity28, Entity29, Entity30 }
 
 CollisionLayers = {
 	Layers = {

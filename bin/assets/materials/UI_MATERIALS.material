@@ -83,6 +83,22 @@ material Win.png {
     }
 }
 
+material CrossThePath_Title.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture CrossThePath_Title.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 
 material Pause_Button.png {
     receive_shadows on
