@@ -1068,9 +1068,9 @@ Entity45 = {
                 YPos = "5",
                 Width = "10",
                 Height = "10",
-                Texture1 = "UI_CrossThePath_Pause.png",
-                Texture2 = "UI_CrossThePath_PauseClicked.png",
-                Texture3 = "UI_CrossThePath_PauseClicked.png",
+				Texture1 = "Pause_Button.png",
+                Texture2 = "PauseOver_Button.png",
+                Texture3 = "PauseClicked_Button.png",
                 Depth = "2"
 			}
 		},

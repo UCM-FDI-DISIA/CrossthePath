@@ -66,9 +66,9 @@ Entity4 = {
                 YPos = "50",
                 Width = "30",
                 Height = "15",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
+                Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -91,9 +91,9 @@ Entity5 = {
                 YPos = "70",
                 Width = "30",
                 Height = "15",
-                Texture1 = "MENU_Ini.png",
-                Texture2 = "MENU_Over.png",
-                Texture3 = "MENU_Click.png",
+                Texture1 = "Menu_Button.png",
+                Texture2 = "MenuOver_Button.png",
+                Texture3 = "MenuClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -117,9 +117,9 @@ Entity6 = {
                 YPos = "90",
                 Width = "30",
                 Height = "15",
-                Texture1 = "Exit_Ini.png",
-                Texture2 = "Exit_Over.png",
-                Texture3 = "Exit_Click.png",
+                Texture1 = "Exit_Button.png",
+                Texture2 = "ExitOver_Button.png",
+                Texture3 = "ExitClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -143,9 +143,9 @@ Entity7 = {
                 YPos = "90",
                 Width = "15",
                 Height = "15",
-                Texture1 = "Options.png",
-                Texture2 = "Options.png",
-                Texture3 = "Options.png",
+                Texture1 = "Settings_Button.png",
+                Texture2 = "SettingsOver_Button.png",
+                Texture3 = "SettingsClicked_Button.png",
                 Depth = "2"
 			}
 		},

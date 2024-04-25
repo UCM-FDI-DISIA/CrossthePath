@@ -14,7 +14,8 @@ material Cursor.png {
         }
     }
 }
-material UI_CrossThePath_Settings.png{
+
+material Settings_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -23,14 +24,15 @@ material UI_CrossThePath_Settings.png{
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture UI_CrossThePath_Settings.png
+                texture Settings_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material UI_CrossThePath_SettingsClicked.png{
+
+material SettingsOver_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -39,13 +41,31 @@ material UI_CrossThePath_SettingsClicked.png{
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture UI_CrossThePath_SettingsClicked.png
+                texture SettingsOver_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
+
+material SettingsClicked_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture SettingsClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
 material Win.png {
     receive_shadows on
     technique {
@@ -62,7 +82,9 @@ material Win.png {
         }
     }
 }
-material UI_CrossThePath_PauseClicked.png {
+
+
+material Pause_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -71,14 +93,15 @@ material UI_CrossThePath_PauseClicked.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture UI_CrossThePath_PauseClicked.png
+                texture Pause_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material UI_CrossThePath_Pause.png {
+
+material PauseOver_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -87,14 +110,15 @@ material UI_CrossThePath_Pause.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture UI_CrossThePath_Pause.png
+                texture PauseOver_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material Exit_Ini.png {
+
+material PauseClicked_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -103,14 +127,32 @@ material Exit_Ini.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Exit_Ini.png
+                texture PauseClicked_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material Exit_Click.png {
+
+material Exit_Button.png {
+    receive_shadows on  
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Exit_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material ExitClicked_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -119,14 +161,15 @@ material Exit_Click.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Exit_Click.png
+                texture ExitClicked_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material Exit_Over.png {
+
+material ExitOver_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -135,13 +178,14 @@ material Exit_Over.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Exit_Over.png
+                texture ExitOver_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
+
 material MENU_Ini.png {
     receive_shadows on
     technique {
@@ -191,7 +235,7 @@ material MENU_Click.png {
         }
     }
 }
-material Resume_Ini.png {
+material Resume_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -200,14 +244,14 @@ material Resume_Ini.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Resume_Ini.png
+                texture Resume_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material Resume_Over.png {
+material ResumeOver_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -216,14 +260,14 @@ material Resume_Over.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Resume_Over.png
+                texture ResumeOver_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material Resume_Click.png {
+material ResumeClicked_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -232,7 +276,7 @@ material Resume_Click.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Resume_Click.png
+                texture ResumeClicked_Button.png
                 tex_address_mode clamp
                 
             }
@@ -289,7 +333,8 @@ material meme.png {
         }
     }
 }
-material PlayButton_Ini.png {
+
+material Menu_Button.png {
      receive_shadows on
     technique {
         pass {
@@ -298,14 +343,14 @@ material PlayButton_Ini.png {
                 depth_write off
                 diffuse vertexcolour
                 texture_unit {
-                texture PlayButton_Ini.png
+                texture Menu_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material MenuButton_Ini.png {
+material MenuOver_Button.png {
      receive_shadows on
     technique {
         pass {
@@ -314,14 +359,14 @@ material MenuButton_Ini.png {
                 depth_write off
                 diffuse vertexcolour
                 texture_unit {
-                texture MenuButton_Ini.png
+                texture MenuOver_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material MenuButton_Over.png {
+material MenuClicked_Button.png {
      receive_shadows on
     technique {
         pass {
@@ -330,23 +375,7 @@ material MenuButton_Over.png {
                 depth_write off
                 diffuse vertexcolour
                 texture_unit {
-                texture MenuButton_Over.png
-                tex_address_mode clamp
-                
-            }
-        }
-    }
-}
-material MenuButton_Clicked.png {
-     receive_shadows on
-    technique {
-        pass {
-                lighting off
-                scene_blend alpha_blend
-                depth_write off
-                diffuse vertexcolour
-                texture_unit {
-                texture MenuButton_Clicked.png
+                texture MenuClicked_Button.png
                 tex_address_mode clamp
                 
             }
@@ -354,8 +383,24 @@ material MenuButton_Clicked.png {
     }
 }
 
+material Play_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture Play_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 
-material PlayButton_Hover.png {
+material PlayOver_Button.png {
    receive_shadows on
     technique {
         pass {
@@ -364,14 +409,14 @@ material PlayButton_Hover.png {
                 depth_write off
                 diffuse vertexcolour
                 texture_unit {
-                texture PlayButton_Hover.png
+                texture PlayOver_Button.png
                 tex_address_mode clamp
                 
             }
         }
     }
 }
-material PlayButton_Clicked.png {
+material PlayClicked_Button.png {
     receive_shadows on
     technique {
         pass {
@@ -380,7 +425,7 @@ material PlayButton_Clicked.png {
                 depth_write off
                 diffuse vertexcolour
                 texture_unit {
-                texture PlayButton_Clicked.png
+                texture PlayClicked_Button.png
                 tex_address_mode clamp
                 
             }

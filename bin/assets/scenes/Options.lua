@@ -69,9 +69,9 @@ Entity4 = {
                 YPos = "45",
                 Width = "25",
                 Height = "10",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
+                Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -95,9 +95,9 @@ Entity5 = {
                 YPos = "55",
                 Width = "25",
                 Height = "10",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
+                Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -121,9 +121,9 @@ Entity6 = {
                 YPos = "70",
                 Width = "15",
                 Height = "10",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
+                Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -146,9 +146,9 @@ Entity7 = {
                 YPos = "70",
                 Width = "15",
                 Height = "10",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
+                Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -190,9 +190,9 @@ Entity9 = {
                 YPos = "90",
                 Width = "15",
                 Height = "10",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
+				Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -215,9 +215,9 @@ Entity10 = {
                 YPos = "90",
                 Width = "15",
                 Height = "10",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
+                Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
                 Depth = "2"
 			}
 		},

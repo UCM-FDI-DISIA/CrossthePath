@@ -2377,9 +2377,9 @@ Entity116 = {
                 YPos = "15",
                 Width = "15",
                 Height = "15",
-                Texture1 = "Pause.png",
-                Texture2 = "Pause.png",
-                Texture3 = "Pause.png",
+                Texture1 = "Pause_Button.png",
+                Texture2 = "PauseOver_Button.png",
+                Texture3 = "PauseClicked_Button.png",
                 Depth = "2"
 			}
 		},
