@@ -67,28 +67,28 @@ void eden_ec::CharacterMovement::MoveCharacter(float dt) {
 	//Hace una rotacion inicial para ponerle mirando hacia delante y luego se hará una 
 	//segunda roatcion para mirar a la direccion correcta
 	_transform->SetRotation(_initialRotation);
-
+	_currentAction = MOVING;
 	switch (_inputVector.back()) {
 	case DOWN:
 	{
-		_transform->Translate(eden_utils::Vector3(0.01, 0, 0).Normalized() * dt);
-		_transform->Roll(180);
+		_transform->Translate(eden_utils::Vector3(0, 0, -0.1).Normalized() * dt);
+		_transform->Yaw(180);
 	}
 	break;
 	case LEFT:
 	{
-		_transform->Translate(eden_utils::Vector3(0, -0.01, 0).Normalized() * dt);
-		_transform->Roll(90);
+		_transform->Translate(eden_utils::Vector3(0.1,0, 0).Normalized() * dt);
+		_transform->Yaw(90);
 	}
 	break;
 	case RIGHT:
 	{
-		_transform->Translate(eden_utils::Vector3(0, 0.01, 0).Normalized() * dt);
-		_transform->Roll(-90);
+		_transform->Translate(eden_utils::Vector3(-0.1,0, 0).Normalized() * dt);
+		_transform->Yaw(-90);
 	}
 	break;
 	case UP:
-		_transform->Translate(eden_utils::Vector3(-0.01, 0, 0).Normalized() * dt);
+		_transform->Translate(eden_utils::Vector3(0, 0, 0.1).Normalized() * dt);
 	}
 
 }

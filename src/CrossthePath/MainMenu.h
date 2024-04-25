@@ -6,6 +6,9 @@
 
 namespace eden_ec {
 	class CButton;
+	class CAudioEmitter;
+	class CTransform;
+
 	class MainMenu : public Component {
 	public:
 		MainMenu();
@@ -33,6 +36,9 @@ namespace eden_ec {
 		CButton* _start = nullptr;
 		CButton* _options = nullptr;
 		CButton* _exit = nullptr;
+		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
+		eden_ec::CTransform* _transform = nullptr;
+
 
 		int _startNewPos=-1;
 		int _exitNewPos = -1;

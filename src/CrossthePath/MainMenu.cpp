@@ -6,8 +6,11 @@
 #include "GameManager.h"
 #include <SceneManager.h>
 #include <RenderManager.h>
+#include "CAudioEmitter.h"
 #include "CButton.h"
 #include "Entity.h"
+#include "Transform.h"
+
 
 const std::string eden_ec::MainMenu::_id = "MAIN_MENU";
 
@@ -37,6 +40,11 @@ void eden_ec::MainMenu::Start()
 	_options = eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<CButton>();
 	_optionsIniPos = _options->GetPosition();
 	_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
+
+	_transform = _ent->GetComponent<CTransform>();
+
+	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
+	_audioEmitter->Play();
 }
 
 void eden_ec::MainMenu::Update(float t)

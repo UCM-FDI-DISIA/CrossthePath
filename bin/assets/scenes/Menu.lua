@@ -105,6 +105,14 @@ Entity6 = {
 			}
 		},
 		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0|0|0",
+				Rotation = "false|1|0|0|0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
 			Name = "AUDIO_EMITTER",
 			Arguments = {
 				SongName = "MainMenu.mp3",
