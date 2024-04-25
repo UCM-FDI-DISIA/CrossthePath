@@ -14,7 +14,7 @@ material Cursor.png {
         }
     }
 }
-material Options.png{
+material UI_CrossThePath_Settings.png{
     receive_shadows on
     technique {
         pass {
@@ -23,7 +23,23 @@ material Options.png{
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Options.png
+                texture UI_CrossThePath_Settings.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material UI_CrossThePath_SettingsClicked.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture UI_CrossThePath_SettingsClicked.png
                 tex_address_mode clamp
                 
             }
@@ -46,7 +62,7 @@ material Win.png {
         }
     }
 }
-material Pause.png {
+material UI_CrossThePath_PauseClicked.png {
     receive_shadows on
     technique {
         pass {
@@ -55,7 +71,23 @@ material Pause.png {
                 depth_write off
                 diffuse vertexcolour
             	texture_unit {
-                texture Pause.png
+                texture UI_CrossThePath_PauseClicked.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material UI_CrossThePath_Pause.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture UI_CrossThePath_Pause.png
                 tex_address_mode clamp
                 
             }

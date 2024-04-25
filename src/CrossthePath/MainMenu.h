@@ -8,6 +8,7 @@ namespace eden_ec {
 	class CButton;
 	class CAudioEmitter;
 	class CTransform;
+	class CAnimator;
 
 	class MainMenu : public Component {
 	public:
@@ -36,6 +37,7 @@ namespace eden_ec {
 		CButton* _start = nullptr;
 		CButton* _options = nullptr;
 		CButton* _exit = nullptr;
+		CAnimator* _playerAnimator = nullptr;
 		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 		eden_ec::CTransform* _transform = nullptr;
 
@@ -43,6 +45,10 @@ namespace eden_ec {
 		int _startNewPos=-1;
 		int _exitNewPos = -1;
 		int _optionsNewPos = -1;
+		float timer = 5.0f;
+		float currentTime = 0.0f;
+		bool changeAnim = false;
+		bool wave = true;
 		std::pair<float, float>_startIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_exitIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_optionsIniPos = std::make_pair(0.0f, 0.0f);

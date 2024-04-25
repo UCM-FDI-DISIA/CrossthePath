@@ -1057,8 +1057,97 @@ Entity44 = {
 		}
 	}
 }
+Entity45 = {
+	Name = "buttonPause",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonPause",
+				XPos = "4",
+                YPos = "5",
+                Width = "10",
+                Height = "10",
+                Texture1 = "UI_CrossThePath_Pause.png",
+                Texture2 = "UI_CrossThePath_PauseClicked.png",
+                Texture3 = "UI_CrossThePath_PauseClicked.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Game_Pause",
+			}
+        }
+	}
+}
+Entity46 = {
+	Name = "UI_Cursor",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+				OverlayName= "image",
+				XPos = "0",
+				YPos = "0",
+				Width = "3",
+				Height = "3",
+				Texture = "Cursor.png",
+				Depth = "10"
+			}
+		},
+		{
+			Name = "CURSOR",
+			Arguments = {
+			}
+		}
+	}		
+}
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, Entity40, Entity41, Entity42, Entity43, Entity44 }
+Entity47 = {
+	Name = "UI_Manager",
+	Components = {
+		{
+			Name = "UI_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
+
+Entity48 = {
+	Name = "timer",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "90",
+                YPos = "5",
+                Tam = "5",
+                Text = "Timer: 0",
+                Font = "",
+                Color = "1|1|1",
+                Depth = "2"
+			}
+		},
+		{
+			Name = "UI_MANAGER_COMPONENT",
+			Arguments ={
+				Element = 3
+			}
+		}
+	}	
+}
+
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, 
+Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, 
+Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, 
+Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, 
+Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
+Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47,
+Entity48 }
 
 CollisionLayers = {
 	Layers = {

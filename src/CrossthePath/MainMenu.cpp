@@ -10,6 +10,7 @@
 #include "CButton.h"
 #include "Entity.h"
 #include "Transform.h"
+#include "CAnimator.h"
 
 
 const std::string eden_ec::MainMenu::_id = "MAIN_MENU";
@@ -43,12 +44,33 @@ void eden_ec::MainMenu::Start()
 
 	_transform = _ent->GetComponent<CTransform>();
 
+	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player")->GetComponent<CAnimator>();
+	_playerAnimator->PlayAnim("Idle");
 	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	_audioEmitter->Play();
+	_audioEmitter->SetLoop(true);
 }
 
 void eden_ec::MainMenu::Update(float t)
 {
+	if (currentTime >= timer && !changeAnim) {
+		changeAnim = true;
+		currentTime = 0; 
+		if (wave) {
+			_playerAnimator->PlayAnim("Wave");
+			wave = false;
+		}
+		else {
+			_playerAnimator->PlayAnim("Yes");
+			wave = true;
+		}
+
+	}
+	else {
+		changeAnim = false;
+		currentTime += t;
+	}
+
 	if (_startNewPos <= _startIniPos.first-3) {
 		_startNewPos = _startNewPos + 3;
 		_start->SetPosition(_startNewPos, _startIniPos.second);
@@ -61,6 +83,8 @@ void eden_ec::MainMenu::Update(float t)
 		_optionsNewPos = _optionsNewPos + 5;
 		_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
 	}
+
+
 }
 
 void eden_ec::MainMenu::Play()

@@ -28,6 +28,6 @@ void RegisterComponents() {
 }
 
 void LoadScene() {
-	eden::SceneManager::getInstance()->PushScene("Menu");
+	eden::SceneManager::getInstance()->PushScene("MainMenu2");
 }
 

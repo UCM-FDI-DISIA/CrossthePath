@@ -132,9 +132,9 @@ Entity7 = {
                 YPos = "90",
                 Width = "15",
                 Height = "15",
-                Texture1 = "Options.png",
-                Texture2 = "Options.png",
-                Texture3 = "Options.png",
+                Texture1 = "UI_CrossThePath_Settings.png",
+                Texture2 = "UI_CrossThePath_SettingsClicked.png",
+                Texture3 = "UI_CrossThePath_SettingsClicked.png",
                 Depth = "2"
 			}
 		},
