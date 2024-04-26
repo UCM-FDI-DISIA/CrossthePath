@@ -315,6 +315,64 @@ Entity11 = {
 	}
 }
 
+EntityCocheIz = {
+	Name = "jose_luis_el_coche",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "car_hatchback"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-5.70170259475708|-1.1442415714263916|0.15525513887405396",
+				Rotation = "false|1.0|-8.146033536604591e-08|-4.902029627786405e-23|-3.993209604997573e-30",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Name = "Gas",
+				Loop = "true",
+				Time = "1.0",
+				Started = "true"
+			}
+		}
+	}
+}
+
+EntityCocheDr = {
+	Name = "antonio_jesus_el_coche",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "car_police"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-5.70170259475708|-1.1442415714263916|0.15525513887405396",
+				Rotation = "false|-4.371138828673793e-08|0.0|0.0|1.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Name = "Gas",
+				Loop = "true",
+				Time = "1.0",
+				Started = "true"
+			}
+		}
+	}
+}
+
 Entity12 = {
 	Name = "base.001",
 	Components = {
@@ -1147,7 +1205,7 @@ Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23,
 Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, 
 Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
 Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47,
-Entity48 }
+Entity48, EntityCocheIz, EntityCocheDr }
 
 CollisionLayers = {
 	Layers = {

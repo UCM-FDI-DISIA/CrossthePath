@@ -96,6 +96,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h" />
     <ClInclude Include="..\..\src\CrossthePath\CTPMain.h" />
+    <ClInclude Include="..\..\src\CrossthePath\EnemyMovement.h" />
     <ClInclude Include="..\..\src\CrossthePath\FinishLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManagerController.h" />
@@ -110,6 +111,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\CrossthePath\CameraMovement.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\EnemyMovement.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\FinishLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManagerController.cpp" />
