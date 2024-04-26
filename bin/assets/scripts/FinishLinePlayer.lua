@@ -11,7 +11,7 @@ function finishLinePlayer:new()
 end
 
 --Metodo OnCollisionEnter
-function collisionTest:OnCollisionEnter()
+function finishLinePlayer:OnCollisionEnter()
 	FinishLine:PlayerWin();
 end
 --Variable global de la clase (para Luabridge)
