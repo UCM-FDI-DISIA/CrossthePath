@@ -5,7 +5,7 @@ Cube = {
             Name = "TRANSFORM", 
             Arguments = {
                 Position = "0|0|0",
-                Rotation = "0|0|0|0",
+                Rotation = "true|0|0|0|0",
                 Scale = "1|1|1"
             }
         },
@@ -25,7 +25,7 @@ Frog = {
             Name = "TRANSFORM", 
             Arguments = {
                 Position = "0|0|100",
-                Rotation = "0|0|0|0",
+                Rotation = "true|0|0|0|0",
                 Scale = "10|10|10"
             }
         },
@@ -38,4 +38,24 @@ Frog = {
     }
 }
 
-Blueprints = { Cube, Frog }
+enemy = {
+    Name = "enemy",
+    Components = {
+        {
+            Name = "TRANSFORM", 
+            Arguments = {
+                Position = "0|0|0",
+                Rotation = "true|0|0|0|0",
+                Scale = "1|1|1"
+            }
+        },
+        {
+            Name = "MESH_RENDERER",
+            Arguments = {
+                Mesh = "car_taxi"
+            }
+        }
+    }
+}
+
+Blueprints = { Cube, Frog, enemy }

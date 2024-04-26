@@ -2377,22 +2377,16 @@ Entity116 = {
                 YPos = "15",
                 Width = "15",
                 Height = "15",
-                Texture1 = "Pause.png",
-                Texture2 = "Pause.png",
-                Texture3 = "Pause.png",
+                Texture1 = "Pause_Button.png",
+                Texture2 = "PauseOver_Button.png",
+                Texture3 = "PauseClicked_Button.png",
                 Depth = "2"
 			}
 		},
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Pause",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
+                Script= "Game_Pause",
 			}
         }
 	}
@@ -2445,7 +2439,7 @@ Entity118 = {
 		{
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "FinishLine",
+                Script= "FinishLinePlayer",
 			}
         }
 	}
@@ -2461,17 +2455,106 @@ Entity119 = {
 	}
 }
 Entity120 = {
-	Name = "Game_Manager",
+	Name = "win",
 	Components = {
 		{
-			Name = "GAME_MANAGER",
+			Name = "IMAGE",
 			Arguments = {
+                OverlayName= "win",
+				XPos = "50",
+                YPos = "40",
+                Width = "75",
+                Height = "75",
+                Texture = "Win.png",
+                Depth = "1"
+			}
+		},
+		{
+			Name = "UI_MANAGER_COMPONENT",
+			Arguments ={
+				Element = 0
+			}
+		}
+	}	
+}
+Entity121 = {
+	Name = "play",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "button",
+				XPos = "50",
+                YPos = "80",
+                Width = "30",
+                Height = "15",
+                Texture1 = "MenuButton_Ini.png",
+                Texture2 = "MenuButton_Over.png",
+                Texture3 = "MenuButton_Clicked.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Game_Replay",
+			}
+        },
+		{
+			Name = "UI_MANAGER_COMPONENT",
+			Arguments ={
+				Element = 4
 			}
 		}
 	}
 }
+Entity122 = {
+	Name = "timer",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "85",
+                YPos = "7",
+                Tam = "7",
+                Text = "Timer: 0",
+                Font = "",
+                Color = "0|0|0",
+                Depth = "2"
+			}
+		},
+		{
+			Name = "UI_MANAGER_COMPONENT",
+			Arguments ={
+				Element = 3
+			}
+		}
+	}	
+}
 
-Entities = {Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, 
+INSTANCIATOR = {
+	Name = "Instanciator",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-6.073911190032959|3.5862433910369873|0.3868137001991272",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy";
+				SpawnRate = "3.0"
+			}
+		}	
+	}
+}
+
+Entities = {INSTANCIATOR, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, 
 Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, 
 Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29,
  Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
@@ -2483,7 +2566,7 @@ Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, 
 	Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99,
 	 Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108,
 	  Entity109, Entity110, Entity111, Entity112, Entity113,Entity114,Entity115 ,Entity116,Entity117,
-	  Entity118,Entity119,Entity120}
+	  Entity118,Entity119,Entity120,Entity121,Entity122}
 
 CollisionLayers = {
 	Layers = {

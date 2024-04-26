@@ -8,6 +8,8 @@ namespace eden_utils {
 }
 namespace eden_ec {
 	class CTransform;
+	class CAudioEmitter;
+
 	/// @brief Clase encargada del movimiento de la camara siguiendo al jugador
 	class CameraMovement : public Component {
 	public:
@@ -30,11 +32,13 @@ namespace eden_ec {
 		eden_ec::CTransform* _transform;
 		eden_ec::CTransform* _playerTransform;
 		eden_utils::Quaternion* _initialRotation;
+		eden_ec::CAudioEmitter* _audioEmitter;
+
 
 		/// @brief velocidad de la cámara
-		float _speed = 5;
+		float _speed = 8;
 		/// @brief offset de la cámara
-		float _offset = 1.5f;
+		float _offset = 0.5f;
 	};
 }
 #endif //CAMERA_MOVEMENT_H

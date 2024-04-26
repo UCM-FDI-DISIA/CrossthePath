@@ -16,42 +16,7 @@ Entity1 = {
 		}
 	}
 }
-
-
-
 Entity2 = {
-	Name = "buttonResume",
-	Components = {
-		{
-			Name = "BUTTON",
-			Arguments = {
-                OverlayName= "buttonResume",
-				XPos = "50",
-                YPos = "50",
-                Width = "30",
-                Height = "15",
-                Texture1 = "Resume_Ini.png",
-                Texture2 = "Resume_Over.png",
-                Texture3 = "Resume_Click.png",
-                Depth = "2"
-			}
-		},
-        {
-            Name = "BEHAVIOUR",
-			Arguments = {
-                Script= "PausaResume",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
-			}
-        }
-	}	
-}
-
-Entity3 = {
 	Name = "UI_Cursor",
 	Components = {
 		{
@@ -73,7 +38,7 @@ Entity3 = {
 		}
 	}		
 }
-Entity4 = {
+Entity3 = {
 	Name = "UI_Image",
 	Components = {
 		{
@@ -90,7 +55,31 @@ Entity4 = {
 		}
 	}	
 }
-
+Entity4 = {
+	Name = "buttonResume",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonResume",
+				XPos = "50",
+                YPos = "50",
+                Width = "30",
+                Height = "15",
+                Texture1 = "Resume_Button.png",
+                Texture2 = "ResumeOver_Button.png",
+                Texture3 = "ResumeClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Pausa_Resume",
+			}
+        }
+	}	
+}
 Entity5 = {
 	Name = "buttonMenu",
 	Components = {
@@ -102,22 +91,16 @@ Entity5 = {
                 YPos = "70",
                 Width = "30",
                 Height = "15",
-                Texture1 = "MENU_Ini.png",
-                Texture2 = "MENU_Over.png",
-                Texture3 = "MENU_Click.png",
+                Texture1 = "Menu_Button.png",
+                Texture2 = "MenuOver_Button.png",
+                Texture3 = "MenuClicked_Button.png",
                 Depth = "2"
 			}
 		},
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "PausaBackMenu",
-			}
-        },
-		{
-            Name = "PAUSA",
-            Arguments = {
-
+                Script= "Pausa_BackMenu",
 			}
         }
 	}	
@@ -134,20 +117,52 @@ Entity6 = {
                 YPos = "90",
                 Width = "30",
                 Height = "15",
-                Texture1 = "Exit_Ini.png",
-                Texture2 = "Exit_Over.png",
-                Texture3 = "Exit_Click.png",
+                Texture1 = "Exit_Button.png",
+                Texture2 = "ExitOver_Button.png",
+                Texture3 = "ExitClicked_Button.png",
                 Depth = "2"
 			}
 		},
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "PausaExit",
+                Script= "Pausa_Exit",
 			}
-        },
+        }
+	}	
+}
+
+Entity7 = {
+	Name = "options",
+	Components = {
 		{
-            Name = "PAUSA",
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "options",
+				XPos = "90",
+                YPos = "90",
+                Width = "15",
+                Height = "15",
+                Texture1 = "Settings_Button.png",
+                Texture2 = "SettingsOver_Button.png",
+                Texture3 = "SettingsClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Pausa_Options",
+			}
+        }
+	}	
+}
+
+Entity8 ={
+	Name = "Pause_menu",
+	Components = {
+		{
+            Name = "MENU_PAUSA",
             Arguments = {
 
 			}
@@ -155,7 +170,7 @@ Entity6 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6}
+Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6,Entity7,Entity8}
 
 CollisionLayers = {
 	Layers = {

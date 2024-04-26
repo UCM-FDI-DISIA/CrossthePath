@@ -64,70 +64,63 @@ void eden_ec::CharacterMovement::MoveCharacter(float dt) {
 		StartMoving();
 	}
 
+	//Hace una rotacion inicial para ponerle mirando hacia delante y luego se hará una 
+	//segunda roatcion para mirar a la direccion correcta
 	_transform->SetRotation(_initialRotation);
 	_currentAction = MOVING;
-
-	switch (_currentDirMovement) {
+	switch (_inputVector.back()) {
 	case DOWN:
 	{
-		_transform->Translate(eden_utils::Vector3(0.01, 0, 0).Normalized() * dt);
-		_transform->Roll(180);
+		_transform->Translate(eden_utils::Vector3(0, 0, -0.1).Normalized() * dt);
+		_transform->Yaw(180);
 	}
 	break;
 	case LEFT:
 	{
-		_transform->Translate(eden_utils::Vector3(0, -0.01, 0).Normalized() * dt);
-		_transform->Roll(90);
+		_transform->Translate(eden_utils::Vector3(0.1,0, 0).Normalized() * dt);
+		_transform->Yaw(90);
 	}
 	break;
 	case RIGHT:
 	{
-		_transform->Translate(eden_utils::Vector3(0, 0.01, 0).Normalized() * dt);
-		_transform->Roll(-90);
+		_transform->Translate(eden_utils::Vector3(-0.1,0, 0).Normalized() * dt);
+		_transform->Yaw(-90);
 	}
 	break;
 	case UP:
-	{
-		_transform->Translate(eden_utils::Vector3(-0.01, 0, 0).Normalized() * dt);
-	}
+		_transform->Translate(eden_utils::Vector3(0, 0, 0.1).Normalized() * dt);
 	}
 
 }
 
+void eden_ec::CharacterMovement::RemoveInput(MovementDir dir) {
+	for (auto it = _inputVector.begin(); it != _inputVector.end();) {
+		if (*it == dir) it = _inputVector.erase(it);
+		else ++it;
+	}
+}
 
 void eden_ec::CharacterMovement::Update(float dt) {
 	PlayAnimation();
-	keyReleased = true;
 
-	if (_inputManager->IsKeyHeld('a')) {
-		_currentDirMovement = LEFT;
-		keyReleased = false;
+	if (_inputManager->IsKeyDown('a')) _inputVector.push_back(LEFT);
+	else if(_inputManager->IsKeyUp('a')) RemoveInput(LEFT);
 
-	}
+	if (_inputManager->IsKeyDown('s')) _inputVector.push_back(DOWN);
+	else if (_inputManager->IsKeyUp('s')) RemoveInput(DOWN);
 
-	if (_inputManager->IsKeyHeld('s')) {
-		_currentDirMovement = DOWN;
-		keyReleased = false;
+	if (_inputManager->IsKeyDown('w')) _inputVector.push_back(UP);
+	else if (_inputManager->IsKeyUp('w')) RemoveInput(UP);
 
-	}
+	if (_inputManager->IsKeyDown('d')) _inputVector.push_back(RIGHT);
+	else if (_inputManager->IsKeyUp('d')) RemoveInput(RIGHT);
 
-	if (_inputManager->IsKeyHeld('w')) {
-		_currentDirMovement = UP;
-		keyReleased = false;
-
-	}
-
-	if (_inputManager->IsKeyHeld('d')) {
-		_currentDirMovement = RIGHT;
-		keyReleased = false;
-
-	}
-
-
-	if (keyReleased) {
+	if (_inputVector.size() == 0) {
 		_currentAction = IDLE;
 	}
-	else MoveCharacter(dt);
+	else {
+		MoveCharacter(dt);
+	}
 
 
 }

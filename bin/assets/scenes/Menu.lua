@@ -17,50 +17,27 @@ Entity1 = {
 	}
 }
 
-
-
 Entity2 = {
-	Name = "UI_Button",
+	Name = "buttonPlay",
 	Components = {
 		{
 			Name = "BUTTON",
 			Arguments = {
                 OverlayName= "button",
 				XPos = "50",
-                YPos = "70",
+                YPos = "55",
                 Width = "30",
                 Height = "15",
-                Texture1 = "MenuButton_Ini.png",
-                Texture2 = "MenuButton_Over.png",
-                Texture3 = "MenuButton_Clicked.png",
+                Texture1 = "Play_Button.png",
+                Texture2 = "PlayOver_Button.png",
+                Texture3 = "PlayClicked_Button.png",
                 Depth = "2"
 			}
 		},
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "buttonTest",
-			}
-        },
-		{
-            Name = "PRUEBA",
-            Arguments = {
-
-			}
-        },
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "-1.610821008682251|5.619948387145996|5.7784810066223145",
-				Rotation = "false|0.5458973050117493|0.14995510876178741|0.21834951639175415|0.7948793172836304",
-				Scale = "1.0|1.0|1.0"
-			}
-		},
-		{
-            Name = "AUDIO_EMITTER",
-            Arguments = {
-				SongName = "MainMenu.mp3",
-				Is3D = "false"
+                Script= "MainMenu_Play",
 			}
         }
 	}	
@@ -88,6 +65,7 @@ Entity3 = {
 		}
 	}		
 }
+
 Entity4 = {
 	Name = "UI_Image",
 	Components = {
@@ -106,7 +84,96 @@ Entity4 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3,Entity4}
+Entity5 = {
+	Name = "Game_Manager",
+	Components = {
+		{
+			Name = "GAME_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
+
+Entity6 = {
+	Name ="Mani_menu",
+	Components ={
+		{
+			Name = "MAIN_MENU",
+			Arguments = {
+
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0|0|0",
+				Rotation = "false|1|0|0|0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "MainMenu.mp3",
+				Is3D = "false"
+			}
+		}
+	}
+}
+Entity7 = {
+	Name = "buttonOptions",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "options",
+				XPos = "90",
+                YPos = "90",
+                Width = "15",
+                Height = "15",
+                Texture1 = "Settings_Button.png",
+                Texture2 = "SettingsOver_Button.png",
+                Texture3 = "SettingsClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "MainMenu_Options",
+			}
+        }
+	}	
+}
+
+Entity8 = {
+	Name = "buttonExit",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonExit",
+				XPos = "50",
+                YPos = "75",
+                Width = "25",
+                Height = "15",
+                Texture1 = "Exit_Button.png",
+                Texture2 = "ExitOver_Button.png",
+                Texture3 = "ExitClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "MainMenu_Exit",
+			}
+        }
+	}	
+}
+
+Entities = { Entity1, Entity2, Entity3,Entity4,Entity5,Entity6,Entity7,Entity8}
 
 CollisionLayers = {
 	Layers = {

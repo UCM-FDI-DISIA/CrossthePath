@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include "Transform.h"
 #include "GameManager.h"
+#include "CAudioEmitter.h"
 
 const std::string eden_ec::CameraMovement::_id = "PLAYERCAMERA";
 
@@ -15,19 +16,21 @@ void eden_ec::CameraMovement::Start() {
 	_transform = _ent->GetComponent<CTransform>();
 	_playerTransform = eden_ec::GameManager::Instance()->GetPlayer()->GetComponent<CTransform>();
 	_initialRotation = new eden_utils::Quaternion(_transform->GetRotation());
+	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
+	_audioEmitter->Play();
 }
 
 void eden_ec::CameraMovement::Update(float dt) 
 {
 	//Calculamos la direccion en la que se movera la camara
 	eden_utils::Vector3 dir =
-		eden_utils::Vector3(_playerTransform->GetPosition().GetX()+_offset, _playerTransform->GetPosition().GetY(), _playerTransform->GetPosition().GetZ()) - _transform->GetPosition();
+		eden_utils::Vector3(_playerTransform->GetPosition().GetX(), _playerTransform->GetPosition().GetY(), _playerTransform->GetPosition().GetZ() + _offset) - _transform->GetPosition();
 	dir.Normalize();
 
 	//Seteamos el vector de movimiento
 	eden_utils::Vector3 toFinalPos = _transform->GetPosition() + (dir * dt * _speed);
 
 	//Actualizamos la posición
-	_transform->SetPosition(eden_utils::Vector3(toFinalPos.GetX(), _transform->GetPosition().GetY(), _transform->GetPosition().GetZ()));
+	_transform->SetPosition(eden_utils::Vector3(_transform->GetPosition().GetX(), _transform->GetPosition().GetY(), toFinalPos.GetZ()));
 }
 

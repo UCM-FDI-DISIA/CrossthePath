@@ -1,0 +1,450 @@
+material Cursor.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Cursor.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material Settings_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Settings_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material SettingsOver_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture SettingsOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material SettingsClicked_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture SettingsClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material Win.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Win.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material CrossThePath_Title.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture CrossThePath_Title.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material Pause_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Pause_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material PauseOver_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture PauseOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material PauseClicked_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture PauseClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material Exit_Button.png {
+    receive_shadows on  
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Exit_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material ExitClicked_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture ExitClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material ExitOver_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture ExitOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material MENU_Ini.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture MENU_Ini.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material MENU_Over.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture MENU_Over.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material MENU_Click.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture MENU_Click.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Resume_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Resume_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material ResumeOver_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture ResumeOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material ResumeClicked_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture ResumeClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material MainMenuBackground.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture MainMenuBackground.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material ComingSoon.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture ComingSoon.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+
+material meme.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture meme.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material Menu_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture Menu_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material MenuOver_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture MenuOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material MenuClicked_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture MenuClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material Play_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture Play_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material PlayOver_Button.png {
+   receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture PlayOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material PlayClicked_Button.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture PlayClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
