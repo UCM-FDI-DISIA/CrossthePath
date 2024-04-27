@@ -327,8 +327,8 @@ EntityCocheIz = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-5.70170259475708|-1.1442415714263916|0.15525513887405396",
-				Rotation = "false|1.0|-8.146033536604591e-08|-4.902029627786405e-23|-3.993209604997573e-30",
+				Position = "0.0|0.0|0.0",
+				Rotation = "true|0|0|0|0",
 				Scale = "1.0|1.0|1.0"
 			}
 		},
@@ -339,6 +339,13 @@ EntityCocheIz = {
 				Loop = "true",
 				Time = "1.0",
 				Started = "true"
+			}
+		},
+		{
+			Name = "ENEMY_MOVEMENT",
+			Arguments = {
+				Way = "true",
+				Velocity = "3"
 			}
 		}
 	}
@@ -356,8 +363,8 @@ EntityCocheDr = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-5.70170259475708|-1.1442415714263916|0.15525513887405396",
-				Rotation = "false|-4.371138828673793e-08|0.0|0.0|1.0",
+				Position = "2.0|0.0|0.0",
+				Rotation = "true|0|0.0|0.0|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
 		},
@@ -368,6 +375,13 @@ EntityCocheDr = {
 				Loop = "true",
 				Time = "1.0",
 				Started = "true"
+			}
+		},
+		{
+			Name = "ENEMY_MOVEMENT",
+			Arguments = {
+				Way = "false",
+				Velocity = "5"
 			}
 		}
 	}

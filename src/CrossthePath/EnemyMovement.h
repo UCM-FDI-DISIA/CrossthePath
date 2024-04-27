@@ -33,11 +33,10 @@ namespace eden_ec {
 		const static std::string _id;
 
 	private:
-		/// @brief Direccion en la que se mueve el coche: true->izquierda, false->derecha
+		/// @brief Sentido en el que se mueve el coche: true->izquierda, false->derecha
 		bool _way;
 
 		eden_ec::CTransform* _transform;
-		eden_utils::Quaternion* _quaternion;
 
 		void SetMov(bool _way);
 

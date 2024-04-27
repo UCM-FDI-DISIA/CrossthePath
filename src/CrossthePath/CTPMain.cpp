@@ -12,6 +12,7 @@
 #include "InstanciateEnemies.h"
 #include "MenuOpciones.h"
 #include "MainMenu.h"
+#include "EnemyMovement.h"
 
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
@@ -25,6 +26,7 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::InstanciateEnemies>();
 	factory->RegisterComponent<eden_ec::MenuOpciones>();
 	factory->RegisterComponent<eden_ec::MainMenu>();
+	factory->RegisterComponent<eden_ec::EnemyMovement>();
 }
 
 void LoadScene() {

@@ -13,31 +13,39 @@ void eden_ec::EnemyMovement::Init(eden_script::ComponentArguments* args)
 	//Velocidad a la que se mueve en dicho sentido
 	_vel = args->GetValueToInt("Velocity");
 
-	//Direccion en la que se mueve y rotacion inicial
+	//Direccion en la que se mueve
 	SetMov(_way);
-	SetInitRotation(_way);
 }
 
 void eden_ec::EnemyMovement::Start()
 {
-	_transform = _ent->GetComponent<CTransform>();
+	_transform = _ent->GetComponent<eden_ec::CTransform>();
+	SetInitRotation(_way);
 }
 
 void eden_ec::EnemyMovement::Update(float t)
 {
-	_transform->Translate(_movDir.Normalized() * t);
+	_transform->Translate((_transform->GetPosition()+_movDir).Normalized() * t);
 }
 
 void eden_ec::EnemyMovement::SetMov(bool _way)
 {
-	if (_way) _movDir = { -1,0,0 };
-	else _movDir = { 1,0,0 };
+	//Eje X positivo hacia la izquierda
+	if (_way) _movDir = { 1,0,0 };
+	//Eje X negativo hacia la derecha
+	else _movDir = { -1,0,0 };
 
 	_movDir *= _vel;
 }
 
 void eden_ec::EnemyMovement::SetInitRotation(bool _way)
 {
-	if (_way) _transform->LocalYaw(90);
-	else _transform->LocalYaw(-90);
+	if (_way) {
+		//_transform->Yaw(-90);
+		//_transform->Pitch(90);
+		//_transform->Roll(180);
+	}
+	else { 
+		_transform->Yaw(-90); 
+	}
 }
