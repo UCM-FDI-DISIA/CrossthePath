@@ -9,6 +9,7 @@
 #include "Entity.h"
 #include "CText.h"
 #include "CBar.h"
+#include <AudioManager.h>
 
 const std::string eden_ec::MenuOpciones::_id = "OPCIONES";
 
@@ -82,7 +83,8 @@ void eden_ec::MenuOpciones::ChangeVolumen(int num)
 {
 	 _vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
 	if (_vol != nullptr) {
-		float aux = _vol->GetComponent<CBar>()->GetBarPercentage();
-		_vol->GetComponent<CBar>()->SetBarPercentage(aux + num);
+		float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100 + num;
+		eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux/100);
+		_vol->GetComponent<CBar>()->SetBarPercentage(eden_audio::AudioManager::GetInstance()->GetGlobalVolume()*100);
 	}
 }
