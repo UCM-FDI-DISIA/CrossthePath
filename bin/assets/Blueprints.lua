@@ -54,8 +54,42 @@ enemy = {
             Arguments = {
                 Mesh = "car_taxi"
             }
+        },
+        {
+            Name = "ENEMY_MOVEMENT",
+            Arguments = {
+                Way = "false",
+                Velocity = "3"
+            }
         }
     }
 }
 
-Blueprints = { Cube, Frog, enemy }
+enemy2 = {
+    Name = "enemy2",
+    Components = {
+        {
+            Name = "TRANSFORM", 
+            Arguments = {
+                Position = "0|0|0",
+                Rotation = "true|0|0|0|0",
+                Scale = "1|1|1"
+            }
+        },
+        {
+            Name = "MESH_RENDERER",
+            Arguments = {
+                Mesh = "car_police"
+            }
+        },
+        {
+            Name = "ENEMY_MOVEMENT",
+            Arguments = {
+                Way = "false",
+                Velocity = "3"
+            }
+        }
+    }
+}
+
+Blueprints = { Cube, Frog, enemy, enemy2 }

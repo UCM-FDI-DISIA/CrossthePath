@@ -33,6 +33,8 @@ namespace eden_ec {
 		static std::string GetID() { return _id; }
 		/// @brief Metodo que instancia el enemigo correspondiente
 		void InstanciateEnemy();
+		/// @brief Metodo que setea la rotacion correcta al coche segun la direccion
+		void SetInitRotation();
 
 	protected:
 		/// @brief el ID del componente
@@ -49,6 +51,9 @@ namespace eden_ec {
 		float _spawnRate = 0.0f;
 		/// @brief Timer auxiliar de la clase
 		float _timer = 0.0f;
+		/// @brief booleano que indica la direccion inicial de los coches
+		bool _isLeft = true;
+		
 	};
 }
 

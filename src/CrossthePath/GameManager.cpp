@@ -59,8 +59,6 @@ void eden_ec::GameManager::GoBack()
 	_currState = _states[_states.size() - 1];
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->PopScene();
-
-	eden_render::RenderManager::getInstance()->ResizedWindow();
 }
 
 void eden_ec::GameManager::GoOptions()
@@ -76,7 +74,7 @@ void eden_ec::GameManager::GoMainMenu()
 	_currState = MainMenu;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->ChangeScene("Menu");
+	scnManager->ChangeScene("MainMenu");
 }
 
 void eden_ec::GameManager::CloseGame()

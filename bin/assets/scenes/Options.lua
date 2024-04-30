@@ -172,7 +172,7 @@ Entity8 = {
                 YPos = "65",
                 Tam = "10",
                 Text = "640x460",
-                Font = "",
+                Font = "OpenSans.ttf",
                 Color = "0|0|0",
                 Depth = "1"
 			}

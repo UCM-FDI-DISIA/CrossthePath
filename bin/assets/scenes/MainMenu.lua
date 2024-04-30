@@ -9,13 +9,7 @@ Entity1 = {
 				Scale = "1.0|1.0|1.0"
 			}
 		},
-		{
-			Name = "AUDIO_EMITTER",
-			Arguments = {
-				SongName = "MainMenu.mp3",
-				Is3D = "false"
-			}
-		},
+		
 		{
 			Name = "CAMERA",
 			Arguments = {

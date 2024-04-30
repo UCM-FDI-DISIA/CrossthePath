@@ -30,10 +30,8 @@ void eden_ec::GameManagerController::Awake()
 
 void eden_ec::GameManagerController::Start()
 {
-	eden::SceneManager::getInstance()->GetCurrentScene()->RemoveGameObject(_ent);
-	if (eden::SceneManager::getInstance()->GeDontDestroyOnLoadScene()->AddExistingGameObject(_ent)) {
+	if (eden::SceneManager::getInstance()->AddEntityToDontDestroyOnLoad(_ent)) {
 		original = true;
 		_gameManager->Start();
 	}
-	else _ent->SetAlive(false);
 }

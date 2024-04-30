@@ -40,7 +40,8 @@ Entity1 = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "PLAYER",
 				Bounciness = "0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -79,13 +80,7 @@ Entity3 = {
 				Scale = "1.0|1.0|1.0"
 			}
 		},
-		{
-			Name = "AUDIO_EMITTER",
-			Arguments = {
-				SongName = "GamePlay.mp3",
-				Is3D = "false"
-			}
-		},
+		
 		{
 			Name = "CAMERA",
 			Arguments = {
@@ -127,7 +122,8 @@ Entity4 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -221,7 +217,8 @@ Entity8 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -255,7 +252,8 @@ Entity9 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -289,7 +287,8 @@ Entity10 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -328,7 +327,7 @@ EntityCocheIz = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "0.0|0.0|0.0",
-				Rotation = "true|0|0|0|0",
+				Rotation = "false|0.0|1.0|0.0|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
 		},
@@ -364,7 +363,7 @@ EntityCocheDr = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "2.0|0.0|0.0",
-				Rotation = "true|0|0.0|0.0|0.0",
+				Rotation = "false|-4.371138828673793e-08|0.0|0.0|1.0",
 				Scale = "1.0|1.0|1.0"
 			}
 		},
@@ -435,7 +434,8 @@ Entity13 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -529,7 +529,8 @@ Entity17 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -783,7 +784,8 @@ Entity29 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -817,7 +819,8 @@ Entity30 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -851,7 +854,8 @@ Entity31 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -885,7 +889,8 @@ Entity32 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -1213,7 +1218,72 @@ Entity48 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, 
+INSTANCIATOR = {
+	Name = "Instanciator",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|1.0|-6.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy";
+				SpawnRate = "3.0"
+			}
+		}	
+	}
+}
+
+INSTANCIATOR = {
+	Name = "Instanciator",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|1.0|-6.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy",
+				SpawnRate = "3.0",
+				IsLeft = "true"
+			}
+		}	
+	}
+}
+
+INSTANCIATOR2 = {
+	Name = "Instanciator2",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|1.0|-4.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy2",
+				SpawnRate = "2.0",
+				IsLeft = "false"
+			}
+		}	
+	}
+}
+
+Entities = { INSTANCIATOR, INSTANCIATOR2, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, 
 Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, 
 Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, 
 Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, 
