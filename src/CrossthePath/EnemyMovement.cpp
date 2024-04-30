@@ -8,13 +8,12 @@ const std::string eden_ec::EnemyMovement::_id = "ENEMY_MOVEMENT";
 void eden_ec::EnemyMovement::Init(eden_script::ComponentArguments* args)
 {
 	//Sentido de la marcha
-	_way = args->GetValueToBool("Way");
+	//_way = args->GetValueToBool("Way");
 
 	//Velocidad a la que se mueve en dicho sentido
 	_vel = args->GetValueToInt("Velocity");
 
-	//Direccion en la que se mueve
-	SetMov(_way);
+	SetMov();
 }
 
 void eden_ec::EnemyMovement::Start()
@@ -28,12 +27,17 @@ void eden_ec::EnemyMovement::Update(float t)
 	_transform->Translate((_movDir).Normalized() * t);
 }
 
-void eden_ec::EnemyMovement::SetMov(bool _way)
+void eden_ec::EnemyMovement::SetWay(bool way)
+{
+	_way = way;
+}
+
+void eden_ec::EnemyMovement::SetMov()
 {
 	//Eje X positivo hacia la izquierda
-	if (_way) _movDir = { 0,1,0 };
+	if (_way) _movDir = { 1,0,0 };
 	//Eje X negativo hacia la derecha
-	else _movDir = { 0,-1,0 };
+	else _movDir = { -1,0,0 };
 
 	_movDir *= _vel;
 }

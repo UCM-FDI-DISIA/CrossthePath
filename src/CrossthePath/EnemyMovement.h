@@ -12,7 +12,7 @@ namespace eden_ec {
 	{
 	public:
 		/// @brief Constructora
-		EnemyMovement(){}
+		EnemyMovement() {}
 
 		/// @brief Destructora
 		~EnemyMovement() = default;
@@ -31,26 +31,30 @@ namespace eden_ec {
 		/// @param t deltaTime
 		void Update(float t) override;
 
+		/// @brief Le da un valor al booleano _way
+		/// @param way 
+		void SetWay(bool way);
+
 	protected:
 		const static std::string _id;
 
 	private:
 		/// @brief Sentido en el que se mueve el coche: true->izquierda, false->derecha
-		bool _way;
+		bool _way = true;
 
 		/// @brief Referencia al transform del coche
-		eden_ec::CTransform* _transform;
+		eden_ec::CTransform* _transform = nullptr;
 
 		/// @brief Le da una direccion de movimiento y velocidad al coche segun el sentido de la marcha
 		/// @param _way 
-		void SetMov(bool _way);
+		void SetMov();
 
 		/// @brief Vector unitario de direccion de movimiento (en que eje se mueve)
-		eden_utils::Vector3 _movDir;
+		eden_utils::Vector3 _movDir = { 0,0,0 };
 
 		/// @brief Variable que recibe de .lua que dictamina la velocidad a la que se mueve
 		/// Debe ser siempre positivo
-		int _vel;
+		int _vel = 1;
 	};
 
 }
