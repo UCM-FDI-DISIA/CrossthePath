@@ -13,7 +13,6 @@ void eden_ec::EnemyMovement::Init(eden_script::ComponentArguments* args)
 	//Velocidad a la que se mueve en dicho sentido
 	_vel = args->GetValueToInt("Velocity");
 
-	SetMov();
 }
 
 void eden_ec::EnemyMovement::Start()
@@ -24,7 +23,7 @@ void eden_ec::EnemyMovement::Start()
 
 void eden_ec::EnemyMovement::Update(float t)
 {
-	_transform->Translate((_movDir).Normalized() * t);
+	_transform->Translate((_movDir).Normalized() * t, true);
 }
 
 void eden_ec::EnemyMovement::SetWay(bool way)

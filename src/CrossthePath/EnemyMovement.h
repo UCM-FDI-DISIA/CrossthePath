@@ -34,6 +34,9 @@ namespace eden_ec {
 		/// @brief Le da un valor al booleano _way
 		/// @param way 
 		void SetWay(bool way);
+		/// @brief Le da una direccion de movimiento y velocidad al coche segun el sentido de la marcha
+		/// @param _way 
+		void SetMov();
 
 	protected:
 		const static std::string _id;
@@ -45,9 +48,6 @@ namespace eden_ec {
 		/// @brief Referencia al transform del coche
 		eden_ec::CTransform* _transform = nullptr;
 
-		/// @brief Le da una direccion de movimiento y velocidad al coche segun el sentido de la marcha
-		/// @param _way 
-		void SetMov();
 
 		/// @brief Vector unitario de direccion de movimiento (en que eje se mueve)
 		eden_utils::Vector3 _movDir = { 0,0,0 };

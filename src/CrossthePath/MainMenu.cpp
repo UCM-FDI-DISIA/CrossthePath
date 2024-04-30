@@ -46,9 +46,9 @@ void eden_ec::MainMenu::Start()
 
 	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player")->GetComponent<CAnimator>();
 	_playerAnimator->PlayAnim("Idle");
-	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
+	/*_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	_audioEmitter->Play();
-	_audioEmitter->SetLoop(true);
+	_audioEmitter->SetLoop(true);*/
 }
 
 void eden_ec::MainMenu::Update(float t)

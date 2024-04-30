@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "Transform.h"
 #include "SceneManager.h"
+#include "EnemyMovement.h"
 
 const std::string eden_ec::InstanciateEnemies::_id = "INSTANCIATE_ENEMIES";
 
@@ -10,6 +11,7 @@ namespace eden_ec {
 	void InstanciateEnemies::Init(eden_script::ComponentArguments* args) {
 		_prefabName = args->GetValueToString("PrefabName");
 		_spawnRate = args->GetValueToFloat("SpawnRate");
+		_isLeft = args->GetValueToBool("IsLeft");
 	}
 
 	void InstanciateEnemies::Awake() {
@@ -54,9 +56,11 @@ namespace eden_ec {
 			_transform->Roll(-90);
 		}
 		else {
-			_transform->Yaw(-90);
-			_transform->Pitch(180);
-			_transform->Roll(-90);
+			_transform->Yaw(90);
+			_transform->Pitch(-180);
+			_transform->Roll(90);
 		}
+		coche->GetComponent<EnemyMovement>()->SetWay(_isLeft);
+		coche->GetComponent<EnemyMovement>()->SetMov();
 	}
 }

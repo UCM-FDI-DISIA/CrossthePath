@@ -80,13 +80,7 @@ Entity3 = {
 				Scale = "1.0|1.0|1.0"
 			}
 		},
-		{
-			Name = "AUDIO_EMITTER",
-			Arguments = {
-				SongName = "GamePlay.mp3",
-				Is3D = "false"
-			}
-		},
+		
 		{
 			Name = "CAMERA",
 			Arguments = {
@@ -1224,7 +1218,72 @@ Entity48 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, 
+INSTANCIATOR = {
+	Name = "Instanciator",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|1.0|-6.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy";
+				SpawnRate = "3.0"
+			}
+		}	
+	}
+}
+
+INSTANCIATOR = {
+	Name = "Instanciator",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|1.0|-6.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy",
+				SpawnRate = "3.0",
+				IsLeft = "true"
+			}
+		}	
+	}
+}
+
+INSTANCIATOR2 = {
+	Name = "Instanciator2",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|1.0|-4.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy2",
+				SpawnRate = "2.0",
+				IsLeft = "false"
+			}
+		}	
+	}
+}
+
+Entities = { INSTANCIATOR, INSTANCIATOR2, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, 
 Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, 
 Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, 
 Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, 
