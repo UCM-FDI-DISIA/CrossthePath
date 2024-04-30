@@ -25,7 +25,7 @@ void eden_ec::EnemyMovement::Start()
 
 void eden_ec::EnemyMovement::Update(float t)
 {
-	_transform->Translate((_transform->GetPosition()+_movDir).Normalized() * t);
+	_transform->Translate((_movDir).Normalized() * t);
 }
 
 void eden_ec::EnemyMovement::SetMov(bool _way)
@@ -46,6 +46,6 @@ void eden_ec::EnemyMovement::SetInitRotation(bool _way)
 		//_transform->Roll(180);
 	}
 	else { 
-		_transform->Yaw(-90); 
+		//_transform->Yaw(-90); 
 	}
 }
