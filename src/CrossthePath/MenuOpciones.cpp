@@ -33,7 +33,7 @@ void eden_ec::MenuOpciones::Start()
 	std::pair aux = eden_render::RenderManager::getInstance()->GetResolution();
 	std::string text = std::to_string(aux.first) + "x" + std::to_string(aux.second);
 	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
-	//if (_res != nullptr) _res->GetComponent<CText>()->SetNewText(text);
+	if (_res != nullptr) _res->GetComponent<CText>()->SetNewText(text);
 }
 
 void eden_ec::MenuOpciones::GoBack()
