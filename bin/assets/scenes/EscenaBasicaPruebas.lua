@@ -40,7 +40,8 @@ Entity1 = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "PLAYER",
 				Bounciness = "0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -127,7 +128,8 @@ Entity4 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -221,7 +223,8 @@ Entity8 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -255,7 +258,8 @@ Entity9 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -289,7 +293,8 @@ Entity10 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -328,7 +333,7 @@ EntityCocheIz = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "0.0|0.0|0.0",
-				Rotation = "true|0|0|0|0",
+				Rotation = "false|0.0|1.0|0.0|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
 		},
@@ -364,7 +369,7 @@ EntityCocheDr = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "2.0|0.0|0.0",
-				Rotation = "true|0|0.0|0.0|0.0",
+				Rotation = "false|-4.371138828673793e-08|0.0|0.0|1.0",
 				Scale = "1.0|1.0|1.0"
 			}
 		},
@@ -435,7 +440,8 @@ Entity13 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -529,7 +535,8 @@ Entity17 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -783,7 +790,8 @@ Entity29 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -817,7 +825,8 @@ Entity30 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -851,7 +860,8 @@ Entity31 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -885,7 +895,8 @@ Entity32 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}

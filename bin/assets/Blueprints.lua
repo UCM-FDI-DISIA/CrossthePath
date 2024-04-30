@@ -54,6 +54,13 @@ enemy = {
             Arguments = {
                 Mesh = "car_taxi"
             }
+        },
+        {
+            Name = "ENEMY_MOVEMENT",
+            Arguments = {
+                Way = "true",
+                Velocity = "3"
+            }
         }
     }
 }
