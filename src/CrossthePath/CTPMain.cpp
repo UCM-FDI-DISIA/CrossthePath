@@ -8,7 +8,6 @@
 #include "FinishLine.h"
 #include "UIManager.h"
 #include "GameManagerController.h"
-#include "UIManagerComponent.h"
 #include "InstanciateEnemies.h"
 #include "MenuOpciones.h"
 #include "MainMenu.h"
@@ -22,7 +21,6 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::FinishLine>();
 	factory->RegisterComponent<eden_ec::UIManager>();
 	factory->RegisterComponent<eden_ec::GameManagerController>();
-	factory->RegisterComponent<eden_ec::UIManagerComponent>();
 	factory->RegisterComponent<eden_ec::InstanciateEnemies>();
 	factory->RegisterComponent<eden_ec::MenuOpciones>();
 	factory->RegisterComponent<eden_ec::MainMenu>();

@@ -105,7 +105,6 @@
     <ClInclude Include="..\..\src\CrossthePath\MenuOpciones.h" />
     <ClInclude Include="..\..\src\CrossthePath\MenuPausa.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
-    <ClInclude Include="..\..\src\CrossthePath\UIManagerComponent.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
   </ItemGroup>
   <ItemGroup>
@@ -120,7 +119,6 @@
     <ClCompile Include="..\..\src\CrossthePath\MenuOpciones.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\MenuPausa.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
-    <ClCompile Include="..\..\src\CrossthePath\UIManagerComponent.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
