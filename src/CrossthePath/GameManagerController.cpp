@@ -1,10 +1,7 @@
 #include "GameManagerController.h"
 #define _CRTDBG_MAP_ALLOC
 #include "GameManager.h"
-#include "InputManager.h"
-#include "EdenMaster.h"
 #include "SceneManager.h"
-#include "Scene.h"
 #include "Entity.h"
 
 
