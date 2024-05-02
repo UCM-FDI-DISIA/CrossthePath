@@ -37,6 +37,13 @@ void eden_ec::GameManager::PlayerWin()
 	_uiManager->ShowWin();
 }
 
+void eden_ec::GameManager::GameOver()
+{
+	_currState = Game_Over;
+	_states[0] = _currState;
+	_uiManager->ShowGameOver();
+}
+
 void eden_ec::GameManager::Play()
 {
 	_currState = Game;

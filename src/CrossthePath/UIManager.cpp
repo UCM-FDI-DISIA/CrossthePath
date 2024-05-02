@@ -53,6 +53,11 @@ void eden_ec::UIManager::ShowWin()
 	_elements[PLAY]->GetComponent<CButton>()->Show();
 }
 
+void eden_ec::UIManager::ShowGameOver()
+{
+	_elements[GAMEOVER]->GetComponent<CImage>()->Show();
+}
+
 void eden_ec::UIManager::PlayAgain()
 {
 	eden_ec::GameManager::Instance()->Play();

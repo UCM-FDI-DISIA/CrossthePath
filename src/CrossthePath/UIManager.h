@@ -23,8 +23,11 @@ namespace eden_ec {
 
 		void Update(float t) override;
 
-		/// @brief Enseña el cartel de Win
+		/// @brief Ensenia el cartel de Win
 		void ShowWin();
+
+		/// @brief Ensenia el cartel de perder
+		void ShowGameOver();
 
 		/// @breig Replay
 		void PlayAgain();

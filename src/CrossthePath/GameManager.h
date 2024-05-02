@@ -19,9 +19,12 @@ namespace eden_ec {
 
 		void Update(float t);
 
-		/// @brief Método cuando el player gana
+		/// @brief Metodo cuando el player gana
 		void PlayerWin();
 		
+		/// @brief Metodo cuando el player pierde
+		void GameOver();
+
 		/// @brief Instancia la escena del juego y cambia el estado actual
 		void Play();
 		/// @brief Instancia la escena de pausa y cambia el estado actual
@@ -57,7 +60,7 @@ namespace eden_ec {
 
 		/// @brief Estados del juego
 		enum States {
-			MainMenu,Game,Pause,Options,Win,GameOver,Exit
+			MainMenu,Game,Pause,Options,Win,Game_Over,Exit
 		};
 
 		/// @brief Vector de estados
