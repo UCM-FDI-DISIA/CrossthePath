@@ -11,6 +11,7 @@
 #include "Entity.h"
 #include "Transform.h"
 #include "CAnimator.h"
+#include <InputManager.h> 
 
 
 const std::string eden_ec::MainMenu::_id = "MAIN_MENU";
@@ -49,6 +50,9 @@ void eden_ec::MainMenu::Start()
 	/*_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);*/
+
+
+	eden_input::InputManager::getInstance()->SetActive(false);
 }
 
 void eden_ec::MainMenu::Update(float t)
@@ -83,6 +87,7 @@ void eden_ec::MainMenu::Update(float t)
 		_optionsNewPos = _optionsNewPos + 5;
 		_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
 	}
+	else if (!eden_input::InputManager::getInstance()->IsActive())eden_input::InputManager::getInstance()->SetActive(true);
 
 
 }
