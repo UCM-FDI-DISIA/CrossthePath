@@ -21,7 +21,7 @@ namespace eden_ec {
 		void Start() override;
 			
 
-		void Update(float t) override {}
+		void Update(float t);
 
 		void GoBack();
 
@@ -49,6 +49,7 @@ namespace eden_ec {
 	protected:
 		const static std::string _id;
 	private:
+		int iteration = 0;
 		Entity* _res = nullptr;
 		Entity* _vol = nullptr;
 	};

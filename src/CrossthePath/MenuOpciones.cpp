@@ -31,10 +31,16 @@ eden_ec::MenuOpciones::MenuOpciones() {
 
 void eden_ec::MenuOpciones::Start()
 {
-	std::pair aux = eden_render::RenderManager::getInstance()->GetResolution();
-	std::string text = std::to_string(aux.first) + "x" + std::to_string(aux.second);
-	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
-	if (_res != nullptr) _res->GetComponent<CText>()->SetNewText(text);
+	ChangeResolution();
+}
+
+void eden_ec::MenuOpciones::Update(float t)
+{
+	if (iteration==1) {
+
+		ChangeVolumen(0);
+	}
+	iteration++;
 }
 
 void eden_ec::MenuOpciones::GoBack()
@@ -64,7 +70,6 @@ void eden_ec::MenuOpciones::ChangeResolution()
 	eden_render::RenderManager::getInstance()->ChangeResolution();
 	std::pair aux = eden_render::RenderManager::getInstance()->GetResolution();
 	std::string text = std::to_string(aux.first) + "x" + std::to_string(aux.second);
-	//PARA VER LUA
 	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
 	if (_res != nullptr) _res->GetComponent<CText>()->SetNewText(text);
 }
