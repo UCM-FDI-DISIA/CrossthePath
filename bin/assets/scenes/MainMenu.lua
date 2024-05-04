@@ -542,7 +542,14 @@ Entity26 = {
 			Arguments = {
                 Script= "MainMenu_Play",
 			}
-        }
+        },
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "PlaySound.wav",
+				Is3D = "false"
+			}
+		}
 	}	
 }
 
