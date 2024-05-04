@@ -25,14 +25,13 @@ namespace eden_ec {
 		/// @param t deltaTime
 		void Update(float t) override;
 
-		bool RunOver();
+		/// @brief Comprueba si la colision se realiza o no con el coche
+		void RunOver();
 
 	protected:
 		const static std::string _id;
 
 	private:
-		eden_ec::CRigidBody* _rb = nullptr;
-		bool _isDead = false;
 	};
 
 }

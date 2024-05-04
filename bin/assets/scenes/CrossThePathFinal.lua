@@ -2356,6 +2356,17 @@ Entity1 = {
             Name = "CHARACTER_MOVEMENT",
             Arguments = {
             }
+        },
+		{
+            Name = "CHARACTER_DIE",
+            Arguments = {
+            }
+        },
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "CHARACTER_DIE"
+            }
         }
 		-- ,
 		-- {

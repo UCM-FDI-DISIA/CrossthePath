@@ -43,7 +43,18 @@ Entity1 = {
 				Friction = "0",
 				Trigger = "false"
 			}
-		}
+		},
+		{
+            Name = "CHARACTER_DIE",
+            Arguments = {
+            }
+        },
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "characterDie"
+            }
+        }
 	}
 }
 
@@ -187,6 +198,24 @@ Entity7 = {
 			}
 		}
 	}
+}
+
+Entity120 = {
+	Name = "UI_win",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+                OverlayName= "win",
+				XPos = "50",
+                YPos = "40",
+                Width = "75",
+                Height = "75",
+                Texture = "Win.png",
+                Depth = "1"
+			}
+		}
+	}	
 }
 
 Entity8 = {
@@ -343,7 +372,6 @@ EntityCocheIz = {
 		{
 			Name = "ENEMY_MOVEMENT",
 			Arguments = {
-				Way = "true",
 				Velocity = "3"
 			}
 		}
@@ -379,7 +407,6 @@ EntityCocheDr = {
 		{
 			Name = "ENEMY_MOVEMENT",
 			Arguments = {
-				Way = "false",
 				Velocity = "5"
 			}
 		}
@@ -1194,7 +1221,7 @@ Entity47 = {
 }
 
 Entity48 = {
-	Name = "timer",
+	Name = "UI_timer",
 	Components = {
 		{
 			Name = "TEXT",
@@ -1208,12 +1235,6 @@ Entity48 = {
                 Color = "1|1|1",
                 Depth = "2"
 			}
-		},
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 3
-			}
 		}
 	}	
 }
@@ -1224,28 +1245,7 @@ INSTANCIATOR = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0.0|1.0|-6.0",
-				Rotation = "false|1.0|0.0|0.0|0.0",
-				Scale = "1.0|1.0|1.0"
-			}
-		},
-		{
-			Name = "INSTANCIATE_ENEMIES",
-			Arguments = {
-				PrefabName = "enemy";
-				SpawnRate = "3.0"
-			}
-		}	
-	}
-}
-
-INSTANCIATOR = {
-	Name = "Instanciator",
-	Components = {
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "0.0|1.0|-6.0",
+				Position = "0.0|0.0|-6.0",
 				Rotation = "false|1.0|0.0|0.0|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
@@ -1267,7 +1267,7 @@ INSTANCIATOR2 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0.0|1.0|-4.0",
+				Position = "0.0|0.0|-4.0",
 				Rotation = "false|1.0|0.0|0.0|0.0",
 				Scale = "1.0|1.0|1.0"
 			}
@@ -1289,7 +1289,7 @@ Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23,
 Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, 
 Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
 Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47,
-Entity48, EntityCocheIz, EntityCocheDr }
+Entity48, EntityCocheIz, EntityCocheDr, Entity120 }
 
 CollisionLayers = {
 	Layers = {

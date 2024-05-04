@@ -11,7 +11,7 @@ end
 
 --Metodo OnCollisionEnter
 function characterDie:OnCollisionEnter()
-	characterDie:RunOver();
+	CharacterDie:RunOver();
 end
 
 --Variable global de la clase (para Luabridge)

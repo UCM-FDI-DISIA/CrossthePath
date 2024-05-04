@@ -34,6 +34,17 @@ Frog = {
             Arguments = {
                 Mesh = "Cube.057"
             }
+        },
+        {
+            Name = "CHARACTER_DIE",
+            Arguments = {
+            }
+        },
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "characterDie"
+            }
         }
     }
 }
@@ -58,9 +69,24 @@ enemy = {
         {
             Name = "ENEMY_MOVEMENT",
             Arguments = {
-                Way = "false",
                 Velocity = "3"
             }
+        },
+        {
+            Name = "RIGIDBODY",
+            Arguments = {
+                Mass = "0.0",
+				AABB = "1.0|1.0|1.0",
+				PosOffset = "0|0|0",
+				Radius = "0.5",
+				Shape = "BOX",
+				CollisionFlag = "DYNAMIC",
+				CollisionLayer = "PLAYER",
+				Bounciness = "0",
+				Friction = "0",
+				Trigger = "false"
+            }
+
         }
     }
 }
@@ -85,9 +111,24 @@ enemy2 = {
         {
             Name = "ENEMY_MOVEMENT",
             Arguments = {
-                Way = "false",
                 Velocity = "3"
             }
+        },
+        {
+            Name = "RIGIDBODY",
+            Arguments = {
+                Mass = "0.0",
+				AABB = "1.0|1.0|1.0",
+				PosOffset = "0|0|0",
+				Radius = "0.5",
+				Shape = "BOX",
+				CollisionFlag = "DYNAMIC",
+				CollisionLayer = "PLAYER",
+				Bounciness = "0",
+				Friction = "0",
+				Trigger = "false"
+            }
+
         }
     }
 }

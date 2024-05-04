@@ -55,7 +55,8 @@ void eden_ec::UIManager::ShowWin()
 
 void eden_ec::UIManager::ShowGameOver()
 {
-	_elements[GAMEOVER]->GetComponent<CImage>()->Show();
+	//PROVISIONAL HASTA QUE HAYA UNA IMAGEN DE GAMEOVER
+	_elements[WIN]->GetComponent<CImage>()->Show();
 }
 
 void eden_ec::UIManager::PlayAgain()
