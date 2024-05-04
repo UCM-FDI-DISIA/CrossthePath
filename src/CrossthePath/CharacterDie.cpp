@@ -36,4 +36,5 @@ void eden_ec::CharacterDie::Update(float t)
 bool eden_ec::CharacterDie::RunOver()
 {
 	eden_ec::GameManager::Instance()->GameOver();
+	return true;
 }

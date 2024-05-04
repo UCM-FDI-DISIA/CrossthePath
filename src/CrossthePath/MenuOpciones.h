@@ -37,6 +37,9 @@ namespace eden_ec {
 		/// @brief Setea la nueva resolución
 		void ChangeResolution();
 
+		/// @brief Actualiza el texto
+		void ChangeResolutionText();
+
 		/// @brief Aumenta el volumen
 		void IncreaseVolumen();
 
@@ -45,6 +48,7 @@ namespace eden_ec {
 
 		/// @brief Cambia el volumen
 		void ChangeVolumen(int num);
+
 
 	protected:
 		const static std::string _id;

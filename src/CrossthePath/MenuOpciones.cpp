@@ -31,7 +31,7 @@ eden_ec::MenuOpciones::MenuOpciones() {
 
 void eden_ec::MenuOpciones::Start()
 {
-	ChangeResolution();
+	ChangeResolutionText();
 }
 
 void eden_ec::MenuOpciones::Update(float t)
@@ -41,6 +41,7 @@ void eden_ec::MenuOpciones::Update(float t)
 		ChangeVolumen(0);
 	}
 	iteration++;
+	ChangeResolutionText();
 }
 
 void eden_ec::MenuOpciones::GoBack()
@@ -68,6 +69,11 @@ void eden_ec::MenuOpciones::PreviousResolution()
 void eden_ec::MenuOpciones::ChangeResolution()
 {
 	eden_render::RenderManager::getInstance()->ChangeResolution();
+	ChangeResolutionText();
+}
+
+void eden_ec::MenuOpciones::ChangeResolutionText()
+{
 	std::pair aux = eden_render::RenderManager::getInstance()->GetResolution();
 	std::string text = std::to_string(aux.first) + "x" + std::to_string(aux.second);
 	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
