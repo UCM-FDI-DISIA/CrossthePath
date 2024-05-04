@@ -32,15 +32,14 @@ eden_ec::MenuOpciones::MenuOpciones() {
 
 void eden_ec::MenuOpciones::Start()
 {
-
 	ChangeResolutionText();
-	//ChangeVolumen(0);
 }
 
 void eden_ec::MenuOpciones::Update(float t)
 {
 	if (iteration==1) {
 
+		ChangeVolumenBar();
 	}
 	iteration++;
 	ChangeResolutionText();
@@ -109,11 +108,15 @@ void eden_ec::MenuOpciones::DecreaseVolumen()
 
 void eden_ec::MenuOpciones::ChangeVolumen(int num)
 {
-	 _vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
+	float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100 + num;
+	eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux/100);
+	ChangeVolumenBar();
+}
 
+void eden_ec::MenuOpciones::ChangeVolumenBar()
+{
+	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
 	if (_vol != nullptr) {
-		float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100 + num;
-		eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux/100);
-		_vol->GetComponent<CBar>()->SetBarPercentage(eden_audio::AudioManager::GetInstance()->GetGlobalVolume()*100);
+		_vol->GetComponent<CBar>()->SetBarPercentage(eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100);
 	}
 }

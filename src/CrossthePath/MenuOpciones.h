@@ -49,6 +49,7 @@ namespace eden_ec {
 		/// @brief Cambia el volumen
 		void ChangeVolumen(int num);
 
+		void ChangeVolumenBar();
 
 	protected:
 		const static std::string _id;
