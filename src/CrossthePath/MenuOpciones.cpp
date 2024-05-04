@@ -10,6 +10,7 @@
 #include "CText.h"
 #include "CBar.h"
 #include <AudioManager.h>
+#include "CAudioEmitter.h"
 
 const std::string eden_ec::MenuOpciones::_id = "OPCIONES";
 
@@ -31,14 +32,15 @@ eden_ec::MenuOpciones::MenuOpciones() {
 
 void eden_ec::MenuOpciones::Start()
 {
+
 	ChangeResolutionText();
+	//ChangeVolumen(0);
 }
 
 void eden_ec::MenuOpciones::Update(float t)
 {
 	if (iteration==1) {
 
-		ChangeVolumen(0);
 	}
 	iteration++;
 	ChangeResolutionText();
@@ -56,12 +58,18 @@ void eden_ec::MenuOpciones::FullScreen()
 
 void eden_ec::MenuOpciones::NextResolution()
 {
+	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
+	eden_ec::CAudioEmitter* em = _res->GetComponent<CAudioEmitter>();
+	em->Play();
 	eden_render::RenderManager::getInstance()->NextResolutuion();
 	ChangeResolution();
 }
 
 void eden_ec::MenuOpciones::PreviousResolution()
 {
+	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
+	eden_ec::CAudioEmitter* em = _res->GetComponent<CAudioEmitter>();
+	em->Play();
 	eden_render::RenderManager::getInstance()->PreviousResolution();
 	ChangeResolution();
 }
@@ -70,6 +78,7 @@ void eden_ec::MenuOpciones::ChangeResolution()
 {
 	eden_render::RenderManager::getInstance()->ChangeResolution();
 	ChangeResolutionText();
+
 }
 
 void eden_ec::MenuOpciones::ChangeResolutionText()
@@ -77,22 +86,31 @@ void eden_ec::MenuOpciones::ChangeResolutionText()
 	std::pair aux = eden_render::RenderManager::getInstance()->GetResolution();
 	std::string text = std::to_string(aux.first) + "x" + std::to_string(aux.second);
 	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
-	if (_res != nullptr) _res->GetComponent<CText>()->SetNewText(text);
+	if (_res != nullptr) {
+		_res->GetComponent<CText>()->SetNewText(text);
+	}
 }
 
 void eden_ec::MenuOpciones::IncreaseVolumen()
 {
+	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
+	eden_ec::CAudioEmitter* em = _vol->GetComponent<CAudioEmitter>();
+	em->Play();
 	ChangeVolumen(5);
 }
 
 void eden_ec::MenuOpciones::DecreaseVolumen()
 {
+	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
+	eden_ec::CAudioEmitter* em = _vol->GetComponent<CAudioEmitter>();
+	em->Play();
 	ChangeVolumen(-5);
 }
 
 void eden_ec::MenuOpciones::ChangeVolumen(int num)
 {
 	 _vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
+
 	if (_vol != nullptr) {
 		float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100 + num;
 		eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux/100);

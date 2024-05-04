@@ -2367,14 +2367,13 @@ Entity1 = {
             Arguments = {
                 Script = "CHARACTER_DIE"
             }
-        }
-		-- ,
+        },
 		-- {
-        --     Name = "AUDIO_EMITTER",
-        --     Arguments = {
-		-- 		SongName = "GamePlay.mp3",
-		-- 		Is3D = "false"
-		-- 	}
+        --      Name = "AUDIO_EMITTER",
+        --      Arguments = {
+		--  		SongName = "GamePlay.mp3",
+		--  		Is3D = "false"
+		--  	}
         -- }
 	}
 }

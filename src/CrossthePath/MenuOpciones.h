@@ -56,6 +56,7 @@ namespace eden_ec {
 		int iteration = 0;
 		Entity* _res = nullptr;
 		Entity* _vol = nullptr;
+
 	};
 }
 #endif //MENU_OPCIONES_H

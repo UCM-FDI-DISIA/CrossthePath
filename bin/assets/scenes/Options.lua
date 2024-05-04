@@ -176,6 +176,13 @@ Entity8 = {
                 Color = "0|0|0",
                 Depth = "1"
 			}
+		},
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "clickButton.wav",
+				Is3D = "false"
+			}
 		}
 	}	
 }
@@ -254,6 +261,13 @@ Entity11 = {
                 Height = "6",
                 Texture = "Volume_Background.png",
                 Depth = "2"
+			}
+		},
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "clickButton.wav",
+				Is3D = "false"
 			}
 		}
 	}	

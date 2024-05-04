@@ -49,7 +49,7 @@ void eden_ec::GameManager::Play()
 	_currState = Game;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->ChangeScene("EscenaBasicaPruebas");
+	scnManager->ChangeScene("CrossThePathFinal");
 }
 
 void eden_ec::GameManager::PauseGame()
