@@ -33,21 +33,22 @@ void eden_ec::GameManager::Start()
 }
 
 void eden_ec::GameManager::Update(float dt) {
-	if (_start && _currState == Game && _uiManager!=nullptr)_uiManager->Timer(dt);
+	if (_start && _currState == Game && _uiManager!=nullptr)
+		_uiManager->GetComponent<UIManager>()->Timer(dt);
 }
 
 void eden_ec::GameManager::PlayerWin()
 {
 	_currState = Win;
 	_states[0] = _currState;
-	_uiManager->ShowWin();
+	_uiManager->GetComponent<UIManager>()->ShowWin();
 }
 
 void eden_ec::GameManager::GameOver()
 {
 	_currState = Game_Over;
 	_states[0] = _currState;
-	_uiManager->ShowGameOver();
+	_uiManager->GetComponent<UIManager>()->ShowGameOver();
 }
 
 void eden_ec::GameManager::Play()
@@ -129,18 +130,9 @@ void eden_ec::GameManager::DestroyEnemy(std::string enemyID)
 		//excepcion?
 	}
 }
-
-void eden_ec::GameManager::SetPlayer(Entity* pl)
-{
-	_player = pl;
-}
-
-void eden_ec::GameManager::SetUI(UIManager* ui)
-{
-	_uiManager = ui;
-}
-
 void eden_ec::GameManager::Begin()
 {
 	_start = true;
+	_player = eden::SceneManager::getInstance()->FindEntity("Player");
+	_uiManager = eden::SceneManager::getInstance()->FindEntity("UI_Manager");
 }

@@ -79,6 +79,7 @@ void eden_ec::MenuOpciones::FullScreen()
 	eden_render::RenderManager::getInstance()->FullScreen();
 	_fullScreenON->GetComponent<CButton>()->Resize();
 	_fullScreenOFF->GetComponent<CButton>()->Resize();
+	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 }
 
 void eden_ec::MenuOpciones::NextResolution()
@@ -95,8 +96,8 @@ void eden_ec::MenuOpciones::PreviousResolution()
 
 void eden_ec::MenuOpciones::ChangeResolution()
 {
-	eden_render::RenderManager::getInstance()->ChangeResolution();
 	ChangeResolutionText();
+	eden_render::RenderManager::getInstance()->ChangeResolution();
 	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::ARROW_BUTTON);
 }
 

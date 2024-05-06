@@ -7,7 +7,6 @@
 #include <vector>
 namespace eden_ec {
 	class Entity;
-	class UIManager;
 	class GameManager : public Singleton<GameManager>
 	{
 		friend Singleton<GameManager>;
@@ -47,12 +46,6 @@ namespace eden_ec {
 		std::unordered_map<std::string, eden_ec::Entity*> *GetEnemies();
 
 		void DestroyEnemy(std::string enemyID);
-		
-		/// @brief Setea el player
-		void SetPlayer(Entity* pl);
-
-		/// @brief Setea el UIManager
-		void SetUI(UIManager* ui);
 
 		/// @brief Flag de comienzo de juego
 		void Begin();
@@ -69,7 +62,7 @@ namespace eden_ec {
 		States _currState;
 
 		Entity* _player = nullptr;
-		UIManager* _uiManager = nullptr;
+		Entity* _uiManager = nullptr;
 		Entity* _sounds = nullptr;
 
 		// Mapa de enemigos del juego

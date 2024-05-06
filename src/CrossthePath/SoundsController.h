@@ -8,9 +8,12 @@
 namespace eden_ec {
 	class Entity;
 	class CAudioEmitter;
+
+	/// @brief Clase encargada del control de los sonidos del juego
 	class SoundsController : public Component
 	{
 	public:
+		/// @brief sonidos
 		enum Sounds {
 			PLAY_BUTTON, ARROW_BUTTON,
 		};
@@ -28,12 +31,15 @@ namespace eden_ec {
 
 		void Update(float t) {}
 
+		/// @brief Método que reproduce un sonido de la lista
 		void PlaySound(Sounds _s);
 
 	protected:
 		const static std::string _id;
 	private:
+		/// @brief lista de sonidos
 		std::vector<std::string> _sounds;
+		/// @brief Puntero a lAudioEmiter
 		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 	};
 }

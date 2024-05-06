@@ -34,8 +34,6 @@ eden_ec::UIManager::UIManager()
 	scriptM->Regist(*this, "Play", &eden_ec::UIManager::Pause, "Pause", this);
 	scriptM->SetGlobal(this, "Play");
 	scriptM = nullptr;
-
-	eden_ec::GameManager::Instance()->SetUI(this);
 }
 
 eden_ec::UIManager::~UIManager()
