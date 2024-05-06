@@ -15,7 +15,7 @@ void eden_ec::SoundsController::Init(eden_script::ComponentArguments* args)
 }
 
 void eden_ec::SoundsController::Start() {
-	eden::SceneManager::getInstance()->AddEntityToDontDestroyOnLoad(_ent);
+	eden::SceneManager::getInstance()->AddEntityToDontDestroyOnLoad(_ent,true);
 	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 }
 
