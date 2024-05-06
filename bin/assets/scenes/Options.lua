@@ -85,7 +85,7 @@ Entity4 = {
 }
 
 Entity5 = {
-	Name = "fullScreen",
+	Name = "fullScreenON",
 	Components = {
 		{
 			Name = "BUTTON",
@@ -176,13 +176,6 @@ Entity8 = {
                 Color = "0|0|0",
                 Depth = "1"
 			}
-		},
-		{
-			Name = "AUDIO_EMITTER",
-			Arguments = {
-				SongName = "clickButton.wav",
-				Is3D = "false"
-			}
 		}
 	}	
 }
@@ -262,13 +255,6 @@ Entity11 = {
                 Texture = "Volume_Background.png",
                 Depth = "2"
 			}
-		},
-		{
-			Name = "AUDIO_EMITTER",
-			Arguments = {
-				SongName = "clickButton.wav",
-				Is3D = "false"
-			}
 		}
 	}	
 }
@@ -283,13 +269,38 @@ Entity12 ={
 		}
 	}
 }
+Entity13 = {
+	Name = "fullScreenOFF",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonResume",
+				XPos = "50",
+                YPos = "55",
+                Width = "30",
+                Height = "10",
+                Texture1 = "Play_Button.png",
+                Texture2 = "PlayOver_Button.png",
+                Texture3 = "PlayClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Options_FullScreen",
+			}
+        }
+	}	
+}
 
 
 
 
 
 Entities = { Entity1, Entity2, Entity3,Entity4,Entity5,Entity6,Entity7,Entity8,Entity9
-,Entity10,Entity11, Entity12}
+,Entity10,Entity11, Entity12,Entity13}
 
 CollisionLayers = {
 	Layers = {

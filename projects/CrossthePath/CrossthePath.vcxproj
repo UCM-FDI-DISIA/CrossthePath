@@ -105,6 +105,7 @@
     <ClInclude Include="..\..\src\CrossthePath\MainMenu.h" />
     <ClInclude Include="..\..\src\CrossthePath\MenuOpciones.h" />
     <ClInclude Include="..\..\src\CrossthePath\MenuPausa.h" />
+    <ClInclude Include="..\..\src\CrossthePath\SoundsController.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
   </ItemGroup>
@@ -120,6 +121,7 @@
     <ClCompile Include="..\..\src\CrossthePath\MainMenu.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\MenuOpciones.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\MenuPausa.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\SoundsController.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
   </ItemGroup>

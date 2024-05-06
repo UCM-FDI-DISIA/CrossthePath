@@ -6,11 +6,12 @@
 #include <RenderManager.h>
 #include "GameManager.h"
 #include <SceneManager.h>
+#include <AudioManager.h>
 #include "Entity.h"
 #include "CText.h"
 #include "CBar.h"
-#include <AudioManager.h>
-#include "CAudioEmitter.h"
+#include "CButton.h"
+#include "SoundsController.h"
 
 const std::string eden_ec::MenuOpciones::_id = "OPCIONES";
 
@@ -33,6 +34,8 @@ eden_ec::MenuOpciones::MenuOpciones() {
 void eden_ec::MenuOpciones::Start()
 {
 	ChangeResolutionText();
+	_fullScreenON = eden::SceneManager::getInstance()->FindEntity("fullScreenON");
+	_fullScreenOFF = eden::SceneManager::getInstance()->FindEntity("fullScreenOFF");
 }
 
 void eden_ec::MenuOpciones::Update(float t)
@@ -40,6 +43,15 @@ void eden_ec::MenuOpciones::Update(float t)
 	if (iteration==1) {
 
 		ChangeVolumenBar();
+		if (eden_render::RenderManager::getInstance()->IsFullScreen()) {
+
+			_fullScreenON->GetComponent<CButton>()->Hide();
+			_fullScreenOFF->GetComponent<CButton>()->Show();
+		}
+		else {
+			_fullScreenON->GetComponent<CButton>()->Show();
+			_fullScreenOFF->GetComponent<CButton>()->Hide();
+		}
 	}
 	iteration++;
 	ChangeResolutionText();
@@ -52,23 +64,31 @@ void eden_ec::MenuOpciones::GoBack()
 
 void eden_ec::MenuOpciones::FullScreen()
 {
+	_fullScreenON = eden::SceneManager::getInstance()->FindEntity("fullScreenON");
+	_fullScreenOFF = eden::SceneManager::getInstance()->FindEntity("fullScreenOFF");
+
+	if (_fullScreenON->GetComponent<CButton>()->IsVisible()) {
+
+		_fullScreenON->GetComponent<CButton>()->Hide();
+		_fullScreenOFF->GetComponent<CButton>()->Show();
+	}
+	else {
+		_fullScreenON->GetComponent<CButton>()->Show();
+		_fullScreenOFF->GetComponent<CButton>()->Hide();
+	}
 	eden_render::RenderManager::getInstance()->FullScreen();
+	_fullScreenON->GetComponent<CButton>()->Resize();
+	_fullScreenOFF->GetComponent<CButton>()->Resize();
 }
 
 void eden_ec::MenuOpciones::NextResolution()
 {
-	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
-	eden_ec::CAudioEmitter* em = _res->GetComponent<CAudioEmitter>();
-	em->Play();
 	eden_render::RenderManager::getInstance()->NextResolutuion();
 	ChangeResolution();
 }
 
 void eden_ec::MenuOpciones::PreviousResolution()
 {
-	_res = eden::SceneManager::getInstance()->FindEntity("resolutionsText");
-	eden_ec::CAudioEmitter* em = _res->GetComponent<CAudioEmitter>();
-	em->Play();
 	eden_render::RenderManager::getInstance()->PreviousResolution();
 	ChangeResolution();
 }
@@ -77,7 +97,7 @@ void eden_ec::MenuOpciones::ChangeResolution()
 {
 	eden_render::RenderManager::getInstance()->ChangeResolution();
 	ChangeResolutionText();
-
+	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::ARROW_BUTTON);
 }
 
 void eden_ec::MenuOpciones::ChangeResolutionText()
@@ -92,17 +112,11 @@ void eden_ec::MenuOpciones::ChangeResolutionText()
 
 void eden_ec::MenuOpciones::IncreaseVolumen()
 {
-	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
-	eden_ec::CAudioEmitter* em = _vol->GetComponent<CAudioEmitter>();
-	em->Play();
 	ChangeVolumen(5);
 }
 
 void eden_ec::MenuOpciones::DecreaseVolumen()
 {
-	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
-	eden_ec::CAudioEmitter* em = _vol->GetComponent<CAudioEmitter>();
-	em->Play();
 	ChangeVolumen(-5);
 }
 
@@ -111,6 +125,7 @@ void eden_ec::MenuOpciones::ChangeVolumen(int num)
 	float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100 + num;
 	eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux/100);
 	ChangeVolumenBar();
+	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::ARROW_BUTTON);
 }
 
 void eden_ec::MenuOpciones::ChangeVolumenBar()

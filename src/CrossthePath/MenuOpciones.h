@@ -57,6 +57,8 @@ namespace eden_ec {
 		int iteration = 0;
 		Entity* _res = nullptr;
 		Entity* _vol = nullptr;
+		Entity* _fullScreenOFF = nullptr;
+		Entity* _fullScreenON = nullptr;
 
 	};
 }

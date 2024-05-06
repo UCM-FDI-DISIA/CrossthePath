@@ -93,9 +93,6 @@ void eden_ec::MainMenu::Update(float t)
 
 void eden_ec::MainMenu::Play()
 {
-	Entity* ent = eden::SceneManager::getInstance()->FindEntity("buttonPlay");
-	eden_ec::CAudioEmitter* em = ent->GetComponent<CAudioEmitter>();
-	em->Play();
 	eden_ec::GameManager::Instance()->Play();
 }
 

@@ -2,6 +2,7 @@
 #define _CRTDBG_MAP_ALLOC
 #include "Entity.h"
 #include "UIManager.h" 
+#include "SoundsController.h"
 #include <SceneManager.h>
 #include <InputManager.h>
 #include <RenderManager.h>
@@ -26,6 +27,11 @@ eden_ec::GameManager::~GameManager()
 	_enemies.clear();
 }
 
+void eden_ec::GameManager::Start()
+{
+	_sounds = eden::SceneManager::getInstance()->FindEntity("Sounds");
+}
+
 void eden_ec::GameManager::Update(float dt) {
 	if (_start && _currState == Game && _uiManager!=nullptr)_uiManager->Timer(dt);
 }
@@ -46,6 +52,7 @@ void eden_ec::GameManager::GameOver()
 
 void eden_ec::GameManager::Play()
 {
+	if(_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Game;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
@@ -54,6 +61,7 @@ void eden_ec::GameManager::Play()
 
 void eden_ec::GameManager::PauseGame()
 {
+	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Pause;
 	_states.push_back(_currState);
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
@@ -62,6 +70,7 @@ void eden_ec::GameManager::PauseGame()
 
 void eden_ec::GameManager::GoBack()
 {
+	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_states.pop_back();
 	_currState = _states[_states.size() - 1];
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
@@ -70,6 +79,7 @@ void eden_ec::GameManager::GoBack()
 
 void eden_ec::GameManager::GoOptions()
 {
+	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Options;
 	_states.push_back(_currState);
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
@@ -78,6 +88,7 @@ void eden_ec::GameManager::GoOptions()
 
 void eden_ec::GameManager::GoMainMenu()
 {
+	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = MainMenu;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
@@ -91,9 +102,9 @@ void eden_ec::GameManager::CloseGame()
 	eden_input::InputManager::getInstance()->SetCloseWindow();
 }
 
-eden_ec::UIManager* eden_ec::GameManager::GetUI()
+eden_ec::Entity* eden_ec::GameManager::GetSound()
 {
-	return _uiManager;
+	return _sounds;
 }
 
 eden_ec::Entity* eden_ec::GameManager::GetPlayer()

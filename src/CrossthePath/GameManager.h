@@ -15,7 +15,7 @@ namespace eden_ec {
 		GameManager();
 		~GameManager();
 		void Awake() {}
-		void Start() {}
+		void Start();
 
 		void Update(float t);
 
@@ -39,7 +39,7 @@ namespace eden_ec {
 		void CloseGame();
 
 		/// @brief Devuelve el puntero a UIManager del Gameplay
-		UIManager* GetUI();
+		Entity* GetSound();
 
 		/// @brief Devuelve puntero al player
 		Entity* GetPlayer();
@@ -70,6 +70,8 @@ namespace eden_ec {
 
 		Entity* _player = nullptr;
 		UIManager* _uiManager = nullptr;
+		Entity* _sounds = nullptr;
+
 		// Mapa de enemigos del juego
 		std::unordered_map<std::string, Entity*> _enemies;
 		bool _start = false;
