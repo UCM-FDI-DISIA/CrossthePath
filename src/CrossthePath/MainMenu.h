@@ -51,6 +51,8 @@ namespace eden_ec {
 		float currentTime = 0.0f;
 		bool changeAnim = false;
 		bool wave = true;
+
+		bool _endTransition = false;
 		std::pair<float, float>_startIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_exitIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_optionsIniPos = std::make_pair(0.0f, 0.0f);

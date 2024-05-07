@@ -233,7 +233,7 @@ Entity11 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "MainMenu_Exit",
+                Script= "MainMenu",
 			}
         }
 	}	

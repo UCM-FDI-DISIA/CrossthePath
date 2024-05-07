@@ -38,7 +38,7 @@ void eden_ec::MenuOpciones::Update(float t)
 	if (iteration==1) {
 
 		ChangeVolumenBar();
-		if (eden_render::RenderManager::getInstance()->IsFullScreen()) {
+		if (!eden_render::RenderManager::getInstance()->IsFullScreen()) {
 
 			_fullScreenON->GetComponent<CButton>()->Hide();
 			_fullScreenOFF->GetComponent<CButton>()->Show();
@@ -137,12 +137,10 @@ void eden_ec::MenuOpciones::ClickButton()
 {
 	Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
 	
-	if (otherEnt->GetEntityID() == "buttonResume")
-	{
+	if (otherEnt->GetEntityID() == "buttonResume")	{
 		GoBack();
 	}
-	else if (otherEnt->GetEntityID() == "fullScreenON" || otherEnt->GetEntityID() == "fullScreenOFF")
-	{
+	else if (otherEnt->GetEntityID() == "fullScreenON" || otherEnt->GetEntityID() == "fullScreenOFF"){
 		FullScreen();
 	}
 	else if (otherEnt->GetEntityID() == "resolutions1") {

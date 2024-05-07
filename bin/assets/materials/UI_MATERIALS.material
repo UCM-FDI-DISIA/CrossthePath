@@ -14,7 +14,102 @@ material Cursor.png {
         }
     }
 }
-
+material Fullscreen_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Fullscreen_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material FullscreenClicked_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture FullscreenClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material FullscreenOver_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture FullscreenOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Windowed_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Windowed_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material WindowedClicked_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture WindowedClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material WindowedOver_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture WindowedOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 material Volume_Bar.png {
     receive_shadows on
     technique {

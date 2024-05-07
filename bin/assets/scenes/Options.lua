@@ -1,5 +1,5 @@
 Entity1 = {
-	Name = "Camera",
+	Name = "CameraMenu",
 	Components = {
 		{
 			Name = "TRANSFORM",
@@ -85,7 +85,7 @@ Entity4 = {
 }
 
 Entity5 = {
-	Name = "fullScreenON",
+	Name = "fullScreenOFF",
 	Components = {
 		{
 			Name = "BUTTON",
@@ -95,9 +95,9 @@ Entity5 = {
                 YPos = "55",
                 Width = "25",
                 Height = "10",
-                Texture1 = "Resume_Button.png",
-                Texture2 = "ResumeOver_Button.png",
-                Texture3 = "ResumeClicked_Button.png",
+                Texture1 = "Fullscreen_Button.png",
+                Texture2 = "FullscreenOver_Button.png",
+                Texture3 = "FullscreenClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -169,7 +169,7 @@ Entity8 = {
 			Arguments = {
                 OverlayName= "textTest",
 				XPos = "50",
-                YPos = "65",
+                YPos = "67",
                 Tam = "10",
                 Text = "640x460",
                 Font = "Buycat.ttf",
@@ -270,7 +270,7 @@ Entity12 ={
 	}
 }
 Entity13 = {
-	Name = "fullScreenOFF",
+	Name = "fullScreenON",
 	Components = {
 		{
 			Name = "BUTTON",
@@ -278,11 +278,11 @@ Entity13 = {
                 OverlayName= "buttonResume",
 				XPos = "50",
                 YPos = "55",
-                Width = "30",
+                Width = "25",
                 Height = "10",
-                Texture1 = "Play_Button.png",
-                Texture2 = "PlayOver_Button.png",
-                Texture3 = "PlayClicked_Button.png",
+                Texture1 = "Windowed_Button.png",
+                Texture2 = "WindowedOver_Button.png",
+                Texture3 = "WindowedClicked_Button.png",
                 Depth = "2"
 			}
 		},

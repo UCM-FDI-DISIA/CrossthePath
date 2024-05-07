@@ -42,7 +42,7 @@ void eden_ec::MainMenu::Start()
 
 	_transform = _ent->GetComponent<CTransform>();
 
-	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player")->GetComponent<CAnimator>();
+	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<CAnimator>();
 	_playerAnimator->PlayAnim("Idle");
 	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	_audioEmitter->Play();
@@ -72,20 +72,28 @@ void eden_ec::MainMenu::Update(float t)
 		currentTime += t;
 	}
 
-	if (_startNewPos <= _startIniPos.first-3) {
-		_startNewPos = _startNewPos + 3;
-		_start->SetPosition(_startNewPos, _startIniPos.second);
+	if (!_endTransition) {
+		if (_startNewPos <= _startIniPos.first - 3) {
+			_startNewPos = _startNewPos + 3;
+			_start->SetPosition(_startNewPos, _startIniPos.second);
+		}
+		if (_exitNewPos >= _exitIniPos.first + 4) {
+			_exitNewPos = _exitNewPos - 4;
+			_exit->SetPosition(_exitNewPos, _exitIniPos.second);
+		}
+		if (_optionsNewPos <= _optionsIniPos.first - 5) {
+			_optionsNewPos = _optionsNewPos + 5;
+			_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
+		}
+		else if (!eden_input::InputManager::getInstance()->IsActive())
+		{
+			eden_input::InputManager::getInstance()->SetActive(true);
+			_endTransition = true;
+			_start->SetPosition(_startIniPos.first, _startIniPos.second);
+			_exit->SetPosition(_exitIniPos.first, _exitIniPos.second);
+			_options->SetPosition(_optionsIniPos.first, _optionsIniPos.second);
+		}
 	}
-	if (_exitNewPos >= _exitIniPos.first+4) {
-		_exitNewPos = _exitNewPos - 4;
-		_exit->SetPosition(_exitNewPos, _exitIniPos.second);
-	}
-	if (_optionsNewPos <= _optionsIniPos.first-5) {
-		_optionsNewPos = _optionsNewPos + 5;
-		_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
-	}
-	else if (!eden_input::InputManager::getInstance()->IsActive())eden_input::InputManager::getInstance()->SetActive(true);
-
 
 }
 

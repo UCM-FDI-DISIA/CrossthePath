@@ -38,7 +38,7 @@ void eden_ec::WinMenu::Start()
 
 	_transform = _ent->GetComponent<CTransform>();
 
-	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player")->GetComponent<CAnimator>();
+	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<CAnimator>();
 	_playerAnimator->PlayAnim("JumpIdle");
 	/*_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	_audioEmitter->Play();
