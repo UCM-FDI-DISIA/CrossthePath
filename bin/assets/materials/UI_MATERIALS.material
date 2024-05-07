@@ -126,7 +126,38 @@ material Volume_Bar.png {
         }
     }
 }
-
+material Volume_BarFull.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Volume_BarFull.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Volume_BarLow.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Volume_BarLow.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 material Volume_Background.png {
     receive_shadows on
     technique {

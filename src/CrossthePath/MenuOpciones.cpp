@@ -130,6 +130,16 @@ void eden_ec::MenuOpciones::ChangeVolumenBar()
 	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
 	if (_vol != nullptr) {
 		_vol->GetComponent<CBar>()->SetBarPercentage(eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100);
+		int aux = _vol->GetComponent<CBar>()->GetBarPercentage();
+		if (aux <= 33) {
+			_vol->GetComponent<CBar>()->SetMaterial("Volume_BarLow.png");
+		}
+		else if (aux <= 66) {
+			_vol->GetComponent<CBar>()->SetMaterial("Volume_Bar.png");
+		}
+		else {
+			_vol->GetComponent<CBar>()->SetMaterial("Volume_BarFull.png");
+		}
 	}
 }
 

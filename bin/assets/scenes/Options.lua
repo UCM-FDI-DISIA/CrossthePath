@@ -237,10 +237,10 @@ Entity11 = {
 			Arguments = {
                 OverlayName= "image",
 				XPos = "50",
-                YPos = "90.5",
+                YPos = "90",
                 Width = "34",
                 Height = "5",
-                Texture = "Volume_Bar.png",
+                Texture = "Volume_BarFull.png",
                 Depth = "3"
 			}
 		},
@@ -251,7 +251,7 @@ Entity11 = {
 				XPos = "50",
                 YPos = "90",
                 Width = "35",
-                Height = "6",
+                Height = "8",
                 Texture = "Volume_Background.png",
                 Depth = "2"
 			}
