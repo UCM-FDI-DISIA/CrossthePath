@@ -12,6 +12,7 @@
 #include "Transform.h"
 #include "CAnimator.h"
 #include <InputManager.h> 
+#include "CText.h"
 
 const std::string eden_ec::MainMenu::_id = "MAIN_MENU";
 
@@ -48,7 +49,11 @@ void eden_ec::MainMenu::Start()
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);
 
-
+	int aux = eden_ec::GameManager::Instance()->GetBestScore();
+	if (aux > 0)
+		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText("Best Score: " + std::to_string(aux),true);
+	else 
+		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText(" ", true);
 	eden_input::InputManager::getInstance()->SetActive(false);
 }
 

@@ -49,6 +49,9 @@ namespace eden_ec {
 
 		/// @brief Flag de comienzo de juego
 		void Begin();
+
+		inline int GetBestScore() { return _bestScore; }
+		inline void SetBestScore(int best) { _bestScore = best; }
 	private:
 
 		/// @brief Estados del juego
@@ -64,6 +67,8 @@ namespace eden_ec {
 		Entity* _player = nullptr;
 		Entity* _uiManager = nullptr;
 		Entity* _sounds = nullptr;
+
+		int _bestScore = 0;
 
 		// Mapa de enemigos del juego
 		std::unordered_map<std::string, Entity*> _enemies;

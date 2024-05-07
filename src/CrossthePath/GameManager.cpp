@@ -92,6 +92,7 @@ void eden_ec::GameManager::GoMainMenu()
 	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = MainMenu;
 	_states[0] = _currState;
+	_start = false;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("MainMenu");
 }

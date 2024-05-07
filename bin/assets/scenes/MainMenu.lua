@@ -657,11 +657,30 @@ Entity31 = {
 		}
 	}	
 }
+
+Entity32 = {
+	Name = "ScoreText",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "15",
+                YPos = "90",
+                Tam = "7",
+                Text = "Best Score: XXX",
+                Font = "Buycat.ttf",
+                Color = "0|0|0",
+                Depth = "1"
+			}
+		}
+	}	
+}
 Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
 Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
 Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, 
 Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
-Entity28, Entity29, Entity30,Entity31 }
+Entity28, Entity29, Entity30,Entity31,Entity32 }
 
 CollisionLayers = {
 	Layers = {

@@ -74,4 +74,7 @@ void eden_ec::UIManager::Timer(float tm)
 	std::string time = "";
 	for (int i = 0; i < aux.length() - 7; i++)time += aux[i];
 	_elements[TIMER]->GetComponent<CText>()->SetNewText("Timer: "+ time);
+
+	///TEMPORAL///
+	eden_ec::GameManager::Instance()->SetBestScore(round(_timer));
 }
