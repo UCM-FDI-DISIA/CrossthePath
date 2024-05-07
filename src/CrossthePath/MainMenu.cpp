@@ -20,10 +20,8 @@ eden_ec::MainMenu::MainMenu() {
 
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
-	scriptM->Regist(*this, "MainMenu", &eden_ec::MainMenu::Play, "Play", this);
-	scriptM->Regist(*this, "MainMenu", &eden_ec::MainMenu::ExitGame, "Exit", this);
-	scriptM->Regist(*this, "MainMenu", &eden_ec::MainMenu::Options, "GoToOptions", this);
-	scriptM->SetGlobal(this, "MainMenu");
+	scriptM->Regist(*this, "mainMenu", &eden_ec::MainMenu::Click, "MainMenuClick", this);
+	scriptM->SetGlobal(this, "mainMenu");
 	scriptM = nullptr;
 }
 
@@ -104,4 +102,19 @@ void eden_ec::MainMenu::ExitGame()
 void eden_ec::MainMenu::Options()
 {
 	eden_ec::GameManager::Instance()->GoOptions();
+}
+
+void eden_ec::MainMenu::Click()
+{
+	Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
+
+	if (otherEnt->GetEntityID() == "buttonPlay") {
+		Play();
+	}
+	else if (otherEnt->GetEntityID() == "buttonExit") {
+		ExitGame();
+	}
+	else if (otherEnt->GetEntityID() == "buttonOptions") {
+		Options();
+	}
 }

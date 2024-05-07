@@ -78,7 +78,7 @@ Entity4 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options_Resume",
+                Script= "MenuOptions",
 			}
         }
 	}	
@@ -104,7 +104,7 @@ Entity5 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options_FullScreen",
+                Script= "MenuOptions",
 			}
         }
 	}	
@@ -130,7 +130,7 @@ Entity6 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options_PreviousResolution",
+                Script= "MenuOptions",
 			}
         }
 	}	
@@ -155,7 +155,7 @@ Entity7 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options_NextResolution",
+                Script= "MenuOptions",
 			}
         }
 	}	
@@ -180,7 +180,7 @@ Entity8 = {
 	}	
 }
 Entity9 = {
-	Name = "volumen",
+	Name = "volumen1",
 	Components = {
 		{
 			Name = "BUTTON",
@@ -199,7 +199,7 @@ Entity9 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options_DecreaseVolumen",
+                Script= "MenuOptions",
 			}
         }
 	}	
@@ -224,7 +224,7 @@ Entity10 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options_IncreaseVolumen",
+                Script= "MenuOptions",
 			}
         }
 	}	
@@ -289,7 +289,7 @@ Entity13 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Options_FullScreen",
+                Script= "MenuOptions",
 			}
         }
 	}	

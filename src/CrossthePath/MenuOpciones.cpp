@@ -20,12 +20,7 @@ eden_ec::MenuOpciones::MenuOpciones() {
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 
-	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::GoBack, "GoBack", this);
-	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::FullScreen, "FullScreen", this);
-	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::NextResolution, "NextRes", this);
-	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::PreviousResolution, "PreviousRes", this);
-	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::IncreaseVolumen, "IncreaseV", this);
-	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::DecreaseVolumen, "DecreaseV", this);
+	scriptM->Regist(*this, "Opciones", &eden_ec::MenuOpciones::ClickButton, "MenuOptionsClick", this);
 	scriptM->SetGlobal(this, "Opciones");
 	scriptM = nullptr;
 
@@ -113,18 +108,19 @@ void eden_ec::MenuOpciones::ChangeResolutionText()
 
 void eden_ec::MenuOpciones::IncreaseVolumen()
 {
-	ChangeVolumen(5);
+	ChangeVolumen(0.05);
 }
 
 void eden_ec::MenuOpciones::DecreaseVolumen()
 {
-	ChangeVolumen(-5);
+	ChangeVolumen(-0.05);
 }
 
-void eden_ec::MenuOpciones::ChangeVolumen(int num)
+void eden_ec::MenuOpciones::ChangeVolumen(float num)
 {
-	float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100 + num;
-	eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux/100);
+	float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() + num;
+	eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux);
+	std::cout << eden_audio::AudioManager::GetInstance()->GetGlobalVolume();
 	ChangeVolumenBar();
 	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::ARROW_BUTTON);
 }
@@ -134,5 +130,31 @@ void eden_ec::MenuOpciones::ChangeVolumenBar()
 	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
 	if (_vol != nullptr) {
 		_vol->GetComponent<CBar>()->SetBarPercentage(eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100);
+	}
+}
+
+void eden_ec::MenuOpciones::ClickButton()
+{
+	Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
+	
+	if (otherEnt->GetEntityID() == "buttonResume")
+	{
+		GoBack();
+	}
+	else if (otherEnt->GetEntityID() == "fullScreenON" || otherEnt->GetEntityID() == "fullScreenOFF")
+	{
+		FullScreen();
+	}
+	else if (otherEnt->GetEntityID() == "resolutions1") {
+		PreviousResolution();
+	}
+	else if (otherEnt->GetEntityID() == "resolutions2") {
+		NextResolution();
+	}
+	else if (otherEnt->GetEntityID() == "volumen1") {
+		DecreaseVolumen();
+	}
+	else if (otherEnt->GetEntityID() == "volumen2") {
+		IncreaseVolumen();
 	}
 }
