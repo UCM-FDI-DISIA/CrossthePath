@@ -4,6 +4,7 @@
 #include "Component.h"
 #include "Vector3.h"
 #include "string"
+#include "vector"
 
 namespace eden {
 	class SceneManager;
@@ -42,7 +43,7 @@ namespace eden_ec {
 		/// @brief Referencia al SceneManager
 		eden::SceneManager* _scnMng = nullptr;
 		/// @brief Nombre del prefab del enemigo en Lua
-		std::string _prefabName = "";
+		std::vector<std::string> _prefabName;
 		/// @brief Posicion en la que deben aparecer los enemigos
 		eden_utils::Vector3 _pos;
 		/// @brief Tiempo que debe pasar para que se instancie cada enemigo

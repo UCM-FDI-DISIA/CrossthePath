@@ -9,7 +9,7 @@ const std::string eden_ec::InstanciateEnemies::_id = "INSTANCIATE_ENEMIES";
 namespace eden_ec {
 
 	void InstanciateEnemies::Init(eden_script::ComponentArguments* args) {
-		_prefabName = args->GetValueToString("PrefabName");
+		_prefabName = args->GetValueToStringVector("PrefabName");
 		_spawnRate = args->GetValueToFloat("SpawnRate");
 		_isLeft = args->GetValueToBool("IsLeft");
 	}
@@ -31,7 +31,8 @@ namespace eden_ec {
 	}
 
 	void InstanciateEnemies::InstanciateEnemy() {
-		Entity* coche = _scnMng->InstantiateBlueprint(_prefabName, _pos);
+		int enemy = std::rand() % _prefabName.size();
+		Entity* coche = _scnMng->InstantiateBlueprint(_prefabName[enemy], _pos);
 		CTransform* _transform = coche->GetComponent<CTransform>();
 
 		if (_isLeft) {
