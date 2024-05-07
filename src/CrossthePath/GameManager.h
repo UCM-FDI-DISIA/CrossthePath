@@ -7,7 +7,6 @@
 #include <vector>
 namespace eden_ec {
 	class Entity;
-	class UIManager;
 	class GameManager : public Singleton<GameManager>
 	{
 		friend Singleton<GameManager>;
@@ -15,13 +14,16 @@ namespace eden_ec {
 		GameManager();
 		~GameManager();
 		void Awake() {}
-		void Start() {}
+		void Start();
 
 		void Update(float t);
 
-		/// @brief Método cuando el player gana
+		/// @brief Metodo cuando el player gana
 		void PlayerWin();
 		
+		/// @brief Metodo cuando el player pierde
+		void GameOver();
+
 		/// @brief Instancia la escena del juego y cambia el estado actual
 		void Play();
 		/// @brief Instancia la escena de pausa y cambia el estado actual
@@ -36,7 +38,7 @@ namespace eden_ec {
 		void CloseGame();
 
 		/// @brief Devuelve el puntero a UIManager del Gameplay
-		UIManager* GetUI();
+		Entity* GetSound();
 
 		/// @brief Devuelve puntero al player
 		Entity* GetPlayer();
@@ -44,12 +46,6 @@ namespace eden_ec {
 		std::unordered_map<std::string, eden_ec::Entity*> *GetEnemies();
 
 		void DestroyEnemy(std::string enemyID);
-		
-		/// @brief Setea el player
-		void SetPlayer(Entity* pl);
-
-		/// @brief Setea el UIManager
-		void SetUI(UIManager* ui);
 
 		/// @brief Flag de comienzo de juego
 		void Begin();
@@ -57,7 +53,7 @@ namespace eden_ec {
 
 		/// @brief Estados del juego
 		enum States {
-			MainMenu,Game,Pause,Options,Win,GameOver,Exit
+			MainMenu,Game,Pause,Options,Win,Game_Over,Exit
 		};
 
 		/// @brief Vector de estados
@@ -66,7 +62,9 @@ namespace eden_ec {
 		States _currState;
 
 		Entity* _player = nullptr;
-		UIManager* _uiManager = nullptr;
+		Entity* _uiManager = nullptr;
+		Entity* _sounds = nullptr;
+
 		// Mapa de enemigos del juego
 		std::unordered_map<std::string, Entity*> _enemies;
 		bool _start = false;

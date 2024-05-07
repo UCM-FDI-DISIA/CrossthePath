@@ -9,13 +9,7 @@ Entity1 = {
 				Scale = "1.0|1.0|1.0"
 			}
 		},
-		{
-			Name = "AUDIO_EMITTER",
-			Arguments = {
-				SongName = "MainMenu.mp3",
-				Is3D = "false"
-			}
-		},
+		
 		{
 			Name = "CAMERA",
 			Arguments = {
@@ -25,7 +19,14 @@ Entity1 = {
 			Name = "MAIN_MENU",
 			Arguments = {
 			}
-		}
+		},
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "GamePlay.mp3",
+				Is3D = "false"
+			}
+	   }
 	}
 }
 
@@ -574,8 +575,8 @@ Entity28 = {
 			Name = "BUTTON",
 			Arguments = {
                 OverlayName= "options",
-				XPos = "97",
-                YPos = "95",
+				XPos = "93",
+                YPos = "93",
                 Width = "13",
                 Height = "12",
                 Texture1 = "Settings_Button.png",
@@ -637,11 +638,30 @@ Entity30 = {
 	}	
 }
 
+Entity31 = {
+	Name = "Sounds",
+	Components = {
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "GamePlay.mp3",
+				Is3D = "false"
+			}
+		},
+		{
+			Name = "SOUND_CONTROLLER",
+			Arguments = {
+               PLAY = "PlaySound.wav",
+			   ARROW = "clickArrow.wav"
+			}
+		}
+	}	
+}
 Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
 Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
 Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, 
 Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
-Entity28, Entity29, Entity30 }
+Entity28, Entity29, Entity30,Entity31 }
 
 CollisionLayers = {
 	Layers = {

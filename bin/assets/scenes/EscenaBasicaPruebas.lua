@@ -40,9 +40,21 @@ Entity1 = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "PLAYER",
 				Bounciness = "0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
-		}
+		},
+		{
+            Name = "CHARACTER_DIE",
+            Arguments = {
+            }
+        },
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "characterDie"
+            }
+        }
 	}
 }
 
@@ -79,13 +91,7 @@ Entity3 = {
 				Scale = "1.0|1.0|1.0"
 			}
 		},
-		{
-			Name = "AUDIO_EMITTER",
-			Arguments = {
-				SongName = "GamePlay.mp3",
-				Is3D = "false"
-			}
-		},
+		
 		{
 			Name = "CAMERA",
 			Arguments = {
@@ -127,7 +133,8 @@ Entity4 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -193,6 +200,24 @@ Entity7 = {
 	}
 }
 
+Entity120 = {
+	Name = "UI_win",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+                OverlayName= "win",
+				XPos = "50",
+                YPos = "40",
+                Width = "75",
+                Height = "75",
+                Texture = "Win.png",
+                Depth = "1"
+			}
+		}
+	}	
+}
+
 Entity8 = {
 	Name = "building_D",
 	Components = {
@@ -221,7 +246,8 @@ Entity8 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -255,7 +281,8 @@ Entity9 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -289,7 +316,8 @@ Entity10 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -310,6 +338,76 @@ Entity11 = {
 				Position = "0.0|0.06499999761581421|-6.0",
 				Rotation = "false|0.4999999403953552|-0.4999999701976776|0.5|0.5000000596046448",
 				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+EntityCocheIz = {
+	Name = "jose_luis_el_coche",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "car_hatchback"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|0.0",
+				Rotation = "false|0.0|1.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Name = "Gas",
+				Loop = "true",
+				Time = "1.0",
+				Started = "true"
+			}
+		},
+		{
+			Name = "ENEMY_MOVEMENT",
+			Arguments = {
+				Velocity = "3"
+			}
+		}
+	}
+}
+
+EntityCocheDr = {
+	Name = "antonio_jesus_el_coche",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "car_police"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "2.0|0.0|0.0",
+				Rotation = "false|-4.371138828673793e-08|0.0|0.0|1.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Name = "Gas",
+				Loop = "true",
+				Time = "1.0",
+				Started = "true"
+			}
+		},
+		{
+			Name = "ENEMY_MOVEMENT",
+			Arguments = {
+				Velocity = "5"
 			}
 		}
 	}
@@ -363,7 +461,8 @@ Entity13 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -457,7 +556,8 @@ Entity17 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -711,7 +811,8 @@ Entity29 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -745,7 +846,8 @@ Entity30 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -779,7 +881,8 @@ Entity31 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -813,7 +916,8 @@ Entity32 = {
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
 				Bounciness = "1.0",
-				Friction = "0"
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
@@ -1117,7 +1221,7 @@ Entity47 = {
 }
 
 Entity48 = {
-	Name = "timer",
+	Name = "UI_timer",
 	Components = {
 		{
 			Name = "TEXT",
@@ -1131,23 +1235,61 @@ Entity48 = {
                 Color = "1|1|1",
                 Depth = "2"
 			}
-		},
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 3
-			}
 		}
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, 
+INSTANCIATOR = {
+	Name = "Instanciator",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-6.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy",
+				SpawnRate = "3.0",
+				IsLeft = "true"
+			}
+		}	
+	}
+}
+
+INSTANCIATOR2 = {
+	Name = "Instanciator2",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-4.0",
+				Rotation = "false|1.0|0.0|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "INSTANCIATE_ENEMIES",
+			Arguments = {
+				PrefabName = "enemy2",
+				SpawnRate = "2.0",
+				IsLeft = "false"
+			}
+		}	
+	}
+}
+
+Entities = { INSTANCIATOR, INSTANCIATOR2, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, 
 Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, 
 Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, 
 Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, 
 Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
 Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47,
-Entity48 }
+Entity48, EntityCocheIz, EntityCocheDr, Entity120 }
 
 CollisionLayers = {
 	Layers = {

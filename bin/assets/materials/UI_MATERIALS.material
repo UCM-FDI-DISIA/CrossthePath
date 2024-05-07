@@ -15,6 +15,40 @@ material Cursor.png {
     }
 }
 
+material Volume_Bar.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Volume_Bar.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material Volume_Background.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Volume_Background.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
 material Settings_Button.png {
     receive_shadows on
     technique {
@@ -332,24 +366,6 @@ material ComingSoon.png {
     }
 }
 
-
-material meme.png {
-    receive_shadows on
-    technique {
-        pass {
-                lighting off
-                scene_blend alpha_blend
-                depth_write off
-                diffuse vertexcolour
-            	texture_unit {
-                texture meme.png
-                tex_address_mode clamp
-                
-            }
-        }
-    }
-}
-
 material Menu_Button.png {
      receive_shadows on
     technique {
@@ -416,6 +432,23 @@ material Play_Button.png {
     }
 }
 
+material Play_Button_Reverse.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture Play_Button_Reverse.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
 material PlayOver_Button.png {
    receive_shadows on
     technique {
@@ -432,6 +465,23 @@ material PlayOver_Button.png {
         }
     }
 }
+
+material PlayOver_Button_Reverse.png {
+   receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture PlayOver_Button_Reverse.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 material PlayClicked_Button.png {
     receive_shadows on
     technique {
@@ -442,6 +492,23 @@ material PlayClicked_Button.png {
                 diffuse vertexcolour
                 texture_unit {
                 texture PlayClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+
+material PlayClicked_Button_Reverse.png {
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture PlayClicked_Button_Reverse.png
                 tex_address_mode clamp
                 
             }

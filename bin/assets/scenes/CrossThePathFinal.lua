@@ -2358,12 +2358,23 @@ Entity1 = {
             }
         },
 		{
-            Name = "AUDIO_EMITTER",
+            Name = "CHARACTER_DIE",
             Arguments = {
-				SongName = "GamePlay.mp3",
-				Is3D = "false"
-			}
-        }
+            }
+        },
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "CHARACTER_DIE"
+            }
+        },
+		-- {
+        --      Name = "AUDIO_EMITTER",
+        --      Arguments = {
+		--  		SongName = "GamePlay.mp3",
+		--  		Is3D = "false"
+		--  	}
+        -- }
 	}
 }
 Entity116 = {
@@ -2455,7 +2466,7 @@ Entity119 = {
 	}
 }
 Entity120 = {
-	Name = "win",
+	Name = "UI_win",
 	Components = {
 		{
 			Name = "IMAGE",
@@ -2468,17 +2479,11 @@ Entity120 = {
                 Texture = "Win.png",
                 Depth = "1"
 			}
-		},
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 0
-			}
 		}
 	}	
 }
 Entity121 = {
-	Name = "play",
+	Name = "UI_play",
 	Components = {
 		{
 			Name = "BUTTON",
@@ -2499,17 +2504,11 @@ Entity121 = {
 			Arguments = {
                 Script= "Game_Replay",
 			}
-        },
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 4
-			}
-		}
+        }
 	}
 }
 Entity122 = {
-	Name = "timer",
+	Name = "UI_timer",
 	Components = {
 		{
 			Name = "TEXT",
@@ -2522,12 +2521,6 @@ Entity122 = {
                 Font = "",
                 Color = "0|0|0",
                 Depth = "2"
-			}
-		},
-		{
-			Name = "UI_MANAGER_COMPONENT",
-			Arguments ={
-				Element = 3
 			}
 		}
 	}	

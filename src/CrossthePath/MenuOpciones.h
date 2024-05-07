@@ -21,7 +21,7 @@ namespace eden_ec {
 		void Start() override;
 			
 
-		void Update(float t) override {}
+		void Update(float t);
 
 		void GoBack();
 
@@ -37,6 +37,9 @@ namespace eden_ec {
 		/// @brief Setea la nueva resolución
 		void ChangeResolution();
 
+		/// @brief Actualiza el texto
+		void ChangeResolutionText();
+
 		/// @brief Aumenta el volumen
 		void IncreaseVolumen();
 
@@ -46,11 +49,17 @@ namespace eden_ec {
 		/// @brief Cambia el volumen
 		void ChangeVolumen(int num);
 
+		void ChangeVolumenBar();
+
 	protected:
 		const static std::string _id;
 	private:
+		int iteration = 0;
 		Entity* _res = nullptr;
 		Entity* _vol = nullptr;
+		Entity* _fullScreenOFF = nullptr;
+		Entity* _fullScreenON = nullptr;
+
 	};
 }
 #endif //MENU_OPCIONES_H

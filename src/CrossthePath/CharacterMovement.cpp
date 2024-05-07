@@ -27,7 +27,6 @@ void eden_ec::CharacterMovement::Start() {
 	_animator->PlayAnim("Idle");
 
 	_initialRotation = _transform->GetRotation();
-	eden_ec::GameManager::Instance()->SetPlayer(_ent);
 }
 
 void eden_ec::CharacterMovement::Init(eden_script::ComponentArguments* args) {
@@ -69,26 +68,33 @@ void eden_ec::CharacterMovement::MoveCharacter(float dt) {
 	_transform->SetRotation(_initialRotation);
 	_currentAction = MOVING;
 	switch (_inputVector.back()) {
+		/* PARA HACER PRUEBAS CON EL MOV DE LA RANA USANDO SUS EJES LOCALES COMENTAR PRIMERA Y TERCERA LINEA
+		* DE CADA CASO DEL SWITCH Y DESCOMENTAR LA SEGUNDA.
+		*/
 	case DOWN:
 	{
 		_transform->Translate(eden_utils::Vector3(0, 0, -0.1).Normalized() * dt);
+		//_transform->Translate(_transform->GetForward() * dt*(-1));
 		_transform->Yaw(180);
 	}
 	break;
 	case LEFT:
 	{
 		_transform->Translate(eden_utils::Vector3(0.1,0, 0).Normalized() * dt);
+		//_transform->Translate(_transform->GetRight() * dt);
 		_transform->Yaw(90);
 	}
 	break;
 	case RIGHT:
 	{
 		_transform->Translate(eden_utils::Vector3(-0.1,0, 0).Normalized() * dt);
+		//_transform->Translate(_transform->GetRight() * dt * (-1));
 		_transform->Yaw(-90);
 	}
 	break;
 	case UP:
 		_transform->Translate(eden_utils::Vector3(0, 0, 0.1).Normalized() * dt);
+		//_transform->Translate(_transform->GetForward() * dt);
 	}
 
 }

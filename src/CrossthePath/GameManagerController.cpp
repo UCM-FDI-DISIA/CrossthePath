@@ -1,10 +1,7 @@
 #include "GameManagerController.h"
 #define _CRTDBG_MAP_ALLOC
 #include "GameManager.h"
-#include "InputManager.h"
-#include "EdenMaster.h"
 #include "SceneManager.h"
-#include "Scene.h"
 #include "Entity.h"
 
 
@@ -30,10 +27,8 @@ void eden_ec::GameManagerController::Awake()
 
 void eden_ec::GameManagerController::Start()
 {
-	eden::SceneManager::getInstance()->GetCurrentScene()->RemoveGameObject(_ent);
-	if (eden::SceneManager::getInstance()->GeDontDestroyOnLoadScene()->AddExistingGameObject(_ent)) {
+	if (eden::SceneManager::getInstance()->AddEntityToDontDestroyOnLoad(_ent)) {
 		original = true;
 		_gameManager->Start();
 	}
-	else _ent->SetAlive(false);
 }

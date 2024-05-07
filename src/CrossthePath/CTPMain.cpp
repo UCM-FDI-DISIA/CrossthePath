@@ -8,11 +8,13 @@
 #include "FinishLine.h"
 #include "UIManager.h"
 #include "GameManagerController.h"
-#include "UIManagerComponent.h"
 #include "InstanciateEnemies.h"
 #include "MenuOpciones.h"
 #include "MainMenu.h"
 #include "WinMenu.h"
+#include "EnemyMovement.h"
+#include "CharacterDie.h"
+#include "SoundsController.h"
 
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
@@ -22,11 +24,13 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::FinishLine>();
 	factory->RegisterComponent<eden_ec::UIManager>();
 	factory->RegisterComponent<eden_ec::GameManagerController>();
-	factory->RegisterComponent<eden_ec::UIManagerComponent>();
 	factory->RegisterComponent<eden_ec::InstanciateEnemies>();
 	factory->RegisterComponent<eden_ec::MenuOpciones>();
 	factory->RegisterComponent<eden_ec::MainMenu>();
 	factory->RegisterComponent<eden_ec::WinMenu>();
+	factory->RegisterComponent<eden_ec::EnemyMovement>();
+	factory->RegisterComponent<eden_ec::CharacterDie>();
+	factory->RegisterComponent<eden_ec::SoundsController>();
 }
 
 void LoadScene() {

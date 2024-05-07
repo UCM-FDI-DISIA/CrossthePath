@@ -3,17 +3,13 @@
 #define UI_MANAGER_H
 
 #include "Component.h"
-#include <map>
+#include <vector>
 
 namespace eden_ec {
-	class UIComponent;
 	class Entity;
 	class UIManager : public Component 
 	{
 	public:
-		enum UI_Elements {
-			WIN,GAMEOVER,SCORE,TIMER,PLAY,PAUSE
-		};
 		UIManager();
 		~UIManager();
 
@@ -23,15 +19,15 @@ namespace eden_ec {
 
 		void Awake() override;
 
-		void Start() override;
-
-		/// @brief Registra los elementos de la UI
-		void Register(Entity* ent, UI_Elements element);
+		void Start();
 
 		void Update(float t) override;
 
-		/// @brief Enseña el cartel de Win
+		/// @brief Ensenia el cartel de Win
 		void ShowWin();
+
+		/// @brief Ensenia el cartel de perder
+		void ShowGameOver();
 
 		/// @breig Replay
 		void PlayAgain();
@@ -44,7 +40,11 @@ namespace eden_ec {
 	protected:
 		const static std::string _id;
 	private:
-		std::map<int, Entity*> _elementsUI;
+		enum UI_Elements {
+			WIN,TIMER,PLAY,PAUSE,GAMEOVER,SCORE
+		};
+		std::vector<Entity*> _elements;
+		std::vector<std::string> _elementsID = { "UI_win","UI_timer","UI_play" };
 
 		float _timer = 0;
 	};

@@ -85,7 +85,7 @@ Entity4 = {
 }
 
 Entity5 = {
-	Name = "fullScreen",
+	Name = "fullScreenON",
 	Components = {
 		{
 			Name = "BUTTON",
@@ -120,10 +120,10 @@ Entity6 = {
 				XPos = "25",
                 YPos = "70",
                 Width = "15",
-                Height = "10",
-                Texture1 = "Resume_Button.png",
-                Texture2 = "ResumeOver_Button.png",
-                Texture3 = "ResumeClicked_Button.png",
+                Height = "15",
+				Texture1 = "Play_Button_Reverse.png",
+                Texture2 = "PlayOver_Button_Reverse.png",
+                Texture3 = "PlayClicked_Button_Reverse.png",
                 Depth = "2"
 			}
 		},
@@ -145,10 +145,10 @@ Entity7 = {
 				XPos = "75",
                 YPos = "70",
                 Width = "15",
-                Height = "10",
-                Texture1 = "Resume_Button.png",
-                Texture2 = "ResumeOver_Button.png",
-                Texture3 = "ResumeClicked_Button.png",
+                Height = "15",
+				Texture1 = "Play_Button.png",
+                Texture2 = "PlayOver_Button.png",
+                Texture3 = "PlayClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -172,7 +172,7 @@ Entity8 = {
                 YPos = "65",
                 Tam = "10",
                 Text = "640x460",
-                Font = "",
+                Font = "Buycat.ttf",
                 Color = "0|0|0",
                 Depth = "1"
 			}
@@ -189,10 +189,10 @@ Entity9 = {
 				XPos = "25",
                 YPos = "90",
                 Width = "15",
-                Height = "10",
-				Texture1 = "Resume_Button.png",
-                Texture2 = "ResumeOver_Button.png",
-                Texture3 = "ResumeClicked_Button.png",
+                Height = "15",
+				Texture1 = "Play_Button_Reverse.png",
+                Texture2 = "PlayOver_Button_Reverse.png",
+                Texture3 = "PlayClicked_Button_Reverse.png",
                 Depth = "2"
 			}
 		},
@@ -214,10 +214,10 @@ Entity10 = {
 				XPos = "75",
                 YPos = "90",
                 Width = "15",
-                Height = "10",
-                Texture1 = "Resume_Button.png",
-                Texture2 = "ResumeOver_Button.png",
-                Texture3 = "ResumeClicked_Button.png",
+                Height = "15",
+                Texture1 = "Play_Button.png",
+                Texture2 = "PlayOver_Button.png",
+                Texture3 = "PlayClicked_Button.png",
                 Depth = "2"
 			}
 		},
@@ -237,10 +237,22 @@ Entity11 = {
 			Arguments = {
                 OverlayName= "image",
 				XPos = "50",
+                YPos = "90.5",
+                Width = "34",
+                Height = "5",
+                Texture = "Volume_Bar.png",
+                Depth = "3"
+			}
+		},
+		{
+			Name = "IMAGE",
+			Arguments = {
+				OverlayName= "image",
+				XPos = "50",
                 YPos = "90",
                 Width = "35",
-                Height = "5",
-                Texture = "meme.png",
+                Height = "6",
+                Texture = "Volume_Background.png",
                 Depth = "2"
 			}
 		}
@@ -257,13 +269,38 @@ Entity12 ={
 		}
 	}
 }
+Entity13 = {
+	Name = "fullScreenOFF",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonResume",
+				XPos = "50",
+                YPos = "55",
+                Width = "30",
+                Height = "10",
+                Texture1 = "Play_Button.png",
+                Texture2 = "PlayOver_Button.png",
+                Texture3 = "PlayClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Options_FullScreen",
+			}
+        }
+	}	
+}
 
 
 
 
 
 Entities = { Entity1, Entity2, Entity3,Entity4,Entity5,Entity6,Entity7,Entity8,Entity9
-,Entity10,Entity11, Entity12}
+,Entity10,Entity11, Entity12,Entity13}
 
 CollisionLayers = {
 	Layers = {
