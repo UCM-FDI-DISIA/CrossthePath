@@ -162,6 +162,91 @@ enemyPolice = {
         }
     }
 }
+
+enemyRed = {
+    Name = "enemyRed",
+    Components = {
+        {
+            Name = "TRANSFORM", 
+            Arguments = {
+                Position = "0|0|0",
+                Rotation = "true|0|0|0|0",
+                Scale = "1|1|1"
+            }
+        },
+        {
+            Name = "MESH_RENDERER",
+            Arguments = {
+                Mesh = "car_hatchback"
+            }
+        },
+        {
+            Name = "ENEMY_MOVEMENT",
+            Arguments = {
+                Velocity = "3"
+            }
+        },
+        {
+            Name = "RIGIDBODY",
+            Arguments = {
+                Mass = "0.0",
+				AABB = "1.0|1.0|1.0",
+				PosOffset = "0|0|0",
+				Radius = "0.5",
+				Shape = "BOX",
+				CollisionFlag = "DYNAMIC",
+				CollisionLayer = "ENEMIES",
+				Bounciness = "0",
+				Friction = "0",
+				Trigger = "false"
+            }
+
+        }
+    }
+}
+
+enemyGreen = {
+    Name = "enemyGreen",
+    Components = {
+        {
+            Name = "TRANSFORM", 
+            Arguments = {
+                Position = "0|0|0",
+                Rotation = "true|0|0|0|0",
+                Scale = "1|1|1"
+            }
+        },
+        {
+            Name = "MESH_RENDERER",
+            Arguments = {
+                Mesh = "car_stationwagon"
+            }
+        },
+        {
+            Name = "ENEMY_MOVEMENT",
+            Arguments = {
+                Velocity = "3"
+            }
+        },
+        {
+            Name = "RIGIDBODY",
+            Arguments = {
+                Mass = "0.0",
+				AABB = "1.0|1.0|1.0",
+				PosOffset = "0|0|0",
+				Radius = "0.5",
+				Shape = "BOX",
+				CollisionFlag = "DYNAMIC",
+				CollisionLayer = "ENEMIES",
+				Bounciness = "0",
+				Friction = "0",
+				Trigger = "false"
+            }
+
+        }
+    }
+}
+
 Camera = {
 	Name = "Camera",
 	Components = {
@@ -185,4 +270,4 @@ Camera = {
 		}
 	}
 }
-Blueprints = { Cube, Player, enemyTaxi, enemyPolice, Camera }
+Blueprints = { Cube, Player, enemyTaxi, enemyPolice, enemyRed, enemyGreen, Camera }
