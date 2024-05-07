@@ -175,9 +175,9 @@ Entity9 = {
                 YPos = "80",
                 Width = "30",
                 Height = "30",
-                Texture1 = "MENU_Ini.png",
-                Texture2 = "MENU_Over.png",
-                Texture3 = "MENU_Click.png",
+                Texture1 = "Menu_Button.png",
+                Texture2 = "MenuOver_Button.png",
+                Texture3 = "MenuClicked_Button.png",
                 Depth = "2"
 			}
 		},

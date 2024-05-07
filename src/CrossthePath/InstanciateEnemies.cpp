@@ -30,25 +30,9 @@ namespace eden_ec {
 		}
 	}
 
-
-	void InstanciateEnemies::SetInitRotation()
-	{
-		/*if (_isLeft) {
-			_transform->Yaw(-90);
-			_transform->Pitch(180);
-			_transform->Roll(-90);
-		}
-		else {
-			_transform->Yaw(-90);
-			_transform->Pitch(180);
-			_transform->Roll(-90);
-		}*/
-	}
-
-
 	void InstanciateEnemies::InstanciateEnemy() {
-		auto coche = _scnMng->InstantiateBlueprint(_prefabName, _pos);
-		auto _transform = coche->GetComponent<CTransform>();
+		Entity* coche = _scnMng->InstantiateBlueprint(_prefabName, _pos);
+		CTransform* _transform = coche->GetComponent<CTransform>();
 
 		if (_isLeft) {
 			_transform->Yaw(-90);

@@ -1253,7 +1253,7 @@ INSTANCIATOR = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemy",
+				PrefabName = "enemyRed",
 				SpawnRate = "3.0",
 				IsLeft = "true"
 			}
@@ -1275,7 +1275,7 @@ INSTANCIATOR2 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemy2",
+				PrefabName = "enemyGreen",
 				SpawnRate = "2.0",
 				IsLeft = "false"
 			}

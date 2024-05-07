@@ -530,9 +530,9 @@ Entity26 = {
                 YPos = "55",
                 Width = "30",
                 Height = "15",
-                Texture1 = "MenuButton_Ini.png",
-                Texture2 = "MenuButton_Over.png",
-                Texture3 = "MenuButton_Clicked.png",
+                Texture1 = "Menu_Button.png",
+                Texture2 = "MenuOver_Button.png",
+                Texture3 = "MenuClicked_Button.png",
                 Depth = "2"
 			}
 		},
