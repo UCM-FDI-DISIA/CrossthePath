@@ -540,7 +540,7 @@ Entity26 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "MainMenu_Play",
+                Script= "MainMenu",
 			}
         }
 	}	
@@ -588,7 +588,7 @@ Entity28 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "MainMenu_Options",
+                Script= "MainMenu",
 			}
         }
 	}	
@@ -614,7 +614,7 @@ Entity29 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "MainMenu_Exit",
+                Script= "MainMenu",
 			}
         }
 	}	

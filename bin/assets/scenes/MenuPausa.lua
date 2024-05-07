@@ -75,7 +75,7 @@ Entity4 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Pausa_Resume",
+                Script= "MenuPausa",
 			}
         }
 	}	
@@ -100,7 +100,7 @@ Entity5 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Pausa_BackMenu",
+                Script= "MenuPausa",
 			}
         }
 	}	
@@ -126,7 +126,7 @@ Entity6 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Pausa_Exit",
+                Script= "MenuPausa",
 			}
         }
 	}	
@@ -152,7 +152,7 @@ Entity7 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "Pausa_Options",
+                Script= "MenuPausa",
 			}
         }
 	}	

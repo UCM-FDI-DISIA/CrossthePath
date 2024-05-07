@@ -31,6 +31,8 @@ namespace eden_ec {
 
 		void Options();
 
+		void Click();
+
 	protected:
 		const static std::string _id;
 	private:
