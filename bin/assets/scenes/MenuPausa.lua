@@ -169,8 +169,39 @@ Entity8 ={
         }
 	}	
 }
+Entity9 = {
+	Name = "Egg",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonExit",
+				XPos = "5",
+                YPos = "99",
+                Width = "10",
+                Height = "10",
+                Texture1 = "Frog.png",
+                Texture2 = "Frog.png",
+                Texture3 = "Frog.png",
+                Depth = "2"
+			}
+		},
+		{
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "easterEggs",
+			}
+        },
+		{
+			Name = "EASTER_EGGS",
+			Arguments = {
+				Egg= 2
+			}
+		}
+	}	
+}
 
-Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6,Entity7,Entity8}
+Entities = { Entity1, Entity2, Entity3,Entity4 ,Entity5 ,Entity6,Entity7,Entity8,Entity9}
 
 CollisionLayers = {
 	Layers = {

@@ -9,7 +9,8 @@ namespace eden_ec {
 	class CAudioEmitter;
 	class CTransform;
 	class CAnimator;
-
+	class CText;
+	class GameManager;
 	class MainMenu : public Component {
 	public:
 		MainMenu();
@@ -25,11 +26,6 @@ namespace eden_ec {
 
 		void Update(float t) override;
 
-		void Play();
-
-		void ExitGame();
-
-		void Options();
 
 		void Click();
 
@@ -43,6 +39,11 @@ namespace eden_ec {
 		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 		eden_ec::CTransform* _transform = nullptr;
 
+		CText* _easterEggs = nullptr;
+		GameManager* _gameManager = nullptr;
+		int _esterEggNum = -1;
+		Entity* _trophy = nullptr;
+		int iteration = 0;
 
 		int _startNewPos=-1;
 		int _exitNewPos = -1;
@@ -56,6 +57,14 @@ namespace eden_ec {
 		std::pair<float, float>_startIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_exitIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_optionsIniPos = std::make_pair(0.0f, 0.0f);
+
+		void Play();
+
+		void ExitGame();
+
+		void Options();
+
+		void UpdateEasterEggs();
 	};
 }
 #endif //MAIN_MENU_H

@@ -13,6 +13,8 @@
 #include "CAnimator.h"
 #include <InputManager.h> 
 #include "CText.h"
+#include "CIMage.h"
+#include "SoundsController.h"
 
 const std::string eden_ec::MainMenu::_id = "MAIN_MENU";
 
@@ -49,11 +51,16 @@ void eden_ec::MainMenu::Start()
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);
 
-	int aux = eden_ec::GameManager::Instance()->GetBestScore();
+	_gameManager = eden_ec::GameManager::Instance();
+	int aux = _gameManager->GetBestScore();
 	if (aux > 0)
-		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText("Best Score: " + std::to_string(aux),true);
+		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText("Best Score: " + std::to_string(aux),false);
 	else 
-		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText(" ", true);
+		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText(" ", false);
+
+	_easterEggs = eden::SceneManager::getInstance()->FindEntity("EasterEggsText")->GetComponent<CText>();
+
+
 	eden_input::InputManager::getInstance()->SetActive(false);
 }
 
@@ -99,7 +106,22 @@ void eden_ec::MainMenu::Update(float t)
 			_options->SetPosition(_optionsIniPos.first, _optionsIniPos.second);
 		}
 	}
+	if (iteration == 1) {
 
+		if (!_gameManager->IsEasterEggComplete()) {
+			_trophy = eden::SceneManager::getInstance()->FindEntity("Trophy");
+			_trophy->GetComponent<CImage>()->Hide();
+		}
+		else {
+			_esterEggNum = _gameManager->GetEasterEggs();
+			_easterEggs->SetNewText("EasterEggs: " + std::to_string(_esterEggNum) + "/3", false);
+
+		}
+	}
+	if (iteration>=1) {
+		UpdateEasterEggs();
+	}
+	iteration++;
 }
 
 void eden_ec::MainMenu::Play()
@@ -115,6 +137,22 @@ void eden_ec::MainMenu::ExitGame()
 void eden_ec::MainMenu::Options()
 {
 	eden_ec::GameManager::Instance()->GoOptions();
+}
+
+void eden_ec::MainMenu::UpdateEasterEggs()
+{
+	if (!_gameManager->IsEasterEggComplete() && _esterEggNum != _gameManager->GetEasterEggs()) {
+		_esterEggNum = _gameManager->GetEasterEggs();
+		_easterEggs->SetNewText("EasterEggs: " + std::to_string(_esterEggNum) + "/3", false);
+		if (_esterEggNum == 3) {
+			eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::EASTEREGG_TROPHY);
+			_gameManager->CompleteEasterEgg();
+			CImage* aux = _trophy->GetComponent<CImage>();
+			aux->Show();
+			aux->Resize();
+			eden_render::RenderManager::getInstance()->ResizedWindow();
+		}
+	}
 }
 
 void eden_ec::MainMenu::Click()

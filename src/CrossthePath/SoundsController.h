@@ -15,7 +15,7 @@ namespace eden_ec {
 	public:
 		/// @brief sonidos
 		enum Sounds {
-			PLAY_BUTTON, ARROW_BUTTON,
+			PLAY_BUTTON, ARROW_BUTTON, EASTEREGG, EASTEREGG_TROPHY
 		};
 
 		SoundsController()=default;

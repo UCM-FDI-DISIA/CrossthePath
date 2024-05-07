@@ -48,7 +48,6 @@ void eden_ec::MenuOpciones::Update(float t)
 			_fullScreenON->GetComponent<CButton>()->Show();
 			_fullScreenOFF->GetComponent<CButton>()->Hide();
 		}
-		eden::SceneManager::getInstance()->FindEntity("muted")->GetComponent<CImage>()->Hide();
 	}
 	iteration++;
 	ChangeResolutionText();
@@ -64,7 +63,7 @@ void eden_ec::MenuOpciones::FullScreen()
 	_fullScreenON = eden::SceneManager::getInstance()->FindEntity("fullScreenON");
 	_fullScreenOFF = eden::SceneManager::getInstance()->FindEntity("fullScreenOFF");
 
-	if (_fullScreenON->GetComponent<CButton>()->IsVisible()) {
+	if (eden_render::RenderManager::getInstance()->IsFullScreen()) {
 
 		_fullScreenON->GetComponent<CButton>()->Hide();
 		_fullScreenOFF->GetComponent<CButton>()->Show();
@@ -123,7 +122,6 @@ void eden_ec::MenuOpciones::ChangeVolumen(float num)
 {
 	float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() + num;
 	eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux);
-	Muted(aux);
 	ChangeVolumenBar();
 	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::ARROW_BUTTON);
 }
@@ -132,7 +130,8 @@ void eden_ec::MenuOpciones::ChangeVolumenBar()
 {
 	_vol = eden::SceneManager::getInstance()->FindEntity("volumenBar");
 	if (_vol != nullptr) {
-		_vol->GetComponent<CBar>()->SetBarPercentage(eden_audio::AudioManager::GetInstance()->GetGlobalVolume() * 100);
+		float v = eden_audio::AudioManager::GetInstance()->GetGlobalVolume();
+		_vol->GetComponent<CBar>()->SetBarPercentage(v * 100);
 		int aux = _vol->GetComponent<CBar>()->GetBarPercentage();
 		if (aux <= 33) {
 			_vol->GetComponent<CBar>()->SetMaterial("Volume_BarLow.png");
@@ -143,6 +142,7 @@ void eden_ec::MenuOpciones::ChangeVolumenBar()
 		else {
 			_vol->GetComponent<CBar>()->SetMaterial("Volume_BarFull.png");
 		}
+		Muted(v);
 	}
 }
 void eden_ec::MenuOpciones::Muted(float v)
@@ -154,7 +154,7 @@ void eden_ec::MenuOpciones::Muted(float v)
 		eden::SceneManager::getInstance()->FindEntity("muted")->GetComponent<CImage>()->Hide();
 	}
 	eden::SceneManager::getInstance()->FindEntity("muted")->GetComponent<CImage>()->Resize();
-	ChangeResolution();
+	eden_render::RenderManager::getInstance()->ResizedWindow();
 }
 
 void eden_ec::MenuOpciones::ClickButton()

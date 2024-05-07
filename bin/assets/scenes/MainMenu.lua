@@ -529,8 +529,8 @@ Entity26 = {
                 OverlayName= "button",
 				XPos = "50",
                 YPos = "55",
-                Width = "30",
-                Height = "30",
+                Width = "27",
+                Height = "27",
                 Texture1 = "Play_Button.png",
                 Texture2 = "PlayOver_Button.png",
                 Texture3 = "PlayClicked_Button.png",
@@ -603,8 +603,8 @@ Entity29 = {
                 OverlayName= "buttonExit",
 				XPos = "50",
                 YPos = "80",
-                Width = "25",
-                Height = "15",
+                Width = "20",
+                Height = "10",
                 Texture1 = "Exit_Button.png",
                 Texture2 = "ExitOver_Button.png",
                 Texture3 = "ExitClicked_Button.png",
@@ -652,7 +652,9 @@ Entity31 = {
 			Name = "SOUND_CONTROLLER",
 			Arguments = {
                PLAY = "PlaySound.wav",
-			   ARROW = "clickArrow.wav"
+			   ARROW = "clickArrow.wav",
+			   EGG = "Egg.mp3",
+			   TROPHY = "Trophy.mp3"
 			}
 		}
 	}	
@@ -666,7 +668,7 @@ Entity32 = {
 			Arguments = {
                 OverlayName= "textTest",
 				XPos = "15",
-                YPos = "90",
+                YPos = "80",
                 Tam = "7",
                 Text = "Best Score: XXX",
                 Font = "Buycat.ttf",
@@ -676,11 +678,77 @@ Entity32 = {
 		}
 	}	
 }
+Entity33 = {
+	Name = "EasterEggsText",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "17",
+                YPos = "90",
+                Tam = "7",
+                Text = "EasterEggs: 0/3",
+                Font = "Buycat.ttf",
+                Color = "0|0|0",
+                Depth = "1"
+			}
+		}
+	}	
+}
+Entity34 = {
+	Name = "Egg",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonExit",
+				XPos = "90",
+                YPos = "4",
+                Width = "10",
+                Height = "10",
+                Texture1 = "Frog.png",
+                Texture2 = "Frog.png",
+                Texture3 = "Frog.png",
+                Depth = "1"
+			}
+		},
+		{
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "easterEggs",
+			}
+        },
+		{
+			Name = "EASTER_EGGS",
+			Arguments = {
+				Egg= 0
+			}
+		}
+	}	
+}
+Entity35 = {
+	Name = "Trophy",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+                OverlayName= "image",
+				XPos = "82",
+                YPos = "50",
+                Width = "35",
+                Height = "35",
+                Texture = "Trofeo.png",
+                Depth = "1"
+			}
+		}
+	}	
+}
 Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
 Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
 Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, 
 Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
-Entity28, Entity29, Entity30,Entity31,Entity32 }
+Entity28, Entity29, Entity30,Entity31,Entity32,Entity33,Entity34,Entity35 }
 
 CollisionLayers = {
 	Layers = {

@@ -15,6 +15,7 @@
 #include "EnemyMovement.h"
 #include "CharacterDie.h"
 #include "SoundsController.h"
+#include "EasterEgg.h"
 
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
@@ -31,6 +32,7 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::EnemyMovement>();
 	factory->RegisterComponent<eden_ec::CharacterDie>();
 	factory->RegisterComponent<eden_ec::SoundsController>();
+	factory->RegisterComponent<eden_ec::EasterEgg>();
 }
 
 void LoadScene() {

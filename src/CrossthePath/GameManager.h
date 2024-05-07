@@ -52,6 +52,13 @@ namespace eden_ec {
 
 		inline int GetBestScore() { return _bestScore; }
 		inline void SetBestScore(int best) { _bestScore = best; }
+
+		inline int GetEasterEggs() { return _easterEggs; }
+		void AddEasterEgg(Entity* egg);
+
+		bool SetEgg(int num, Entity* egg);
+		inline bool IsEasterEggComplete() { return _easterEggCompleted; }
+		inline void CompleteEasterEgg() { _easterEggCompleted = true; }
 	private:
 
 		/// @brief Estados del juego
@@ -68,7 +75,10 @@ namespace eden_ec {
 		Entity* _uiManager = nullptr;
 		Entity* _sounds = nullptr;
 
+		bool _easterEggCompleted = false;
+		std::vector <std::pair<bool, Entity*>>_eggsFound = { {false,nullptr},{false,nullptr},{false,nullptr} };
 		int _bestScore = 0;
+		int _easterEggs = 0;
 
 		// Mapa de enemigos del juego
 		std::unordered_map<std::string, Entity*> _enemies;

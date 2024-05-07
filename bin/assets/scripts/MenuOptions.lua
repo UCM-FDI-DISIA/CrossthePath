@@ -17,6 +17,7 @@ end
 function MenuOptions:OnButtonReleased()
 	print("Estoy encima del boton");
 	Opciones:MenuOptionsClick();
+	
 end
 --Variable global de la clase (para Luabridge)
 MenuOptionsLua = MenuOptions:new()

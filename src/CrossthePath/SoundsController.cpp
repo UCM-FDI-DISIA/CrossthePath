@@ -12,6 +12,9 @@ void eden_ec::SoundsController::Init(eden_script::ComponentArguments* args)
 {
 	_sounds.push_back(args->GetValueToString("PLAY"));
 	_sounds.push_back(args->GetValueToString("ARROW"));
+	_sounds.push_back(args->GetValueToString("EGG"));
+	_sounds.push_back(args->GetValueToString("TROPHY"));
+
 }
 
 void eden_ec::SoundsController::Start() {

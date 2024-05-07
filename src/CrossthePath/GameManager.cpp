@@ -137,3 +137,26 @@ void eden_ec::GameManager::Begin()
 	_player = eden::SceneManager::getInstance()->FindEntity("Player");
 	_uiManager = eden::SceneManager::getInstance()->FindEntity("UI_Manager");
 }
+
+void eden_ec::GameManager::AddEasterEgg(Entity* egg)
+{
+	_easterEggs++;
+	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::EASTEREGG);
+
+	for (int i = 0; i < _eggsFound.size(); i++) {
+		if (_eggsFound[i].second == egg) {
+			_eggsFound[i].first = true;
+			break;
+		}
+	}
+}
+
+bool eden_ec::GameManager::SetEgg(int num, Entity* egg)
+{
+	if (!_eggsFound[num].first) {
+		_eggsFound[num] = { false,egg };
+		return true;
+	}
+	else return false;
+
+}
