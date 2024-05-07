@@ -15,7 +15,7 @@ eden_ec::CameraMovement::~CameraMovement()
 
 void eden_ec::CameraMovement::Start() {
 	_transform = _ent->GetComponent<CTransform>();
-	_playerTransform = eden::SceneManager::getInstance()->FindEntity("Player")->GetComponent<CTransform>();
+	_playerTransform = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<CTransform>();
 	_initialRotation = new eden_utils::Quaternion(_transform->GetRotation());
 	//_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	//_audioEmitter->Play();

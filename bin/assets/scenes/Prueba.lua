@@ -1,46 +1,58 @@
-Entity1 = {
-	Name = "Camera",
-	Components = {
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "7.358891487121582|4.958309173583984|6.925790786743164",
-				Rotation = "false|0.7804827094078064|0.483536034822464|-0.33687159419059753|0.20870360732078552",
-				Scale = "1.0|1.0|1.0"
-			}
-		},
-		{
-			Name = "CAMERA",
-			Arguments = {
-			}
-		}
-	}
-}
-
-Entity2 = {
-	Name = "Frog",
+Base = {
+	Name = "Base",
 	Components = {
 		{
 			Name = "MESH_RENDERER",
 			Arguments = {
-				Mesh = "Cube.057"
+				Mesh = "base"
 			}
 		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0.0|-0.954870343208313|-0.0",
-				Rotation = "false|1.0|0.0|-0.0|0.0",
-				Scale = "10.0|10.0|10.0"
+				Position = "0.0|0.0|0.0",
+				Rotation = "false|0.707|-0.707|0.0|0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				Mass = "1.0",
+				AABB = "2.0|2.0|0.1",
+				PosOffset = "0|0|0",
+				Radius = "2",
+				Shape = "BOX",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Bounciness = "1.0",
+				Friction = "0",
+				Trigger = "false"
 			}
 		}
 	}
 }
 
-Entities = { Entity1, Entity2 }
+Player = {
+	Name = "Player",
+	Components = {
+		
+	}
+}
+
+Camera = {
+	Name = "Camera",
+	Components = {
+		
+	}
+}
+
+
+Entities = { Base, Player, Camera}
 
 CollisionLayers = {
 	Layers = {
-		DEFAULT = "DEFAULT"
+		DEFAULT = "",
+		PLAYER = ""
 	}
 }
