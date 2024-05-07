@@ -294,13 +294,30 @@ Entity13 = {
         }
 	}	
 }
+Entity14 = {
+	Name = "muted",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+				OverlayName= "image1",
+				XPos = "50",
+                YPos = "90",
+                Width = "15",
+                Height = "15",
+                Texture = "Muted.png",
+                Depth = "5"
+			}
+		}
+	}	
+}
 
 
 
 
 
 Entities = { Entity1, Entity2, Entity3,Entity4,Entity5,Entity6,Entity7,Entity8,Entity9
-,Entity10,Entity11, Entity12,Entity13}
+,Entity10,Entity11, Entity12,Entity13,Entity14}
 
 CollisionLayers = {
 	Layers = {

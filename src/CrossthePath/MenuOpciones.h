@@ -18,38 +18,9 @@ namespace eden_ec {
 
 		void Awake() override {}
 
-		void Start() override;
-			
+		void Start() override;			
 
 		void Update(float t);
-
-		void GoBack();
-
-		/// @brief Pantalla completa
-		void FullScreen();
-
-		/// @brief Cambia la resolución
-		void NextResolution();
-
-		/// @brief Cambia la resolución
-		void PreviousResolution();
-
-		/// @brief Setea la nueva resolución
-		void ChangeResolution();
-
-		/// @brief Actualiza el texto
-		void ChangeResolutionText();
-
-		/// @brief Aumenta el volumen
-		void IncreaseVolumen();
-
-		/// @brief Aumenta el volumen
-		void DecreaseVolumen();
-
-		/// @brief Cambia el volumen
-		void ChangeVolumen(float num);
-
-		void ChangeVolumenBar();
 
 		void ClickButton();
 
@@ -62,6 +33,34 @@ namespace eden_ec {
 		Entity* _fullScreenOFF = nullptr;
 		Entity* _fullScreenON = nullptr;
 
+		void GoBack();
+
+		/// @brief Pantalla completa
+		void FullScreen();
+
+		/// @brief Cambia la resolución
+		void NextResolution();
+
+		/// @brief Cambia la resolución
+		void PreviousResolution();
+
+		/// @brief Actualiza el texto
+		void ChangeResolutionText();
+
+		/// @brief Aumenta el volumen
+		void IncreaseVolumen();
+
+		/// @brief Aumenta el volumen
+		void DecreaseVolumen();
+
+		/// @brief Cambia el volumen
+		void ChangeVolumen(float num);
+		/// @brief Setea la barra de volumen
+		void ChangeVolumenBar();
+		/// @brief Setea la nueva resolución
+		void ChangeResolution();
+
+		void Muted(float v);
 	};
 }
 #endif //MENU_OPCIONES_H

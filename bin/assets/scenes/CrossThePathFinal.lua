@@ -2518,7 +2518,7 @@ Entity122 = {
                 YPos = "7",
                 Tam = "7",
                 Text = "Timer: 0",
-                Font = "",
+                Font = "Buycat.ttf",
                 Color = "0|0|0",
                 Depth = "2"
 			}

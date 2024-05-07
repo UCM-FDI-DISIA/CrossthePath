@@ -10,6 +10,7 @@
 #include "Entity.h"
 #include "CText.h"
 #include "CBar.h"
+#include "CIMage.h"
 #include "CButton.h"
 #include "SoundsController.h"
 
@@ -47,6 +48,7 @@ void eden_ec::MenuOpciones::Update(float t)
 			_fullScreenON->GetComponent<CButton>()->Show();
 			_fullScreenOFF->GetComponent<CButton>()->Hide();
 		}
+		eden::SceneManager::getInstance()->FindEntity("muted")->GetComponent<CImage>()->Hide();
 	}
 	iteration++;
 	ChangeResolutionText();
@@ -96,6 +98,7 @@ void eden_ec::MenuOpciones::ChangeResolution()
 	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::ARROW_BUTTON);
 }
 
+
 void eden_ec::MenuOpciones::ChangeResolutionText()
 {
 	std::pair aux = eden_render::RenderManager::getInstance()->GetResolution();
@@ -120,7 +123,7 @@ void eden_ec::MenuOpciones::ChangeVolumen(float num)
 {
 	float aux = eden_audio::AudioManager::GetInstance()->GetGlobalVolume() + num;
 	eden_audio::AudioManager::GetInstance()->SetGlobalVolume(aux);
-	std::cout << eden_audio::AudioManager::GetInstance()->GetGlobalVolume();
+	Muted(aux);
 	ChangeVolumenBar();
 	eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::ARROW_BUTTON);
 }
@@ -141,6 +144,17 @@ void eden_ec::MenuOpciones::ChangeVolumenBar()
 			_vol->GetComponent<CBar>()->SetMaterial("Volume_BarFull.png");
 		}
 	}
+}
+void eden_ec::MenuOpciones::Muted(float v)
+{
+	if (v <= 0) {
+		eden::SceneManager::getInstance()->FindEntity("muted")->GetComponent<CImage>()->Show();
+	}
+	else {
+		eden::SceneManager::getInstance()->FindEntity("muted")->GetComponent<CImage>()->Hide();
+	}
+	eden::SceneManager::getInstance()->FindEntity("muted")->GetComponent<CImage>()->Resize();
+	ChangeResolution();
 }
 
 void eden_ec::MenuOpciones::ClickButton()

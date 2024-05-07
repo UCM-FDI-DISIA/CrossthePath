@@ -1231,7 +1231,7 @@ Entity48 = {
                 YPos = "5",
                 Tam = "5",
                 Text = "Timer: 0",
-                Font = "",
+                Font = "Buycat.ttf",
                 Color = "1|1|1",
                 Depth = "2"
 			}
