@@ -40,6 +40,13 @@ Entity2 = {
 			Name = "LOSE_MENU",
 			Arguments = {
 			}
+		},
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "Lose.mp3",
+				Is3D = "false"
+			}
 		}
 	}
 }
@@ -773,12 +780,53 @@ Entity37 = {
 	}	
 }
 
+Entity38 = {
+	Name = "LoseText",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "50",
+                YPos = "10",
+                Tam = "25",
+                Text = "You Lose :(",
+                Font = "Buycat.ttf",
+                Color = "255|2|0",
+                Depth = "1"
+			}
+		}
+	}
+}
+
+Entity39 = {
+	Name = "Sounds",
+	Components = {
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "GamePlay.mp3",
+				Is3D = "false"
+			}
+		},
+		{
+			Name = "SOUND_CONTROLLER",
+			Arguments = {
+               PLAY = "PlaySound.wav",
+			   ARROW = "clickArrow.wav",
+			   EGG = "Egg.mp3",
+			   TROPHY = "Trophy.mp3"
+			}
+		}
+	}	
+}
+
 Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7,
 		 Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, 
 		 Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21,
 		 Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, 
 		 Entity29, Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36,
-		 Entity37 }
+		 Entity37, Entity38, Entity39 }
 
 CollisionLayers = {
 	Layers = {

@@ -57,6 +57,10 @@ void ctp::GameManager::GameOver()
 void ctp::GameManager::Play()
 {
 	if(_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
+	else {
+		_sounds = eden::SceneManager::getInstance()->FindEntity("Sounds");
+		if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
+	}
 	_currState = Game;
 	_start = false;
 	_states[0] = _currState;
@@ -93,7 +97,11 @@ void ctp::GameManager::GoOptions()
 
 void ctp::GameManager::GoMainMenu()
 {
-	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
+	if (_sounds != nullptr)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
+	else {
+		_sounds = eden::SceneManager::getInstance()->FindEntity("Sounds");
+		if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
+	}
 	_currState = MainMenu;
 	_states[0] = _currState;
 	_start = false;

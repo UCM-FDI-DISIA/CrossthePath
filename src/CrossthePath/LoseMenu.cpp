@@ -39,13 +39,19 @@ void ctp::LoseMenu::Start()
 
 	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player1")->GetComponent<eden_ec::CAnimator>();
 	_playerAnimator->PlayAnim("Duck");
-	/*_audioEmitter = _ent->GetComponent<CAudioEmitter>();
+	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	_audioEmitter->Play();
-	_audioEmitter->SetLoop(true);*/
 }
 
 void ctp::LoseMenu::Update(float t)
 {
+	if (_audioEmitter->HasEnded())
+	{
+		_audioEmitter->ChangeClip("MainMenu.mp3");
+		_audioEmitter->Play();
+		_audioEmitter->SetLoop(true); 
+
+	}
 	if (currentTime >= timer && !changeAnim) {
 		changeAnim = true;
 		currentTime = 0;

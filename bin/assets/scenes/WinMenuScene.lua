@@ -40,6 +40,13 @@ Entity2 = {
 			Name = "WIN_MENU",
 			Arguments = {
 			}
+		},
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "Win.mp3",
+				Is3D = "false"
+			}
 		}
 	}
 }
@@ -251,7 +258,7 @@ Entity12 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-0.0007762163877487183|0.10111222416162491|0.7495381832122803",
+				Position = "-0.0007762163877487183|0.10111222416162491|0.7",
 				Rotation = "true|0.0|-0.0|-0.0|0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -271,21 +278,68 @@ Entity12 = {
 Entity13 = {
 	Name = "WinText",
 	Components = {
-		Name = "TEXT", 
-		Arguments = {
-			OverlayName = "winText",
-			XPos = "60",
-			YPos = "60",
-			Tam = "30",
-			Text = "You Win :D",
-			Font = "Buycat.tff",
-			Color = "0|1|1",
-			Depth = "1"
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "50",
+                YPos = "10",
+                Tam = "25",
+                Text = "You Win :D",
+                Font = "Buycat.ttf",
+                Color = "255|255|0",
+                Depth = "1"
+			}
 		}
 	}
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13 }
+Entity14 = {
+	Name = "Confetti1",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.5|0.6999",
+				Rotation = "true|0.0|0.0|0.0|0.0",
+				Scale = "5|5|5"
+			}
+		},
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Loop = "true",
+				Time = "10.0",
+				Started = "true",
+				Name = "Confetti"
+			}
+		}
+	}
+}
+
+Entity15 = {
+	Name = "Sounds",
+	Components = {
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "GamePlay.mp3",
+				Is3D = "false"
+			}
+		},
+		{
+			Name = "SOUND_CONTROLLER",
+			Arguments = {
+               PLAY = "PlaySound.wav",
+			   ARROW = "clickArrow.wav",
+			   EGG = "Egg.mp3",
+			   TROPHY = "Trophy.mp3"
+			}
+		}
+	}	
+}
+
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15 }
 
 CollisionLayers = {
 	Layers = {
