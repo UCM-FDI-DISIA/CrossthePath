@@ -40,8 +40,6 @@ void RegisterComponents() {
 }
 
 void LoadScene() {
-	//eden::SceneManager::getInstance()->PushScene("EscenaBasicaPruebas");
-	//eden::SceneManager::getInstance()->PushScene("MainMenu");
-	eden::SceneManager::getInstance()->PushScene("LoseMenuScene");
+	eden::SceneManager::getInstance()->PushScene("MainMenu");
 }
 

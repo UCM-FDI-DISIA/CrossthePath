@@ -39,7 +39,7 @@ void ctp::LoseMenu::Start()
 
 	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player1")->GetComponent<eden_ec::CAnimator>();
 	_playerAnimator->PlayAnim("Duck");
-	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
+	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
 	_audioEmitter->Play();
 }
 
