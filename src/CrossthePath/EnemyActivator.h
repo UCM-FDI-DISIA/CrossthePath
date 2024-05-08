@@ -1,6 +1,8 @@
 #ifndef ENEMY_ACTIVATOR
 #define ENEMY_ACTIVATOR
 #include "Component.h"
+#include <vector>
+#include <string>
 
 namespace eden_ec {
 	class CRigidBody;
@@ -11,7 +13,7 @@ namespace ctp {
 	class EnemyActivator : public eden_ec::Component
 	{
 	public:
-		EnemyActivator() = default;
+		EnemyActivator();
 		~EnemyActivator() = default;
 
 		static std::string GetID() { return _id; }
@@ -22,7 +24,7 @@ namespace ctp {
 		void Awake() {}
 
 		/// @brief Hace referencia al Transform
-		void Start() {};
+		void Start();
 
 		/// @brief Actualiza el movimiento de los coches segun su direccion y velocidad
 		/// @param t deltaTime

@@ -98,6 +98,7 @@
     <ClInclude Include="..\..\src\CrossthePath\CharacterDie.h" />
     <ClInclude Include="..\..\src\CrossthePath\CTPMain.h" />
     <ClInclude Include="..\..\src\CrossthePath\EasterEgg.h" />
+    <ClInclude Include="..\..\src\CrossthePath\EnemyActivator.h" />
     <ClInclude Include="..\..\src\CrossthePath\LimitLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\EnemyMovement.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManager.h" />
@@ -111,13 +112,13 @@
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
     <ClInclude Include="..\..\src\CrossthePath\WinMenu.h" />
-    <ClInclude Include="EnemyActivator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\CrossthePath\CameraMovement.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterDie.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\EasterEgg.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\EnemyActivator.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\LimitLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\EnemyMovement.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp" />
@@ -131,7 +132,6 @@
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\WinMenu.cpp" />
-    <ClCompile Include="EnemyActivator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

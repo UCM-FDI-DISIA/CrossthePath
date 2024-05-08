@@ -3746,6 +3746,7 @@ Entity188 = {
 Entity189 = {
 	Name = "Decoracion_1",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3775,6 +3776,7 @@ Entity189 = {
 Entity190 = {
 	Name = "Decoracion_2",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3804,6 +3806,7 @@ Entity190 = {
 Entity191 = {
 	Name = "Decoracion_3",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3833,6 +3836,7 @@ Entity191 = {
 Entity192 = {
 	Name = "Decoracion_4",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3862,6 +3866,7 @@ Entity192 = {
 Entity193 = {
 	Name = "Decoracion_5",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3891,6 +3896,7 @@ Entity193 = {
 Entity194 = {
 	Name = "Decoracion_6",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3920,6 +3926,7 @@ Entity194 = {
 Entity195 = {
 	Name = "Decoracion_7",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3949,6 +3956,7 @@ Entity195 = {
 Entity196 = {
 	Name = "Decoracion_8",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3978,6 +3986,7 @@ Entity196 = {
 Entity197 = {
 	Name = "Decoracion_9",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4007,6 +4016,7 @@ Entity197 = {
 Entity198 = {
 	Name = "Decoracion_10",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4036,6 +4046,7 @@ Entity198 = {
 Entity199 = {
 	Name = "Decoracion_11",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4175,7 +4186,7 @@ Entity205 = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "-2.9389901161193848|0.11689912527799606|-34.538780212402344",
-				Rotation = "false|0.2831059694290161|-0.2831060290336609|-0.6479590535163879|-0.6479591727256775",
+				Rotation = "false|0.2831059396266937|-0.2831060290336609|-0.6479589939117432|-0.6479591727256775",
 				Scale = "0.38702499866485596|0.38702499866485596|0.38702499866485596"
 			}
 		}
@@ -4195,7 +4206,7 @@ Entity206 = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "2.183490753173828|0.11689912527799606|-35.07661056518555",
-				Rotation = "false|0.2831059694290161|-0.2831060290336609|-0.6479590535163879|-0.6479591727256775",
+				Rotation = "false|0.2831059396266937|-0.2831060290336609|-0.6479589939117432|-0.6479591727256775",
 				Scale = "0.38702499866485596|0.38702499866485596|0.38702499866485596"
 			}
 		}
@@ -4255,7 +4266,7 @@ Entity209 = {
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "-0.9417237043380737|0.11689912527799606|-35.176326751708984",
-				Rotation = "false|0.21401643753051758|-0.21401651203632355|-0.6739412546157837|-0.673941433429718",
+				Rotation = "false|0.21401642262935638|-0.21401652693748474|-0.6739411950111389|-0.6739414930343628",
 				Scale = "0.43559542298316956|0.43559542298316956|0.4355953633785248"
 			}
 		}
@@ -5601,6 +5612,7 @@ Entity273 = {
 Entity274 = {
 	Name = "BloqueoEntrada",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -5630,6 +5642,7 @@ Entity274 = {
 Entity275 = {
 	Name = "BloqueoDerecha",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -5659,6 +5672,7 @@ Entity275 = {
 Entity276 = {
 	Name = "BloqueoIzquierda",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -5691,7 +5705,7 @@ Entity277 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-2.315335750579834",
+				Position = "7.027426242828369|0.12999999523162842|-2.315335750579834",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5701,7 +5715,8 @@ Entity277 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "true"
 			}
 		}
 	}
@@ -5713,7 +5728,7 @@ Entity278 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-4.292304039001465",
+				Position = "7.027426242828369|0.12999999523162842|-4.292304039001465",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5723,7 +5738,8 @@ Entity278 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "true"
 			}
 		}
 	}
@@ -5735,7 +5751,7 @@ Entity279 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-12.295836448669434",
+				Position = "7.027426242828369|0.12999999523162842|-12.295836448669434",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5745,7 +5761,8 @@ Entity279 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -5757,7 +5774,7 @@ Entity280 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-18.29051399230957",
+				Position = "7.027426242828369|0.12999999523162842|-18.29051399230957",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5767,7 +5784,8 @@ Entity280 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -5779,7 +5797,7 @@ Entity281 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-22.308223724365234",
+				Position = "7.027426242828369|0.12999999523162842|-22.308223724365234",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5789,7 +5807,8 @@ Entity281 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -5801,7 +5820,7 @@ Entity282 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-24.301136016845703",
+				Position = "7.027426242828369|0.12999999523162842|-24.301136016845703",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5811,7 +5830,8 @@ Entity282 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -5823,7 +5843,7 @@ Entity283 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-26.30998992919922",
+				Position = "7.027426242828369|0.12999999523162842|-26.30998992919922",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5833,7 +5853,8 @@ Entity283 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -5845,7 +5866,7 @@ Entity284 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-16.32311248779297",
+				Position = "7.027426242828369|0.12999999523162842|-16.32311248779297",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5855,7 +5876,8 @@ Entity284 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -5867,7 +5889,7 @@ Entity285 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "7.027426242828369|0.0|-10.324705123901367",
+				Position = "7.027426242828369|0.12999999523162842|-10.324705123901367",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5877,7 +5899,8 @@ Entity285 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -5889,7 +5912,7 @@ Entity286 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-9.72962474822998",
+				Position = "-7.334024906158447|0.12999999523162842|-9.72962474822998",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5899,7 +5922,8 @@ Entity286 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5911,7 +5935,7 @@ Entity287 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-15.728032112121582",
+				Position = "-7.334024906158447|0.12999999523162842|-15.728032112121582",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5921,7 +5945,8 @@ Entity287 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5933,7 +5958,7 @@ Entity288 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-25.714908599853516",
+				Position = "-7.334024906158447|0.12999999523162842|-25.714908599853516",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5943,7 +5968,8 @@ Entity288 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5955,7 +5981,7 @@ Entity289 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-23.7060546875",
+				Position = "-7.334024906158447|0.12999999523162842|-23.7060546875",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5965,7 +5991,8 @@ Entity289 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5977,7 +6004,7 @@ Entity290 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-21.71314239501953",
+				Position = "-7.334024906158447|0.12999999523162842|-21.71314239501953",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5987,7 +6014,8 @@ Entity290 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5999,7 +6027,7 @@ Entity291 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-17.6954345703125",
+				Position = "-7.334024906158447|0.12999999523162842|-17.6954345703125",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -6009,7 +6037,8 @@ Entity291 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -6021,7 +6050,7 @@ Entity292 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-11.700756072998047",
+				Position = "-7.334024906158447|0.12999999523162842|-11.700756072998047",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -6031,7 +6060,8 @@ Entity292 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -6043,7 +6073,7 @@ Entity293 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-3.697223663330078",
+				Position = "-7.334024906158447|0.12999999523162842|-3.697223663330078",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -6053,7 +6083,8 @@ Entity293 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "true"
 			}
 		}
 	}
@@ -6065,7 +6096,7 @@ Entity294 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-7.334024906158447|0.0|-1.7202553749084473",
+				Position = "-7.334024906158447|0.12999999523162842|-1.7202553749084473",
 				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -6075,7 +6106,8 @@ Entity294 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "true"
 			}
 		}
 	}
@@ -6084,18 +6116,40 @@ Entity294 = {
 Entity295 = {
 	Name = "FinishLine",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "0.0|1.0|-29.0",
-				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "2.0|0.30000001192092896|1.0"
 			}
 		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "limitLine"
+            }
+        },
+        {
+            Name = "LIMIT_LINE",
+            Arguments = {
+                _isPlayer = "false"
+            }
+        },
 		{
-			Name = "FINISH_LINE",
+			Name = "RIGIDBODY",
 			Arguments = {
-				_isPlayer = "true"
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "4.0",
+				Shape = "BOX",
+				Trigger = "true"
 			}
 		}
 	}
@@ -6104,6 +6158,7 @@ Entity295 = {
 Entity296 = {
 	Name = "FinishLineDer",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -6112,18 +6167,18 @@ Entity296 = {
 				Scale = "1.0|19.0|1.0"
 			}
 		},
-		{
-			Name = "BEHAVIOUR",
-			Arguments = {
-				Script = "finishLine"
-			}
-		},
-		{
-			Name = "FINISH_LINE",
-			Arguments = {
-				_isPlayer = "false"
-			}
-		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "limitLine"
+            }
+        },
+        {
+            Name = "LIMIT_LINE",
+            Arguments = {
+                _isPlayer = "false"
+            }
+        },
 		{
 			Name = "RIGIDBODY",
 			Arguments = {
@@ -6145,6 +6200,7 @@ Entity296 = {
 Entity297 = {
 	Name = "FinishLineIzq",
 	Components = {
+		 
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -6153,18 +6209,18 @@ Entity297 = {
 				Scale = "1.0|19.0|1.0"
 			}
 		},
-		{
-			Name = "BEHAVIOUR",
-			Arguments = {
-				Script = "finishLine"
-			}
-		},
-		{
-			Name = "FINISH_LINE",
-			Arguments = {
-				_isPlayer = "false"
-			}
-		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "limitLine"
+            }
+        },
+        {
+            Name = "LIMIT_LINE",
+            Arguments = {
+                _isPlayer = "false"
+            }
+        },
 		{
 			Name = "RIGIDBODY",
 			Arguments = {
@@ -6183,7 +6239,133 @@ Entity297 = {
 	}
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47, Entity48, Entity49, Entity50, Entity51, Entity52, Entity53, Entity54, Entity55, Entity56, Entity57, Entity58, Entity59, Entity60, Entity61, Entity62, Entity63, Entity64, Entity65, Entity66, Entity67, Entity68, Entity69, Entity70, Entity71, Entity72, Entity73, Entity74, Entity75, Entity76, Entity77, Entity78, Entity79, Entity80, Entity81, Entity82, Entity83, Entity84, Entity85, Entity86, Entity87, Entity88, Entity89, Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99, Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108, Entity109, Entity110, Entity111, Entity112, Entity113, Entity114, Entity115, Entity116, Entity117, Entity118, Entity119, Entity120, Entity121, Entity122, Entity123, Entity124, Entity125, Entity126, Entity127, Entity128, Entity129, Entity130, Entity131, Entity132, Entity133, Entity134, Entity135, Entity136, Entity137, Entity138, Entity139, Entity140, Entity141, Entity142, Entity143, Entity144, Entity145, Entity146, Entity147, Entity148, Entity149, Entity150, Entity151, Entity152, Entity153, Entity154, Entity155, Entity156, Entity157, Entity158, Entity159, Entity160, Entity161, Entity162, Entity163, Entity164, Entity165, Entity166, Entity167, Entity168, Entity169, Entity170, Entity171, Entity172, Entity173, Entity174, Entity175, Entity176, Entity177, Entity178, Entity179, Entity180, Entity181, Entity182, Entity183, Entity184, Entity185, Entity186, Entity187, Entity188, Entity189, Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Entity196, Entity197, Entity198, Entity199, Entity200, Entity201, Entity202, Entity203, Entity204, Entity205, Entity206, Entity207, Entity208, Entity209, Entity210, Entity211, Entity212, Entity213, Entity214, Entity215, Entity216, Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, Entity224, Entity225, Entity226, Entity227, Entity228, Entity229, Entity230, Entity231, Entity232, Entity233, Entity234, Entity235, Entity236, Entity237, Entity238, Entity239, Entity240, Entity241, Entity242, Entity243, Entity244, Entity245, Entity246, Entity247, Entity248, Entity249, Entity250, Entity251, Entity252, Entity253, Entity254, Entity255, Entity256, Entity257, Entity258, Entity259, Entity260, Entity261, Entity262, Entity263, Entity264, Entity265, Entity266, Entity267, Entity268, Entity269, Entity270, Entity271, Entity272, Entity273, Entity274, Entity275, Entity276, Entity277, Entity278, Entity279, Entity280, Entity281, Entity282, Entity283, Entity284, Entity285, Entity286, Entity287, Entity288, Entity289, Entity290, Entity291, Entity292, Entity293, Entity294, Entity295, Entity296, Entity297 }
+Entity298 = {
+	Name = "EnemieController",
+	Components = {
+		 
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-6.982699871063232",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "2.0|0.15000000596046448|1.0"
+			}
+		},
+		{
+			Name = "ENEMY_ACTIVATOR",
+			Arguments = {
+				ActiveInstanciator = "Instanciator.001|Instanciator.016|Instanciator.017|Instanciator|Instanciator.002|Instanciator.015|Instanciator.008|Instanciator.009"
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "4.0",
+				Shape = "BOX",
+				Trigger = "true"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "enemyActivator"
+            }
+        }
+	}
+}
+
+Entity299 = {
+	Name = "EnemieController.001",
+	Components = {
+		 
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-13.176137924194336",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "2.0|0.15000000596046448|1.0"
+			}
+		},
+		{
+			Name = "ENEMY_ACTIVATOR",
+			Arguments = {
+				ActiveInstanciator = "Instanciator.007|Instanciator.010|Instanciator.014|Instanciator.003|Instanciator.002|Instanciator.015|Instanciator.008|Instanciator.009"
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "4.0",
+				Shape = "BOX",
+				Trigger = "true"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "enemyActivator"
+            }
+        }
+	}
+}
+
+Entity300 = {
+	Name = "EnemieController.002",
+	Components = {
+		 
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-19.155054092407227",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "2.0|0.15000000596046448|1.0"
+			}
+		},
+		{
+			Name = "ENEMY_ACTIVATOR",
+			Arguments = {
+				ActiveInstanciator = "Instanciator.007|Instanciator.010|Instanciator.014|Instanciator.003|Instanciator.004|Instanciator.005|Instanciator.006|Instanciator.011|Instanciator.012|Instanciator.013"
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "4.0",
+				Shape = "BOX",
+				Trigger = "true"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "enemyActivator"
+            }
+        }
+	}
+}
+
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47, Entity48, Entity49, Entity50, Entity51, Entity52, Entity53, Entity54, Entity55, Entity56, Entity57, Entity58, Entity59, Entity60, Entity61, Entity62, Entity63, Entity64, Entity65, Entity66, Entity67, Entity68, Entity69, Entity70, Entity71, Entity72, Entity73, Entity74, Entity75, Entity76, Entity77, Entity78, Entity79, Entity80, Entity81, Entity82, Entity83, Entity84, Entity85, Entity86, Entity87, Entity88, Entity89, Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99, Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108, Entity109, Entity110, Entity111, Entity112, Entity113, Entity114, Entity115, Entity116, Entity117, Entity118, Entity119, Entity120, Entity121, Entity122, Entity123, Entity124, Entity125, Entity126, Entity127, Entity128, Entity129, Entity130, Entity131, Entity132, Entity133, Entity134, Entity135, Entity136, Entity137, Entity138, Entity139, Entity140, Entity141, Entity142, Entity143, Entity144, Entity145, Entity146, Entity147, Entity148, Entity149, Entity150, Entity151, Entity152, Entity153, Entity154, Entity155, Entity156, Entity157, Entity158, Entity159, Entity160, Entity161, Entity162, Entity163, Entity164, Entity165, Entity166, Entity167, Entity168, Entity169, Entity170, Entity171, Entity172, Entity173, Entity174, Entity175, Entity176, Entity177, Entity178, Entity179, Entity180, Entity181, Entity182, Entity183, Entity184, Entity185, Entity186, Entity187, Entity188, Entity189, Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Entity196, Entity197, Entity198, Entity199, Entity200, Entity201, Entity202, Entity203, Entity204, Entity205, Entity206, Entity207, Entity208, Entity209, Entity210, Entity211, Entity212, Entity213, Entity214, Entity215, Entity216, Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, Entity224, Entity225, Entity226, Entity227, Entity228, Entity229, Entity230, Entity231, Entity232, Entity233, Entity234, Entity235, Entity236, Entity237, Entity238, Entity239, Entity240, Entity241, Entity242, Entity243, Entity244, Entity245, Entity246, Entity247, Entity248, Entity249, Entity250, Entity251, Entity252, Entity253, Entity254, Entity255, Entity256, Entity257, Entity258, Entity259, Entity260, Entity261, Entity262, Entity263, Entity264, Entity265, Entity266, Entity267, Entity268, Entity269, Entity270, Entity271, Entity272, Entity273, Entity274, Entity275, Entity276, Entity277, Entity278, Entity279, Entity280, Entity281, Entity282, Entity283, Entity284, Entity285, Entity286, Entity287, Entity288, Entity289, Entity290, Entity291, Entity292, Entity293, Entity294, Entity295, Entity296, Entity297, Entity298, Entity299, Entity300 }
 
 CollisionLayers = {
 	Layers = {

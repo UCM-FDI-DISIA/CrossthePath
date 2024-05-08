@@ -13,6 +13,7 @@ namespace ctp {
 		_prefabName = args->GetValueToStringVector("PrefabName");
 		_spawnRate = args->GetValueToFloat("SpawnRate");
 		_isLeft = args->GetValueToBool("IsLeft");
+		_active = args->GetValueToBool("Active");
 	}
 
 	void InstanciateEnemies::Awake() {

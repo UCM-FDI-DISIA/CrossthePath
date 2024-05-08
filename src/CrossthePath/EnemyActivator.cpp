@@ -9,6 +9,23 @@
 
 const std::string ctp::EnemyActivator::_id = "ENEMY_ACTIVATOR";
 
+ctp::EnemyActivator::EnemyActivator() {
+
+	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
+
+	scriptM->Regist(*this, "EnemyActivator", &ctp::EnemyActivator::CollisionLine, "CollisionLine", this);
+
+	scriptM->SetGlobal(this, "EnemyActivator");
+
+	scriptM = nullptr;
+}
+
+void ctp::EnemyActivator::Start()
+{
+
+	_ent->GetComponent<eden_ec::CRigidBody>()->SetTemporalDeactivation(true);
+}
+
 void ctp::EnemyActivator::Init(eden_script::ComponentArguments* args)
 {
 	_activate = args->GetValueToStringVector("ActiveInstanciator");
