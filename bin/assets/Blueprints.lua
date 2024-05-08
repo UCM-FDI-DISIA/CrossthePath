@@ -246,28 +246,27 @@ enemyGreen = {
         }
     }
 }
-
 Camera = {
-	Name = "Camera",
-	Components = {
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "1.3|4|4",
-				Rotation = "false|0.7|-0.4|0.17|0",
-				Scale = "1.0|1.0|1.0"
-			}
-		},
-		{
-			Name = "CAMERA",
-			Arguments = {
-			}
-		},
-		{
-			Name = "PLAYERCAMERA",
-			Arguments = {
-			}
-		}
-	}
+    Name = "Camera",
+    Components = {
+        {
+            Name = "TRANSFORM",
+            Arguments = {
+                Position = "-4|10|4",
+                Rotation = "false|1|-1|0|0",
+                Scale = "1.0|1.0|1.0"
+            }
+        },
+        {
+            Name = "CAMERA",
+            Arguments = {
+            }
+        },
+        {
+            Name = "PLAYERCAMERA",
+            Arguments = {
+            }
+        }
+    }
 }
 Blueprints = { Cube, Player, enemyTaxi, enemyPolice, enemyRed, enemyGreen, Camera }
