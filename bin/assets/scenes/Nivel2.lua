@@ -4781,8 +4781,125 @@ Entity229 = {
 		}
 	}
 }
+Entity230 = {
+	Name = "UI_win",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+                OverlayName= "win",
+				XPos = "50",
+                YPos = "40",
+                Width = "75",
+                Height = "75",
+                Texture = "Win.png",
+                Depth = "1"
+			}
+		}
+	}	
+}
+Entity231 = {
+	Name = "buttonPause",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonPause",
+				XPos = "4",
+                YPos = "5",
+                Width = "10",
+                Height = "10",
+				Texture1 = "Pause_Button.png",
+                Texture2 = "PauseOver_Button.png",
+                Texture3 = "PauseClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Game_Pause",
+			}
+        }
+	}
+}
+Entity232 = {
+	Name = "UI_Cursor",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+				OverlayName= "image",
+				XPos = "0",
+				YPos = "0",
+				Width = "3",
+				Height = "3",
+				Texture = "Cursor.png",
+				Depth = "10"
+			}
+		},
+		{
+			Name = "CURSOR",
+			Arguments = {
+			}
+		}
+	}		
+}
+Entity233 = {
+	Name = "UI_Manager",
+	Components = {
+		{
+			Name = "UI_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47, Entity48, Entity49, Entity50, Entity51, Entity52, Entity53, Entity54, Entity55, Entity56, Entity57, Entity58, Entity59, Entity60, Entity61, Entity62, Entity63, Entity64, Entity65, Entity66, Entity67, Entity68, Entity69, Entity70, Entity71, Entity72, Entity73, Entity74, Entity75, Entity76, Entity77, Entity78, Entity79, Entity80, Entity81, Entity82, Entity83, Entity84, Entity85, Entity86, Entity87, Entity88, Entity89, Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99, Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108, Entity109, Entity110, Entity111, Entity112, Entity113, Entity114, Entity115, Entity116, Entity117, Entity118, Entity119, Entity120, Entity121, Entity122, Entity123, Entity124, Entity125, Entity126, Entity127, Entity128, Entity129, Entity130, Entity131, Entity132, Entity133, Entity134, Entity135, Entity136, Entity137, Entity138, Entity139, Entity140, Entity141, Entity142, Entity143, Entity144, Entity145, Entity146, Entity147, Entity148, Entity149, Entity150, Entity151, Entity152, Entity153, Entity154, Entity155, Entity156, Entity157, Entity158, Entity159, Entity160, Entity161, Entity162, Entity163, Entity164, Entity165, Entity166, Entity167, Entity168, Entity169, Entity170, Entity171, Entity172, Entity173, Entity174, Entity175, Entity176, Entity177, Entity178, Entity179, Entity180, Entity181, Entity182, Entity183, Entity184, Entity185, Entity186, Entity187, Entity188, Entity189, Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Entity196, Entity197, Entity198, Entity199, Entity200, Entity201, Entity202, Entity203, Entity204, Entity205, Entity206, Entity207, Entity208, Entity209, Entity210, Entity211, Entity212, Entity213, Entity214, Entity215, Entity216, Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, Entity224, Entity225, Entity226, Entity227, Entity228, Entity229 }
+Entity234 = {
+	Name = "UI_timer",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "90",
+                YPos = "5",
+                Tam = "5",
+                Text = "Timer: 0",
+                Font = "Buycat.ttf",
+                Color = "1|1|1",
+                Depth = "2"
+			}
+		}
+	}	
+}
+
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, 
+Entity10, Entity11, Entity12, Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19,
+Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29,
+Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, 
+Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47, Entity48, Entity49, 
+Entity50, Entity51, Entity52, Entity53, Entity54, Entity55, Entity56, Entity57, Entity58, Entity59, 
+Entity60, Entity61, Entity62, Entity63, Entity64, Entity65, Entity66, Entity67, Entity68, Entity69, 
+Entity70, Entity71, Entity72, Entity73, Entity74, Entity75, Entity76, Entity77, Entity78, Entity79, 
+Entity80, Entity81, Entity82, Entity83, Entity84, Entity85, Entity86, Entity87, Entity88, Entity89, 
+Entity90, Entity91, Entity92, Entity93, Entity94, Entity95, Entity96, Entity97, Entity98, Entity99, 
+Entity100, Entity101, Entity102, Entity103, Entity104, Entity105, Entity106, Entity107, Entity108, 
+Entity109, Entity110, Entity111, Entity112, Entity113, Entity114, Entity115, Entity116, Entity117, 
+Entity118, Entity119, Entity120, Entity121, Entity122, Entity123, Entity124, Entity125, Entity126, 
+Entity127, Entity128, Entity129, Entity130, Entity131, Entity132, Entity133, Entity134, Entity135, 
+Entity136, Entity137, Entity138, Entity139, Entity140, Entity141, Entity142, Entity143, Entity144, 
+Entity145, Entity146, Entity147, Entity148, Entity149, Entity150, Entity151, Entity152, Entity153, 
+Entity154, Entity155, Entity156, Entity157, Entity158, Entity159, Entity160, Entity161, Entity162, 
+Entity163, Entity164, Entity165, Entity166, Entity167, Entity168, Entity169, Entity170, Entity171, 
+Entity172, Entity173, Entity174, Entity175, Entity176, Entity177, Entity178, Entity179, Entity180, 
+Entity181, Entity182, Entity183, Entity184, Entity185, Entity186, Entity187, Entity188, Entity189, 
+Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Entity196, Entity197, Entity198, 
+Entity199, Entity200, Entity201, Entity202, Entity203, Entity204, Entity205, Entity206, Entity207, 
+Entity208, Entity209, Entity210, Entity211, Entity212, Entity213, Entity214, Entity215, Entity216, 
+Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, Entity224, Entity225, 
+Entity226, Entity227, Entity228, Entity229, Entity230, Entity231, Entity232, Entity233, Entity234 }
 
 CollisionLayers = {
 	Layers = {
