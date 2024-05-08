@@ -4,6 +4,9 @@
 
 #include "Component.h"
 
+namespace eden_ec {
+	class CAudioEmitter;
+}
 namespace ctp {
 
 	class MenuPausa : public eden_ec::Component {
@@ -17,7 +20,7 @@ namespace ctp {
 
 		void Awake() override {}
 
-		void Start() override {}
+		void Start() override;
 
 		void Update(float t) override {}
 
@@ -33,6 +36,8 @@ namespace ctp {
 
 	protected:
 		const static std::string _id;
+		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
+
 	};
 }
 #endif //MENU_PAUSA_H

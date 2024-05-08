@@ -6,7 +6,9 @@
 namespace eden_render {
 	class RenderManager;
 }
-
+namespace eden_ec {
+	class CAudioEmitter;
+}
 namespace ctp {
 	class MenuOpciones : public eden_ec::Component {
 	public:
@@ -33,6 +35,7 @@ namespace ctp {
 		eden_ec::Entity* _vol = nullptr;
 		eden_ec::Entity* _fullScreenOFF = nullptr;
 		eden_ec::Entity* _fullScreenON = nullptr;
+		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 
 		void GoBack();
 

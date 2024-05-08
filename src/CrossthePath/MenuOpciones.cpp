@@ -7,6 +7,7 @@
 #include "GameManager.h"
 #include <SceneManager.h>
 #include <AudioManager.h>
+#include <CAudioEmitter.h>
 #include "Entity.h"
 #include "CText.h"
 #include "CBar.h"
@@ -32,6 +33,10 @@ void ctp::MenuOpciones::Start()
 	ChangeResolutionText();
 	_fullScreenON = eden::SceneManager::getInstance()->FindEntity("fullScreenON");
 	_fullScreenOFF = eden::SceneManager::getInstance()->FindEntity("fullScreenOFF");
+
+	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
+	_audioEmitter->Play();
+	_audioEmitter->SetLoop(true);
 }
 
 void ctp::MenuOpciones::Update(float t)

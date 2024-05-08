@@ -166,7 +166,15 @@ Entity8 ={
             Arguments = {
 
 			}
-        }
+        },
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "MainMenu.mp3",
+				Is3D = "false"
+			}
+		}
+
 	}	
 }
 Entity9 = {

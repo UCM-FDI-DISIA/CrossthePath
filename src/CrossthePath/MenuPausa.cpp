@@ -5,6 +5,7 @@
 #include <LuaManager.h>
 #include "GameManager.h"
 #include "Entity.h"
+#include <CAudioEmitter.h>
 
 const std::string ctp::MenuPausa::_id = "MENU_PAUSA";
 
@@ -16,6 +17,13 @@ ctp::MenuPausa::MenuPausa() {
 	scriptM->Regist(*this, "Pausa", &ctp::MenuPausa::Click, "MenuPausaClick", this);
 	scriptM->SetGlobal(this, "Pausa");
 	scriptM = nullptr;
+}
+
+void ctp::MenuPausa::Start()
+{
+	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
+	_audioEmitter->Play();
+	_audioEmitter->SetLoop(true);
 }
 
 void ctp::MenuPausa::ResumeGame()
