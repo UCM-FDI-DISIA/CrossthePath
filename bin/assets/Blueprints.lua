@@ -31,7 +31,7 @@ Player = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0.0|0.0|0.0",
+				Position = "0|2.0|0",
 				Rotation = "false|0.0|0.0|1.0|0.0",
 				Scale = "0.1|0.1|0.1"
 			}

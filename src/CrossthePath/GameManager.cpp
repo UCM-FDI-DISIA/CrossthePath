@@ -109,10 +109,6 @@ eden_ec::Entity* eden_ec::GameManager::GetSound()
 	return _sounds;
 }
 
-eden_ec::Entity* eden_ec::GameManager::GetPlayer()
-{
-	return _player;
-}
 
 std::unordered_map<std::string, eden_ec::Entity*>* eden_ec::GameManager::GetEnemies()
 {
@@ -134,7 +130,7 @@ void eden_ec::GameManager::DestroyEnemy(std::string enemyID)
 void eden_ec::GameManager::Begin()
 {
 	_start = true;
-	_player = eden::SceneManager::getInstance()->FindEntity("Player");
+	//_player = eden::SceneManager::getInstance()->FindEntity("Player");
 	_uiManager = eden::SceneManager::getInstance()->FindEntity("UI_Manager");
 }
 

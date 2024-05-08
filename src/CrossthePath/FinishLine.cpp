@@ -4,6 +4,7 @@
 #include "Transform.h"
 #include "CRigidBody.h"
 #include "GameManager.h"
+#include "SceneManager.h"
 #include "ComponentArguments.h"
 #include "LuaManager.h"
 #include"ScriptManager.h"
@@ -12,6 +13,9 @@ const std::string eden_ec::FinishLine::_id = "FINISH_LINE";
 void eden_ec::FinishLine::Init(eden_script::ComponentArguments* args)
 {
 	_isPlayer = args->GetValueToBool("IsPlayer");
+}
+void eden_ec::FinishLine::Start() {
+
 	// PRUEBA TRIGGER/COLISION
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::Instance()->GetLuaManager();
 	if (_isPlayer)
@@ -25,19 +29,16 @@ void eden_ec::FinishLine::Init(eden_script::ComponentArguments* args)
 	}
 	scriptM->SetGlobal(this, "FinishLine");
 	scriptM = nullptr;
-
-}
-void eden_ec::FinishLine::Start() {
-
 	_transform = _ent->GetComponent<CTransform>();
 	if (_isPlayer)
 	{
-		_playerTransform = eden_ec::GameManager::Instance()->GetPlayer()->GetComponent<CTransform>();
+		_playerTransform = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<CTransform>();
 	}
 	else
 	{
 		//_enemies = eden_ec::GameManager::Instance()->GetEnemies();
 	}
+
 }
 
 void eden_ec::FinishLine::Update(float dt)

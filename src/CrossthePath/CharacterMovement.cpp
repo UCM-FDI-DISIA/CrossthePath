@@ -13,7 +13,7 @@
 #include "Vector3.h"
 #include "GameManager.h"
 
-#include "GameManager.h"
+#include "CRigidBody.h"
 
 #include <string>
 #include <math.h> 
@@ -21,7 +21,7 @@
 const std::string eden_ec::CharacterMovement::_id = "CHARACTER_MOVEMENT";
 void eden_ec::CharacterMovement::Start() {
 	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
-
+	_ent->GetComponent<CRigidBody>()->SetTemporalDeactivation(true);
 	_transform = _ent->GetComponent<CTransform>();
 	_animator = _ent->GetComponent<CAnimator>();
 	_animator->PlayAnim("Idle");

@@ -40,9 +40,6 @@ namespace eden_ec {
 		/// @brief Devuelve el puntero a UIManager del Gameplay
 		Entity* GetSound();
 
-		/// @brief Devuelve puntero al player
-		Entity* GetPlayer();
-
 		std::unordered_map<std::string, eden_ec::Entity*> *GetEnemies();
 
 		void DestroyEnemy(std::string enemyID);
