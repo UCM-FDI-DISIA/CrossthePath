@@ -99,7 +99,7 @@ enemyTaxi = {
         {
             Name = "ENEMY_MOVEMENT",
             Arguments = {
-                Velocity = "3"
+                Velocity = "10"
             }
         },
         {
@@ -149,7 +149,7 @@ enemyPolice = {
         {
             Name = "ENEMY_MOVEMENT",
             Arguments = {
-                Velocity = "3"
+                Velocity = "10"
             }
         },
         {

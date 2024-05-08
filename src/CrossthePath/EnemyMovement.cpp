@@ -21,7 +21,7 @@ void ctp::EnemyMovement::Start()
 
 void ctp::EnemyMovement::Update(float t)
 {
-	_transform->Translate((_movDir).Normalized() * t, true);
+	_transform->Translate((_movDir) * t, true);
 }
 
 void ctp::EnemyMovement::SetWay(bool way)
