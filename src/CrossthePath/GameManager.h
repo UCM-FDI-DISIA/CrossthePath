@@ -5,6 +5,7 @@
 #include <string> 
 #include "Singleton.h"
 #include <vector>
+#include <list>
 namespace eden_ec {
 	class Entity;
 	class GameManager : public Singleton<GameManager>
@@ -40,9 +41,9 @@ namespace eden_ec {
 		/// @brief Devuelve el puntero a UIManager del Gameplay
 		Entity* GetSound();
 
-		std::unordered_map<std::string, eden_ec::Entity*> *GetEnemies();
-
-		void DestroyEnemy(std::string enemyID);
+		
+		void AddEnemy(Entity* ent);
+		void DestroyEnemy(Entity* ent);
 
 		/// @brief Flag de comienzo de juego
 		void Begin();
@@ -78,7 +79,7 @@ namespace eden_ec {
 		int _easterEggs = 0;
 
 		// Mapa de enemigos del juego
-		std::unordered_map<std::string, Entity*> _enemies;
+		std::list<Entity*> _enemies;
 		bool _start = false;
 	};
 }

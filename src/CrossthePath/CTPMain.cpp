@@ -5,7 +5,6 @@
 #include "MenuPausa.h"
 #include "CharacterMovement.h"
 #include "CameraMovement.h"
-#include "FinishLine.h"
 #include "UIManager.h"
 #include "GameManagerController.h"
 #include "InstanciateEnemies.h"
@@ -18,12 +17,13 @@
 #include "SoundsController.h"
 #include "EasterEgg.h"
 
+#include "LimitLine.h"
+
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
 	factory->RegisterComponent<eden_ec::MenuPausa>();
 	factory->RegisterComponent<eden_ec::CharacterMovement>();
 	factory->RegisterComponent<eden_ec::CameraMovement>();
-	factory->RegisterComponent<eden_ec::FinishLine>();
 	factory->RegisterComponent<eden_ec::UIManager>();
 	factory->RegisterComponent<eden_ec::GameManagerController>();
 	factory->RegisterComponent<eden_ec::InstanciateEnemies>();
@@ -35,6 +35,8 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::CharacterDie>();
 	factory->RegisterComponent<eden_ec::SoundsController>();
 	factory->RegisterComponent<eden_ec::EasterEgg>();
+
+	factory->RegisterComponent<eden_ec::LimitLine>();
 }
 
 void LoadScene() {

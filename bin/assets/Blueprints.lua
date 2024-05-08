@@ -284,8 +284,8 @@ Camera = {
         {
             Name = "TRANSFORM",
             Arguments = {
-                Position = "1.3|4|4",
-                Rotation = "false|0.7|-0.4|0.17|0",
+                Position = "1.3|4|10",
+                Rotation = "false|1|-0.4|0.17|0",
                 Scale = "1.0|1.0|1.0"
             }
         },

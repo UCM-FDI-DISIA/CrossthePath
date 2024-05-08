@@ -38,7 +38,7 @@ namespace eden_ec {
 		/// @brief velocidad de la cámara
 		float _speed = 8;
 		/// @brief offset de la cámara
-		float _offset = 1;
+		float _offset = 3;
 	};
 }
 #endif //CAMERA_MOVEMENT_H

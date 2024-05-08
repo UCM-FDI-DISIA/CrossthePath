@@ -3,6 +3,7 @@
 #include "Transform.h"
 #include "SceneManager.h"
 #include "EnemyMovement.h"
+#include "GameManager.h"
 
 const std::string eden_ec::InstanciateEnemies::_id = "INSTANCIATE_ENEMIES";
 
@@ -47,5 +48,7 @@ namespace eden_ec {
 		}
 		coche->GetComponent<EnemyMovement>()->SetWay(_isLeft);
 		coche->GetComponent<EnemyMovement>()->SetMov();
+
+		eden_ec::GameManager::Instance()->AddEnemy(coche);
 	}
 }

@@ -5,7 +5,6 @@
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
-    <ClCompile Include="..\..\src\CrossthePath\FinishLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManagerController.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\InstanciateEnemies.cpp" />
@@ -18,13 +17,13 @@
     <ClCompile Include="..\..\src\CrossthePath\SoundsController.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\EasterEgg.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\LoseMenu.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\LimitLine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h" />
     <ClInclude Include="..\..\src\CrossthePath\CTPMain.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
-    <ClInclude Include="..\..\src\CrossthePath\FinishLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManagerController.h" />
     <ClInclude Include="..\..\src\CrossthePath\InstanciateEnemies.h" />
@@ -37,5 +36,6 @@
     <ClInclude Include="..\..\src\CrossthePath\SoundsController.h" />
     <ClInclude Include="..\..\src\CrossthePath\EasterEgg.h" />
     <ClInclude Include="..\..\src\CrossthePath\LoseMenu.h" />
+    <ClInclude Include="..\..\src\CrossthePath\LimitLine.h" />
   </ItemGroup>
 </Project>

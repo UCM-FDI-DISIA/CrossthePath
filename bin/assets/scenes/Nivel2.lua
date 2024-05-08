@@ -12,18 +12,6 @@ Entity2 = {
 	}
 }
 
-Entity3 = {
-	Name = "Game_Manager",
-	Components = {
-		
-		{
-			Name = "GAME_MANAGER",
-			Arguments = {
-			}
-		}
-	}
-}
-
 Entity4 = {
 	Name = "Light",
 	Components = {
@@ -4687,9 +4675,29 @@ Entity227 = {
 			}
 		},
 		{
-			Name = "FINISH_LINE",
+			Name = "BEHAVIOUR",
 			Arguments = {
-				_isPlayer = "true"
+				Script = "limitLine"
+			}
+		},
+		{
+			Name = "LIMIT_LINE",
+			Arguments = {
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "38.0",
+				Shape = "BOX",
+				Trigger = "true"
 			}
 		}
 	}
@@ -4710,13 +4718,12 @@ Entity228 = {
 		{
 			Name = "BEHAVIOUR",
 			Arguments = {
-				Script = "finishLine"
+				Script = "limitLine"
 			}
 		},
 		{
-			Name = "FINISH_LINE",
+			Name = "LIMIT_LINE",
 			Arguments = {
-				_isPlayer = "false"
 			}
 		},
 		{
@@ -4757,13 +4764,12 @@ Entity229 = {
 		{
 			Name = "BEHAVIOUR",
 			Arguments = {
-				Script = "finishLine"
+				Script = "limitLine"
 			}
 		},
 		{
-			Name = "FINISH_LINE",
+			Name = "LIMIT_LINE",
 			Arguments = {
-				_isPlayer = "false"
 			}
 		},
 		{
@@ -4876,54 +4882,7 @@ Entity234 = {
 		}
 	}	
 }
-enemyGreen = {
-    Name = "enemyGreenBlah",
-    Components = {
-		{
-            Name = "TRANSFORM", 
-            Arguments = {
-                Position = "0|0|-2",
-                Rotation = "true|0|0|0|0",
-                Scale = "1|1|1"
-            }
-        },
-        {
-            Name = "MESH_RENDERER",
-            Arguments = {
-                Mesh = "car_stationwagon"
-            }
-        },
-        {
-			Name = "BEHAVIOUR",
-			Arguments = {
-				Script = "finishLine"
-			}
-		},
-		{
-			Name = "FINISH_LINE",
-			Arguments = {
-				_isPlayer = "false"
-			}
-		},
-        {
-            Name = "RIGIDBODY",
-            Arguments = {
-                Mass = "0",
-				AABB = "0.7|0.8|0.8",
-				PosOffset = "0|0|0",
-				Radius = "0.5",
-				Shape = "BOX",
-				CollisionFlag = "DYNAMIC",
-				CollisionLayer = "ENEMIES",
-				Bounciness = "0",
-				Friction = "0",
-				Trigger = "false"
-            }
-
-        }
-    }
-}
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, 
+Entities = { Entity1, Entity2, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, 
 Entity13, Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, 
 Entity26, Entity27, Entity28, Entity29, Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, 
 Entity39, Entity40, Entity41, Entity42, Entity43, Entity44, Entity45, Entity46, Entity47, Entity48, Entity49, Entity50, Entity51, 
@@ -4941,7 +4900,7 @@ Entity176, Entity177, Entity178, Entity179, Entity180, Entity181, Entity182, Ent
 Entity188, Entity189, Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Entity196, Entity197, Entity198, Entity199, 
 Entity200, Entity201, Entity202, Entity203, Entity204, Entity205, Entity206, Entity207, Entity208, Entity209, Entity210, Entity211, 
 Entity212, Entity213, Entity214, Entity215, Entity216, Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, 
-Entity224, Entity225, Entity226, Entity227, Entity228, Entity229, Entity230, Entity231, Entity232, Entity233, Entity234, enemyGreen}
+Entity224, Entity225, Entity226, Entity227, Entity228, Entity229, Entity230, Entity231, Entity232, Entity233, Entity234}
 
 CollisionLayers = {
 	Layers = {

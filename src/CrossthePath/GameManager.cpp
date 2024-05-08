@@ -57,7 +57,7 @@ void eden_ec::GameManager::Play()
 	_currState = Game;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->ChangeScene("Nivel1");
+	scnManager->ChangeScene("Nivel2");
 }
 
 void eden_ec::GameManager::PauseGame()
@@ -109,24 +109,22 @@ eden_ec::Entity* eden_ec::GameManager::GetSound()
 	return _sounds;
 }
 
-
-std::unordered_map<std::string, eden_ec::Entity*>* eden_ec::GameManager::GetEnemies()
+void eden_ec::GameManager::AddEnemy(Entity* ent)
 {
-	return &_enemies;
+	_enemies.push_back(ent);
 }
 
-void eden_ec::GameManager::DestroyEnemy(std::string enemyID)
+void eden_ec::GameManager::DestroyEnemy(Entity* ent)
 {
-	auto it = _enemies.find(enemyID);
-	if (it != _enemies.end())
-	{
-		delete it->second;
-	}
-	else
-	{
-		//excepcion?
+	for (auto it = _enemies.begin(); it != _enemies.end(); ++it) {
+		if ((*it) == ent) {
+			_enemies.remove(ent);
+			ent->SetAlive(false);
+			break;
+		}
 	}
 }
+
 void eden_ec::GameManager::Begin()
 {
 	_start = true;

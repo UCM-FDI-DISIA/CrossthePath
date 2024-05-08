@@ -98,8 +98,8 @@
     <ClInclude Include="..\..\src\CrossthePath\CharacterDie.h" />
     <ClInclude Include="..\..\src\CrossthePath\CTPMain.h" />
     <ClInclude Include="..\..\src\CrossthePath\EasterEgg.h" />
+    <ClInclude Include="..\..\src\CrossthePath\LimitLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\EnemyMovement.h" />
-    <ClInclude Include="..\..\src\CrossthePath\FinishLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\GameManagerController.h" />
     <ClInclude Include="..\..\src\CrossthePath\InstanciateEnemies.h" />
@@ -117,8 +117,8 @@
     <ClCompile Include="..\..\src\CrossthePath\CharacterDie.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CTPMain.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\EasterEgg.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\LimitLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\EnemyMovement.cpp" />
-    <ClCompile Include="..\..\src\CrossthePath\FinishLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\GameManagerController.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\InstanciateEnemies.cpp" />
