@@ -116,7 +116,15 @@ enemyTaxi = {
 				Friction = "0",
 				Trigger = "false"
             }
-
+        },
+        {
+            Name = "PARTICLE_EMITTER",
+                Arguments = {
+                Loop = "true",
+                Time = "10.0",
+                Started = "true",
+                Name = "Particulas"
+            }
         }
     }
 }
@@ -158,8 +166,16 @@ enemyPolice = {
 				Friction = "0",
 				Trigger = "false"
             }
-
-        }
+        },
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Loop = "true",
+				Time = "10.0",
+				Started = "true",
+				Name = "Particulas"
+			}
+		}
     }
 }
 
@@ -200,8 +216,16 @@ enemyRed = {
 				Friction = "0",
 				Trigger = "false"
             }
-
-        }
+        },
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Loop = "true",
+				Time = "10.0",
+				Started = "true",
+				Name = "Particulas"
+			}
+		}
     }
 }
 
@@ -242,8 +266,16 @@ enemyGreen = {
 				Friction = "0",
 				Trigger = "false"
             }
-
-        }
+        },
+		{
+			Name = "PARTICLE_EMITTER",
+			Arguments = {
+				Loop = "true",
+				Time = "10.0",
+				Started = "true",
+				Name = "Particulas"
+			}
+		}
     }
 }
 Camera = {

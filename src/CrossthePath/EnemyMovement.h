@@ -7,6 +7,7 @@
 
 namespace eden_ec {
 	class CTransform;
+	class CParticleEmitter;
 
 	class EnemyMovement : public Component
 	{
@@ -55,6 +56,8 @@ namespace eden_ec {
 		/// @brief Variable que recibe de .lua que dictamina la velocidad a la que se mueve
 		/// Debe ser siempre positivo
 		int _vel = 1;
+
+		eden_ec::CParticleEmitter* _particle = nullptr;
 	};
 
 }

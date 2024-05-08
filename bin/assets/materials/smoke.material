@@ -1,0 +1,17 @@
+material Smoke {
+    receive_shadows on
+    technique {
+        pass {
+            diffuse 0.8 0.8 0.8 0.3
+            specular 0.5 0.5 0.5 0 0
+
+            texture_unit {
+                texture smoke_texture.png
+                tex_address_mode wrap
+                colour_op modulate
+                // Modo de mezcla para transparencia
+                scene_blend alpha_blend
+            }
+        }
+    }
+}
