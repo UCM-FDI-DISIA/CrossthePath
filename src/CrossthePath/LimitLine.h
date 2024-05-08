@@ -4,8 +4,10 @@
 
 namespace eden_ec {
 	class CRigidBody;
+}
+namespace ctp{
 
-	class LimitLine : public Component
+	class LimitLine : public eden_ec::Component
 	{
 	public:
 		LimitLine();

@@ -10,7 +10,7 @@
 #include "CBar.h"
 #include <Scene.h>
 
-eden_ec::GameManager::GameManager()
+ctp::GameManager::GameManager()
 {
 	std::vector<std::pair<int, int>> resolutions;
 	resolutions.push_back({ 640,480 });
@@ -22,22 +22,22 @@ eden_ec::GameManager::GameManager()
 	_currState = _states[0];
 }
 
-eden_ec::GameManager::~GameManager()
+ctp::GameManager::~GameManager()
 {
 	_enemies.clear();
 }
 
-void eden_ec::GameManager::Start()
+void ctp::GameManager::Start()
 {
 	_sounds = eden::SceneManager::getInstance()->FindEntity("Sounds");
 }
 
-void eden_ec::GameManager::Update(float dt) {
+void ctp::GameManager::Update(float dt) {
 	if (_start && _currState == Game && _uiManager!=nullptr)
 		_uiManager->GetComponent<UIManager>()->Timer(dt);
 }
 
-void eden_ec::GameManager::PlayerWin()
+void ctp::GameManager::PlayerWin()
 {
 	_currState = Win;
 	_states[0] = _currState;
@@ -45,7 +45,7 @@ void eden_ec::GameManager::PlayerWin()
 	scnManager->ChangeScene("WinMenuScene");
 }
 
-void eden_ec::GameManager::GameOver()
+void ctp::GameManager::GameOver()
 {
 	_currState = Game_Over;
 	_states[0] = _currState;
@@ -53,7 +53,7 @@ void eden_ec::GameManager::GameOver()
 	scnManager->ChangeScene("LoseMenuScene");
 }
 
-void eden_ec::GameManager::Play()
+void ctp::GameManager::Play()
 {
 	if(_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Game;
@@ -63,7 +63,7 @@ void eden_ec::GameManager::Play()
 	scnManager->ChangeScene("Nivel2");
 }
 
-void eden_ec::GameManager::PauseGame()
+void ctp::GameManager::PauseGame()
 {
 	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Pause;
@@ -72,7 +72,7 @@ void eden_ec::GameManager::PauseGame()
 	scnManager->PushScene("MenuPausa");
 }
 
-void eden_ec::GameManager::GoBack()
+void ctp::GameManager::GoBack()
 {
 	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_states.pop_back();
@@ -81,7 +81,7 @@ void eden_ec::GameManager::GoBack()
 	scnManager->PopScene();
 }
 
-void eden_ec::GameManager::GoOptions()
+void ctp::GameManager::GoOptions()
 {
 	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Options;
@@ -90,7 +90,7 @@ void eden_ec::GameManager::GoOptions()
 	scnManager->PushScene("Options");
 }
 
-void eden_ec::GameManager::GoMainMenu()
+void ctp::GameManager::GoMainMenu()
 {
 	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = MainMenu;
@@ -100,37 +100,37 @@ void eden_ec::GameManager::GoMainMenu()
 	scnManager->ChangeScene("MainMenu");
 }
 
-void eden_ec::GameManager::CloseGame()
+void ctp::GameManager::CloseGame()
 {
 	_currState = Exit;
 	_states[0] = _currState;
 	eden_input::InputManager::getInstance()->SetCloseWindow();
 }
 
-eden_ec::Entity* eden_ec::GameManager::GetSound()
+eden_ec::Entity* ctp::GameManager::GetSound()
 {
 	return _sounds;
 }
 
-void eden_ec::GameManager::AddEnemy(Entity* ent)
+void ctp::GameManager::AddEnemy(eden_ec::Entity* ent)
 {
 	_enemies.push_back(ent);
 }
 
-void eden_ec::GameManager::DestroyEnemy(Entity* ent)
+void ctp::GameManager::DestroyEnemy(eden_ec::Entity* ent)
 {
 	_enemies.remove(ent);
 	ent->SetAlive(false);
 }
 
-void eden_ec::GameManager::Begin()
+void ctp::GameManager::Begin()
 {
 	_start = true;
 	//_player = eden::SceneManager::getInstance()->FindEntity("Player");
 	_uiManager = eden::SceneManager::getInstance()->FindEntity("UI_Manager");
 }
 
-void eden_ec::GameManager::AddEasterEgg(Entity* egg)
+void ctp::GameManager::AddEasterEgg(eden_ec::Entity* egg)
 {
 	_easterEggs++;
 	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::EASTEREGG);
@@ -143,7 +143,7 @@ void eden_ec::GameManager::AddEasterEgg(Entity* egg)
 	}
 }
 
-bool eden_ec::GameManager::SetEgg(int num, Entity* egg)
+bool ctp::GameManager::SetEgg(int num, eden_ec::Entity* egg)
 {
 	if (!_eggsFound[num].first) {
 		_eggsFound[num] = { false,egg };

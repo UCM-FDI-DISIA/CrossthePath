@@ -9,9 +9,12 @@ namespace eden_utils {
 namespace eden_ec {
 	class CTransform;
 	class CAudioEmitter;
+}
+
+namespace ctp {
 
 	/// @brief Clase encargada del movimiento de la camara siguiendo al jugador
-	class CameraMovement : public Component {
+	class CameraMovement : public eden_ec::Component {
 	public:
 		CameraMovement() = default;
 		~CameraMovement() override;

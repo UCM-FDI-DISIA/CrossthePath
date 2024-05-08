@@ -8,8 +8,10 @@
 namespace eden_ec {
 	class CTransform;
 	class CParticleEmitter;
+}
+namespace ctp{
 
-	class EnemyMovement : public Component
+	class EnemyMovement : public eden_ec::Component
 	{
 	public:
 		/// @brief Constructora

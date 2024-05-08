@@ -9,8 +9,10 @@ namespace eden_ec {
 	class CAudioEmitter;
 	class CTransform;
 	class CAnimator;
+}
+namespace ctp{
 
-	class LoseMenu : public Component {
+	class LoseMenu : public eden_ec::Component {
 	public:
 		LoseMenu();
 		~LoseMenu() = default;
@@ -36,9 +38,9 @@ namespace eden_ec {
 	protected:
 		const static std::string _id;
 	private:
-		CButton* _mainMenu = nullptr;
-		CButton* _exit = nullptr;
-		CAnimator* _playerAnimator = nullptr;
+		eden_ec::CButton* _mainMenu = nullptr;
+		eden_ec::CButton* _exit = nullptr;
+		eden_ec::CAnimator* _playerAnimator = nullptr;
 		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 		eden_ec::CTransform* _transform = nullptr;
 

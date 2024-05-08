@@ -5,9 +5,9 @@
 #include "EnemyMovement.h"
 #include "GameManager.h"
 
-const std::string eden_ec::InstanciateEnemies::_id = "INSTANCIATE_ENEMIES";
+const std::string ctp::InstanciateEnemies::_id = "INSTANCIATE_ENEMIES";
 
-namespace eden_ec {
+namespace ctp {
 
 	void InstanciateEnemies::Init(eden_script::ComponentArguments* args) {
 		_prefabName = args->GetValueToStringVector("PrefabName");
@@ -33,8 +33,8 @@ namespace eden_ec {
 
 	void InstanciateEnemies::InstanciateEnemy() {
 		int enemy = std::rand() % _prefabName.size();
-		Entity* coche = _scnMng->InstantiateBlueprint(_prefabName[enemy], _pos);
-		CTransform* _transform = coche->GetComponent<CTransform>();
+		eden_ec::Entity* coche = _scnMng->InstantiateBlueprint(_prefabName[enemy], _pos);
+		eden_ec::CTransform* _transform = coche->GetComponent<eden_ec::CTransform>();
 
 		if (_isLeft) {
 			_transform->Yaw(-90);
@@ -49,6 +49,6 @@ namespace eden_ec {
 		coche->GetComponent<EnemyMovement>()->SetWay(_isLeft);
 		coche->GetComponent<EnemyMovement>()->SetMov();
 
-		eden_ec::GameManager::Instance()->AddEnemy(coche);
+		ctp::GameManager::Instance()->AddEnemy(coche);
 	}
 }

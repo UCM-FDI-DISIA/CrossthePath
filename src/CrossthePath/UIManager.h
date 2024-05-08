@@ -7,7 +7,10 @@
 
 namespace eden_ec {
 	class Entity;
-	class UIManager : public Component 
+}
+namespace ctp{
+
+	class UIManager : public eden_ec::Component 
 	{
 	public:
 		UIManager();
@@ -43,7 +46,7 @@ namespace eden_ec {
 		enum UI_Elements {
 			WIN,TIMER,PLAY,PAUSE,GAMEOVER,SCORE
 		};
-		std::vector<Entity*> _elements;
+		std::vector<eden_ec::Entity*> _elements;
 		std::vector<std::string> _elementsID = { "UI_win","UI_timer","UI_play" };
 
 		float _timer = 0;

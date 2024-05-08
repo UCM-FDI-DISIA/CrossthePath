@@ -5,27 +5,27 @@
 #include "Entity.h"
 
 
-const std::string eden_ec::GameManagerController::_id = "GAME_MANAGER";
+const std::string ctp::GameManagerController::_id = "GAME_MANAGER";
 
-eden_ec::GameManagerController::GameManagerController() {
+ctp::GameManagerController::GameManagerController() {
 
-	_gameManager = eden_ec::GameManager::Instance();
+	_gameManager = ctp::GameManager::Instance();
 }
 
-eden_ec::GameManagerController::~GameManagerController()
+ctp::GameManagerController::~GameManagerController()
 {
-	if(original)eden_ec::GameManager::Instance()->Close();
+	if(original)ctp::GameManager::Instance()->Close();
 }
 
-void eden_ec::GameManagerController::Update(float dt) {
+void ctp::GameManagerController::Update(float dt) {
 	_gameManager->Update(dt);
 }
 
-void eden_ec::GameManagerController::Awake()
+void ctp::GameManagerController::Awake()
 {
 }
 
-void eden_ec::GameManagerController::Start()
+void ctp::GameManagerController::Start()
 {
 	if (eden::SceneManager::getInstance()->AddEntityToDontDestroyOnLoad(_ent)) {
 		original = true;

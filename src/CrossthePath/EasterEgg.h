@@ -3,10 +3,11 @@
 #define EASTER_EGGS_H
 
 #include "Component.h"
-namespace eden_ec {
+
+namespace ctp{
 
 	/// @brief Clase encargada del movimiento de la camara siguiendo al jugador
-	class EasterEgg : public Component {
+	class EasterEgg : public eden_ec::Component {
 	public:
 		EasterEgg();
 		~EasterEgg() =default;

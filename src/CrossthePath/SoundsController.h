@@ -8,9 +8,11 @@
 namespace eden_ec {
 	class Entity;
 	class CAudioEmitter;
+}
 
+namespace ctp{
 	/// @brief Clase encargada del control de los sonidos del juego
-	class SoundsController : public Component
+	class SoundsController : public eden_ec::Component
 	{
 	public:
 		/// @brief sonidos

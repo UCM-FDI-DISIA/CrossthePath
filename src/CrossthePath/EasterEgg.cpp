@@ -8,34 +8,34 @@
 #include "CButton.h"
 #include "ComponentArguments.h"
 
-const std::string eden_ec::EasterEgg::_id = "EASTER_EGGS";
+const std::string ctp::EasterEgg::_id = "EASTER_EGGS";
 
-eden_ec::EasterEgg::EasterEgg()
+ctp::EasterEgg::EasterEgg()
 {
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 
-	scriptM->Regist(*this, "EasterEggs", &eden_ec::EasterEgg::ClickEasterEggs, "ClickEasterEggs", this);
+	scriptM->Regist(*this, "EasterEggs", &ctp::EasterEgg::ClickEasterEggs, "ClickEasterEggs", this);
 	scriptM->SetGlobal(this, "EasterEggs");
 	scriptM = nullptr;
 }
 
-void eden_ec::EasterEgg::Init(eden_script::ComponentArguments* args)
+void ctp::EasterEgg::Init(eden_script::ComponentArguments* args)
 {
 	int aux = args->GetValueToInt("Egg");
-	if (!eden_ec::GameManager::Instance()->SetEgg(aux, _ent)) {
+	if (!ctp::GameManager::Instance()->SetEgg(aux, _ent)) {
 		hide = true;
 	}
 }
 
-void eden_ec::EasterEgg::Start()
+void ctp::EasterEgg::Start()
 {
-	if(hide)eden::SceneManager::getInstance()->FindEntity("Egg")->GetComponent<CButton>()->Hide();
+	if(hide) eden::SceneManager::getInstance()->FindEntity("Egg")->GetComponent<eden_ec::CButton>()->Hide();
 }
 
 
-void eden_ec::EasterEgg::ClickEasterEggs()
+void ctp::EasterEgg::ClickEasterEggs()
 {
-	eden_ec::GameManager::Instance()->AddEasterEgg(luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton"));
-	eden::SceneManager::getInstance()->FindEntity("Egg")->GetComponent<CButton>()->Hide();
+	ctp::GameManager::Instance()->AddEasterEgg(luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton"));
+	eden::SceneManager::getInstance()->FindEntity("Egg")->GetComponent<eden_ec::CButton>()->Hide();
 }

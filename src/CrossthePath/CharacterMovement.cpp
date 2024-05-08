@@ -18,22 +18,22 @@
 #include <string>
 #include <math.h> 
 
-const std::string eden_ec::CharacterMovement::_id = "CHARACTER_MOVEMENT";
-void eden_ec::CharacterMovement::Start() {
-	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
-	_ent->GetComponent<CRigidBody>()->SetTemporalDeactivation(true);
-	_transform = _ent->GetComponent<CTransform>();
-	_animator = _ent->GetComponent<CAnimator>();
+const std::string ctp::CharacterMovement::_id = "CHARACTER_MOVEMENT";
+void ctp::CharacterMovement::Start() {
+	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
+	_ent->GetComponent<eden_ec::CRigidBody>()->SetTemporalDeactivation(true);
+	_transform = _ent->GetComponent<eden_ec::CTransform>();
+	_animator = _ent->GetComponent<eden_ec::CAnimator>();
 	_animator->PlayAnim("Idle");
 
 	_initialRotation = _transform->GetRotation();
 }
 
-void eden_ec::CharacterMovement::Init(eden_script::ComponentArguments* args) {
+void ctp::CharacterMovement::Init(eden_script::ComponentArguments* args) {
 	_inputManager = eden_input::InputManager::getInstance();
 }
 
-void eden_ec::CharacterMovement::PlayAnimation() {
+void ctp::CharacterMovement::PlayAnimation() {
 
 	switch (_currentAction) {
 	case MOVING:
@@ -51,12 +51,12 @@ void eden_ec::CharacterMovement::PlayAnimation() {
 	}
 }
 
-void eden_ec::CharacterMovement::StartMoving()
+void ctp::CharacterMovement::StartMoving()
 {
-	eden_ec::GameManager::Instance()->Begin();
+	ctp::GameManager::Instance()->Begin();
 }
 
-void eden_ec::CharacterMovement::MoveCharacter(float dt) {
+void ctp::CharacterMovement::MoveCharacter(float dt) {
 
 	if (_firstMove) {
 		_firstMove = false;
@@ -99,14 +99,14 @@ void eden_ec::CharacterMovement::MoveCharacter(float dt) {
 
 }
 
-void eden_ec::CharacterMovement::RemoveInput(MovementDir dir) {
+void ctp::CharacterMovement::RemoveInput(MovementDir dir) {
 	for (auto it = _inputVector.begin(); it != _inputVector.end();) {
 		if (*it == dir) it = _inputVector.erase(it);
 		else ++it;
 	}
 }
 
-void eden_ec::CharacterMovement::Update(float dt) {
+void ctp::CharacterMovement::Update(float dt) {
 	PlayAnimation();
 
 	if (_inputManager->IsKeyDown('a')) _inputVector.push_back(LEFT);

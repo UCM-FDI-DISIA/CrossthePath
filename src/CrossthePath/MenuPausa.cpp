@@ -6,41 +6,41 @@
 #include "GameManager.h"
 #include "Entity.h"
 
-const std::string eden_ec::MenuPausa::_id = "MENU_PAUSA";
+const std::string ctp::MenuPausa::_id = "MENU_PAUSA";
 
-eden_ec::MenuPausa::MenuPausa() {
+ctp::MenuPausa::MenuPausa() {
 
 	
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
-	scriptM->Regist(*this, "Pausa", &eden_ec::MenuPausa::Click, "MenuPausaClick", this);
+	scriptM->Regist(*this, "Pausa", &ctp::MenuPausa::Click, "MenuPausaClick", this);
 	scriptM->SetGlobal(this, "Pausa");
 	scriptM = nullptr;
 }
 
-void eden_ec::MenuPausa::ResumeGame()
+void ctp::MenuPausa::ResumeGame()
 {
-	eden_ec::GameManager::Instance()->GoBack();
+	ctp::GameManager::Instance()->GoBack();
 }
 
-void eden_ec::MenuPausa::ExitGame()
+void ctp::MenuPausa::ExitGame()
 {
-	eden_ec::GameManager::Instance()->CloseGame();
+	ctp::GameManager::Instance()->CloseGame();
 }
 
-void eden_ec::MenuPausa::BackToMenu()
+void ctp::MenuPausa::BackToMenu()
 {
-	eden_ec::GameManager::Instance()->GoMainMenu();
+	ctp::GameManager::Instance()->GoMainMenu();
 }
 
-void eden_ec::MenuPausa::Options()
+void ctp::MenuPausa::Options()
 {
-	eden_ec::GameManager::Instance()->GoOptions();
+	ctp::GameManager::Instance()->GoOptions();
 }
 
-void eden_ec::MenuPausa::Click()
+void ctp::MenuPausa::Click()
 {
-	Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
+	eden_ec::Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
 
 	if (otherEnt->GetEntityID() == "buttonResume") {
 		ResumeGame();

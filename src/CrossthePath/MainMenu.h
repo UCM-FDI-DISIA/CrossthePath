@@ -10,8 +10,11 @@ namespace eden_ec {
 	class CTransform;
 	class CAnimator;
 	class CText;
+}
+namespace ctp{
 	class GameManager;
-	class MainMenu : public Component {
+
+	class MainMenu : public eden_ec::Component {
 	public:
 		MainMenu();
 		~MainMenu() = default;
@@ -32,17 +35,17 @@ namespace eden_ec {
 	protected:
 		const static std::string _id;
 	private:
-		CButton* _start = nullptr;
-		CButton* _options = nullptr;
-		CButton* _exit = nullptr;
-		CAnimator* _playerAnimator = nullptr;
+		eden_ec::CButton* _start = nullptr;
+		eden_ec::CButton* _options = nullptr;
+		eden_ec::CButton* _exit = nullptr;
+		eden_ec::CAnimator* _playerAnimator = nullptr;
 		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 		eden_ec::CTransform* _transform = nullptr;
 
-		CText* _easterEggs = nullptr;
+		eden_ec::CText* _easterEggs = nullptr;
 		GameManager* _gameManager = nullptr;
 		int _esterEggNum = -1;
-		Entity* _trophy = nullptr;
+		eden_ec::Entity* _trophy = nullptr;
 		int iteration = 0;
 
 		int _startNewPos=-1;

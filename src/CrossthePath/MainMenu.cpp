@@ -16,55 +16,55 @@
 #include "CIMage.h"
 #include "SoundsController.h"
 
-const std::string eden_ec::MainMenu::_id = "MAIN_MENU";
+const std::string ctp::MainMenu::_id = "MAIN_MENU";
 
-eden_ec::MainMenu::MainMenu() {
+ctp::MainMenu::MainMenu() {
 
 
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
-	scriptM->Regist(*this, "mainMenu", &eden_ec::MainMenu::Click, "MainMenuClick", this);
+	scriptM->Regist(*this, "mainMenu", &ctp::MainMenu::Click, "MainMenuClick", this);
 	scriptM->SetGlobal(this, "mainMenu");
 	scriptM = nullptr;
 }
 
-void eden_ec::MainMenu::Start()
+void ctp::MainMenu::Start()
 {
-	_start = eden::SceneManager::getInstance()->FindEntity("buttonPlay")->GetComponent<CButton>();
+	_start = eden::SceneManager::getInstance()->FindEntity("buttonPlay")->GetComponent<eden_ec::CButton>();
 	_startIniPos = _start->GetPosition();
 	_start->SetPosition(_startNewPos, _startIniPos.second);
 
-	_exit = eden::SceneManager::getInstance()->FindEntity("buttonExit")->GetComponent<CButton>();
+	_exit = eden::SceneManager::getInstance()->FindEntity("buttonExit")->GetComponent<eden_ec::CButton>();
 	_exitIniPos = _exit->GetPosition();
 	_exitNewPos = eden_render::RenderManager::getInstance()->GetResolution().first;
 	_exit->SetPosition(_exitNewPos, _exitIniPos.second);
 
-	_options = eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<CButton>();
+	_options = eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<eden_ec::CButton>();
 	_optionsIniPos = _options->GetPosition();
 	_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
 
-	_transform = _ent->GetComponent<CTransform>();
+	_transform = _ent->GetComponent<eden_ec::CTransform>();
 
-	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<CAnimator>();
+	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<eden_ec::CAnimator>();
 	_playerAnimator->PlayAnim("Idle");
-	_audioEmitter = _ent->GetComponent<CAudioEmitter>();
+	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);
 
-	_gameManager = eden_ec::GameManager::Instance();
+	_gameManager = ctp::GameManager::Instance();
 	int aux = _gameManager->GetBestScore();
 	if (aux > 0)
-		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText("Best Score: " + std::to_string(aux),false);
+		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<eden_ec::CText>()->SetNewText("Best Score: " + std::to_string(aux),false);
 	else 
-		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<CText>()->SetNewText(" ", false);
+		eden::SceneManager::getInstance()->FindEntity("ScoreText")->GetComponent<eden_ec::CText>()->SetNewText(" ", false);
 
-	_easterEggs = eden::SceneManager::getInstance()->FindEntity("EasterEggsText")->GetComponent<CText>();
+	_easterEggs = eden::SceneManager::getInstance()->FindEntity("EasterEggsText")->GetComponent<eden_ec::CText>();
 
 
 	//eden_input::InputManager::getInstance()->SetActive(false);
 }
 
-void eden_ec::MainMenu::Update(float t)
+void ctp::MainMenu::Update(float t)
 {
 	if (currentTime >= timer && !changeAnim) {
 		changeAnim = true;
@@ -110,7 +110,7 @@ void eden_ec::MainMenu::Update(float t)
 
 		if (!_gameManager->IsEasterEggComplete()) {
 			_trophy = eden::SceneManager::getInstance()->FindEntity("Trophy");
-			_trophy->GetComponent<CImage>()->Hide();
+			_trophy->GetComponent<eden_ec::CImage>()->Hide();
 		}
 		else {
 			_esterEggNum = _gameManager->GetEasterEggs();
@@ -124,30 +124,30 @@ void eden_ec::MainMenu::Update(float t)
 	iteration++;
 }
 
-void eden_ec::MainMenu::Play()
+void ctp::MainMenu::Play()
 {
-	eden_ec::GameManager::Instance()->Play();
+	ctp::GameManager::Instance()->Play();
 }
 
-void eden_ec::MainMenu::ExitGame()
+void ctp::MainMenu::ExitGame()
 {
-	eden_ec::GameManager::Instance()->CloseGame();
+	ctp::GameManager::Instance()->CloseGame();
 }
 
-void eden_ec::MainMenu::Options()
+void ctp::MainMenu::Options()
 {
-	eden_ec::GameManager::Instance()->GoOptions();
+	ctp::GameManager::Instance()->GoOptions();
 }
 
-void eden_ec::MainMenu::UpdateEasterEggs()
+void ctp::MainMenu::UpdateEasterEggs()
 {
 	if (!_gameManager->IsEasterEggComplete() && _esterEggNum != _gameManager->GetEasterEggs()) {
 		_esterEggNum = _gameManager->GetEasterEggs();
 		_easterEggs->SetNewText("EasterEggs: " + std::to_string(_esterEggNum) + "/3", false);
 		if (_esterEggNum == 3) {
-			eden_ec::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::EASTEREGG_TROPHY);
+			ctp::GameManager::Instance()->GetSound()->GetComponent<SoundsController>()->PlaySound(SoundsController::EASTEREGG_TROPHY);
 			_gameManager->CompleteEasterEgg();
-			CImage* aux = _trophy->GetComponent<CImage>();
+			eden_ec::CImage* aux = _trophy->GetComponent<eden_ec::CImage>();
 			aux->Show();
 			aux->Resize();
 			eden_render::RenderManager::getInstance()->ResizedWindow();
@@ -155,9 +155,9 @@ void eden_ec::MainMenu::UpdateEasterEggs()
 	}
 }
 
-void eden_ec::MainMenu::Click()
+void ctp::MainMenu::Click()
 {
-	Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
+	eden_ec::Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
 
 	if (otherEnt->GetEntityID() == "buttonPlay") {
 		Play();

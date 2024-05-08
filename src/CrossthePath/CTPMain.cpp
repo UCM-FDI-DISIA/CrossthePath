@@ -21,22 +21,22 @@
 
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
-	factory->RegisterComponent<eden_ec::MenuPausa>();
-	factory->RegisterComponent<eden_ec::CharacterMovement>();
-	factory->RegisterComponent<eden_ec::CameraMovement>();
-	factory->RegisterComponent<eden_ec::UIManager>();
-	factory->RegisterComponent<eden_ec::GameManagerController>();
-	factory->RegisterComponent<eden_ec::InstanciateEnemies>();
-	factory->RegisterComponent<eden_ec::MenuOpciones>();
-	factory->RegisterComponent<eden_ec::MainMenu>();
-	factory->RegisterComponent<eden_ec::WinMenu>();
-	factory->RegisterComponent<eden_ec::LoseMenu>();
-	factory->RegisterComponent<eden_ec::EnemyMovement>();
-	factory->RegisterComponent<eden_ec::CharacterDie>();
-	factory->RegisterComponent<eden_ec::SoundsController>();
-	factory->RegisterComponent<eden_ec::EasterEgg>();
+	factory->RegisterComponent<ctp::MenuPausa>();
+	factory->RegisterComponent<ctp::CharacterMovement>();
+	factory->RegisterComponent<ctp::CameraMovement>();
+	factory->RegisterComponent<ctp::UIManager>();
+	factory->RegisterComponent<ctp::GameManagerController>();
+	factory->RegisterComponent<ctp::InstanciateEnemies>();
+	factory->RegisterComponent<ctp::MenuOpciones>();
+	factory->RegisterComponent<ctp::MainMenu>();
+	factory->RegisterComponent<ctp::WinMenu>();
+	factory->RegisterComponent<ctp::LoseMenu>();
+	factory->RegisterComponent<ctp::EnemyMovement>();
+	factory->RegisterComponent<ctp::CharacterDie>();
+	factory->RegisterComponent<ctp::SoundsController>();
+	factory->RegisterComponent<ctp::EasterEgg>();
 
-	factory->RegisterComponent<eden_ec::LimitLine>();
+	factory->RegisterComponent<ctp::LimitLine>();
 }
 
 void LoadScene() {

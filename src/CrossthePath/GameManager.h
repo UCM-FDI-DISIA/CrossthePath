@@ -8,6 +8,10 @@
 #include <list>
 namespace eden_ec {
 	class Entity;
+}
+
+namespace ctp{
+
 	class GameManager : public Singleton<GameManager>
 	{
 		friend Singleton<GameManager>;
@@ -39,11 +43,11 @@ namespace eden_ec {
 		void CloseGame();
 
 		/// @brief Devuelve el puntero a UIManager del Gameplay
-		Entity* GetSound();
+		eden_ec::Entity* GetSound();
 
 		
-		void AddEnemy(Entity* ent);
-		void DestroyEnemy(Entity* ent);
+		void AddEnemy(eden_ec::Entity* ent);
+		void DestroyEnemy(eden_ec::Entity* ent);
 
 		/// @brief Flag de comienzo de juego
 		void Begin();
@@ -52,9 +56,9 @@ namespace eden_ec {
 		inline void SetBestScore(int best) { if(best>_bestScore) _bestScore = best; }
 
 		inline int GetEasterEggs() { return _easterEggs; }
-		void AddEasterEgg(Entity* egg);
+		void AddEasterEgg(eden_ec::Entity* egg);
 
-		bool SetEgg(int num, Entity* egg);
+		bool SetEgg(int num, eden_ec::Entity* egg);
 		inline bool IsEasterEggComplete() { return _easterEggCompleted; }
 		inline void CompleteEasterEgg() { _easterEggCompleted = true; }
 	private:
@@ -69,17 +73,17 @@ namespace eden_ec {
 		/// @brief Estado actual
 		States _currState;
 
-		Entity* _player = nullptr;
-		Entity* _uiManager = nullptr;
-		Entity* _sounds = nullptr;
+		eden_ec::Entity* _player = nullptr;
+		eden_ec::Entity* _uiManager = nullptr;
+		eden_ec::Entity* _sounds = nullptr;
 
 		bool _easterEggCompleted = false;
-		std::vector <std::pair<bool, Entity*>>_eggsFound = { {false,nullptr},{false,nullptr},{false,nullptr} };
+		std::vector <std::pair<bool, eden_ec::Entity*>>_eggsFound = { {false,nullptr},{false,nullptr},{false,nullptr} };
 		int _bestScore = 0;
 		int _easterEggs = 0;
 
 		// Mapa de enemigos del juego
-		std::list<Entity*> _enemies;
+		std::list<eden_ec::Entity*> _enemies;
 		bool _start = false;
 	};
 }

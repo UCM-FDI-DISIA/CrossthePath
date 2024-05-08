@@ -4,8 +4,11 @@
 
 namespace eden_ec {
 	class CRigidBody;
+}
 
-	class CharacterDie : public Component
+namespace ctp{
+
+	class CharacterDie : public eden_ec::Component
 	{
 	public:
 		CharacterDie();

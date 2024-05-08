@@ -24,7 +24,11 @@ namespace eden_ec {
 	class CTransform;
 	class CAnimator;
 	class CAudioEmitter;
-	class CharacterMovement : public Component {
+}
+
+namespace ctp {
+
+	class CharacterMovement : public eden_ec::Component {
 	public:
 		CharacterMovement() = default;
 		~CharacterMovement() = default;

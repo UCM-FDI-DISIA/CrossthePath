@@ -6,22 +6,22 @@
 #include "CAudioEmitter.h"
 #include <SceneManager.h>
 
-const std::string eden_ec::CameraMovement::_id = "PLAYERCAMERA";
+const std::string ctp::CameraMovement::_id = "PLAYERCAMERA";
 
-eden_ec::CameraMovement::~CameraMovement()
+ctp::CameraMovement::~CameraMovement()
 {
 	delete _initialRotation;
 }
 
-void eden_ec::CameraMovement::Start() {
-	_transform = _ent->GetComponent<CTransform>();
-	_playerTransform = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<CTransform>();
+void ctp::CameraMovement::Start() {
+	_transform = _ent->GetComponent<eden_ec::CTransform>();
+	_playerTransform = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<eden_ec::CTransform>();
 	_initialRotation = new eden_utils::Quaternion(_transform->GetRotation());
 	//_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	//_audioEmitter->Play();
 }
 
-void eden_ec::CameraMovement::Update(float dt) 
+void ctp::CameraMovement::Update(float dt) 
 {
 	//Calculamos la direccion en la que se movera la camara
 	eden_utils::Vector3 dir =

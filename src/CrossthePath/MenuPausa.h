@@ -4,9 +4,9 @@
 
 #include "Component.h"
 
-namespace eden_ec {
+namespace ctp {
 
-	class MenuPausa : public Component {
+	class MenuPausa : public eden_ec::Component {
 	public:
 		MenuPausa();
 		~MenuPausa() = default;

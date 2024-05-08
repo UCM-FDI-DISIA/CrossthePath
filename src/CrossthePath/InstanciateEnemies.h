@@ -10,10 +10,10 @@ namespace eden {
 	class SceneManager;
 }
 
-namespace eden_ec {
+namespace ctp {
 	/// @brief Clase encargada de instanciar los enemigos (coches) de Cross The Path cada cierto tiempo
 	/// determinado por un float _spawnRate
-	class InstanciateEnemies : public Component
+	class InstanciateEnemies : public eden_ec::Component
 	{
 	public:
 		InstanciateEnemies() = default;

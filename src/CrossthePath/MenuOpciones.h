@@ -6,8 +6,9 @@
 namespace eden_render {
 	class RenderManager;
 }
-namespace eden_ec {
-	class MenuOpciones : public Component {
+
+namespace ctp {
+	class MenuOpciones : public eden_ec::Component {
 	public:
 		MenuOpciones();
 		~MenuOpciones() = default;
@@ -28,10 +29,10 @@ namespace eden_ec {
 		const static std::string _id;
 	private:
 		int iteration = 0;
-		Entity* _res = nullptr;
-		Entity* _vol = nullptr;
-		Entity* _fullScreenOFF = nullptr;
-		Entity* _fullScreenON = nullptr;
+		eden_ec::Entity* _res = nullptr;
+		eden_ec::Entity* _vol = nullptr;
+		eden_ec::Entity* _fullScreenOFF = nullptr;
+		eden_ec::Entity* _fullScreenON = nullptr;
 
 		void GoBack();
 

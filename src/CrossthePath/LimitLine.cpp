@@ -6,36 +6,36 @@
 #include "LuaManager.h"
 #include "CRigidBody.h"
 
-const std::string eden_ec::LimitLine::_id = "LIMIT_LINE";
+const std::string ctp::LimitLine::_id = "LIMIT_LINE";
 
-eden_ec::LimitLine::LimitLine()
+ctp::LimitLine::LimitLine()
 {
 
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 
-	scriptM->Regist(*this, "LimitLine", &eden_ec::LimitLine::CollisionLine, "CollisionLine", this);
+	scriptM->Regist(*this, "LimitLine", &ctp::LimitLine::CollisionLine, "CollisionLine", this);
 
 	scriptM->SetGlobal(this, "LimitLine");
 
 	scriptM = nullptr;
 }
 
-void eden_ec::LimitLine::Start()
+void ctp::LimitLine::Start()
 {
 
 	_ent->GetComponent<eden_ec::CRigidBody>()->SetTemporalDeactivation(true);
 }
 
-void eden_ec::LimitLine::CollisionLine()
+void ctp::LimitLine::CollisionLine()
 {
 	//Se obtiene la entidad contra la que se ha chocado
-	Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "other");
+	eden_ec::Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "other");
 
 	//Si dicha entidad tiene el componente enemyMovement significa que es un coche
 	if (otherEnt->GetEntityID() == "Player_0") {
-		eden_ec::GameManager::Instance()->PlayerWin();
+		ctp::GameManager::Instance()->PlayerWin();
 	}
 	else if (otherEnt->HasComponent("ENEMY_MOVEMENT")) {
-		eden_ec::GameManager::Instance()->DestroyEnemy(otherEnt);
+		ctp::GameManager::Instance()->DestroyEnemy(otherEnt);
 	}
 }

@@ -8,8 +8,10 @@
 namespace eden_ec {
 	class Entity;
 	class UIManager;
+}
+namespace ctp{
 	class GameManager;
-	class GameManagerController : public Component	{
+	class GameManagerController : public eden_ec::Component	{
 	public:
 		GameManagerController();
 		~GameManagerController();
@@ -23,7 +25,7 @@ namespace eden_ec {
 	protected:
 		const static std::string _id;
 	private:
-		eden_ec::GameManager* _gameManager;
+		ctp::GameManager* _gameManager;
 		bool original = false;
 	};
 }
