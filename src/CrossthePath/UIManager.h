@@ -26,15 +26,6 @@ namespace ctp{
 
 		void Update(float t) override;
 
-		/// @brief Ensenia el cartel de Win
-		void ShowWin();
-
-		/// @brief Ensenia el cartel de perder
-		void ShowGameOver();
-
-		/// @breig Replay
-		void PlayAgain();
-
 		void Pause();
 
 		/// @Update del timer
@@ -44,10 +35,10 @@ namespace ctp{
 		const static std::string _id;
 	private:
 		enum UI_Elements {
-			WIN,TIMER,PLAY,PAUSE,GAMEOVER,SCORE
+			TIMER,PAUSE
 		};
 		std::vector<eden_ec::Entity*> _elements;
-		std::vector<std::string> _elementsID = { "UI_win","UI_timer","UI_play" };
+		std::vector<std::string> _elementsID = {"UI_timer","UI_pause" };
 
 		float _timer = 0;
 	};

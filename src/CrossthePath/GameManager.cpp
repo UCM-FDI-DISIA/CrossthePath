@@ -10,7 +10,8 @@
 #include "CText.h"
 #include "CBar.h"
 #include <Scene.h>
-
+#include "Transform.h"
+#include "Vector3.h"
 ctp::GameManager::GameManager()
 {
 	std::vector<std::pair<int, int>> resolutions;
@@ -130,7 +131,14 @@ void ctp::GameManager::DestroyEnemy(eden_ec::Entity* ent)
 void ctp::GameManager::Begin()
 {
 	_start = true;
-	//_player = eden::SceneManager::getInstance()->FindEntity("Player");
+	_player= eden::SceneManager::getInstance()->FindEntity("Player_0");
+	eden_ec::Entity* camera = eden::SceneManager::getInstance()->FindEntity("Camera_0");
+	eden_utils::Vector3 v =  
+		eden_utils::Vector3(camera->GetComponent<eden_ec::CTransform>()->GetPosition().GetX(),
+			camera->GetComponent<eden_ec::CTransform>()->GetPosition().GetY(),
+			_player->GetComponent<eden_ec::CTransform>()->GetPosition().GetZ());
+	
+	camera->GetComponent<eden_ec::CTransform>()->SetPosition(v);
 	_uiManager = eden::SceneManager::getInstance()->FindEntity("UI_Manager");
 }
 

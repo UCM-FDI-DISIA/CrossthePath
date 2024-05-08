@@ -18,6 +18,7 @@
 #include "EasterEgg.h"
 #include "EnemyActivator.h"
 #include "LimitLine.h"
+#include "RenderManager.h"
 
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
@@ -40,8 +41,9 @@ void RegisterComponents() {
 }
 
 void LoadScene() {
-	//eden::SceneManager::getInstance()->PushScene("EscenaBasicaPruebas");
+
+	eden_render::RenderManager::getInstance()->SetWindowName("CrossThePath");
+	eden_render::RenderManager::getInstance()->SetWindowIcon("Icon.bmp");
 	eden::SceneManager::getInstance()->PushScene("MainMenu");
-	//eden::SceneManager::getInstance()->PushScene("LoseMenuScene");
 }
 
