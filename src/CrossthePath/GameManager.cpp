@@ -57,7 +57,7 @@ void eden_ec::GameManager::Play()
 	_currState = Game;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->ChangeScene("EscenaBasicaPruebas");
+	scnManager->ChangeScene("Nivel1");
 }
 
 void eden_ec::GameManager::PauseGame()

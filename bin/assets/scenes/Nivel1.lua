@@ -1,3 +1,17 @@
+EntityPlayer = {
+	Name = "Player",
+	Components = {
+		
+	}
+}
+
+EntityCamera = {
+	Name = "Camera",
+	Components = {
+		
+	}
+}
+
 Entity1 = {
 	Name = "Light",
 	Components = {
@@ -14,21 +28,7 @@ Entity1 = {
 			Arguments = {
 				LightType = "LT_DIRECTIONAL",
 				DiffuseColor = "1.0|1.0|1.0",
-				SpecularColor = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity2 = {
-	Name = "Camera",
-	Components = {
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "7.358891487121582|4.958309173583984|6.925790786743164",
-				Rotation = "false|0.8937962055206299|-0.20997300744056702|0.3857799172401428|0.09062845259904861",
-				Scale = "1.0|1.0|1.0"
+				SpecularColor = "0.0|0.0|0.0"
 			}
 		}
 	}
@@ -3918,12 +3918,6 @@ Entity197 = {
 	Name = "SueloSupremo",
 	Components = {
 		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
-		{
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "0.0|-0.10000000149011612|-16.0",
@@ -3938,7 +3932,7 @@ Entity197 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "40.0",
@@ -3952,12 +3946,6 @@ Entity197 = {
 Entity198 = {
 	Name = "FinishLineWin",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -3979,7 +3967,7 @@ Entity198 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "13.677336692810059",
@@ -3993,12 +3981,6 @@ Entity198 = {
 Entity199 = {
 	Name = "FinishLineRight",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4020,7 +4002,7 @@ Entity199 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "26.903247833251953",
@@ -4034,12 +4016,6 @@ Entity199 = {
 Entity200 = {
 	Name = "FinishLineLeft",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4061,7 +4037,7 @@ Entity200 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "26.903247833251953",
@@ -4136,12 +4112,6 @@ Entity204 = {
 	Name = "ParedTrasera",
 	Components = {
 		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
-		{
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "0.12132194638252258|0.0|1.6549019813537598",
@@ -4156,7 +4126,7 @@ Entity204 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "8.414005279541016",
@@ -4170,12 +4140,6 @@ Entity204 = {
 Entity205 = {
 	Name = "Obstacle2",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4191,7 +4155,7 @@ Entity205 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4205,12 +4169,6 @@ Entity205 = {
 Entity206 = {
 	Name = "Obstacle1",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4226,7 +4184,7 @@ Entity206 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4240,12 +4198,6 @@ Entity206 = {
 Entity207 = {
 	Name = "Obstacle3",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4261,7 +4213,7 @@ Entity207 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4275,12 +4227,6 @@ Entity207 = {
 Entity208 = {
 	Name = "Obstacle4",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4296,7 +4242,7 @@ Entity208 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4310,12 +4256,6 @@ Entity208 = {
 Entity209 = {
 	Name = "Obstacle5",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4331,7 +4271,7 @@ Entity209 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4345,12 +4285,6 @@ Entity209 = {
 Entity210 = {
 	Name = "Obstacle6",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4366,7 +4300,7 @@ Entity210 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4380,12 +4314,6 @@ Entity210 = {
 Entity211 = {
 	Name = "Obstacle7",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4401,7 +4329,7 @@ Entity211 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4415,12 +4343,6 @@ Entity211 = {
 Entity212 = {
 	Name = "Obstacle9",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4436,7 +4358,7 @@ Entity212 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4450,12 +4372,6 @@ Entity212 = {
 Entity213 = {
 	Name = "Obstacle10",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4471,7 +4387,7 @@ Entity213 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4485,12 +4401,6 @@ Entity213 = {
 Entity214 = {
 	Name = "Obstacle8",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4506,7 +4416,7 @@ Entity214 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4520,12 +4430,6 @@ Entity214 = {
 Entity215 = {
 	Name = "Obstacle11",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4541,7 +4445,7 @@ Entity215 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "DEFAULT",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "2.0",
@@ -4830,12 +4734,6 @@ Entity230 = {
 	Name = "LimitRoad",
 	Components = {
 		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
-		{
 			Name = "TRANSFORM",
 			Arguments = {
 				Position = "3.5|0.0|-13.016066551208496",
@@ -4850,7 +4748,7 @@ Entity230 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "ROAD",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "28.137855529785156",
@@ -4864,12 +4762,6 @@ Entity230 = {
 Entity231 = {
 	Name = "LimitRoad2",
 	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "Cube"
-			}
-		},
 		{
 			Name = "TRANSFORM",
 			Arguments = {
@@ -4885,7 +4777,7 @@ Entity231 = {
 				Bounciness = "1.0",
 				CollisionFlag = "STATIC",
 				CollisionLayer = "ROAD",
-				Friction = "0",
+				Friction = "1",
 				Mass = "1.0",
 				PosOffset = "0|0|0",
 				Radius = "28.137855529785156",
@@ -4902,7 +4794,7 @@ Entity232 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "6.663475513458252|0.0|-2.315335750579834",
+				Position = "6.663475513458252|0.13|-2.315335750579834",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -4924,7 +4816,7 @@ Entity233 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "6.663475513458252|0.0|-8.220869064331055",
+				Position = "6.663475513458252|0.13|-8.220869064331055",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -4946,7 +4838,7 @@ Entity234 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "6.663475513458252|0.0|-12.295836448669434",
+				Position = "6.663475513458252|0.13|-12.295836448669434",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -4968,7 +4860,7 @@ Entity235 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "6.663475513458252|0.0|-18.29051399230957",
+				Position = "6.663475513458252|0.13|-18.29051399230957",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -4990,7 +4882,7 @@ Entity236 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "6.663475513458252|0.0|-22.308223724365234",
+				Position = "6.663475513458252|0.13|-22.308223724365234",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5012,7 +4904,7 @@ Entity237 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "6.663475513458252|0.0|-20.264728546142578",
+				Position = "6.663475513458252|0.13|-20.264728546142578",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5034,7 +4926,7 @@ Entity238 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "6.663475513458252|0.0|-14.28950309753418",
+				Position = "6.663475513458252|0.13|-14.28950309753418",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5056,7 +4948,7 @@ Entity239 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-6.89322566986084|0.0|-13.694422721862793",
+				Position = "-6.89322566986084|0.13|-13.694422721862793",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5078,7 +4970,7 @@ Entity240 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-6.89322566986084|0.0|-19.669647216796875",
+				Position = "-6.89322566986084|0.13|-19.669647216796875",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5100,7 +4992,7 @@ Entity241 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-6.89322566986084|0.0|-21.71314239501953",
+				Position = "-6.89322566986084|0.13|-21.71314239501953",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5122,7 +5014,7 @@ Entity242 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-6.89322566986084|0.0|-17.6954345703125",
+				Position = "-6.89322566986084|0.13|-17.6954345703125",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5144,7 +5036,7 @@ Entity243 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-6.89322566986084|0.0|-11.700756072998047",
+				Position = "-6.89322566986084|0.13|-11.700756072998047",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5166,7 +5058,7 @@ Entity244 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-6.89322566986084|0.0|-7.62578821182251",
+				Position = "-6.89322566986084|0.13|-7.62578821182251",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5188,7 +5080,7 @@ Entity245 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-6.89322566986084|0.0|-1.7202553749084473",
+				Position = "-6.89322566986084|0.13|-1.7202553749084473",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
 			}
@@ -5204,7 +5096,7 @@ Entity245 = {
 	}
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14,
+Entities = { EntityPlayer, EntityCamera, Entity1, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14,
 Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29,
 Entity30, Entity31, Entity32, Entity33, Entity34, Entity35, Entity36, Entity37, Entity38, Entity39, Entity40, Entity41, Entity42, Entity43, Entity44,
 Entity45, Entity46, Entity47, Entity48, Entity49, Entity50, Entity51, Entity52, Entity53, Entity54, Entity55, Entity56, Entity57, Entity58, Entity59,

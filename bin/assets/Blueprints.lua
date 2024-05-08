@@ -113,7 +113,7 @@ enemyTaxi = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "ENEMIES",
 				Bounciness = "0",
-				Friction = "0",
+				Friction = "1",
 				Trigger = "false"
             }
         },
@@ -163,7 +163,7 @@ enemyPolice = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "ENEMIES",
 				Bounciness = "0",
-				Friction = "0",
+				Friction = "1",
 				Trigger = "false"
             }
         },
@@ -213,7 +213,7 @@ enemyRed = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "ENEMIES",
 				Bounciness = "0",
-				Friction = "0",
+				Friction = "1",
 				Trigger = "false"
             }
         },
@@ -263,7 +263,7 @@ enemyGreen = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "ENEMIES",
 				Bounciness = "0",
-				Friction = "0",
+				Friction = "1",
 				Trigger = "false"
             }
         },
@@ -284,8 +284,8 @@ Camera = {
         {
             Name = "TRANSFORM",
             Arguments = {
-                Position = "-4|10|4",
-                Rotation = "false|1|-1|0|0",
+                Position = "1.3|4|4",
+                Rotation = "false|0.7|-0.4|0.17|0",
                 Scale = "1.0|1.0|1.0"
             }
         },

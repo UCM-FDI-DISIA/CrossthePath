@@ -36,7 +36,7 @@ void RegisterComponents() {
 }
 
 void LoadScene() {
-	eden::SceneManager::getInstance()->PushScene("Nivel2");
+	eden::SceneManager::getInstance()->PushScene("MainMenu");
 	//eden::SceneManager::getInstance()->PushScene("EscenaBasicaPruebas");
 	//eden::SceneManager::getInstance()->PushScene("WinMenuScene");
 }
