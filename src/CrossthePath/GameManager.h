@@ -51,7 +51,7 @@ namespace eden_ec {
 		void Begin();
 
 		inline int GetBestScore() { return _bestScore; }
-		inline void SetBestScore(int best) { _bestScore = best; }
+		inline void SetBestScore(int best) { if(best>_bestScore) _bestScore = best; }
 
 		inline int GetEasterEggs() { return _easterEggs; }
 		void AddEasterEgg(Entity* egg);

@@ -14,6 +14,54 @@ material Cursor.png {
         }
     }
 }
+material rob.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture rob.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material manin.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture manin.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material ott.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture ott.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 material Trofeo.png{
     receive_shadows on
     technique {
@@ -24,6 +72,22 @@ material Trofeo.png{
                 diffuse vertexcolour
             	texture_unit {
                 texture Trofeo.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Frog2.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Frog2.png
                 tex_address_mode clamp
                 
             }

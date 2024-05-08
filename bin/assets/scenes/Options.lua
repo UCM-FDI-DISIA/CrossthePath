@@ -319,13 +319,13 @@ Entity15 = {
 			Arguments = {
                 OverlayName= "buttonExit",
 				XPos = "25",
-                YPos = "63",
-                Width = "15",
-                Height = "15",
-                Texture1 = "Frog.png",
-                Texture2 = "Frog.png",
-                Texture3 = "Frog.png",
-                Depth = "2"
+                YPos = "80",
+                Width = "3",
+                Height = "7",
+                Texture1 = "ott.png",
+                Texture2 = "ott.png",
+                Texture3 = "ott.png",
+                Depth = "5"
 			}
 		},
 		{
