@@ -3955,9 +3955,15 @@ Entity198 = {
 			}
 		},
 		{
-			Name = "FINISH_LINE",
+			Name = "LIMIT_LINE",
 			Arguments = {
 				_isPlayer = "true"
+			}
+		},
+		{
+			Name = "BEHAVIOUR",
+			Arguments = {
+				Script = "limitLine"
 			}
 		},
 		{
@@ -3990,9 +3996,15 @@ Entity199 = {
 			}
 		},
 		{
-			Name = "FINISH_LINE",
+			Name = "LIMIT_LINE",
 			Arguments = {
 				_isPlayer = "false"
+			}
+		},
+		{
+			Name = "BEHAVIOUR",
+			Arguments = {
+				Script = "limitLine"
 			}
 		},
 		{
@@ -4025,9 +4037,15 @@ Entity200 = {
 			}
 		},
 		{
-			Name = "FINISH_LINE",
+			Name = "LIMIT_LINE",
 			Arguments = {
 				_isPlayer = "false"
+			}
+		},
+		{
+			Name = "BEHAVIOUR",
+			Arguments = {
+				Script = "limitLine"
 			}
 		},
 		{
