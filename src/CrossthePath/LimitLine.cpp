@@ -33,8 +33,7 @@ void eden_ec::LimitLine::CollisionLine()
 
 	//Si dicha entidad tiene el componente enemyMovement significa que es un coche
 	if (otherEnt->GetEntityID() == "Player_0") {
-		//eden_ec::GameManager::Instance()->PlayerWin();
-		int a = 0;
+		eden_ec::GameManager::Instance()->PlayerWin();
 	}
 	else if (otherEnt->HasComponent("ENEMY_MOVEMENT")) {
 		eden_ec::GameManager::Instance()->DestroyEnemy(otherEnt);

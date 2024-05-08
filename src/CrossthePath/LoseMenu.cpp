@@ -86,7 +86,7 @@ void eden_ec::LoseMenu::Exit()
 
 void eden_ec::LoseMenu::Retry()
 {
-	eden_ec::GameManager::Instance()->GoBack();
+	eden_ec::GameManager::Instance()->Play();
 }
 
 void eden_ec::LoseMenu::Click()

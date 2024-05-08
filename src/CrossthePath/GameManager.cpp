@@ -41,20 +41,23 @@ void eden_ec::GameManager::PlayerWin()
 {
 	_currState = Win;
 	_states[0] = _currState;
-	_uiManager->GetComponent<UIManager>()->ShowWin();
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
+	scnManager->ChangeScene("WinMenuScene");
 }
 
 void eden_ec::GameManager::GameOver()
 {
 	_currState = Game_Over;
 	_states[0] = _currState;
-	_uiManager->GetComponent<UIManager>()->ShowGameOver();
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
+	scnManager->ChangeScene("LoseMenuScene");
 }
 
 void eden_ec::GameManager::Play()
 {
 	if(_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Game;
+	_start = false;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("Nivel2");
