@@ -31,7 +31,7 @@ Player = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0|2.0|0",
+				Position = "0|0.1|0",
 				Rotation = "false|0.0|0.0|1.0|0.0",
 				Scale = "0.1|0.1|0.1"
 			}
@@ -49,6 +49,8 @@ Player = {
 			Name = "CHARACTER_MOVEMENT",
 			Arguments = {
 			}
+
+            Instanciator.007|Instanciator.010|Instanciator.014|Instanciator.003|Instanciator.004|Instanciator.005|Instanciator.006|Instanciator.011|Instanciator.012|Instanciator.013
 		},
 		{
 			Name = "RIGIDBODY",
@@ -284,7 +286,7 @@ Camera = {
         {
             Name = "TRANSFORM",
             Arguments = {
-                Position = "1.3|4|10",
+                Position = "1.3|4|3",
                 Rotation = "false|1|-0.4|0.17|0",
                 Scale = "1.0|1.0|1.0"
             }

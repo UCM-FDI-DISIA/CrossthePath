@@ -4,8 +4,8 @@
 #include <unordered_map>
 #include <string> 
 #include "Singleton.h"
-#include <vector>
 #include <list>
+#include <vector>
 namespace eden_ec {
 	class Entity;
 }
@@ -45,7 +45,9 @@ namespace ctp{
 		/// @brief Devuelve el puntero a UIManager del Gameplay
 		eden_ec::Entity* GetSound();
 
-		
+		void SwitchInstanciator(std::vector<std::string> id);
+		void AddInstanciator(eden_ec::Entity* inst);
+
 		void AddEnemy(eden_ec::Entity* ent);
 		void DestroyEnemy(eden_ec::Entity* ent);
 
@@ -85,6 +87,7 @@ namespace ctp{
 		// Mapa de enemigos del juego
 		std::list<eden_ec::Entity*> _enemies;
 		bool _start = false;
+		std::list<eden_ec::Entity*> _instanciators;
 	};
 }
 #endif //GAME_MANAGER_H

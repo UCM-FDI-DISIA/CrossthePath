@@ -16,7 +16,7 @@
 #include "CharacterDie.h"
 #include "SoundsController.h"
 #include "EasterEgg.h"
-
+#include "EnemyActivator.h"
 #include "LimitLine.h"
 
 void RegisterComponents() {
@@ -35,7 +35,7 @@ void RegisterComponents() {
 	factory->RegisterComponent<ctp::CharacterDie>();
 	factory->RegisterComponent<ctp::SoundsController>();
 	factory->RegisterComponent<ctp::EasterEgg>();
-
+	factory->RegisterComponent<ctp::EnemyActivator>();
 	factory->RegisterComponent<ctp::LimitLine>();
 }
 

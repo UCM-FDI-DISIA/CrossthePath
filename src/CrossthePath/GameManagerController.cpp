@@ -8,7 +8,6 @@
 const std::string ctp::GameManagerController::_id = "GAME_MANAGER";
 
 ctp::GameManagerController::GameManagerController() {
-
 	_gameManager = ctp::GameManager::Instance();
 }
 

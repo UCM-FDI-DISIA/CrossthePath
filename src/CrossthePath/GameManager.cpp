@@ -6,6 +6,7 @@
 #include <SceneManager.h>
 #include <InputManager.h>
 #include <RenderManager.h>
+#include "InstanciateEnemies.h"
 #include "CText.h"
 #include "CBar.h"
 #include <Scene.h>
@@ -151,4 +152,24 @@ bool ctp::GameManager::SetEgg(int num, eden_ec::Entity* egg)
 	}
 	else return false;
 
+}
+
+void ctp::GameManager::SwitchInstanciator(std::vector<std::string> id) {
+	auto it = _instanciators.begin();
+	bool found = false;
+	while (it != _instanciators.end() && !found) {
+		for (int i = 0; i < id.size(); ++i) {
+			if (id[i] == (*it)->GetEntityID()) {
+				(*it)->GetComponent<ctp::InstanciateEnemies>()->SetActive(true);
+			}
+			else {
+				(*it)->GetComponent<ctp::InstanciateEnemies>()->SetActive(false);
+				++it;
+			} 
+		}
+	}
+}
+
+void ctp::GameManager::AddInstanciator(eden_ec::Entity* inst) {
+	_instanciators.push_back(inst);
 }

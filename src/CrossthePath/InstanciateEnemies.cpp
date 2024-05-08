@@ -17,21 +17,26 @@ namespace ctp {
 
 	void InstanciateEnemies::Awake() {
 		_scnMng = eden::SceneManager::getInstance();
+	
 	}
 
 	void InstanciateEnemies::Start() {
 		_pos = _ent->GetComponent<eden_ec::CTransform>()->GetPosition();
+		ctp::GameManager::Instance()->AddInstanciator(_ent);
 	}
 
 	void InstanciateEnemies::Update(float t) {
-		_timer += t;
-		if (_timer >= _spawnRate) {
-			InstanciateEnemy();
-			_timer = 0;
+		if (_active) {
+			_timer += t;
+			if (_timer >= _spawnRate) {
+				InstanciateEnemy();
+				_timer = 0;
+			}
 		}
 	}
 
 	void InstanciateEnemies::InstanciateEnemy() {
+		
 		int enemy = std::rand() % _prefabName.size();
 		eden_ec::Entity* coche = _scnMng->InstantiateBlueprint(_prefabName[enemy], _pos);
 		eden_ec::CTransform* _transform = coche->GetComponent<eden_ec::CTransform>();

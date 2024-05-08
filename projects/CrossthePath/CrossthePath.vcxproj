@@ -111,6 +111,7 @@
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
     <ClInclude Include="..\..\src\CrossthePath\WinMenu.h" />
+    <ClInclude Include="EnemyActivator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\CrossthePath\CameraMovement.cpp" />
@@ -130,6 +131,7 @@
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\WinMenu.cpp" />
+    <ClCompile Include="EnemyActivator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
