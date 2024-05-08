@@ -24,10 +24,10 @@ namespace eden_ec {
 
 		void Update(float t) {}
 
+		void Collision();
 	protected:
 		const static std::string _id;
 	private:
-		void Collision();
 		void DestroyEntities();
 		void PlayerWin();
 	};
