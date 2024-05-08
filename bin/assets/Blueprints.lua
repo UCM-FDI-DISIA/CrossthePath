@@ -61,7 +61,7 @@ Player = {
 				CollisionFlag = "DYNAMIC",
 				CollisionLayer = "PLAYER",
 				Bounciness = "0",
-				Friction = "0",
+				Friction = "1",
 				Trigger = "false"
 			}
 		},
