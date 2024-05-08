@@ -22,16 +22,12 @@ namespace eden_ec {
 
 		void Start() override;
 
-		void Update(float t) override;
+		void Update(float t) {}
 
 	protected:
 		const static std::string _id;
 	private:
-		eden_ec::CTransform* _transform;
-		eden_ec::CTransform* _playerTransform;
-		std::unordered_map<std::string, Entity*>* _enemies;
-		bool _win = false;
-		bool _isPlayer = true; 
+		void Collision();
 		void DestroyEntities();
 		void PlayerWin();
 	};

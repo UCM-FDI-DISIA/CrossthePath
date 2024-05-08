@@ -12,7 +12,7 @@ end
 
 --Metodo OnCollisionEnter
 function finishLine:OnCollisionEnter()
-	FinishLine:DestroyEntities();
+	FinishLine:CollisionLine();
 end
 --Variable global de la clase (para Luabridge)
 finishLineLua = finishLine:new()
