@@ -63,6 +63,9 @@ namespace ctp{
 		bool SetEgg(int num, eden_ec::Entity* egg);
 		inline bool IsEasterEggComplete() { return _easterEggCompleted; }
 		inline void CompleteEasterEgg() { _easterEggCompleted = true; }
+
+		inline int GetLevel() { return _level; }
+		inline void ChangeLevel() { _level= (_level+1)%2; }
 	private:
 
 		/// @brief Estados del juego
@@ -75,6 +78,7 @@ namespace ctp{
 		/// @brief Estado actual
 		States _currState;
 
+		int _level = 0;
 		eden_ec::Entity* _player = nullptr;
 		eden_ec::Entity* _uiManager = nullptr;
 		eden_ec::Entity* _sounds = nullptr;

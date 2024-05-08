@@ -773,11 +773,37 @@ Entity35 = {
 		}
 	}	
 }
+Entity36 = {
+	Name = "level",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonExit",
+				XPos = "15",
+                YPos = "50",
+                Width = "15",
+                Height = "15",
+                Texture1 = "Moon.png",
+                Texture2 = "Moon2.png",
+                Texture3 = "Moon2.png",
+                Depth = "1"
+			}
+		},
+		{
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "MainMenu",
+			}
+        }
+	}	
+}
 Entities = { Entity21, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
 Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
 Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20,
 Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
-Entity28, Entity29, Entity30,Entity31,Entity32,Entity33,Entity34,Entity35 }
+Entity28, Entity29, Entity30,Entity31,Entity32,Entity33,Entity34,Entity35,
+Entity36 }
 
 CollisionLayers = {
 	Layers = {

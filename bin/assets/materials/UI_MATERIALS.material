@@ -14,6 +14,214 @@ material Cursor.png {
         }
     }
 }
+material DarkOptionsClicked.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkOptionsClicked.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkOptionsOver.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkOptionsOver.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkOptions.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkOptions.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkExit.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkExit.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkExitOver.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkExitOver.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkExitClicked.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkExitClicked.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkPlayClicked.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkPlayClicked.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkPlayOver.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkPlayOver.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkPlay.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkPlay.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Moon.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Moon.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Moon2.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Moon2.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Sun.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Sun.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Sun2.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Sun2.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 material rob.png{
     receive_shadows on
     technique {

@@ -57,15 +57,14 @@ void ctp::GameManager::GameOver()
 void ctp::GameManager::Play()
 {
 	if(_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
-	else {
-		_sounds = eden::SceneManager::getInstance()->FindEntity("Sounds");
-		if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
-	}
 	_currState = Game;
 	_start = false;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->ChangeScene("Nivel2");
+	if (_level == 0) {
+		scnManager->ChangeScene("Nivel2");
+	}
+	else scnManager->ChangeScene("Nivel2");
 }
 
 void ctp::GameManager::PauseGame()
@@ -83,7 +82,7 @@ void ctp::GameManager::GoBack()
 	_states.pop_back();
 	_currState = _states[_states.size() - 1];
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->PopScene();
+	scnManager->ChangeScene("MainMenu");
 }
 
 void ctp::GameManager::GoOptions()
@@ -92,16 +91,12 @@ void ctp::GameManager::GoOptions()
 	_currState = Options;
 	_states.push_back(_currState);
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->PushScene("Options");
+	scnManager->ChangeScene("Options");
 }
 
 void ctp::GameManager::GoMainMenu()
 {
-	if (_sounds != nullptr)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
-	else {
-		_sounds = eden::SceneManager::getInstance()->FindEntity("Sounds");
-		if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
-	}
+	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = MainMenu;
 	_states[0] = _currState;
 	_start = false;

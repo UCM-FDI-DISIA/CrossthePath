@@ -29,8 +29,12 @@ namespace ctp{
 
 		void Update(float t) override;
 
+		void GameMode();
 
 		void Click();
+
+		void SetDarkMode();
+		void SetDayMode();
 
 	protected:
 		const static std::string _id;

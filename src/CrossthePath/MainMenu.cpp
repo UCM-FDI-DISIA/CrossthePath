@@ -60,6 +60,7 @@ void ctp::MainMenu::Start()
 
 	_easterEggs = eden::SceneManager::getInstance()->FindEntity("EasterEggsText")->GetComponent<eden_ec::CText>();
 
+	if (_gameManager->GetLevel() == 1)SetDarkMode();
 
 	//eden_input::InputManager::getInstance()->SetActive(false);
 }
@@ -124,6 +125,15 @@ void ctp::MainMenu::Update(float t)
 	iteration++;
 }
 
+void ctp::MainMenu::GameMode()
+{
+	if (ctp::GameManager::Instance()->GetLevel() == 0) {
+		SetDarkMode();
+	}
+	else SetDayMode();
+	ctp::GameManager::Instance()->ChangeLevel();
+}
+
 void ctp::MainMenu::Play()
 {
 	ctp::GameManager::Instance()->Play();
@@ -168,4 +178,29 @@ void ctp::MainMenu::Click()
 	else if (otherEnt->GetEntityID() == "buttonOptions") {
 		Options();
 	}
+	else if (otherEnt->GetEntityID() == "level") {
+		GameMode();
+	}
+}
+
+void ctp::MainMenu::SetDarkMode()
+{
+	eden::SceneManager::getInstance()->FindEntity("buttonPlay")->GetComponent<eden_ec::CButton>()->ChangeTextures("DarkPlay.png", "DarkPlayOver.png", "DarkPlayClicked.png");
+
+	eden::SceneManager::getInstance()->FindEntity("buttonExit")->GetComponent<eden_ec::CButton>()->ChangeTextures("DarkExit.png", "DarkExitOver.png", "DarkExitClicked.png");
+
+	eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<eden_ec::CButton>()->ChangeTextures("DarkOptions.png", "DarkOptionsOver.png", "DarkOptionsClicked.png");
+
+	eden::SceneManager::getInstance()->FindEntity("level")->GetComponent<eden_ec::CButton>()->ChangeTextures("Sun.png", "Sun2.png", "Sun2.png");
+}
+
+void ctp::MainMenu::SetDayMode()
+{
+	eden::SceneManager::getInstance()->FindEntity("buttonPlay")->GetComponent<eden_ec::CButton>()->ChangeTextures("Play_Button.png", "PlayOver_Button.png", "PlayClicked_Button.png");
+
+	eden::SceneManager::getInstance()->FindEntity("buttonExit")->GetComponent<eden_ec::CButton>()->ChangeTextures("Exit_Button.png", "ExitOver_Button.png", "ExitClicked_Button.png");
+
+	eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<eden_ec::CButton>()->ChangeTextures("Settings_Button.png", "SettingsOver_Button.png", "SettingsClicked_Button.png");
+
+	eden::SceneManager::getInstance()->FindEntity("level")->GetComponent<eden_ec::CButton>()->ChangeTextures("Moon.png", "Moon2.png", "Moon2.png");
 }

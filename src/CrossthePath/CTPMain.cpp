@@ -40,6 +40,11 @@ void RegisterComponents() {
 }
 
 void LoadScene() {
+<<<<<<< Updated upstream
+=======
+	//eden::SceneManager::getInstance()->PushScene("EscenaBasicaPruebas");
+	//eden::SceneManager::getInstance()->PushScene("MainMenu");
+>>>>>>> Stashed changes
 	eden::SceneManager::getInstance()->PushScene("MainMenu");
 }
 
