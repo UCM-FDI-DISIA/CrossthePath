@@ -21,12 +21,12 @@ Entity1 = {
 }
 
 Entity2 = {
-	Name = "Camera",
+	Name = "Camera1",
 	Components = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0.0043773651123046875|0.33414697647094727|2.914267063140869",
+				Position = "0.0|0.5|3",
 				Rotation = "true|0.0|90.0|0.0|-0.0",
 				Scale = "1.0|1.0|1.0"
 			}
@@ -172,9 +172,9 @@ Entity9 = {
 			Arguments = {
                 OverlayName= "button",
 				XPos = "50",
-                YPos = "80",
-                Width = "30",
-                Height = "30",
+                YPos = "90",
+                Width = "15",
+                Height = "15",
                 Texture1 = "Menu_Button.png",
                 Texture2 = "MenuOver_Button.png",
                 Texture3 = "MenuClicked_Button.png",
@@ -184,7 +184,7 @@ Entity9 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "WinMenu_Go_To_MainMenu",
+                Script= "WinMenu",
 			}
         }
 	}	
@@ -220,10 +220,10 @@ Entity11 = {
 			Name = "BUTTON",
 			Arguments = {
                 OverlayName= "buttonExit",
-				XPos = "90",
-                YPos = "92",
-                Width = "20",
-                Height = "10",
+				XPos = "92",
+                YPos = "94",
+                Width = "10",
+                Height = "6",
                 Texture1 = "Exit_Button.png",
                 Texture2 = "ExitOver_Button.png",
                 Texture3 = "ExitClicked_Button.png",
@@ -233,14 +233,14 @@ Entity11 = {
         {
             Name = "BEHAVIOUR",
 			Arguments = {
-                Script= "MainMenu",
+                Script= "WinMenu",
 			}
         }
 	}	
 }
 
 Entity12 = {
-	Name = "Player",
+	Name = "Player1",
 	Components = {
 		{
 			Name = "MESH_RENDERER",
@@ -268,7 +268,24 @@ Entity12 = {
 	}
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12 }
+Entity13 = {
+	Name = "WinText",
+	Components = {
+		Name = "TEXT", 
+		Arguments = {
+			OverlayName = "winText",
+			XPos = "60",
+			YPos = "60",
+			Tam = "30",
+			Text = "You Win :D",
+			Font = "Buycat.tff",
+			Color = "0|1|1",
+			Depth = "1"
+		}
+	}
+}
+
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13 }
 
 CollisionLayers = {
 	Layers = {

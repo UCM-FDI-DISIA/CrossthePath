@@ -61,7 +61,7 @@ void eden_ec::MainMenu::Start()
 	_easterEggs = eden::SceneManager::getInstance()->FindEntity("EasterEggsText")->GetComponent<CText>();
 
 
-	eden_input::InputManager::getInstance()->SetActive(false);
+	//eden_input::InputManager::getInstance()->SetActive(false);
 }
 
 void eden_ec::MainMenu::Update(float t)

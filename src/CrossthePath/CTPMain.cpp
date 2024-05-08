@@ -12,6 +12,7 @@
 #include "MenuOpciones.h"
 #include "MainMenu.h"
 #include "WinMenu.h"
+#include "LoseMenu.h"
 #include "EnemyMovement.h"
 #include "CharacterDie.h"
 #include "SoundsController.h"
@@ -29,6 +30,7 @@ void RegisterComponents() {
 	factory->RegisterComponent<eden_ec::MenuOpciones>();
 	factory->RegisterComponent<eden_ec::MainMenu>();
 	factory->RegisterComponent<eden_ec::WinMenu>();
+	factory->RegisterComponent<eden_ec::LoseMenu>();
 	factory->RegisterComponent<eden_ec::EnemyMovement>();
 	factory->RegisterComponent<eden_ec::CharacterDie>();
 	factory->RegisterComponent<eden_ec::SoundsController>();
@@ -36,8 +38,8 @@ void RegisterComponents() {
 }
 
 void LoadScene() {
-	eden::SceneManager::getInstance()->PushScene("MainMenu");
 	//eden::SceneManager::getInstance()->PushScene("EscenaBasicaPruebas");
+	eden::SceneManager::getInstance()->PushScene("MainMenu");
 	//eden::SceneManager::getInstance()->PushScene("WinMenuScene");
 }
 

@@ -753,3 +753,51 @@ material PlayClicked_Button_Reverse.png {
         }
     }
 }
+material Retry_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture Retry_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material RetryOver_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture RetryOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material RetryClicked_Button.png {
+     receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+                texture_unit {
+                texture RetryClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}

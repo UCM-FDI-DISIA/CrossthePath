@@ -17,6 +17,7 @@
     <ClCompile Include="..\..\src\CrossthePath\CharacterDie.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\SoundsController.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\EasterEgg.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\LoseMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h" />
@@ -35,5 +36,6 @@
     <ClInclude Include="..\..\src\CrossthePath\CharacterDie.h" />
     <ClInclude Include="..\..\src\CrossthePath\SoundsController.h" />
     <ClInclude Include="..\..\src\CrossthePath\EasterEgg.h" />
+    <ClInclude Include="..\..\src\CrossthePath\LoseMenu.h" />
   </ItemGroup>
 </Project>

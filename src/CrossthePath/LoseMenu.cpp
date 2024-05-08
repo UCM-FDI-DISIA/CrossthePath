@@ -1,5 +1,5 @@
 #define _CRTDBG_MAP_ALLOC
-#include "WinMenu.h"
+#include "LoseMenu.h"
 
 #include <ScriptManager.h>
 #include <LuaManager.h>
@@ -12,19 +12,19 @@
 #include "Transform.h"
 #include "CAnimator.h"
 
-const std::string eden_ec::WinMenu::_id = "WIN_MENU";
+const std::string eden_ec::LoseMenu::_id = "LOSE_MENU";
 
-eden_ec::WinMenu::WinMenu() {
+eden_ec::LoseMenu::LoseMenu() {
 
 
 	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
-	scriptM->Regist(*this, "winMenu", &eden_ec::WinMenu::Click, "WinMenuClick", this);
-	scriptM->SetGlobal(this, "winMenu");
+	scriptM->Regist(*this, "loseMenu", &eden_ec::LoseMenu::Click, "LoseMenuClick", this);
+	scriptM->SetGlobal(this, "loseMenu");
 	scriptM = nullptr;
 }
 
-void eden_ec::WinMenu::Start()
+void eden_ec::LoseMenu::Start()
 {
 	_mainMenu = eden::SceneManager::getInstance()->FindEntity("buttonMenu")->GetComponent<CButton>();
 	_startIniPos = _mainMenu->GetPosition();
@@ -38,23 +38,23 @@ void eden_ec::WinMenu::Start()
 	_transform = _ent->GetComponent<CTransform>();
 
 	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player1")->GetComponent<CAnimator>();
-	_playerAnimator->PlayAnim("JumpIdle");
+	_playerAnimator->PlayAnim("Duck");
 	/*_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);*/
 }
 
-void eden_ec::WinMenu::Update(float t)
+void eden_ec::LoseMenu::Update(float t)
 {
 	if (currentTime >= timer && !changeAnim) {
 		changeAnim = true;
 		currentTime = 0;
 		if (dance) {
-			_playerAnimator->PlayAnim("Yes");
+			_playerAnimator->PlayAnim("Duck");
 			dance = false;
 		}
 		else {
-			_playerAnimator->PlayAnim("JumpIdle");
+			_playerAnimator->PlayAnim("Punch");
 			dance = true;
 		}
 
@@ -74,17 +74,22 @@ void eden_ec::WinMenu::Update(float t)
 	}
 }
 
-void eden_ec::WinMenu::Menu()
+void eden_ec::LoseMenu::Menu()
 {
 	eden_ec::GameManager::Instance()->GoMainMenu();
 }
 
-void eden_ec::WinMenu::Exit()
+void eden_ec::LoseMenu::Exit()
 {
 	eden_ec::GameManager::Instance()->CloseGame();
 }
 
-void eden_ec::WinMenu::Click()
+void eden_ec::LoseMenu::Retry()
+{
+	eden_ec::GameManager::Instance()->GoBack();
+}
+
+void eden_ec::LoseMenu::Click()
 {
 	Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "selfButton");
 
@@ -94,5 +99,7 @@ void eden_ec::WinMenu::Click()
 	else if (otherEnt->GetEntityID() == "buttonExit") {
 		Exit();
 	}
+	else if (otherEnt->GetEntityID() == "buttonRetry") {
+		Retry();
+	}
 }
-

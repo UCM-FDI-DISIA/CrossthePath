@@ -1,6 +1,6 @@
 #define _CRTDBG_MAP_ALLOC
-#ifndef WIN_MENU_H
-#define WIN_MENU_H
+#ifndef LOSE_MENU_H
+#define LOSE_MENU_H
 
 #include "Component.h"
 
@@ -10,10 +10,10 @@ namespace eden_ec {
 	class CTransform;
 	class CAnimator;
 
-	class WinMenu : public Component {
+	class LoseMenu : public Component {
 	public:
-		WinMenu();
-		~WinMenu() = default;
+		LoseMenu();
+		~LoseMenu() = default;
 
 		static std::string GetID() { return _id; }
 
@@ -28,6 +28,8 @@ namespace eden_ec {
 		void Menu();
 
 		void Exit();
+
+		void Retry();
 
 		void Click();
 
@@ -52,6 +54,6 @@ namespace eden_ec {
 		std::pair<float, float>_optionsIniPos = std::make_pair(0.0f, 0.0f);
 	};
 }
-#endif //WIN_MENU_H
+#endif //LOSE_MENU_H
 
 
