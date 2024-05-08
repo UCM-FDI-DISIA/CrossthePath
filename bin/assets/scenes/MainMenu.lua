@@ -1,5 +1,5 @@
 Entity1 = {
-	Name = "Camera",
+	Name = "CameraMenu",
 	Components = {
 		{
 			Name = "TRANSFORM",
@@ -27,6 +27,35 @@ Entity1 = {
 				Is3D = "false"
 			}
 	   }
+	}
+}
+
+Entity21 = {
+	Name = "Rana",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "Cube.057"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-1.0529091358184814|0.09722249209880829|0",
+				Rotation = "false|0.5|0.0|0.5|0.0",
+				Scale = "0.10000000149011612|0.10000000149011612|0.10000000149011612"
+			}
+		},
+		{
+			Name = "ANIMATOR",
+			Arguments = {
+				AnimNames = "Die|Duck|HitReact|Idle|JumpIdle|JumpLand|JumpStart|No|Punch|Run|Walk|Wave|Weapon|Yes",
+				AnimMeshNames = "Frog_Death|Frog_Duck|Frog_HitReact|Frog_Idle|Frog_JumpIdle|Frog_JumpLand|Frog_JumpStart|Frog_No|Frog_Punch|Frog_Run|Frog_Walk|Frog_Wave|Frog_Weapon|Frog_Yes",
+				NextAnim = "Idle|Idle|Idle|Idle|JumpLand|Idle|JumpIdle|Idle|Idle|Idle|Idle|Idle|Idle|Idle",
+				LoopAnims = "false|false|false|true|false|false|false|false|false|true|true|false|false|false"
+			}
+		}
 	}
 }
 
@@ -413,7 +442,7 @@ Entity20 = {
 }
 
 Entity21 = {
-	Name = "Player",
+	Name = "Rana",
 	Components = {
 		{
 			Name = "MESH_RENDERER",
@@ -744,10 +773,10 @@ Entity35 = {
 		}
 	}	
 }
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
+Entities = { Entity21, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
 Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
-Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, 
-Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
+Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20,
+Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
 Entity28, Entity29, Entity30,Entity31,Entity32,Entity33,Entity34,Entity35 }
 
 CollisionLayers = {

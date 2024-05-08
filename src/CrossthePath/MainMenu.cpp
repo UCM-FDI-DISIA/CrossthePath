@@ -45,7 +45,7 @@ void ctp::MainMenu::Start()
 
 	_transform = _ent->GetComponent<eden_ec::CTransform>();
 
-	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<eden_ec::CAnimator>();
+	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Rana")->GetComponent<eden_ec::CAnimator>();
 	_playerAnimator->PlayAnim("Idle");
 	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
 	_audioEmitter->Play();
