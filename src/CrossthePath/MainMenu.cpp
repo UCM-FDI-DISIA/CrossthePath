@@ -15,6 +15,7 @@
 #include "CText.h"
 #include "CIMage.h"
 #include "SoundsController.h"
+#include "CCamera.h"
 
 const std::string ctp::MainMenu::_id = "MAIN_MENU";
 
@@ -61,7 +62,7 @@ void ctp::MainMenu::Start()
 	_easterEggs = eden::SceneManager::getInstance()->FindEntity("EasterEggsText")->GetComponent<eden_ec::CText>();
 
 	if (_gameManager->GetLevel() == 1)SetDarkMode();
-
+	else SetDayMode();
 	//eden_input::InputManager::getInstance()->SetActive(false);
 }
 
@@ -192,6 +193,8 @@ void ctp::MainMenu::SetDarkMode()
 	eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<eden_ec::CButton>()->ChangeTextures("DarkOptions.png", "DarkOptionsOver.png", "DarkOptionsClicked.png");
 
 	eden::SceneManager::getInstance()->FindEntity("level")->GetComponent<eden_ec::CButton>()->ChangeTextures("Sun.png", "Sun2.png", "Sun2.png");
+
+	eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
 }
 
 void ctp::MainMenu::SetDayMode()
@@ -203,4 +206,6 @@ void ctp::MainMenu::SetDayMode()
 	eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<eden_ec::CButton>()->ChangeTextures("Settings_Button.png", "SettingsOver_Button.png", "SettingsClicked_Button.png");
 
 	eden::SceneManager::getInstance()->FindEntity("level")->GetComponent<eden_ec::CButton>()->ChangeTextures("Moon.png", "Moon2.png", "Moon2.png");
+
+	eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
 }

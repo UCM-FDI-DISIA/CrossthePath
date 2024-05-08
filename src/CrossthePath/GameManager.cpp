@@ -82,7 +82,7 @@ void ctp::GameManager::GoBack()
 	_states.pop_back();
 	_currState = _states[_states.size() - 1];
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->ChangeScene("MainMenu");
+	scnManager->PopScene();
 }
 
 void ctp::GameManager::GoOptions()
@@ -91,7 +91,7 @@ void ctp::GameManager::GoOptions()
 	_currState = Options;
 	_states.push_back(_currState);
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
-	scnManager->ChangeScene("Options");
+	scnManager->PushScene("Options");
 }
 
 void ctp::GameManager::GoMainMenu()
