@@ -49,7 +49,7 @@ Entity3 = {
                 YPos = "50",
                 Width = "100",
                 Height = "100",
-                Texture = "MainMenuBackground.png",
+                Texture = "CTP_Background.png",
                 Depth = "1"
 			}
 		}
