@@ -119,13 +119,8 @@ void eden_ec::GameManager::AddEnemy(Entity* ent)
 
 void eden_ec::GameManager::DestroyEnemy(Entity* ent)
 {
-	for (auto it = _enemies.begin(); it != _enemies.end(); ++it) {
-		if ((*it) == ent) {
-			_enemies.remove(ent);
-			ent->SetAlive(false);
-			break;
-		}
-	}
+	_enemies.remove(ent);
+	ent->SetAlive(false);
 }
 
 void eden_ec::GameManager::Begin()
