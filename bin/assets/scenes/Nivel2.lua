@@ -6427,9 +6427,9 @@ Entity304 = {
                 YPos = "90",
                 Width = "10",
                 Height = "10",
-				Texture1 = "Pause_Button.png",
-                Texture2 = "PauseOver_Button.png",
-                Texture3 = "PauseClicked_Button.png",
+				Texture1 = "DarkPause.png",
+                Texture2 = "DarkPauseOver.png",
+                Texture3 = "DarkPauseClicked.png",
                 Depth = "2"
 			}
 		},

@@ -8,6 +8,7 @@
 #include "CAudioEmitter.h"
 #include "CButton.h"
 #include "Entity.h"
+#include "CCamera.h"
 #include "Transform.h"
 #include "CAnimator.h"
 
@@ -35,6 +36,9 @@ void ctp::LoseMenu::Start()
 	_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 
 	_transform = _ent->GetComponent<eden_ec::CTransform>();
+
+	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("Camera1")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
+	else eden::SceneManager::getInstance()->FindEntity("Camera1")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
 
 	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player1")->GetComponent<eden_ec::CAnimator>();
 	_playerAnimator->PlayAnim("Duck");

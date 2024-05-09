@@ -193,6 +193,8 @@ void ctp::MainMenu::SetDarkMode()
 
 	eden::SceneManager::getInstance()->FindEntity("level")->GetComponent<eden_ec::CButton>()->ChangeTextures("Sun.png", "Sun2.png", "Sun2.png");
 
+	eden::SceneManager::getInstance()->FindEntity("title")->GetComponent<eden_ec::CImage>()->SetMaterial("DarkTitle_CTP.png");
+
 	eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
 }
 
@@ -205,6 +207,8 @@ void ctp::MainMenu::SetDayMode()
 	eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<eden_ec::CButton>()->ChangeTextures("Settings_Button.png", "SettingsOver_Button.png", "SettingsClicked_Button.png");
 
 	eden::SceneManager::getInstance()->FindEntity("level")->GetComponent<eden_ec::CButton>()->ChangeTextures("Moon.png", "Moon2.png", "Moon2.png");
+
+	eden::SceneManager::getInstance()->FindEntity("title")->GetComponent<eden_ec::CImage>()->SetMaterial("CrossThePath_Title.png");
 
 	eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176f, 0.8196f, 0.9647f, 1.0f);
 }
