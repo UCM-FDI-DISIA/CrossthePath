@@ -32,8 +32,6 @@ void ctp::WinMenu::Start()
 	_exitNewPos = eden_render::RenderManager::getInstance()->GetResolution().first;
 	_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 
-	_transform = _ent->GetComponent<eden_ec::CTransform>();
-
 	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("Camera1")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
 	else eden::SceneManager::getInstance()->FindEntity("Camera1")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
 
@@ -52,22 +50,22 @@ void ctp::WinMenu::Update(float t)
 		_audioEmitter->Play();
 		_audioEmitter->SetLoop(true);
 	}
-	if (currentTime >= timer && !changeAnim) {
-		changeAnim = true;
-		currentTime = 0;
-		if (dance) {
+	if (_currentTime >= _timer && !_changeAnim) {
+		_changeAnim = true;
+		_currentTime = 0;
+		if (_dance) {
 			_playerAnimator->PlayAnim("Yes");
-			dance = false;
+			_dance = false;
 		}
 		else {
 			_playerAnimator->PlayAnim("JumpIdle");
-			dance = true;
+			_dance = true;
 		}
 
 	}
 	else {
-		changeAnim = false;
-		currentTime += t;
+		_changeAnim = false;
+		_currentTime += t;
 	}
 
 	if (_startNewPos <= _startIniPos.first - 3) {

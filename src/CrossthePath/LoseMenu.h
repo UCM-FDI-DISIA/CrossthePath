@@ -10,49 +10,63 @@ namespace eden_ec {
 	class CAnimator;
 }
 namespace ctp{
-
+	/// @brief Clase encargada de la funcionalidad del menu de partida perdida
 	class LoseMenu : public eden_ec::Component {
 	public:
+		/// @brief Constructora
 		LoseMenu();
+		/// @brief Desctructora
 		~LoseMenu() = default;
-
+		/// @brief Devuelve el ID del componente
 		static std::string GetID() { return _id; }
-
+		/// @brief Recoge los componentes del .lua
 		void Init(eden_script::ComponentArguments* args) {}
-
+		/// @brief Necesario override
 		void Awake() override {}
-
+		/// @brief Coloca los botones, setea el modo diurno o nocturno y inicia las animaciones y el sonido
 		void Start() override;
-
+		/// @brief Actualiza el sonido, las posiciones de los botones y las animaciones del jugador
 		void Update(float t) override;
-
-		void Menu();
-
-		void Exit();
-
-		void Retry();
-
+		/// @brief Funcion que se encarga de elegir la funcion adecuada para cada boton clickado
 		void Click();
 
 	protected:
+		/// @brief ID Del componente
 		const static std::string _id;
 	private:
+		/// @brief Boton de vuelta al menu principal
 		eden_ec::CButton* _mainMenu = nullptr;
+		/// @brief Boton de exit
 		eden_ec::CButton* _exit = nullptr;
+		/// @brief Componente de animacion del jugador
 		eden_ec::CAnimator* _playerAnimator = nullptr;
+		/// @brief Componente de musica del menu
 		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
-		eden_ec::CTransform* _transform = nullptr;
 
+		/// @brief Nueva posision del boton del menu principal
 		int _startNewPos = -1;
+		/// @brief Nueva posicion del boton de exit
 		int _exitNewPos = -1;
-		int _optionsNewPos = -1;
-		float timer = 5.0f;
-		float currentTime = 0.0f;
-		bool changeAnim = false;
-		bool dance = true;
+		/// @brief Timer de animacion
+		float _timer = 5.0f;
+		/// @brief Tiempo transcurrido
+		float _currentTime = 0.0f;
+		/// @brief Booleano de control de animacion
+		bool _changeAnim = false;
+		/// @brief Booleano de control de animacion
+		bool _dance = true;
+
+		/// @brief Posiciones originales de los botones
 		std::pair<float, float>_startIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_exitIniPos = std::make_pair(0.0f, 0.0f);
 		std::pair<float, float>_optionsIniPos = std::make_pair(0.0f, 0.0f);
+		
+		/// @brief Funcion para volver al menu principal
+		void Menu();
+		/// @brief Funcion para salir de la aplicacion
+		void Exit();
+		/// @brief Funcion para volver a jugar la partida
+		void Retry();
 	};
 }
 #endif //LOSE_MENU_H
