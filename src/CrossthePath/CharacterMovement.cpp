@@ -47,7 +47,7 @@ void ctp::CharacterMovement::PlayAnimation() {
 		break;
 	default:
 		if (!_animator->IsPlaying("Idle")) _animator->PlayAnim("Idle");
-
+		break;
 	}
 }
 
@@ -63,14 +63,11 @@ void ctp::CharacterMovement::MoveCharacter(float dt) {
 		StartMoving();
 	}
 
-	//Hace una rotacion inicial para ponerle mirando hacia delante y luego se har� una 
+	//Hace una rotacion inicial para ponerle mirando hacia delante y luego se hara una 
 	//segunda roatcion para mirar a la direccion correcta
 	_transform->SetRotation(_initialRotation);
 	_currentAction = MOVING;
 	switch (_inputVector.back()) {
-		/* PARA HACER PRUEBAS CON EL MOV DE LA RANA USANDO SUS EJES LOCALES COMENTAR PRIMERA Y TERCERA LINEA
-		* DE CADA CASO DEL SWITCH Y DESCOMENTAR LA SEGUNDA.
-		*/
 	case DOWN:
 	{
 		_transform->Translate(eden_utils::Vector3(0.0f, 0.0f, -0.1f).Normalized()* _speed * dt);

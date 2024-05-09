@@ -19,12 +19,9 @@ void ctp::GameManagerController::Update(float dt) {
 	_gameManager->Update(dt);
 }
 
-void ctp::GameManagerController::Awake()
-{
-}
-
 void ctp::GameManagerController::Start()
 {
+	//Intentamos añadirlo al DontDestroyOnLoad
 	if (eden::SceneManager::getInstance()->AddEntityToDontDestroyOnLoad(_ent)) {
 		original = true;
 		_gameManager->Start();
