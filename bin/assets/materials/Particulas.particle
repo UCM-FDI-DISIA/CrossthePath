@@ -11,16 +11,9 @@ particle_system Particulas{
         direction 0 1 0
         angle 30
         emission_rate 10
-        time_to_live 3
+        time_to_live 0.5
         velocity_min 1
         velocity_max 1
-    }
-
-    affector ColourFader{
-        red -0.000045
-		green -0.000045
-		blue -0.000045
-        alpha -0.000045
     }
 
     affector Rotator{
@@ -31,7 +24,7 @@ particle_system Particulas{
     }
 
     affector Scaler{
-        rate 0.1
+        rate 0.15
     }
 
     affector DirectionRandomiser{
