@@ -3,6 +3,7 @@
 #include "Transform.h"
 #include "SceneManager.h"
 #include "EnemyMovement.h"
+#include "CAudioEmitter.h"
 #include "GameManager.h"
 
 const std::string ctp::InstanciateEnemies::_id = "INSTANCIATE_ENEMIES";
@@ -53,7 +54,10 @@ namespace ctp {
 		}
 		coche->GetComponent<EnemyMovement>()->SetWay(_isLeft);
 		coche->GetComponent<EnemyMovement>()->SetMov();
-
+		_motorSound = coche->GetComponent<eden_ec::CAudioEmitter>();
 		ctp::GameManager::Instance()->AddEnemy(coche);
+		_motorSound->SetVolume(0.8);
+		_motorSound->Play();
+		_motorSound->SetLoop(true);
 	}
 }

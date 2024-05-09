@@ -83,7 +83,13 @@ Player = {
 				SongName = "footstep.wav",
 				Is3D = "false"
 			}
-		}
+		},
+        {
+            Name = "AUDIO_LISTENER",
+            Arguments = {
+
+            }
+        }
 	}
 }
 
@@ -133,7 +139,14 @@ enemyTaxi = {
                 Started = "true",
                 Name = "Particulas"
             }
-        }
+        },
+        {
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "car.mp3",
+				Is3D = "true"
+			}
+		}
     }
 }
 
@@ -182,6 +195,13 @@ enemyPolice = {
 				Time = "10.0",
 				Started = "true",
 				Name = "Particulas"
+			}
+		},
+        {
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "car.mp3",
+				Is3D = "true"
 			}
 		}
     }
@@ -233,6 +253,13 @@ enemyRed = {
 				Started = "true",
 				Name = "Particulas"
 			}
+		},
+        {
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "car.mp3",
+				Is3D = "true"
+			}
 		}
     }
 }
@@ -283,6 +310,13 @@ enemyGreen = {
 				Started = "true",
 				Name = "Particulas"
 			}
+		},
+        {
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "car.mp3",
+				Is3D = "true"
+			}
 		}
     }
 }
@@ -313,7 +347,8 @@ Camera = {
 				SongName = "GamePlay.mp3",
 				Is3D = "false"
 			}
-	   }
+	   },
+       
     }
 }
 Blueprints = { Cube, Player, enemyTaxi, enemyPolice, enemyRed, enemyGreen, Camera }

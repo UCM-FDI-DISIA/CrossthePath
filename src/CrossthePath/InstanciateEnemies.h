@@ -9,6 +9,9 @@
 namespace eden {
 	class SceneManager;
 }
+namespace eden_ec {
+	class CAudioEmitter;
+}
 
 namespace ctp {
 	/// @brief Clase encargada de instanciar los enemigos (coches) de Cross The Path cada cierto tiempo
@@ -45,6 +48,8 @@ namespace ctp {
 		std::vector<std::string> _prefabName;
 		/// @brief Posicion en la que deben aparecer los enemigos
 		eden_utils::Vector3 _pos = {0.0f, 0.0f, 0.0f};
+		/// @brief
+		eden_ec::CAudioEmitter* _motorSound = nullptr;
 		/// @brief Tiempo que debe pasar para que se instancie cada enemigo
 		float _spawnRate = 0.0f;
 		/// @brief Timer auxiliar de la clase
