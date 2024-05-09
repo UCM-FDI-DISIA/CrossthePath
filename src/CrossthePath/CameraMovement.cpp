@@ -20,8 +20,9 @@ void ctp::CameraMovement::Start() {
 	_initialRotation = new eden_utils::Quaternion(_transform->GetRotation());
 	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
 	else eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
-	//_audioEmitter = _ent->GetComponent<CAudioEmitter>();
-	//_audioEmitter->Play();
+	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
+	_audioEmitter->Play();
+	_audioEmitter->SetLoop(true);
 }
 
 void ctp::CameraMovement::Update(float dt) 
@@ -36,5 +37,18 @@ void ctp::CameraMovement::Update(float dt)
 
 	//Actualizamos la posición
 	_transform->SetPosition(eden_utils::Vector3(_transform->GetPosition().GetX(), _transform->GetPosition().GetY(), toFinalPos.GetZ()));
+}
+
+void ctp::CameraMovement::GoToPlayer()
+{
+	if (_playerTransform->GetPosition().GetZ() - _transform->GetPosition().GetZ() > 5) {
+
+		eden_utils::Vector3 v =	eden_utils::Vector3(_transform->GetPosition().GetX(),
+			_transform->GetPosition().GetY(),
+			_playerTransform->GetPosition().GetZ());
+
+		_transform->SetPosition(v);
+	}
+	
 }
 

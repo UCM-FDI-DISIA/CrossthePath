@@ -84,6 +84,8 @@ namespace ctp {
 
 		/// @brief Deque con las teclas presionadas que indican que movimiento hacer (la ultima tecla pulsada)
 		std::deque<MovementDir> _inputVector;
+
+		float _speed = 1;
 	};
 }
 #endif //CHARACTER_MOVEMENT_H

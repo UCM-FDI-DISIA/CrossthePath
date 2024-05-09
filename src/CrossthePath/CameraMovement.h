@@ -29,6 +29,8 @@ namespace ctp {
 
 		void Update(float t) override;
 
+		void GoToPlayer();
+
 	protected:
 		const static std::string _id;
 	private:

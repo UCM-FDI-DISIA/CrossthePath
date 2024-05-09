@@ -14,7 +14,7 @@ namespace ctp{
 	{
 	public:
 		UIManager();
-		~UIManager();
+		~UIManager()=default;
 
 		static std::string GetID() { return _id; }
 
@@ -24,7 +24,7 @@ namespace ctp{
 
 		void Start();
 
-		void Update(float t) override;
+		void Update(float t) {}
 
 		void Pause();
 
@@ -41,6 +41,8 @@ namespace ctp{
 		std::vector<std::string> _elementsID = {"UI_timer","UI_pause" };
 
 		float _timer = 0;
+
+		void SetTimerText(int time);
 	};
 }
 #endif //UI_MANAGER_H

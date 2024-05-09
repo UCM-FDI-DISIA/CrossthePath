@@ -22,6 +22,8 @@ void ctp::UIManager::Start() {
 	for (int i = 0; i < _elementsID.size(); i++) {
 		_elements.push_back(eden::SceneManager::getInstance()->FindEntity(_elementsID[i]));
 	}
+	_timer = ctp::GameManager::Instance()->GetTimer();
+	SetTimerText(_timer);
 }
 
 ctp::UIManager::UIManager()
@@ -33,15 +35,6 @@ ctp::UIManager::UIManager()
 	scriptM = nullptr;
 }
 
-ctp::UIManager::~UIManager()
-{
-
-}
-
-void ctp::UIManager::Update(float dt) {
-
-}
-
 void ctp::UIManager::Pause()
 {
 	ctp::GameManager::Instance()->PauseGame();
@@ -49,12 +42,17 @@ void ctp::UIManager::Pause()
 
 void ctp::UIManager::Timer(float tm)
 {
-	_timer = _timer + tm;
-	std::string aux = std::to_string(round(_timer));
+	_timer = _timer - tm;
+	SetTimerText(_timer);
+
+	if(_timer<=0)ctp::GameManager::Instance()->GameOver();
+	else ctp::GameManager::Instance()->SetBestScore(ctp::GameManager::Instance()->GetTimer()-round(_timer));
+}
+
+void ctp::UIManager::SetTimerText(int timer)
+{
+	std::string aux = std::to_string(round(timer));
 	std::string time = "";
 	for (int i = 0; i < aux.length() - 7; i++)time += aux[i];
-	_elements[TIMER]->GetComponent<eden_ec::CText>()->SetNewText("Timer: "+ time);
-
-	///TEMPORAL///
-	ctp::GameManager::Instance()->SetBestScore(round(_timer));
+	_elements[TIMER]->GetComponent<eden_ec::CText>()->SetNewText("Timer: " + time);
 }

@@ -31,6 +31,7 @@ void ctp::CharacterMovement::Start() {
 
 void ctp::CharacterMovement::Init(eden_script::ComponentArguments* args) {
 	_inputManager = eden_input::InputManager::getInstance();
+	_speed = args->GetValueToFloat("Speed");
 }
 
 void ctp::CharacterMovement::PlayAnimation() {
@@ -73,28 +74,24 @@ void ctp::CharacterMovement::MoveCharacter(float dt) {
 		*/
 	case DOWN:
 	{
-		_transform->Translate(eden_utils::Vector3(0, 0, -0.1).Normalized() * dt);
-		//_transform->Translate(_transform->GetForward() * dt*(-1));
+		_transform->Translate(eden_utils::Vector3(0, 0, -0.1).Normalized()* _speed * dt);
 		_transform->Yaw(180);
 	}
 	break;
 	case LEFT:
 	{
-		_transform->Translate(eden_utils::Vector3(0.1,0, 0).Normalized() * dt);
-		//_transform->Translate(_transform->GetRight() * dt);
+		_transform->Translate(eden_utils::Vector3(0.1,0, 0).Normalized()* _speed * dt);
 		_transform->Yaw(90);
 	}
 	break;
 	case RIGHT:
 	{
-		_transform->Translate(eden_utils::Vector3(-0.1,0, 0).Normalized() * dt);
-		//_transform->Translate(_transform->GetRight() * dt * (-1));
+		_transform->Translate(eden_utils::Vector3(-0.1,0, 0).Normalized()* _speed * dt);
 		_transform->Yaw(-90);
 	}
 	break;
 	case UP:
-		_transform->Translate(eden_utils::Vector3(0, 0, 0.1).Normalized() * dt);
-		//_transform->Translate(_transform->GetForward() * dt);
+		_transform->Translate(eden_utils::Vector3(0, 0, 0.1).Normalized()* _speed * dt);
 	}
 
 }

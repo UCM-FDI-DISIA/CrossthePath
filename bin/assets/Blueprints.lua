@@ -48,6 +48,7 @@ Player = {
 		{
 			Name = "CHARACTER_MOVEMENT",
 			Arguments = {
+                Speed= 1.5
 			}
 		},
 		{
@@ -298,7 +299,14 @@ Camera = {
             Name = "PLAYERCAMERA",
             Arguments = {
             }
-        }
+        },
+        {
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "GamePlay.mp3",
+				Is3D = "false"
+			}
+	   }
     }
 }
 Blueprints = { Cube, Player, enemyTaxi, enemyPolice, enemyRed, enemyGreen, Camera }

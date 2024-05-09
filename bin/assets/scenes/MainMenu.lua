@@ -23,7 +23,7 @@ Entity1 = {
 		{
 			Name = "AUDIO_EMITTER",
 			Arguments = {
-				SongName = "GamePlay.mp3",
+				SongName = "MainMenu.mp3",
 				Is3D = "false"
 			}
 	   }

@@ -53,7 +53,7 @@ namespace ctp{
 		void Begin();
 
 		inline int GetBestScore() { return _bestScore; }
-		inline void SetBestScore(int best) { if(best>_bestScore) _bestScore = best; }
+		inline void SetBestScore(int best) { if(best> _currScore) _currScore = best; }
 
 		inline int GetEasterEggs() { return _easterEggs; }
 		void AddEasterEgg(eden_ec::Entity* egg);
@@ -64,6 +64,8 @@ namespace ctp{
 
 		inline int GetLevel() { return _level; }
 		inline void ChangeLevel() { _level= (_level+1)%2; }
+
+		inline int GetTimer() { return _timer; }
 	private:
 
 		/// @brief Estados del juego
@@ -76,6 +78,8 @@ namespace ctp{
 		/// @brief Estado actual
 		States _currState;
 
+		int _timer = 60;
+
 		int _level = 0;
 		eden_ec::Entity* _player = nullptr;
 		eden_ec::Entity* _uiManager = nullptr;
@@ -83,8 +87,10 @@ namespace ctp{
 
 		bool _easterEggCompleted = false;
 		std::vector <std::pair<bool, eden_ec::Entity*>>_eggsFound = { {false,nullptr},{false,nullptr},{false,nullptr} };
-		int _bestScore = 0;
 		int _easterEggs = 0;
+		
+		int _bestScore = 0;
+		int _currScore = 0;
 
 		// Mapa de enemigos del juego
 		std::list<eden_ec::Entity*> _enemies;

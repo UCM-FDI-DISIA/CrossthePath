@@ -7,11 +7,8 @@
 #include <InputManager.h>
 #include <RenderManager.h>
 #include "InstanciateEnemies.h"
-#include "CText.h"
-#include "CBar.h"
 #include <Scene.h>
-#include "Transform.h"
-#include "Vector3.h"
+#include "CameraMovement.h"
 ctp::GameManager::GameManager()
 {
 	std::vector<std::pair<int, int>> resolutions;
@@ -42,6 +39,7 @@ void ctp::GameManager::Update(float dt) {
 
 void ctp::GameManager::PlayerWin()
 {
+	_bestScore = _currScore;
 	_currState = Win;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
@@ -105,7 +103,6 @@ void ctp::GameManager::GoMainMenu()
 	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = MainMenu;
 	_states[0] = _currState;
-	_start = false;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("MainMenu");
 	ClearInstanciator();
@@ -137,14 +134,7 @@ void ctp::GameManager::DestroyEnemy(eden_ec::Entity* ent)
 void ctp::GameManager::Begin()
 {
 	_start = true;
-	_player= eden::SceneManager::getInstance()->FindEntity("Player_0");
-	eden_ec::Entity* camera = eden::SceneManager::getInstance()->FindEntity("Camera_0");
-	eden_utils::Vector3 v =  
-		eden_utils::Vector3(camera->GetComponent<eden_ec::CTransform>()->GetPosition().GetX(),
-			camera->GetComponent<eden_ec::CTransform>()->GetPosition().GetY(),
-			_player->GetComponent<eden_ec::CTransform>()->GetPosition().GetZ());
-	
-	camera->GetComponent<eden_ec::CTransform>()->SetPosition(v);
+	eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<CameraMovement>()->GoToPlayer();;
 	_uiManager = eden::SceneManager::getInstance()->FindEntity("UI_Manager");
 }
 
