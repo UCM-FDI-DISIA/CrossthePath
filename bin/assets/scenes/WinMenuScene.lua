@@ -26,7 +26,7 @@ Entity2 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0.0|0.5|3",
+				Position = "0.0|0.6|3",
 				Rotation = "true|0.0|90.0|0.0|-0.0",
 				Scale = "1.0|1.0|1.0"
 			}
@@ -52,126 +52,6 @@ Entity2 = {
 }
 
 Entity3 = {
-	Name = "building_A",
-	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "building_A"
-			}
-		},
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "0.0|0.0|-0.0",
-				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
-				Scale = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity4 = {
-	Name = "building_B",
-	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "building_B"
-			}
-		},
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "-2.0|0.0|-0.0",
-				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
-				Scale = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity5 = {
-	Name = "building_C",
-	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "building_C"
-			}
-		},
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "2.0|0.0|-0.0",
-				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
-				Scale = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity6 = {
-	Name = "road_straight",
-	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "road_straight"
-			}
-		},
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "2.0|0.0|2.0",
-				Rotation = "false|0.4999999701976776|-0.5|0.5|0.5",
-				Scale = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity7 = {
-	Name = "road_straight.001",
-	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "road_straight"
-			}
-		},
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "-2.0|0.0|2.0",
-				Rotation = "false|0.4999999701976776|-0.5|0.5|0.5",
-				Scale = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity8 = {
-	Name = "road_straight.002",
-	Components = {
-		{
-			Name = "MESH_RENDERER",
-			Arguments = {
-				Mesh = "road_straight"
-			}
-		},
-		{
-			Name = "TRANSFORM",
-			Arguments = {
-				Position = "0.0|0.0|2.0",
-				Rotation = "false|0.4999999701976776|-0.5|0.5|0.5",
-				Scale = "1.0|1.0|1.0"
-			}
-		}
-	}
-}
-
-Entity9 = {
 	Name = "buttonMenu",
 	Components = {
 		{
@@ -197,7 +77,7 @@ Entity9 = {
 	}	
 }
 
-Entity10 = {
+Entity4 = {
 	Name = "UI_Cursor",
 	Components = {
 		{
@@ -220,7 +100,7 @@ Entity10 = {
 	}		
 }
 
-Entity11 = {
+Entity5 = {
 	Name = "buttonExit",
 	Components = {
 		{
@@ -246,7 +126,7 @@ Entity11 = {
 	}	
 }
 
-Entity12 = {
+Entity6 = {
 	Name = "Player1",
 	Components = {
 		{
@@ -275,7 +155,7 @@ Entity12 = {
 	}
 }
 
-Entity13 = {
+Entity7 = {
 	Name = "WinText",
 	Components = {
 		{
@@ -294,7 +174,7 @@ Entity13 = {
 	}
 }
 
-Entity14 = {
+Entity8 = {
 	Name = "Confetti1",
 	Components = {
 		{
@@ -317,7 +197,7 @@ Entity14 = {
 	}
 }
 
-Entity15 = {
+Entity9 = {
 	Name = "Sounds",
 	Components = {
 		{
@@ -339,7 +219,491 @@ Entity15 = {
 	}	
 }
 
-Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14, Entity15 }
+Entity10 = {
+	Name = "pine3.005",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "pine3"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-3.1150050163269043|0.0|-0.37074485421180725",
+				Rotation = "false|0.6081834435462952|-0.6081834435462952|-0.36071163415908813|-0.3607116639614105",
+				Scale = "0.3913928270339966|0.3913928270339966|0.3913928270339966"
+			}
+		}
+	}
+}
+
+Entity11 = {
+	Name = "pine3.001",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "pine3"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-0.9417237043380737|0.0|-2.1456568241119385",
+				Rotation = "false|0.21401646733283997|-0.21401648223400116|-0.6739413142204285|-0.6739413738250732",
+				Scale = "0.43559542298316956|0.4355953633785248|0.43559542298316956"
+			}
+		}
+	}
+}
+
+Entity12 = {
+	Name = "pine2.005",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "pine2"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "1.7454713582992554|0.0|-0.3125554621219635",
+				Rotation = "false|0.6361207365989685|-0.6361207365989685|0.30878862738609314|0.3087886571884155",
+				Scale = "0.3071858286857605|0.3071858286857605|0.3071858286857605"
+			}
+		}
+	}
+}
+
+Entity13 = {
+	Name = "pine2.001",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "pine2"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-2.1860451698303223|0.0|-1.5142232179641724",
+				Rotation = "false|0.2534017562866211|-0.2534017562866211|-0.6601420640945435|-0.6601420640945435",
+				Scale = "0.3071858286857605|0.3071858286857605|0.3071858286857605"
+			}
+		}
+	}
+}
+
+Entity14 = {
+	Name = "pine1.004",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "pine1"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "2.183490753173828|0.0|-2.045942544937134",
+				Rotation = "false|-0.2831059694290161|0.2831059694290161|0.6479591131210327|0.6479591131210327",
+				Scale = "0.38702499866485596|0.38702499866485596|0.38702499866485596"
+			}
+		}
+	}
+}
+
+Entity15 = {
+	Name = "pine1.001",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "pine1"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-2.9389901161193848|0.0|-1.5081101655960083",
+				Rotation = "false|-0.2831059694290161|0.2831059694290161|0.6479591131210327|0.6479591131210327",
+				Scale = "0.38702499866485596|0.38702499866485596|0.38702499866485596"
+			}
+		}
+	}
+}
+
+Entity16 = {
+	Name = "oak3.003",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "oak3"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-1.3561196327209473|0.0|0.7527998685836792",
+				Rotation = "false|0.6511799097061157|-0.6511799693107605|-0.27561691403388977|-0.27561691403388977",
+				Scale = "0.24245376884937286|0.24245378375053406|0.24245376884937286"
+			}
+		}
+	}
+}
+
+Entity17 = {
+	Name = "oak2.005",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "oak2"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.7268905639648438|0.0|-1.2758408784866333",
+				Rotation = "false|0.7056174874305725|-0.7056175470352173|-0.045868564397096634|-0.04586856812238693",
+				Scale = "0.3770845830440521|0.3770845830440521|0.3770845830440521"
+			}
+		}
+	}
+}
+
+Entity18 = {
+	Name = "oak2.001",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "oak2"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "1.1159173250198364|0.0|1.1246451139450073",
+				Rotation = "false|0.6631561517715454|-0.6631561517715454|-0.2454056292772293|-0.2454056441783905",
+				Scale = "0.3189728558063507|0.3189728558063507|0.3189728558063507"
+			}
+		}
+	}
+}
+
+Entity19 = {
+	Name = "oak1.001",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "oak1"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "2.55203914642334|0.0|0.5154742002487183",
+				Rotation = "false|0.6346908807754517|-0.6346908807754517|-0.3117170035839081|-0.3117170035839081",
+				Scale = "0.371971070766449|0.371971070766449|0.371971070766449"
+			}
+		}
+	}
+}
+
+Entity20 = {
+	Name = "oak1",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "oak1"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-0.8032528162002563|0.0|-0.9950047731399536",
+				Rotation = "false|0.7007195949554443|-0.7007195949554443|0.09482639282941818|0.09482640027999878",
+				Scale = "0.371971070766449|0.371971070766449|0.371971070766449"
+			}
+		}
+	}
+}
+
+Entity21 = {
+	Name = "building_A.002",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "building_A"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|0.02722916752099991",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity22 = {
+	Name = "base.026",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "4.0|0.0|-1.9727709293365479",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity23 = {
+	Name = "base.025",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "4.0|0.0|0.02722916752099991",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity24 = {
+	Name = "base.024",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "2.0|0.0|-1.9727709293365479",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity25 = {
+	Name = "base.023",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-1.9727709293365479",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity26 = {
+	Name = "base.021",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-4.0|0.0|0.02722916752099991",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity27 = {
+	Name = "base.020",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-4.0|0.0|-1.9727709293365479",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity28 = {
+	Name = "base.019",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-2.0|0.0|-1.9727709293365479",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity29 = {
+	Name = "base.017",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "2.0|0.0|0.02722916752099991",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity30 = {
+	Name = "base.016",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-2.0|0.0|0.02722916752099991",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity31 = {
+	Name = "base.001",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "2.0|0.0|2.0251903533935547",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity32 = {
+	Name = "base.002",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.026947859674692154|0.0|2.0251903533935547",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity33 = {
+	Name = "base.003",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "base"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-1.9599945545196533|0.0|2.0251903533935547",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entities = { Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
+			Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
+			Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20,
+			Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
+			Entity28, Entity29, Entity30, Entity31, Entity32, Entity33 }
 
 CollisionLayers = {
 	Layers = {
