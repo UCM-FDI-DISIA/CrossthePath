@@ -1,7 +1,5 @@
-#define _CRTDBG_MAP_ALLOC
 #ifndef GAME_MANAGER_H
 #define GAME_MANAGER_H
-#include <unordered_map>
 #include <string> 
 #include "Singleton.h"
 #include <list>

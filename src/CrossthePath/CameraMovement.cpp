@@ -4,6 +4,7 @@
 #include "Transform.h"
 #include "GameManager.h"
 #include "CAudioEmitter.h"
+#include "CCamera.h"
 #include <SceneManager.h>
 
 const std::string ctp::CameraMovement::_id = "PLAYERCAMERA";
@@ -17,6 +18,8 @@ void ctp::CameraMovement::Start() {
 	_transform = _ent->GetComponent<eden_ec::CTransform>();
 	_playerTransform = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<eden_ec::CTransform>();
 	_initialRotation = new eden_utils::Quaternion(_transform->GetRotation());
+	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
+	else eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
 	//_audioEmitter = _ent->GetComponent<CAudioEmitter>();
 	//_audioEmitter->Play();
 }

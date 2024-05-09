@@ -159,17 +159,15 @@ bool ctp::GameManager::SetEgg(int num, eden_ec::Entity* egg)
 
 void ctp::GameManager::SwitchInstanciator(std::vector<std::string> id) {
 	auto it = _instanciators.begin();
-	bool found = false;
-	while (it != _instanciators.end() && !found) {
-		for (int i = 0; i < id.size(); ++i) {
-			if (id[i] == (*it)->GetEntityID()) {
-				(*it)->GetComponent<ctp::InstanciateEnemies>()->SetActive(true);
-			}
-			else {
-				(*it)->GetComponent<ctp::InstanciateEnemies>()->SetActive(false);
-				++it;
-			} 
-		}
+
+	for (auto instanciator : _instanciators) {
+		instanciator->GetComponent<InstanciateEnemies>()->SetActive(false);
+	}
+
+	for (int i = 0; i < id.size(); ++i) {
+		auto it = _instanciators.begin();
+		while (it != _instanciators.end() && !(id[i] == (*it)->GetEntityID())) ++it;
+		if(it != _instanciators.end()) (*it)->GetComponent<InstanciateEnemies>()->SetActive(true);
 	}
 }
 

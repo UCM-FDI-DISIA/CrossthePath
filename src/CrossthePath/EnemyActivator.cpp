@@ -34,8 +34,9 @@ void ctp::EnemyActivator::Init(eden_script::ComponentArguments* args)
 void ctp::EnemyActivator::CollisionLine()
 {
 	eden_ec::Entity* otherEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "other");
+	eden_ec::Entity* selfEnt = luabridge::getGlobal(eden_script::ScriptManager::getInstance()->GetLuaManager()->GetLuaState(), "self");
 
 	if (otherEnt->GetEntityID() == "Player_0") {
-		ctp::GameManager::Instance()->SwitchInstanciator(_activate);
+		ctp::GameManager::Instance()->SwitchInstanciator(selfEnt->GetComponent<EnemyActivator>()->_activate);
 	}
 }

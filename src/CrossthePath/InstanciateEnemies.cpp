@@ -24,6 +24,7 @@ namespace ctp {
 	void InstanciateEnemies::Start() {
 		_pos = _ent->GetComponent<eden_ec::CTransform>()->GetPosition();
 		ctp::GameManager::Instance()->AddInstanciator(_ent);
+		_timer = _spawnRate;
 	}
 
 	void InstanciateEnemies::Update(float t) {

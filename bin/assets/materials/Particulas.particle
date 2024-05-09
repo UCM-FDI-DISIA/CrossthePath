@@ -1,23 +1,26 @@
 particle_system Particulas{
     renderer billboard
     billboard_type point
-    particle_width 0.035
-    particle_height 0.035
+    particle_width 0.1
+    particle_height 0.1
     quota 500
-    material demonBody
+    material Smoke
 
     emitter Point{
+        colour 1.0 1.0 1.0 1.0
         direction 0 1 0
         angle 30
         emission_rate 10
-        time_to_live 0.75
+        time_to_live 3
         velocity_min 1
         velocity_max 1
-        colour 0.7 0.7 0.7 0.5
     }
 
     affector ColourFader{
-        alpha -0.1
+        red -0.000045
+		green -0.000045
+		blue -0.000045
+        alpha -0.000045
     }
 
     affector Rotator{
@@ -28,7 +31,7 @@ particle_system Particulas{
     }
 
     affector Scaler{
-        rate 0
+        rate 0.1
     }
 
     affector DirectionRandomiser{
