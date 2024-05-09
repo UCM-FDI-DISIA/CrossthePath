@@ -34,8 +34,6 @@ namespace ctp {
 		static std::string GetID() { return _id; }
 		/// @brief Metodo que instancia el enemigo correspondiente
 		void InstanciateEnemy();
-
-		void SetActive(bool active) { _active = active; }
 	protected:
 		/// @brief el ID del componente
 		const static std::string _id;
@@ -53,8 +51,6 @@ namespace ctp {
 		float _timer = 0.0f;
 		/// @brief booleano que indica la direccion inicial de los coches
 		bool _isLeft = true;
-		bool _active = true;
-		
 	};
 }
 

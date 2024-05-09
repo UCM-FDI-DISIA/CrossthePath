@@ -13,7 +13,7 @@ namespace ctp {
 		_prefabName = args->GetValueToStringVector("PrefabName");
 		_spawnRate = args->GetValueToFloat("SpawnRate");
 		_isLeft = args->GetValueToBool("IsLeft");
-		_active = args->GetValueToBool("Active");
+		SetActive(args->GetValueToBool("Active"));
 	}
 
 	void InstanciateEnemies::Awake() {
@@ -28,12 +28,10 @@ namespace ctp {
 	}
 
 	void InstanciateEnemies::Update(float t) {
-		if (_active) {
-			_timer += t;
-			if (_timer >= _spawnRate) {
-				InstanciateEnemy();
-				_timer = 0;
-			}
+		_timer += t;
+		if (_timer >= _spawnRate) {
+			InstanciateEnemy();
+			_timer = 0;
 		}
 	}
 
