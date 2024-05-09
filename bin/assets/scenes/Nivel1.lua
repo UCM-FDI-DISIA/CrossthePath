@@ -4817,7 +4817,7 @@ Entity232 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
+				PrefabName = "enemyTaxi|enemyPolice",
 				SpawnRate = "5",
 				IsLeft = "false",
 				Active = "true"
@@ -4840,8 +4840,8 @@ Entity233 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyRed|enemyGreen",
+				SpawnRate = "2",
 				IsLeft = "false",
 				Active = "false"
 			}
@@ -4863,8 +4863,8 @@ Entity234 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyRed|enemyGreen",
+				SpawnRate = "2",
 				IsLeft = "false",
 				Active = "false"
 			}
@@ -4886,8 +4886,8 @@ Entity235 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyTaxi|enemyPolice",
+				SpawnRate = "4",
 				IsLeft = "false",
 				Active = "false"
 			}
@@ -4909,8 +4909,8 @@ Entity236 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyTaxi|enemyPolice",
+				SpawnRate = "4",
 				IsLeft = "false",
 				Active = "false"
 			}
@@ -4932,8 +4932,8 @@ Entity237 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyPolice|enemyGreen",
+				SpawnRate = "4",
 				IsLeft = "false",
 				Active = "false"
 			}
@@ -4955,8 +4955,8 @@ Entity238 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyPolice|enemyRed|enemyGreen",
+				SpawnRate = "4",
 				IsLeft = "false",
 				Active = "false"
 			}
@@ -4979,7 +4979,7 @@ Entity239 = {
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				SpawnRate = "4",
 				IsLeft = "true",
 				Active = "false"
 			}
@@ -5001,8 +5001,8 @@ Entity240 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyTaxi|enemyGreen",
+				SpawnRate = "4",
 				IsLeft = "true",
 				Active = "false"
 			}
@@ -5024,8 +5024,8 @@ Entity241 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyTaxi|enemyRed",
+				SpawnRate = "4",
 				IsLeft = "true",
 				Active = "false"
 			}
@@ -5047,8 +5047,8 @@ Entity242 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyTaxi|enemyPolice",
+				SpawnRate = "2",
 				IsLeft = "true",
 				Active = "false"
 			}
@@ -5070,8 +5070,8 @@ Entity243 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyRed|enemyGreen",
+				SpawnRate = "1",
 				IsLeft = "true",
 				Active = "false"
 			}
@@ -5093,8 +5093,8 @@ Entity244 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyTaxi|enemyPolice",
+				SpawnRate = "3",
 				IsLeft = "true",
 				Active = "false"
 			}
@@ -5116,8 +5116,8 @@ Entity245 = {
 		{
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
-				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
-				SpawnRate = "5",
+				PrefabName = "enemyRed|enemyGreen",
+				SpawnRate = "1",
 				IsLeft = "true",
 				Active = "true"
 			}
