@@ -78,6 +78,22 @@ material DarkOptionsClicked.png{
         }
     }
 }
+material DarkTitle_CTP.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkTitle_CTP.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 material DarkOptionsOver.png{
     receive_shadows on
     technique {
@@ -168,6 +184,54 @@ material DarkPlayClicked.png{
                 diffuse vertexcolour
             	texture_unit {
                 texture DarkPlayClicked.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkPause.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkPause.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkPauseClicked.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkPauseClicked.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material DarkPauseOver.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture DarkPauseOver.png
                 tex_address_mode clamp
                 
             }
