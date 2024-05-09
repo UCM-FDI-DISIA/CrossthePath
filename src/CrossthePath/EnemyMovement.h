@@ -10,14 +10,14 @@ namespace eden_ec {
 	class CParticleEmitter;
 }
 namespace ctp{
-
+	/// @brief Clase encargada de darle sentido y velocidad a los coches en escena
 	class EnemyMovement : public eden_ec::Component
 	{
 	public:
 		/// @brief Constructora
 		EnemyMovement() {}
 
-		/// @brief Destructora
+		/// @brief Destructora por defecto
 		~EnemyMovement() = default;
 
 		static std::string GetID() { return _id; }
@@ -59,6 +59,7 @@ namespace ctp{
 		/// Debe ser siempre positivo
 		int _vel = 1;
 
+		/// @brief Referencia al emisor de particulas que simula el humo del coche
 		eden_ec::CParticleEmitter* _particle = nullptr;
 	};
 

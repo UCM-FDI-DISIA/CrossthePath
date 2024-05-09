@@ -7,7 +7,7 @@ namespace eden_ec {
 }
 
 namespace ctp{
-
+	/// @brief Clase encargada de gestionar que hacer si el jugador colisiona con un coche
 	class CharacterDie : public eden_ec::Component
 	{
 	public:
