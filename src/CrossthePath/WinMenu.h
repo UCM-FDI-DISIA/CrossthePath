@@ -1,4 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
 #ifndef WIN_MENU_H
 #define WIN_MENU_H
 

@@ -1,4 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
 #ifndef EASTER_EGGS_H
 #define EASTER_EGGS_H
 

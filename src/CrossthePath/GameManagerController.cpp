@@ -1,5 +1,4 @@
 #include "GameManagerController.h"
-#define _CRTDBG_MAP_ALLOC
 #include "GameManager.h"
 #include "SceneManager.h"
 #include "Entity.h"

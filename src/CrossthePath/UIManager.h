@@ -1,4 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
 #ifndef UI_MANAGER_H
 #define UI_MANAGER_H
 

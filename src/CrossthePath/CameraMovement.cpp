@@ -1,5 +1,4 @@
 #include "CameraMovement.h"
-#define _CRTDBG_MAP_ALLOC
 #include "Entity.h"
 #include "Transform.h"
 #include "GameManager.h"

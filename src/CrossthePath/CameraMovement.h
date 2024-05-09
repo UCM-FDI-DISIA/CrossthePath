@@ -1,4 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
 #ifndef CAMERA_MOVEMENT_H
 #define CAMERA_MOVEMENT_H
 

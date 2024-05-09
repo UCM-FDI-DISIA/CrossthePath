@@ -1,4 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
 #ifndef MENU_PAUSA_H
 #define MENU_PAUSA_H
 

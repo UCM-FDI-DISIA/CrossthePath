@@ -1,4 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
 #include "WinMenu.h"
 
 #include <ScriptManager.h>

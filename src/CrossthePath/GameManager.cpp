@@ -1,5 +1,4 @@
 #include "GameManager.h"
-#define _CRTDBG_MAP_ALLOC
 #include "Entity.h"
 #include "UIManager.h" 
 #include "SoundsController.h"

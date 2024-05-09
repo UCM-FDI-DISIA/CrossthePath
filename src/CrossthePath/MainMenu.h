@@ -1,4 +1,3 @@
-#define _CRTDBG_MAP_ALLOC
 #ifndef MAIN_MENU_H
 #define MAIN_MENU_H
 

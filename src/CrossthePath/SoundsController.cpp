@@ -1,5 +1,4 @@
 #include "SoundsController.h"
-#define _CRTDBG_MAP_ALLOC
 #include "Entity.h"
 #include "ComponentArguments.h"
 #include <AudioManager.h>

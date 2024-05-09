@@ -1,5 +1,4 @@
 #include "EasterEgg.h"
-#define _CRTDBG_MAP_ALLOC
 #include "Entity.h"
 #include "GameManager.h"
 #include <SceneManager.h>
