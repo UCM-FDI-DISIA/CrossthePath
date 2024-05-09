@@ -650,7 +650,7 @@ Entity29 = {
 }
 
 Entity30 = {
-	Name = "UI_Image",
+	Name = "title",
 	Components = {
 		{
 			Name = "IMAGE",
@@ -658,10 +658,10 @@ Entity30 = {
                 OverlayName= "image",
 				XPos = "50",
                 YPos = "15",
-                Width = "100",
-                Height = "50",
+                Width = "95",
+                Height = "25",
                 Texture = "CrossThePath_Title.png",
-                Depth = "1"
+                Depth = "2"
 			}
 		}
 	}	
