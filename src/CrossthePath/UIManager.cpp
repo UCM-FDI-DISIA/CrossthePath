@@ -12,9 +12,7 @@
 #include <SceneManager.h>
 
 const std::string ctp::UIManager::_id = "UI_MANAGER";
-void ctp::UIManager::Awake() {
 
-}
 
 void ctp::UIManager::Start() {
 	
@@ -27,7 +25,6 @@ void ctp::UIManager::Start() {
 
 ctp::UIManager::UIManager()
 {
-	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "Play", &ctp::UIManager::Pause, "Pause", this);
 	scriptM->SetGlobal(this, "Play");

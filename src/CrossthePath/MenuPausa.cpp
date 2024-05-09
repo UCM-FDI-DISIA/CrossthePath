@@ -9,9 +9,6 @@
 const std::string ctp::MenuPausa::_id = "MENU_PAUSA";
 
 ctp::MenuPausa::MenuPausa() {
-
-	
-	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "Pausa", &ctp::MenuPausa::Click, "MenuPausaClick", this);
 	scriptM->SetGlobal(this, "Pausa");

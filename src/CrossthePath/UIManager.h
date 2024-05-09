@@ -21,7 +21,7 @@ namespace ctp{
 		/// @brief Init
 		void Init(eden_script::ComponentArguments* args) {}
 		/// @brief Awake
-		void Awake() override;
+		void Awake() {}
 		/// @brief Start
 		void Start();
 		/// @brief Update

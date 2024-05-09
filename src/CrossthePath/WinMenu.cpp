@@ -15,9 +15,6 @@
 const std::string ctp::WinMenu::_id = "WIN_MENU";
 
 ctp::WinMenu::WinMenu() {
-
-
-	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "winMenu", &ctp::WinMenu::Click, "WinMenuClick", this);
 	scriptM->SetGlobal(this, "winMenu");

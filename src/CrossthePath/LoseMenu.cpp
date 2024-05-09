@@ -15,9 +15,6 @@
 const std::string ctp::LoseMenu::_id = "LOSE_MENU";
 
 ctp::LoseMenu::LoseMenu() {
-
-
-	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "loseMenu", &ctp::LoseMenu::Click, "LoseMenuClick", this);
 	scriptM->SetGlobal(this, "loseMenu");
