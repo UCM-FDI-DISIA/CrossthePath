@@ -3949,7 +3949,7 @@ Entity198 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "-0.36326301097869873|0.0|-28.17440414428711",
+				Position = "-0.36326301097869873|0.0|-27",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "6.838668346405029|1.0|1.9235742092132568"
 			}
@@ -3957,7 +3957,6 @@ Entity198 = {
 		{
 			Name = "LIMIT_LINE",
 			Arguments = {
-				_isPlayer = "true"
 			}
 		},
 		{
@@ -3998,7 +3997,6 @@ Entity199 = {
 		{
 			Name = "LIMIT_LINE",
 			Arguments = {
-				_isPlayer = "false"
 			}
 		},
 		{
@@ -4039,7 +4037,6 @@ Entity200 = {
 		{
 			Name = "LIMIT_LINE",
 			Arguments = {
-				_isPlayer = "false"
 			}
 		},
 		{
@@ -5251,8 +5248,85 @@ Entity248 = {
         }
 	}
 }
-
 Entity249 = {
+	Name = "UI_Cursor",
+	Components = {
+		{
+			Name = "IMAGE",
+			Arguments = {
+				OverlayName= "image",
+				XPos = "0",
+				YPos = "0",
+				Width = "3",
+				Height = "3",
+				Texture = "Cursor.png",
+				Depth = "10"
+			}
+		},
+		{
+			Name = "CURSOR",
+			Arguments = {
+			}
+		}
+	}		
+}
+
+Entity250 = {
+	Name = "UI_Manager",
+	Components = {
+		{
+			Name = "UI_MANAGER",
+			Arguments = {
+			}
+		}
+	}
+}
+
+Entity251 = {
+	Name = "UI_timer",
+	Components = {
+		{
+			Name = "TEXT",
+			Arguments = {
+                OverlayName= "textTest",
+				XPos = "90",
+                YPos = "5",
+                Tam = "5",
+                Text = "Timer: 0",
+                Font = "Buycat.ttf",
+                Color = "255|255|0",
+                Depth = "2"
+			}
+		}
+	}	
+}
+Entity252 = {
+	Name = "buttonPause",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "buttonPause",
+				XPos = "90",
+                YPos = "90",
+                Width = "10",
+                Height = "10",
+				Texture1 = "Pause_Button.png",
+                Texture2 = "PauseOver_Button.png",
+                Texture3 = "PauseClicked_Button.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "Game_Pause",
+			}
+        }
+	}
+}
+
+Entity253 = {
 	Name = "building_A.003",
 	Components = {
 		{
@@ -5272,7 +5346,7 @@ Entity249 = {
 	}
 }
 
-Entity250 = {
+Entity254 = {
 	Name = "building_H.003",
 	Components = {
 		{
@@ -5292,7 +5366,7 @@ Entity250 = {
 	}
 }
 
-Entity251 = {
+Entity255 = {
 	Name = "building_E.008",
 	Components = {
 		{
@@ -5312,7 +5386,7 @@ Entity251 = {
 	}
 }
 
-Entity252 = {
+Entity256 = {
 	Name = "building_B.002",
 	Components = {
 		{
@@ -5349,7 +5423,7 @@ Entity189, Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Ent
 Entity203, Entity204, Entity205, Entity206, Entity207, Entity208, Entity209, Entity210, Entity211, Entity212, Entity213, Entity214, Entity215, Entity216,
 Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, Entity224, Entity225, Entity226, Entity227, Entity228, Entity229, Entity230,
 Entity231, Entity232, Entity233, Entity234, Entity235, Entity236, Entity237, Entity238, Entity239, Entity240, Entity241, Entity242, Entity243, Entity244, 
-Entity245, Entity246, Entity247, Entity248, Entity249, Entity250, Entity251, Entity252}
+Entity245, Entity246, Entity247, Entity248, Entity249, Entity250, Entity251, Entity252,Entity253, Entity254, Entity255, Entity256 }
 
 CollisionLayers = {
 	Layers = {

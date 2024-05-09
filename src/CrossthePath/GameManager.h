@@ -53,7 +53,7 @@ namespace ctp{
 		void Begin();
 
 		inline int GetBestScore() { return _bestScore; }
-		inline void SetBestScore(int best) { if(best> _currScore) _currScore = best; }
+		inline void SetBestScore(int best) { if(best < _currScore) _currScore = best; }
 
 		inline int GetEasterEggs() { return _easterEggs; }
 		void AddEasterEgg(eden_ec::Entity* egg);

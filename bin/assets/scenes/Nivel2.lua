@@ -6120,7 +6120,7 @@ Entity295 = {
 		{
 			Name = "TRANSFORM",
 			Arguments = {
-				Position = "0.0|1.0|-29.0",
+				Position = "0.0|1.0|-30",
 				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
 				Scale = "2.0|0.30000001192092896|1.0"
 			}
@@ -6134,7 +6134,6 @@ Entity295 = {
         {
             Name = "LIMIT_LINE",
             Arguments = {
-                _isPlayer = "false"
             }
         },
 		{
@@ -6176,7 +6175,6 @@ Entity296 = {
         {
             Name = "LIMIT_LINE",
             Arguments = {
-                _isPlayer = "false"
             }
         },
 		{
@@ -6218,7 +6216,6 @@ Entity297 = {
         {
             Name = "LIMIT_LINE",
             Arguments = {
-                _isPlayer = "false"
             }
         },
 		{
