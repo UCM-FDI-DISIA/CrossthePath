@@ -26,6 +26,7 @@ ctp::GameManager::GameManager()
 
 ctp::GameManager::~GameManager()
 {
+	ClearInstanciator();
 	_enemies.clear();
 }
 
@@ -45,6 +46,7 @@ void ctp::GameManager::PlayerWin()
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("WinMenuScene");
+	ClearInstanciator();
 }
 
 void ctp::GameManager::GameOver()
@@ -53,6 +55,7 @@ void ctp::GameManager::GameOver()
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("LoseMenuScene");
+	ClearInstanciator();
 }
 
 void ctp::GameManager::Play()
@@ -66,6 +69,7 @@ void ctp::GameManager::Play()
 		scnManager->ChangeScene("Nivel1");
 	}
 	else scnManager->ChangeScene("Nivel2");
+	ClearInstanciator();
 }
 
 void ctp::GameManager::PauseGame()
@@ -93,6 +97,7 @@ void ctp::GameManager::GoOptions()
 	_states.push_back(_currState);
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->PushScene("Options");
+	ClearInstanciator();
 }
 
 void ctp::GameManager::GoMainMenu()
@@ -103,6 +108,7 @@ void ctp::GameManager::GoMainMenu()
 	_start = false;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->ChangeScene("MainMenu");
+	ClearInstanciator();
 }
 
 void ctp::GameManager::CloseGame()
@@ -177,6 +183,10 @@ void ctp::GameManager::SwitchInstanciator(std::vector<std::string> id) {
 		while (it != _instanciators.end() && !(id[i] == (*it)->GetEntityID())) ++it;
 		if(it != _instanciators.end()) (*it)->GetComponent<InstanciateEnemies>()->SetActive(true);
 	}
+}
+
+void ctp::GameManager::ClearInstanciator() {
+	_instanciators.clear();
 }
 
 void ctp::GameManager::AddInstanciator(eden_ec::Entity* inst) {

@@ -45,7 +45,7 @@ namespace ctp{
 
 		void SwitchInstanciator(std::vector<std::string> id);
 		void AddInstanciator(eden_ec::Entity* inst);
-
+		void ClearInstanciator();
 		void AddEnemy(eden_ec::Entity* ent);
 		void DestroyEnemy(eden_ec::Entity* ent);
 

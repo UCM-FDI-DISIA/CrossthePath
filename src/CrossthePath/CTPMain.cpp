@@ -42,7 +42,7 @@ void RegisterComponents() {
 
 void LoadScene() {
 
-	eden_render::RenderManager::getInstance()->SetWindowName("CrossThePath");
+	eden_render::RenderManager::getInstance()->SetWindowName("Cross The Path");
 	eden_render::RenderManager::getInstance()->SetWindowIcon("Icon.bmp");
 	eden::SceneManager::getInstance()->PushScene("MainMenu");
 }
