@@ -115,12 +115,12 @@ void ctp::MenuOpciones::ChangeResolutionText()
 
 void ctp::MenuOpciones::IncreaseVolumen()
 {
-	ChangeVolumen(0.05);
+	ChangeVolumen(0.05f);
 }
 
 void ctp::MenuOpciones::DecreaseVolumen()
 {
-	ChangeVolumen(-0.05);
+	ChangeVolumen(-0.05f);
 }
 
 void ctp::MenuOpciones::ChangeVolumen(float num)
@@ -137,7 +137,7 @@ void ctp::MenuOpciones::ChangeVolumenBar()
 	if (_vol != nullptr) {
 		float v = eden_audio::AudioManager::GetInstance()->GetGlobalVolume();
 		_vol->GetComponent<eden_ec::CBar>()->SetBarPercentage(v * 100);
-		int aux = _vol->GetComponent<eden_ec::CBar>()->GetBarPercentage();
+		int aux = (int)_vol->GetComponent<eden_ec::CBar>()->GetBarPercentage();
 		if (aux <= 33) {
 			_vol->GetComponent<eden_ec::CBar>()->SetMaterial("Volume_BarLow.png");
 		}

@@ -28,12 +28,12 @@ void ctp::WinMenu::Start()
 {
 	_mainMenu = eden::SceneManager::getInstance()->FindEntity("buttonMenu")->GetComponent<eden_ec::CButton>();
 	_startIniPos = _mainMenu->GetPosition();
-	_mainMenu->SetPosition(_startNewPos, _startIniPos.second);
+	_mainMenu->SetPosition((float)_startNewPos, _startIniPos.second);
 
 	_exit = eden::SceneManager::getInstance()->FindEntity("buttonExit")->GetComponent<eden_ec::CButton>();
 	_exitIniPos = _exit->GetPosition();
 	_exitNewPos = eden_render::RenderManager::getInstance()->GetResolution().first;
-	_exit->SetPosition(_exitNewPos, _exitIniPos.second);
+	_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 
 	_transform = _ent->GetComponent<eden_ec::CTransform>();
 
@@ -72,11 +72,11 @@ void ctp::WinMenu::Update(float t)
 
 	if (_startNewPos <= _startIniPos.first - 3) {
 		_startNewPos = _startNewPos + 3;
-		_mainMenu->SetPosition(_startNewPos, _startIniPos.second);
+		_mainMenu->SetPosition((float)_startNewPos, _startIniPos.second);
 	}
 	if (_exitNewPos >= _exitIniPos.first + 4) {
 		_exitNewPos = _exitNewPos - 4;
-		_exit->SetPosition(_exitNewPos, _exitIniPos.second);
+		_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 	}
 }
 

@@ -34,10 +34,10 @@ namespace ctp {
 	protected:
 		const static std::string _id;
 	private:
-		eden_ec::CTransform* _transform;
-		eden_ec::CTransform* _playerTransform;
-		eden_utils::Quaternion* _initialRotation;
-		eden_ec::CAudioEmitter* _audioEmitter;
+		eden_ec::CTransform* _transform = nullptr;
+		eden_ec::CTransform* _playerTransform = nullptr;
+		eden_utils::Quaternion* _initialRotation = nullptr;
+		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 
 
 		/// @brief velocidad de la cámara

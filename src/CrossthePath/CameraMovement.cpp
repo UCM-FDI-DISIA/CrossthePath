@@ -19,7 +19,7 @@ void ctp::CameraMovement::Start() {
 	_playerTransform = eden::SceneManager::getInstance()->FindEntity("Player_0")->GetComponent<eden_ec::CTransform>();
 	_initialRotation = new eden_utils::Quaternion(_transform->GetRotation());
 	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
-	else eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
+	else eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176f, 0.8196f, 0.9647f, 1.0f);
 	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);
@@ -35,7 +35,7 @@ void ctp::CameraMovement::Update(float dt)
 	//Seteamos el vector de movimiento
 	eden_utils::Vector3 toFinalPos = _transform->GetPosition() + (dir * dt * _speed);
 
-	//Actualizamos la posición
+	//Actualizamos la posiciï¿½n
 	_transform->SetPosition(eden_utils::Vector3(_transform->GetPosition().GetX(), _transform->GetPosition().GetY(), toFinalPos.GetZ()));
 }
 

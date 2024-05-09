@@ -44,7 +44,7 @@ namespace ctp {
 		/// @brief Nombre del prefab del enemigo en Lua
 		std::vector<std::string> _prefabName;
 		/// @brief Posicion en la que deben aparecer los enemigos
-		eden_utils::Vector3 _pos;
+		eden_utils::Vector3 _pos = {0.0f, 0.0f, 0.0f};
 		/// @brief Tiempo que debe pasar para que se instancie cada enemigo
 		float _spawnRate = 0.0f;
 		/// @brief Timer auxiliar de la clase

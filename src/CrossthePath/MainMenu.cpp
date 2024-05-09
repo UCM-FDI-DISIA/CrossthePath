@@ -33,16 +33,16 @@ void ctp::MainMenu::Start()
 {
 	_start = eden::SceneManager::getInstance()->FindEntity("buttonPlay")->GetComponent<eden_ec::CButton>();
 	_startIniPos = _start->GetPosition();
-	_start->SetPosition(_startNewPos, _startIniPos.second);
+	_start->SetPosition((float)_startNewPos, _startIniPos.second);
 
 	_exit = eden::SceneManager::getInstance()->FindEntity("buttonExit")->GetComponent<eden_ec::CButton>();
 	_exitIniPos = _exit->GetPosition();
 	_exitNewPos = eden_render::RenderManager::getInstance()->GetResolution().first;
-	_exit->SetPosition(_exitNewPos, _exitIniPos.second);
+	_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 
 	_options = eden::SceneManager::getInstance()->FindEntity("buttonOptions")->GetComponent<eden_ec::CButton>();
 	_optionsIniPos = _options->GetPosition();
-	_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
+	_options->SetPosition((float)_optionsNewPos, _optionsIniPos.second);
 
 	_transform = _ent->GetComponent<eden_ec::CTransform>();
 
@@ -89,15 +89,15 @@ void ctp::MainMenu::Update(float t)
 	if (!_endTransition) {
 		if (_startNewPos <= _startIniPos.first - 3) {
 			_startNewPos = _startNewPos + 3;
-			_start->SetPosition(_startNewPos, _startIniPos.second);
+			_start->SetPosition((float)_startNewPos, _startIniPos.second);
 		}
 		if (_exitNewPos >= _exitIniPos.first + 4) {
 			_exitNewPos = _exitNewPos - 4;
-			_exit->SetPosition(_exitNewPos, _exitIniPos.second);
+			_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 		}
 		if (_optionsNewPos <= _optionsIniPos.first - 5) {
 			_optionsNewPos = _optionsNewPos + 5;
-			_options->SetPosition(_optionsNewPos, _optionsIniPos.second);
+			_options->SetPosition((float)_optionsNewPos, _optionsIniPos.second);
 		}
 		else if (!eden_input::InputManager::getInstance()->IsActive())
 		{
@@ -207,5 +207,5 @@ void ctp::MainMenu::SetDayMode()
 
 	eden::SceneManager::getInstance()->FindEntity("level")->GetComponent<eden_ec::CButton>()->ChangeTextures("Moon.png", "Moon2.png", "Moon2.png");
 
-	eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
+	eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176f, 0.8196f, 0.9647f, 1.0f);
 }

@@ -68,10 +68,10 @@ namespace ctp {
 	private:
 
 		/// @brief Referencias a componentes necesarios
-		eden_ec::CAudioEmitter* _audioEmitter;
-		eden_input::InputManager* _inputManager;
-		eden_ec::CTransform* _transform;
-		eden_ec::CAnimator* _animator;
+		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
+		eden_input::InputManager* _inputManager = nullptr;
+		eden_ec::CTransform* _transform = nullptr;
+		eden_ec::CAnimator* _animator = nullptr;
 
 		/// @brief Rotacion inicial del jugador, rotacion de incio de partida
 		eden_utils::Quaternion _initialRotation;

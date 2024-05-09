@@ -1,5 +1,4 @@
 #include "CharacterMovement.h"
-#define _CRTDBG_MAP_ALLOC
 #include "Entity.h"
 #include "CAudioEmitter.h"
 #include "InputManager.h"
@@ -64,7 +63,7 @@ void ctp::CharacterMovement::MoveCharacter(float dt) {
 		StartMoving();
 	}
 
-	//Hace una rotacion inicial para ponerle mirando hacia delante y luego se hará una 
+	//Hace una rotacion inicial para ponerle mirando hacia delante y luego se harï¿½ una 
 	//segunda roatcion para mirar a la direccion correcta
 	_transform->SetRotation(_initialRotation);
 	_currentAction = MOVING;
@@ -74,24 +73,24 @@ void ctp::CharacterMovement::MoveCharacter(float dt) {
 		*/
 	case DOWN:
 	{
-		_transform->Translate(eden_utils::Vector3(0, 0, -0.1).Normalized()* _speed * dt);
+		_transform->Translate(eden_utils::Vector3(0.0f, 0.0f, -0.1f).Normalized()* _speed * dt);
 		_transform->Yaw(180);
 	}
 	break;
 	case LEFT:
 	{
-		_transform->Translate(eden_utils::Vector3(0.1,0, 0).Normalized()* _speed * dt);
+		_transform->Translate(eden_utils::Vector3(0.1f,0.0f, 0.0f).Normalized()* _speed * dt);
 		_transform->Yaw(90);
 	}
 	break;
 	case RIGHT:
 	{
-		_transform->Translate(eden_utils::Vector3(-0.1,0, 0).Normalized()* _speed * dt);
+		_transform->Translate(eden_utils::Vector3(-0.1f,0.0f, 0.0f).Normalized()* _speed * dt);
 		_transform->Yaw(-90);
 	}
 	break;
 	case UP:
-		_transform->Translate(eden_utils::Vector3(0, 0, 0.1).Normalized()* _speed * dt);
+		_transform->Translate(eden_utils::Vector3(0.0f, 0.0f, 0.1f).Normalized()* _speed * dt);
 	}
 
 }
