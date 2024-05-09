@@ -5252,6 +5252,85 @@ Entity248 = {
 	}
 }
 
+Entity249 = {
+	Name = "building_A.003",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "building_A"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-7.0|0.0|-24.0",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity250 = {
+	Name = "building_H.003",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "building_H"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-7.0|0.0|-16.0",
+				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity251 = {
+	Name = "building_E.008",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "building_E"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-7.0|0.0|-10.0",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
+
+Entity252 = {
+	Name = "building_B.002",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "building_B"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "-7.0|0.0|-4.0",
+				Rotation = "false|0.7071067690849304|-0.7071067690849304|0.0|-0.0",
+				Scale = "1.0|1.0|1.0"
+			}
+		}
+	}
+}
 
 Entities = { EntityPlayer, EntityCamera, Entity1, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14,
 Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29,
@@ -5270,7 +5349,7 @@ Entity189, Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Ent
 Entity203, Entity204, Entity205, Entity206, Entity207, Entity208, Entity209, Entity210, Entity211, Entity212, Entity213, Entity214, Entity215, Entity216,
 Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, Entity224, Entity225, Entity226, Entity227, Entity228, Entity229, Entity230,
 Entity231, Entity232, Entity233, Entity234, Entity235, Entity236, Entity237, Entity238, Entity239, Entity240, Entity241, Entity242, Entity243, Entity244, 
-Entity245, Entity246, Entity247, Entity248 }
+Entity245, Entity246, Entity247, Entity248, Entity249, Entity250, Entity251, Entity252}
 
 CollisionLayers = {
 	Layers = {
