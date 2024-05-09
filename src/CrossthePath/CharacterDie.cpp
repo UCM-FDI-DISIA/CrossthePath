@@ -1,6 +1,5 @@
 #include "CharacterDie.h"
 #include "GameManager.h"
-#include "CRigidBody.h"
 #include "Entity.h"
 #include "ScriptManager.h"
 #include "LuaManager.h"
@@ -17,20 +16,6 @@ ctp::CharacterDie::CharacterDie()
 	scriptM->SetGlobal(this, "CharacterDie");
 
 	scriptM = nullptr;
-}
-
-void ctp::CharacterDie::Init(eden_script::ComponentArguments* args)
-{
-
-}
-
-void ctp::CharacterDie::Start()
-{
-}
-
-void ctp::CharacterDie::Update(float t)
-{
-	
 }
 
 void ctp::CharacterDie::RunOver()

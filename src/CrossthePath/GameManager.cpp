@@ -60,6 +60,7 @@ void ctp::GameManager::Play()
 	if(_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Game;
 	_start = false;
+	_currScore = _timer;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	if (_level == 0) {

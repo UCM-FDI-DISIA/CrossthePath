@@ -17,24 +17,22 @@ namespace ctp{
 		static std::string GetID() { return _id; }
 
 		/// @brief Recoge los componentes del .lua
-		void Init(eden_script::ComponentArguments* args) override;
+		void Init(eden_script::ComponentArguments* args) {}
 
 		void Awake() override {};
 
 		/// @brief Hace referencia al Transform
-		void Start() override;
+		void Start() {}
 
 		/// @brief Actualiza el movimiento de los coches segun su direccion y velocidad
 		/// @param t deltaTime
-		void Update(float t) override;
+		void Update(float t) {}
 
 		/// @brief Comprueba si la colision se realiza o no con el coche
 		void RunOver();
 
 	protected:
 		const static std::string _id;
-
-	private:
 	};
 
 }

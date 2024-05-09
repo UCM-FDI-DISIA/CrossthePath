@@ -19,7 +19,7 @@ void ctp::CameraMovement::Start() {
 	_initialRotation = new eden_utils::Quaternion(_transform->GetRotation());
 	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
 	else eden::SceneManager::getInstance()->FindEntity("Camera_0")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176f, 0.8196f, 0.9647f, 1.0f);
-	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
+	eden_ec::CAudioEmitter* _audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);
 }

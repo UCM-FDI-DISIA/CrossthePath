@@ -42,8 +42,11 @@ void RegisterComponents() {
 
 void LoadScene() {
 
+	//Ponemos el nombre del juego en la ventana
 	eden_render::RenderManager::getInstance()->SetWindowName("Cross The Path");
+	//Ponemos el logo del juego en la ventana
 	eden_render::RenderManager::getInstance()->SetWindowIcon("Icon.bmp");
+	//Cargamos el MainMenu
 	eden::SceneManager::getInstance()->PushScene("MainMenu");
 }
 
