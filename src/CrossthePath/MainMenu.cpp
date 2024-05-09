@@ -12,7 +12,7 @@
 #include "CAnimator.h"
 #include <InputManager.h> 
 #include "CText.h"
-#include "CIMage.h"
+#include "CImage.h"
 #include "SoundsController.h"
 #include "CCamera.h"
 

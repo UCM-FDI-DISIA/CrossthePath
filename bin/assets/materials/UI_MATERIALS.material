@@ -14,6 +14,54 @@ material Cursor.png {
         }
     }
 }
+material BackClicked_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture BackClicked_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material BackOver_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture BackOver_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
+material Back_Button.png{
+    receive_shadows on
+    technique {
+        pass {
+                lighting off
+                scene_blend alpha_blend
+                depth_write off
+                diffuse vertexcolour
+            	texture_unit {
+                texture Back_Button.png
+                tex_address_mode clamp
+                
+            }
+        }
+    }
+}
 material DarkOptionsClicked.png{
     receive_shadows on
     technique {

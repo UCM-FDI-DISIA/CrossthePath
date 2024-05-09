@@ -69,9 +69,9 @@ Entity4 = {
                 YPos = "45",
                 Width = "25",
                 Height = "10",
-                Texture1 = "Resume_Button.png",
-                Texture2 = "ResumeOver_Button.png",
-                Texture3 = "ResumeClicked_Button.png",
+                Texture1 = "Back_Button.png",
+                Texture2 = "BackOver_Button.png",
+                Texture3 = "BackClicked_Button.png",
                 Depth = "2"
 			}
 		},
