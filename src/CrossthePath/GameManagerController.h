@@ -30,9 +30,9 @@ namespace ctp{
 	protected:
 		const static std::string _id;
 	private:
-		/// @brief Referencia al GameManget
-		ctp::GameManager* _gameManager;
-		/// @brief Flag de si es el GameManager original para borrarlo al terminar la ejecución
+		/// @brief Referencia al GameManager
+		ctp::GameManager* _gameManager = nullptr;
+		/// @brief Flag de si es el GameManager original para borrarlo al terminar la ejecucion
 		bool original = false;
 	};
 }

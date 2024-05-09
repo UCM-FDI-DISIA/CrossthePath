@@ -33,7 +33,7 @@ void ctp::WinMenu::Start()
 	_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 
 	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("Camera1")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
-	else eden::SceneManager::getInstance()->FindEntity("Camera1")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176, 0.8196, 0.9647, 1);
+	else eden::SceneManager::getInstance()->FindEntity("Camera1")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor((float)0.3176, (float)0.8196, (float)0.9647, (float)1);
 
 	_playerAnimator = eden::SceneManager::getInstance()->FindEntity("Player1")->GetComponent<eden_ec::CAnimator>();
 	_playerAnimator->PlayAnim("JumpIdle");

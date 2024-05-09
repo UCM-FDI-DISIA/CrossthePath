@@ -56,7 +56,7 @@ namespace ctp {
 		coche->GetComponent<EnemyMovement>()->SetMov();
 		_motorSound = coche->GetComponent<eden_ec::CAudioEmitter>();
 		ctp::GameManager::Instance()->AddEnemy(coche);
-		_motorSound->SetVolume(0.8);
+		_motorSound->SetVolume((float)0.8);
 		_motorSound->Play();
 		_motorSound->SetLoop(true);
 	}

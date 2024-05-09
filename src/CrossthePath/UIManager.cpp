@@ -19,8 +19,8 @@ void ctp::UIManager::Start() {
 	for (int i = 0; i < _elementsID.size(); i++) {
 		_elements.push_back(eden::SceneManager::getInstance()->FindEntity(_elementsID[i]));
 	}
-	_timer = ctp::GameManager::Instance()->GetTimer();
-	SetTimerText(_timer);
+	_timer = (int)ctp::GameManager::Instance()->GetTimer();
+	SetTimerText((int)_timer);
 }
 
 ctp::UIManager::UIManager()
@@ -39,10 +39,10 @@ void ctp::UIManager::Pause()
 void ctp::UIManager::Timer(float tm)
 {
 	_timer = _timer - tm;
-	SetTimerText(_timer);
+	SetTimerText((int)_timer);
 
 	if(_timer<=0)ctp::GameManager::Instance()->GameOver();
-	else ctp::GameManager::Instance()->SetBestScore(ctp::GameManager::Instance()->GetTimer()-round(_timer));
+	else ctp::GameManager::Instance()->SetBestScore(ctp::GameManager::Instance()->GetTimer()-round((int)_timer));
 }
 
 void ctp::UIManager::SetTimerText(int timer)
