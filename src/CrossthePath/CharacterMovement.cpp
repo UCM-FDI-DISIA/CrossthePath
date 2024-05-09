@@ -119,9 +119,20 @@ void ctp::CharacterMovement::Update(float dt) {
 
 	if (_inputVector.size() == 0) {
 		_currentAction = IDLE;
+		if (!_audioEmitter->IsPaused())
+		{
+			_audioEmitter->Pause();
+			_stepSound = false;
+		}
 	}
 	else {
 		MoveCharacter(dt);
+		if (!_stepSound)
+		{
+			_audioEmitter->Play();
+			_audioEmitter->SetLoop(true);
+			_stepSound = true;
+		}
 	}
 
 

@@ -78,6 +78,9 @@ namespace ctp {
 		/// @brief Booleano que avisa si el jugador se ha movido por primera vez
 		bool _firstMove = true;
 
+		/// @brief Booleano que avisa si suenan los pasos
+		bool _stepSound = false;
+
 		/// @brief  Animacion actual del jugador
 		MovementAnimations _currentAction = MovementAnimations::IDLE;
 

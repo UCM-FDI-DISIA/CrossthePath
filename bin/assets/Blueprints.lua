@@ -76,7 +76,14 @@ Player = {
             Arguments = {
                 Script = "characterDie"
             }
-        }
+        },
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "footstep.wav",
+				Is3D = "false"
+			}
+		}
 	}
 }
 
