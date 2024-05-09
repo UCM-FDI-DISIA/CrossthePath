@@ -9,4 +9,4 @@ for %%i in (".\EDEN\bin\*") do (
 )
 
 msbuild "CrossthePath.sln" /p:configuration=Debug /p:Platform=x64
-msbuild "CrossthePath.sln" /p:configuration=Release /p:Platform x64
+msbuild "CrossthePath.sln" /p:configuration=Release /p:Platform=x64
