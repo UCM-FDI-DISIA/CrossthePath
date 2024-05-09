@@ -4822,7 +4822,8 @@ Entity232 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "true"
 			}
 		}
 	}
@@ -4844,7 +4845,8 @@ Entity233 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -4866,7 +4868,8 @@ Entity234 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -4888,7 +4891,8 @@ Entity235 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -4910,7 +4914,8 @@ Entity236 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -4932,7 +4937,8 @@ Entity237 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -4954,7 +4960,8 @@ Entity238 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "false"
+				IsLeft = "false",
+				Active = "false"
 			}
 		}
 	}
@@ -4976,7 +4983,8 @@ Entity239 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -4998,7 +5006,8 @@ Entity240 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5020,7 +5029,8 @@ Entity241 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5042,7 +5052,8 @@ Entity242 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5064,7 +5075,8 @@ Entity243 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5086,7 +5098,8 @@ Entity244 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "false"
 			}
 		}
 	}
@@ -5108,11 +5121,137 @@ Entity245 = {
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice|enemyRed|enemyGreen",
 				SpawnRate = "5",
-				IsLeft = "true"
+				IsLeft = "true",
+				Active = "true"
 			}
 		}
 	}
 }
+
+
+Entity246 = {
+	Name = "EnemieController",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-5.174973011016846",
+				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
+				Scale = "2.0|0.15000000596046448|1.0"
+			}
+		},
+		{
+			Name = "ENEMY_ACTIVATOR",
+			Arguments = {
+				ActiveInstanciator = "Instanciator.001|Instanciator.016|Instanciator.017|Instanciator|"
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "4.0",
+				Shape = "BOX",
+				Trigger = "true"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "enemyActivator"
+            }
+        }
+	}
+}
+
+Entity247 = {
+	Name = "EnemieController.001",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-10.092663764953613",
+				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
+				Scale = "2.0|0.15000000596046448|1.0"
+			}
+		},
+		{
+			Name = "ENEMY_ACTIVATOR",
+			Arguments = {
+				ActiveInstanciator = "Instanciator.007|Instanciator.010|Instanciator.002|Instanciator.015|Instanciator.001|Instanciator.016|"
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "4.0",
+				Shape = "BOX",
+				Trigger = "true"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "enemyActivator"
+            }
+        }
+	}
+}
+
+Entity248 = {
+	Name = "EnemieController.002",
+	Components = {
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0.0|0.0|-16.137800216674805",
+				Rotation = "false|0.7071067094802856|-0.7071068286895752|0.0|-0.0",
+				Scale = "2.0|0.15000000596046448|1.0"
+			}
+		},
+		{
+			Name = "ENEMY_ACTIVATOR",
+			Arguments = {
+				ActiveInstanciator = "Instanciator.014|Instanciator.003|Instanciator.004|Instanciator.005|Instanciator.012|Instanciator.013|Instanciator.007|Instanciator.002|Instanciator.010|Instanciator.015|"
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				AABB = "2.0|2.0|2.0",
+				Bounciness = "0",
+				CollisionFlag = "STATIC",
+				CollisionLayer = "DEFAULT",
+				Friction = "1",
+				Mass = "1.0",
+				PosOffset = "0|0|0",
+				Radius = "4.0",
+				Shape = "BOX",
+				Trigger = "true"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "enemyActivator"
+            }
+        }
+	}
+}
+
 
 Entities = { EntityPlayer, EntityCamera, Entity1, Entity3, Entity4, Entity5, Entity6, Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, Entity14,
 Entity15, Entity16, Entity17, Entity18, Entity19, Entity20, Entity21, Entity22, Entity23, Entity24, Entity25, Entity26, Entity27, Entity28, Entity29,
@@ -5130,7 +5269,8 @@ Entity175, Entity176, Entity177, Entity178, Entity179, Entity180, Entity181, Ent
 Entity189, Entity190, Entity191, Entity192, Entity193, Entity194, Entity195, Entity196, Entity197, Entity198, Entity199, Entity200, Entity201, Entity202,
 Entity203, Entity204, Entity205, Entity206, Entity207, Entity208, Entity209, Entity210, Entity211, Entity212, Entity213, Entity214, Entity215, Entity216,
 Entity217, Entity218, Entity219, Entity220, Entity221, Entity222, Entity223, Entity224, Entity225, Entity226, Entity227, Entity228, Entity229, Entity230,
-Entity231, Entity232, Entity233, Entity234, Entity235, Entity236, Entity237, Entity238, Entity239, Entity240, Entity241, Entity242, Entity243, Entity244, Entity245 }
+Entity231, Entity232, Entity233, Entity234, Entity235, Entity236, Entity237, Entity238, Entity239, Entity240, Entity241, Entity242, Entity243, Entity244, 
+Entity245, Entity246, Entity247, Entity248 }
 
 CollisionLayers = {
 	Layers = {
