@@ -64,7 +64,7 @@ namespace ctp{
 		/// @brief Devuelve la mejor puntuación actual
 		inline int GetBestScore() { return _bestScore; }
 		/// @brief Setea la mejor puntiación de la partida actual
-		inline void SetBestScore(int best) { if(best > _currScore) _currScore = best; }
+		inline void SetBestScore(float best) { _currScore = best; }
 		/// @brief Devuelve el número de EasterEggs encontrados
 		inline int GetEasterEggs() { return _easterEggs; }
 		/// @brief Suma el contador de EasterEggs y lo activa como recogido
@@ -80,7 +80,7 @@ namespace ctp{
 		/// @brief Cambia el nivel actual
 		inline void ChangeLevel() { _level= (_level+1)%2; }
 		/// @brief Devuelve el timer para los juegos
-		inline int GetTimer() { return _timer; }
+		inline float GetTimer() { return _timer; }
 	private:
 
 		/// @brief Estados del juego
@@ -94,7 +94,7 @@ namespace ctp{
 		States _currState;
 
 		/// @brief Timer de los juegos
-		int _timer = 60;
+		float _timer = 60;
 		/// @brief Nivel seleccionado
 		int _level = 0;
 		/// @brief Referencia al UIManager
@@ -108,9 +108,9 @@ namespace ctp{
 		/// @brief Contador de EasterEggs
 		int _easterEggs = 0;
 		/// @brief Mejor puntuacion del juego
-		int _bestScore = 0;
+		float _bestScore = 0;
 		/// @brief Mejor puntuacion del nivel actual 
-		int _currScore = _timer;
+		float _currScore = _timer;
 
 		// Mapa de enemigos del juego
 		std::list<eden_ec::Entity*> _enemies;

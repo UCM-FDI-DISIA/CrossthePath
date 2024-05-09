@@ -38,7 +38,8 @@ void ctp::GameManager::Update(float dt) {
 
 void ctp::GameManager::PlayerWin()
 {
-	_bestScore = _currScore;
+	if(_currScore > _bestScore)
+		_bestScore = _currScore;
 	_currState = Win;
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
@@ -95,7 +96,6 @@ void ctp::GameManager::GoOptions()
 	_states.push_back(_currState);
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	scnManager->PushScene("Options");
-	ClearInstanciator();
 }
 
 void ctp::GameManager::GoMainMenu()
