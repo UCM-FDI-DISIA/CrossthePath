@@ -17,8 +17,6 @@
 const std::string ctp::MenuOpciones::_id = "OPCIONES";
 
 ctp::MenuOpciones::MenuOpciones() {
-
-	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 
 	scriptM->Regist(*this, "Opciones", &ctp::MenuOpciones::ClickButton, "MenuOptionsClick", this);

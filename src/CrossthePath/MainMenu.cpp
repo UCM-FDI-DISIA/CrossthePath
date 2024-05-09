@@ -19,9 +19,6 @@
 const std::string ctp::MainMenu::_id = "MAIN_MENU";
 
 ctp::MainMenu::MainMenu() {
-
-
-	////PRUEBA BOTON
 	eden_script::LuaManager* scriptM = eden_script::ScriptManager::getInstance()->GetLuaManager();
 	scriptM->Regist(*this, "mainMenu", &ctp::MainMenu::Click, "MainMenuClick", this);
 	scriptM->SetGlobal(this, "mainMenu");
@@ -62,7 +59,7 @@ void ctp::MainMenu::Start()
 
 	if (_gameManager->GetLevel() == 1)SetDarkMode();
 	else SetDayMode();
-	//eden_input::InputManager::getInstance()->SetActive(false);
+	eden_input::InputManager::getInstance()->SetActive(false);
 }
 
 void ctp::MainMenu::Update(float t)
