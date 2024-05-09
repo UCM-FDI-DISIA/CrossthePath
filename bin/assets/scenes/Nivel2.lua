@@ -5806,7 +5806,7 @@ Entity281 = {
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice",
-				SpawnRate = "5",
+				SpawnRate = "3",
 				IsLeft = "false",
 				Active = "false"
 			}
@@ -5944,7 +5944,7 @@ Entity287 = {
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice",
-				SpawnRate = "4",
+				SpawnRate = "3",
 				IsLeft = "true",
 				Active = "false"
 			}
@@ -5990,7 +5990,7 @@ Entity289 = {
 			Name = "INSTANCIATE_ENEMIES",
 			Arguments = {
 				PrefabName = "enemyTaxi|enemyPolice",
-				SpawnRate = "5",
+				SpawnRate = "4",
 				IsLeft = "true",
 				Active = "false"
 			}
