@@ -62,7 +62,7 @@ namespace ctp{
 		void Begin();
 
 		/// @brief Devuelve la mejor puntuación actual
-		inline int GetBestScore() { return _bestScore; }
+		inline int GetBestScore() { return (int)_bestScore; }
 		/// @brief Setea la mejor puntiación de la partida actual
 		inline void SetBestScore(float best) { _currScore = best; }
 		/// @brief Devuelve el número de EasterEggs encontrados

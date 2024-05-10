@@ -36,5 +36,5 @@ void ctp::EnemyMovement::SetMov()
 	//Eje X negativo hacia la derecha
 	else _movDir = { -1,0,0 };
 
-	_movDir *= _vel;
+	_movDir *= (float)_vel;
 }
