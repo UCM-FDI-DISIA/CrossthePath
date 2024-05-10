@@ -5,6 +5,8 @@
 #include "GameManager.h"
 #include "Entity.h"
 #include <CAudioEmitter.h>
+#include <SceneManager.h>
+#include "CCamera.h"
 
 const std::string ctp::MenuPausa::_id = "MENU_PAUSA";
 
@@ -20,6 +22,8 @@ void ctp::MenuPausa::Start()
 	_audioEmitter = _ent->GetComponent<eden_ec::CAudioEmitter>();
 	_audioEmitter->Play();
 	_audioEmitter->SetLoop(true);
+	if (ctp::GameManager::Instance()->GetLevel() == 1) eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0, 0, 0, 0);
+	else eden::SceneManager::getInstance()->FindEntity("CameraMenu")->GetComponent<eden_ec::CCamera>()->SetBackgroundColor(0.3176f, 0.8196f, 0.9647f, 1.0f);
 }
 
 void ctp::MenuPausa::ResumeGame()
