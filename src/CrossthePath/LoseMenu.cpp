@@ -69,11 +69,11 @@ void ctp::LoseMenu::Update(float t)
 	}
 
 	if (_startNewPos <= _startIniPos.first - 3) {
-		_startNewPos = _startNewPos + 30*t;
+		_startNewPos = _startNewPos + 300*t;
 		_mainMenu->SetPosition((float)_startNewPos, _startIniPos.second);
 	}
 	if (_exitNewPos >= _exitIniPos.first + 4) {
-		_exitNewPos = _exitNewPos - 40*t;
+		_exitNewPos = _exitNewPos - 400*t;
 		_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 	}
 }

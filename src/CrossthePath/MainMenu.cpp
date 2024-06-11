@@ -59,7 +59,6 @@ void ctp::MainMenu::Start()
 
 	if (_gameManager->GetLevel() == 1)SetDarkMode();
 	else SetDayMode();
-	eden_input::InputManager::getInstance()->SetActive(false);
 }
 
 void ctp::MainMenu::Update(float t)
@@ -84,20 +83,19 @@ void ctp::MainMenu::Update(float t)
 
 	if (!_endTransition) {
 		if (_startNewPos <= _startIniPos.first - 3) {
-			_startNewPos = _startNewPos + 30 *t;
+			_startNewPos = _startNewPos + 300 *t;
 			_start->SetPosition((float)_startNewPos, _startIniPos.second);
 		}
 		if (_exitNewPos >= _exitIniPos.first + 4) {
-			_exitNewPos = _exitNewPos - 40*t;
+			_exitNewPos = _exitNewPos - 400*t;
 			_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 		}
 		if (_optionsNewPos <= _optionsIniPos.first - 5) {
-			_optionsNewPos = _optionsNewPos + 50*t;
+			_optionsNewPos = _optionsNewPos + 500*t;
 			_options->SetPosition((float)_optionsNewPos, _optionsIniPos.second);
 		}
-		else if (!eden_input::InputManager::getInstance()->IsActive())
+		else 
 		{
-			eden_input::InputManager::getInstance()->SetActive(true);
 			_endTransition = true;
 			_start->SetPosition(_startIniPos.first, _startIniPos.second);
 			_exit->SetPosition(_exitIniPos.first, _exitIniPos.second);
