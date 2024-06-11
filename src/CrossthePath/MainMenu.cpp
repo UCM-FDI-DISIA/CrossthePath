@@ -84,15 +84,15 @@ void ctp::MainMenu::Update(float t)
 
 	if (!_endTransition) {
 		if (_startNewPos <= _startIniPos.first - 3) {
-			_startNewPos = _startNewPos + 3;
+			_startNewPos = _startNewPos + 30 *t;
 			_start->SetPosition((float)_startNewPos, _startIniPos.second);
 		}
 		if (_exitNewPos >= _exitIniPos.first + 4) {
-			_exitNewPos = _exitNewPos - 4;
+			_exitNewPos = _exitNewPos - 40*t;
 			_exit->SetPosition((float)_exitNewPos, _exitIniPos.second);
 		}
 		if (_optionsNewPos <= _optionsIniPos.first - 5) {
-			_optionsNewPos = _optionsNewPos + 5;
+			_optionsNewPos = _optionsNewPos + 50*t;
 			_options->SetPosition((float)_optionsNewPos, _optionsIniPos.second);
 		}
 		else if (!eden_input::InputManager::getInstance()->IsActive())

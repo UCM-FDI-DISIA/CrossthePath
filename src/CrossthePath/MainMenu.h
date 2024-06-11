@@ -65,11 +65,11 @@ namespace ctp{
 		int iteration = 0;
 		
 		/// @brief Nueva posicion del boton de play
-		int _startNewPos=-1;
+		float _startNewPos=-1;
 		/// @brief Nueva posicion del boton de exit
-		int _exitNewPos = -1;
+		float _exitNewPos = -1;
 		/// @brief Nueva posicion del boton de opciones
-		int _optionsNewPos = -1;
+		float _optionsNewPos = -1;
 		/// @brief Timer
 		float timer = 5.0f;
 		/// @brief Tiempo actual

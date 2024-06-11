@@ -44,9 +44,9 @@ namespace ctp{
 		eden_ec::CAudioEmitter* _audioEmitter = nullptr;
 
 		/// @brief Nueva posision del boton del menu principal
-		int _startNewPos = -1;
+		float _startNewPos = -1;
 		/// @brief Nueva posicion del boton de exit
-		int _exitNewPos = -1;
+		float _exitNewPos = -1;
 		/// @brief Timer de animacion
 		float _timer = 5.0f;
 		/// @brief Tiempo transcurrido
