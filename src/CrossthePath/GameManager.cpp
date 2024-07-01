@@ -65,7 +65,7 @@ void ctp::GameManager::Play()
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	if (_level == 0) {
-		scnManager->ChangeScene("Nivel1");
+		scnManager->ChangeScene("NivelCoop");
 	}
 	else scnManager->ChangeScene("Nivel2");
 	ClearInstanciator();

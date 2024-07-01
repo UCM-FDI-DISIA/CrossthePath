@@ -93,6 +93,154 @@ Player = {
 	}
 }
 
+Player1 = {
+	Name = "Player1",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "Cube.057"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0|2.0|0",
+				Rotation = "false|0.0|0.0|1.0|0.0",
+				Scale = "0.1|0.1|0.1"
+			}
+		},
+		{
+			Name = "ANIMATOR",
+			Arguments = {
+				AnimNames = "Die|Duck|HitReact|Idle|JumpIdle|JumpLand|JumpStart|No|Punch|Run|Walk|Wave|Weapon|Yes",
+				AnimMeshNames = "Frog_Death|Frog_Duck|Frog_HitReact|Frog_Idle|Frog_JumpIdle|Frog_JumpLand|Frog_JumpStart|Frog_No|Frog_Punch|Frog_Run|Frog_Walk|Frog_Wave|Frog_Weapon|Frog_Yes",
+				NextAnim = "Idle|Idle|Idle|Idle|JumpLand|Idle|JumpIdle|Idle|Idle|Idle|Idle|Idle|Idle|Idle",
+				LoopAnims = "false|false|false|true|false|false|false|false|false|true|true|false|false|false"
+			}
+		},
+		{
+			Name = "CHARACTER_MOVEMENT",
+			Arguments = {
+                Speed= 1.5
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				Mass = "1.0",
+				AABB = "0.46|0.1556|0.2695482373237617",
+				PosOffset = "0|0|0",
+				Radius = "0.46",
+				Shape = "BOX",
+				CollisionFlag = "DYNAMIC",
+				CollisionLayer = "PLAYER",
+				Bounciness = "0",
+				Friction = "1",
+				Trigger = "false"
+			}
+		},
+		{
+            Name = "CHARACTER_DIE",
+            Arguments = {
+            }
+        },
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "characterDie"
+            }
+        },
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "footstep.wav",
+				Is3D = "false"
+			}
+		},
+        {
+            Name = "AUDIO_LISTENER",
+            Arguments = {
+
+            }
+        }
+	}
+}
+
+Player2 = {
+	Name = "Player2",
+	Components = {
+		{
+			Name = "MESH_RENDERER",
+			Arguments = {
+				Mesh = "Cube.057"
+			}
+		},
+		{
+			Name = "TRANSFORM",
+			Arguments = {
+				Position = "0|2.0|0",
+				Rotation = "false|0.0|0.0|1.0|0.0",
+				Scale = "0.1|0.1|0.1"
+			}
+		},
+		{
+			Name = "ANIMATOR",
+			Arguments = {
+				AnimNames = "Die|Duck|HitReact|Idle|JumpIdle|JumpLand|JumpStart|No|Punch|Run|Walk|Wave|Weapon|Yes",
+				AnimMeshNames = "Frog_Death|Frog_Duck|Frog_HitReact|Frog_Idle|Frog_JumpIdle|Frog_JumpLand|Frog_JumpStart|Frog_No|Frog_Punch|Frog_Run|Frog_Walk|Frog_Wave|Frog_Weapon|Frog_Yes",
+				NextAnim = "Idle|Idle|Idle|Idle|JumpLand|Idle|JumpIdle|Idle|Idle|Idle|Idle|Idle|Idle|Idle",
+				LoopAnims = "false|false|false|true|false|false|false|false|false|true|true|false|false|false"
+			}
+		},
+		{
+			Name = "CHARACTER_MOVEMENT",
+			Arguments = {
+                Speed= 1.5
+			}
+		},
+		{
+			Name = "RIGIDBODY",
+			Arguments = {
+				Mass = "1.0",
+				AABB = "0.46|0.1556|0.2695482373237617",
+				PosOffset = "0|0|0",
+				Radius = "0.46",
+				Shape = "BOX",
+				CollisionFlag = "DYNAMIC",
+				CollisionLayer = "PLAYER",
+				Bounciness = "0",
+				Friction = "1",
+				Trigger = "false"
+			}
+		},
+		{
+            Name = "CHARACTER_DIE",
+            Arguments = {
+            }
+        },
+        {
+            Name = "BEHAVIOUR",
+            Arguments = {
+                Script = "characterDie"
+            }
+        },
+		{
+			Name = "AUDIO_EMITTER",
+			Arguments = {
+				SongName = "footstep.wav",
+				Is3D = "false"
+			}
+		},
+        {
+            Name = "AUDIO_LISTENER",
+            Arguments = {
+
+            }
+        }
+	}
+}
+
 enemyTaxi = {
     Name = "enemyTaxi",
     Components = {
