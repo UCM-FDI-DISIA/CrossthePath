@@ -8,8 +8,10 @@
 #include "InstanciateEnemies.h"
 #include <Scene.h>
 #include "CameraMovement.h"
-// #include "NetworkManager.h"
-// #include <iostream>
+#include <NetworkManager.h>
+#include <iostream>
+
+#include <fstream>
 
 ctp::GameManager::GameManager()
 {
@@ -59,7 +61,7 @@ void ctp::GameManager::GameOver()
 	ClearInstanciator();
 }
 
-void ctp::GameManager::Play()
+void ctp::GameManager::PlayAsHost()
 {
 	if(_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
 	_currState = Game;
@@ -68,9 +70,42 @@ void ctp::GameManager::Play()
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	if (_level == 0) {
-		//std::string _hostIP; int _port;
-		//std::cin >> _hostIP >> _port;
-		//eden_net::NetworkManager::Instance()->InitNetwork(_port, _hostIP);
+		std::ifstream configFile("config.txt");
+		std::string _hostIP = "localhost";
+		int _port = 12345; // Valor por defecto para el puerto
+
+		if (configFile.is_open()) {
+			// Si el archivo existe y se puede abrir, lee la IP y el puerto
+			configFile >> _hostIP >> _port;
+			configFile.close();
+		}
+		else {
+			// Si el archivo no existe, se usa un valor por defecto para el host
+			_hostIP = ""; // Suponiendo que tu lógica interna maneja un host vacío como "no host"
+			std::cout << "Archivo de configuración no encontrado. Usando configuración por defecto." << std::endl;
+		}
+
+		// Suponiendo que tienes estas funciones implementadas
+		eden_net::NetworkManager::Instance()->InitNetwork(_port, _hostIP);
+		scnManager->ChangeScene("NivelCoop");
+	}
+	else scnManager->ChangeScene("Nivel2");
+	ClearInstanciator();
+}
+
+void ctp::GameManager::PlayAsGuest()
+{
+	if (_sounds)_sounds->GetComponent<SoundsController>()->PlaySound(SoundsController::PLAY_BUTTON);
+	_currState = Game;
+	_start = false;
+	_currScore = _timer;
+	_states[0] = _currState;
+	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
+	if (_level == 0) {
+		std::string _hostIP = "";
+		int _port = 12345; // Valor por defecto para el puerto
+		// Suponiendo que tienes estas funciones implementadas
+		eden_net::NetworkManager::Instance()->InitNetwork(_port, _hostIP);
 		scnManager->ChangeScene("NivelCoop");
 	}
 	else scnManager->ChangeScene("Nivel2");

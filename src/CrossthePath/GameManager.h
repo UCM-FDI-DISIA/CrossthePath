@@ -31,7 +31,9 @@ namespace ctp{
 		void GameOver();
 
 		/// @brief Instancia la escena del juego y cambia el estado actual
-		void Play();
+		void PlayAsHost();
+		/// @brief Instancia la escena del juego y cambia el estado actual
+		void PlayAsGuest();
 		/// @brief Instancia la escena de pausa y cambia el estado actual
 		void PauseGame();
 		/// @brief Vuelve a la escena anterior y cambia el estado actual

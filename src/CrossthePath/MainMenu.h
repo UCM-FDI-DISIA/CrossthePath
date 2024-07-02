@@ -88,7 +88,7 @@ namespace ctp{
 		std::pair<float, float>_optionsIniPos = std::make_pair(0.0f, 0.0f);
 
 		/// @brief Metodo que empieza el nivel
-		void Play();
+		void Play(bool host);
 		/// @brief Metodo que cierra el juego
 		void ExitGame();
 		/// @brief Metodo que va al menu de opciones

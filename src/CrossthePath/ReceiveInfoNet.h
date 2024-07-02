@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Component.h"
+#include <SDL_net.h>
 
 #include "defs.h"
 
@@ -19,11 +20,11 @@ namespace ctp {
     class ReceiveInfoNet : public eden_ec::Component {
     public:
         ReceiveInfoNet() = default;
-        ~ReceiveInfoNet() override;
+        ~ReceiveInfoNet() override {}
 
         /// @brief Inicializa el componente, guardando los argumentos recibidos desde lua
         /// @param args los argumentos que contienen informacion sobre ...
-        void Init(eden_script::ComponentArguments* args) override;
+        void Init(eden_script::ComponentArguments* args) override {}
         /// @brief Actualiza ...
         /// @param dt El tiempo transcurrido desde el ultimo frame
         void Update(float dt) override;
@@ -32,14 +33,19 @@ namespace ctp {
         void Awake() override;
 
         /// @brief No usado
-        void Start() override;
+        void Start() override {}
 
         /// @brief Devuelve el identificador del componente
         /// @return Identificador del componente
         static std::string GetID() { return "RECEIVE_INFO_NET"; }
     private:
+        SDLNet_SocketSet _socketSet;
+        TCPsocket _socket[4];
+
         eden_net::NetworkManager* _networkManager = nullptr;
         eden_ec::CTransform* _transform = nullptr;
+
+        char buff[256];
     };
 }
 

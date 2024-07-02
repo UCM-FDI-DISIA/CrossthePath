@@ -4,6 +4,8 @@
 #include <string>
 
 #include "Component.h"
+#include "Vector3.h"
+#include <SDL_net.h>
 
 #include "defs.h"
 
@@ -19,7 +21,7 @@ namespace ctp {
     class SendInfoNet : public eden_ec::Component {
     public:
         SendInfoNet() = default;
-        ~SendInfoNet() override;
+        ~SendInfoNet() override {}
 
         /// @brief Inicializa el componente, guardando los argumentos recibidos desde lua
         /// @param args los argumentos que contienen informacion sobre ...
@@ -32,16 +34,20 @@ namespace ctp {
         void Awake() override;
 
         /// @brief No usado
-        void Start() override;
+        void Start() override {}
+
+        void Restart();
 
         /// @brief Devuelve el identificador del componente
         /// @return Identificador del componente
         static std::string GetID() { return "SEND_INFO_NET"; }
-
-        // uint32_t getNetworkID() const { return networkID; }
     private:
+        TCPsocket _socket;
         eden_net::NetworkManager* _networkManager = nullptr;
         eden_ec::CTransform* _transform = nullptr;
+
+        char buff[256];
+        eden_utils::Vector3 _originalPos;
     };
 }
 

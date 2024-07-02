@@ -556,7 +556,7 @@ Entity26 = {
 			Name = "BUTTON",
 			Arguments = {
                 OverlayName= "button",
-				XPos = "50",
+				XPos = "25",
                 YPos = "55",
                 Width = "27",
                 Height = "27",
@@ -798,12 +798,39 @@ Entity36 = {
         }
 	}	
 }
+
+Entity37 = {
+	Name = "buttonPlay2",
+	Components = {
+		{
+			Name = "BUTTON",
+			Arguments = {
+                OverlayName= "button2",
+				XPos = "75",
+                YPos = "55",
+                Width = "27",
+                Height = "27",
+                Texture1 = "Play_Button_Reverse.png",
+                Texture2 = "PlayOver_Button_Reverse.png",
+                Texture3 = "PlayClicked_Button_Reverse.png",
+                Depth = "2"
+			}
+		},
+        {
+            Name = "BEHAVIOUR",
+			Arguments = {
+                Script= "MainMenu",
+			}
+        }
+	}	
+}
+
 Entities = { Entity21, Entity1, Entity2, Entity3, Entity4, Entity5, Entity6, 
 Entity7, Entity8, Entity9, Entity10, Entity11, Entity12, Entity13, 
 Entity14, Entity15, Entity16, Entity17, Entity18, Entity19, Entity20,
 Entity22, Entity23, Entity24, Entity25, Entity26, Entity27,
 Entity28, Entity29, Entity30,Entity31,Entity32,Entity33,Entity34,Entity35,
-Entity36 }
+Entity36, Entity37 }
 
 CollisionLayers = {
 	Layers = {

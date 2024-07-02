@@ -163,7 +163,13 @@ Player1 = {
             Arguments = {
 
             }
-        }
+        },
+		{
+			Name = "SEND_INFO_NET",
+			Arguments = {
+
+			}
+		}
 	}
 }
 
@@ -226,7 +232,13 @@ Player2 = {
             Arguments = {
 
             }
-        }
+        },
+		{
+			Name = "RECEIVE_INFO_NET",
+			Arguments = {
+
+			}
+		}
 	}
 }
 

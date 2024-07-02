@@ -20,6 +20,9 @@
 #include "LimitLine.h"
 #include "RenderManager.h"
 
+#include "SendInfoNet.h"
+#include "ReceiveInfoNet.h"
+
 void RegisterComponents() {
 	eden_ec::ComponentFactory* factory = eden_ec::ComponentFactory::getInstance();
 	factory->RegisterComponent<ctp::MenuPausa>();
@@ -38,6 +41,8 @@ void RegisterComponents() {
 	factory->RegisterComponent<ctp::EasterEgg>();
 	factory->RegisterComponent<ctp::EnemyActivator>();
 	factory->RegisterComponent<ctp::LimitLine>();
+	factory->RegisterComponent<ctp::SendInfoNet>();
+	factory->RegisterComponent<ctp::ReceiveInfoNet>();
 }
 
 void LoadScene() {

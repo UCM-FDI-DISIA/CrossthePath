@@ -90,7 +90,7 @@ void ctp::LoseMenu::Exit()
 
 void ctp::LoseMenu::Retry()
 {
-	ctp::GameManager::Instance()->Play();
+	ctp::GameManager::Instance()->GoMainMenu();
 }
 
 void ctp::LoseMenu::Click()

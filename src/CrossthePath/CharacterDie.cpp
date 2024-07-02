@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include "ScriptManager.h"
 #include "LuaManager.h"
+#include "SendInfoNet.h"
 
 const std::string ctp::CharacterDie::_id = "CHARACTER_DIE";
 
@@ -25,5 +26,8 @@ void ctp::CharacterDie::RunOver()
 		->GetLuaManager()->GetLuaState(), "other");
 
 	//Si dicha entidad tiene el componente enemyMovement significa que es un coche
-	if(otherEnt->HasComponent("ENEMY_MOVEMENT")) ctp::GameManager::Instance()->GameOver();
+	if (otherEnt->HasComponent("ENEMY_MOVEMENT")) {
+		ctp::SendInfoNet* sendInfo = _ent->GetComponent<ctp::SendInfoNet>();
+		sendInfo->Restart();
+	}
 }

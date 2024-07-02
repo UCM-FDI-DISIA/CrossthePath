@@ -129,9 +129,10 @@ void ctp::MainMenu::GameMode()
 	ctp::GameManager::Instance()->ChangeLevel();
 }
 
-void ctp::MainMenu::Play()
+void ctp::MainMenu::Play(bool host = false)
 {
-	ctp::GameManager::Instance()->Play();
+	if (host) ctp::GameManager::Instance()->PlayAsHost();
+	else ctp::GameManager::Instance()->PlayAsGuest();
 }
 
 void ctp::MainMenu::ExitGame()
@@ -166,6 +167,9 @@ void ctp::MainMenu::Click()
 
 	if (otherEnt->GetEntityID() == "buttonPlay") {
 		Play();
+	}
+	else if (otherEnt->GetEntityID() == "buttonPlay2") {
+		Play(true);
 	}
 	else if (otherEnt->GetEntityID() == "buttonExit") {
 		ExitGame();
