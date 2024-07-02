@@ -8,6 +8,9 @@
 #include "InstanciateEnemies.h"
 #include <Scene.h>
 #include "CameraMovement.h"
+// #include "NetworkManager.h"
+// #include <iostream>
+
 ctp::GameManager::GameManager()
 {
 	std::vector<std::pair<int, int>> resolutions;
@@ -65,6 +68,9 @@ void ctp::GameManager::Play()
 	_states[0] = _currState;
 	eden::SceneManager* scnManager = eden::SceneManager::getInstance();
 	if (_level == 0) {
+		//std::string _hostIP; int _port;
+		//std::cin >> _hostIP >> _port;
+		//eden_net::NetworkManager::Instance()->InitNetwork(_port, _hostIP);
 		scnManager->ChangeScene("NivelCoop");
 	}
 	else scnManager->ChangeScene("Nivel2");

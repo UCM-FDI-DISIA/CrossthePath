@@ -19,6 +19,8 @@
     <ClCompile Include="..\..\src\CrossthePath\LoseMenu.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\LimitLine.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\EnemyActivator.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\ReceiveInfoNet.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\SendInfoNet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\CrossthePath\CameraMovement.h" />
@@ -39,5 +41,7 @@
     <ClInclude Include="..\..\src\CrossthePath\LoseMenu.h" />
     <ClInclude Include="..\..\src\CrossthePath\LimitLine.h" />
     <ClInclude Include="..\..\src\CrossthePath\EnemyActivator.h" />
+    <ClInclude Include="..\..\src\CrossthePath\SendInfoNet.h" />
+    <ClInclude Include="..\..\src\CrossthePath\ReceiveInfoNet.h" />
   </ItemGroup>
 </Project>

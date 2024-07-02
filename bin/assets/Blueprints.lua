@@ -194,12 +194,6 @@ Player2 = {
 			}
 		},
 		{
-			Name = "CHARACTER_MOVEMENT",
-			Arguments = {
-                Speed= 1.5
-			}
-		},
-		{
 			Name = "RIGIDBODY",
 			Arguments = {
 				Mass = "1.0",
@@ -214,11 +208,6 @@ Player2 = {
 				Trigger = "false"
 			}
 		},
-		{
-            Name = "CHARACTER_DIE",
-            Arguments = {
-            }
-        },
         {
             Name = "BEHAVIOUR",
             Arguments = {
@@ -499,4 +488,4 @@ Camera = {
        
     }
 }
-Blueprints = { Cube, Player, enemyTaxi, enemyPolice, enemyRed, enemyGreen, Camera }
+Blueprints = { Cube, Player, Player1, Player2, enemyTaxi, enemyPolice, enemyRed, enemyGreen, Camera }

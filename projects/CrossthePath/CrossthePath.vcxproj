@@ -64,12 +64,12 @@
       <PreprocessorDefinitions>EDEN_EXPORTS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)EDEN\src\EDEN_Export\;$(SolutionDir)EDEN\src\EDEN_Script\;$(SolutionDir)EDEN\src\EDEN_Render\;$(SolutionDir)EDEN\src\EDEN_Physics\;$(SolutionDir)EDEN\src\EDEN_Input\;$(SolutionDir)EDEN\src\EDEN_Audio\;$(SolutionDir)EDEN\src\EDEN_EC\;$(SolutionDir)EDEN\src\EDEN_Utils\;$(SolutionDir)EDEN\src\EDEN_Managers\;$(SolutionDir)EDEN\dependencies\Lua\src\src\;$(SolutionDir)EDEN\dependencies\LuaBridge\Source\LuaBridge\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EDEN\src\EDEN_Export\;$(SolutionDir)EDEN\src\EDEN_Script\;$(SolutionDir)EDEN\src\EDEN_Render\;$(SolutionDir)EDEN\src\EDEN_Physics\;$(SolutionDir)EDEN\src\EDEN_Input\;$(SolutionDir)EDEN\src\EDEN_Audio\;$(SolutionDir)EDEN\src\EDEN_EC\;$(SolutionDir)EDEN\src\EDEN_Utils\;$(SolutionDir)EDEN\src\EDEN_Net\;$(SolutionDir)EDEN\src\EDEN_Managers\;$(SolutionDir)EDEN\dependencies\Lua\src\src\;$(SolutionDir)EDEN\dependencies\LuaBridge\Source\LuaBridge\;$(SolutionDir)EDEN\dependencies\SDL_Net\src\;$(SolutionDir)EDEN\dependencies\SDL\src\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\;$(SolutionDir)EDEN\dependencies\Lua\build\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\;$(SolutionDir)EDEN\dependencies\Lua\build\$(Platform)\$(Configuration)\;$(SolutionDir)EDEN\dependencies\SDL_Net\src\;$(SolutionDir)EDEN\dependencies\SDL\src\include\;</AdditionalLibraryDirectories>
       <AdditionalDependencies>EDEN_Export_d.lib;%(AdditionalDependencies);lua.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -82,14 +82,14 @@
       <PreprocessorDefinitions>EDEN_EXPORTS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)EDEN\src\EDEN_Export\;$(SolutionDir)EDEN\src\EDEN_Script\;$(SolutionDir)EDEN\src\EDEN_Render\;$(SolutionDir)EDEN\src\EDEN_Physics\;$(SolutionDir)EDEN\src\EDEN_Input\;$(SolutionDir)EDEN\src\EDEN_Audio\;$(SolutionDir)EDEN\src\EDEN_EC\;$(SolutionDir)EDEN\src\EDEN_Utils\;$(SolutionDir)EDEN\src\EDEN_Managers\;$(SolutionDir)EDEN\dependencies\Lua\src\src\;$(SolutionDir)EDEN\dependencies\LuaBridge\Source\LuaBridge\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)EDEN\src\EDEN_Export\;$(SolutionDir)EDEN\src\EDEN_Script\;$(SolutionDir)EDEN\src\EDEN_Render\;$(SolutionDir)EDEN\src\EDEN_Physics\;$(SolutionDir)EDEN\src\EDEN_Input\;$(SolutionDir)EDEN\src\EDEN_Audio\;$(SolutionDir)EDEN\src\EDEN_EC\;$(SolutionDir)EDEN\src\EDEN_Utils\;$(SolutionDir)EDEN\src\EDEN_Net\;$(SolutionDir)EDEN\src\EDEN_Managers\;$(SolutionDir)EDEN\dependencies\Lua\src\src\;$(SolutionDir)EDEN\dependencies\LuaBridge\Source\LuaBridge\;$(SolutionDir)EDEN\dependencies\SDL_Net\src\;$(SolutionDir)EDEN\dependencies\SDL\src\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\;$(SolutionDir)EDEN\dependencies\Lua\build\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\;$(SolutionDir)EDEN\dependencies\Lua\build\$(Platform)\$(Configuration)\;$(SolutionDir)EDEN\dependencies\SDL_Net\src\;$(SolutionDir)EDEN\dependencies\SDL\src\include\;</AdditionalLibraryDirectories>
       <AdditionalDependencies>EDEN_Export.lib;%(AdditionalDependencies);lua.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -108,6 +108,8 @@
     <ClInclude Include="..\..\src\CrossthePath\MainMenu.h" />
     <ClInclude Include="..\..\src\CrossthePath\MenuOpciones.h" />
     <ClInclude Include="..\..\src\CrossthePath\MenuPausa.h" />
+    <ClInclude Include="..\..\src\CrossthePath\ReceiveInfoNet.h" />
+    <ClInclude Include="..\..\src\CrossthePath\SendInfoNet.h" />
     <ClInclude Include="..\..\src\CrossthePath\SoundsController.h" />
     <ClInclude Include="..\..\src\CrossthePath\UIManager.h" />
     <ClInclude Include="..\..\src\CrossthePath\CharacterMovement.h" />
@@ -128,6 +130,8 @@
     <ClCompile Include="..\..\src\CrossthePath\MainMenu.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\MenuOpciones.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\MenuPausa.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\ReceiveInfoNet.cpp" />
+    <ClCompile Include="..\..\src\CrossthePath\SendInfoNet.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\SoundsController.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\UIManager.cpp" />
     <ClCompile Include="..\..\src\CrossthePath\CharacterMovement.cpp" />
